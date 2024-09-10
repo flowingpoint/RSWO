@@ -1,0 +1,5 @@
+rune_bu_min_duration = 10
+rune_bu_max_duration = 50
+rune_ke_min_duration = 10
+rune_ke_max_duration = 50
+creative_mode = 0

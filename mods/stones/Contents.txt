@@ -1,0 +1,238 @@
+Stones
+sto1.lua
+stones: {
+rock				Rock
+rubble				Rubble
+rush				Rush
+brush				Brush
+brushrock_0			Brush | Rock
+brushrock_1			Brush / Rock
+brushrock_2			Brush+Rock 3/1
+brushrock_3			Brush+Rock 1/3
+brushrock_4			Brush+Rock 3\1
+brushrock_8			Brush / Rock
+brushrock_5			Brush+Rock 1\3
+brushrock_52ul		R5/2 Brush+Rock Left HighHalf
+brushrock_52ur		R5/2 Brush+Rock Right HighHalf
+brushrock_527l		R5/2 7/8 Brush+Rock Left
+brushrock_527r		R5/2 7/8 Brush+Rock Right
+brushrock_22		Root 2 Brushrock
+brushrock_2u		Root 2 Brushrock Diagstep
+brushrock_21		4Brush 3Rock /8
+brushrock_c			Brush Curved Into Rock
+brushrock_11		Brush+Rock+Brush //
+sku					Diagonal SkewSlab
+sku2_r				RightHalf SkewSlab
+sku2_l				LeftHalf SkewSlab
+sku3_l				R3 SkewSlab
+sku3_r				R3 SkewSlab Alt
+diagsteps			Diagonal Steps
+diagstep			Diagonal Step
+arch				Arch
+arsh				Shallow Arch
+arschol				Shallow to Arch Outer Left
+arshcol				Arch to Shallow Left
+arschor				Shallow to Arch Right
+arcshor				Arch to Shallow Right
+arco				Outer Arc
+arci					Inner Arc
+}
+
+sto2.lua
+stones: {
+s_222				R2 Diagsteps 1/8 1/2
+r_2					Root 2 Slope Rubble
+s_2					Root 2 Slope
+s_52				R5/2 Slope LowHalf
+s_252l				R2, R5/2 Left
+s_252r				R2, R5/2 Right
+s_52pr				R5/2 Slope LowHalf Pyramid Right
+s_52pl				R5/2 Slope LowHalf Pyramid Left
+s_52l				R5/2 Slope LowHalf Left
+s_52r				R5/2 Slope LowHalf Right
+s_22				R2/2 Slope Edgefill
+s_21				R2 Slope 7/8
+s_21u				R2 Slope Upper 15/16
+s_22l				R2/2 Slope Cornerfill Left
+s_22r				R2/2 Slope Cornerfill Right
+spike				Spike
+spikle				Spikle
+s_52u				R5/2 Slope HighHalf
+s_52hul				R5/2 Slope HighHalf to Left
+s_52hur				R5/2 Slope HighHalf to Right
+s_52ul				R5/2 Slope HighHalf Left
+s_52ur				R5/2 Slope HighHalf Right
+asect				Apex Inset Nsecting
+asect_2				Apex Inset Nsecting LowHalf
+asect_2u			Apex Inset Nsecting HighHalf
+vsect				Vertex Filled Nsecting
+vsect_2				Vertex Filled Nsecting LowHalf
+vsect_2u			Vertex Filled Nsecting HighHalf
+}
+
+sto3.lua
+stones: {
+aset				Apex Inset
+aset_2				Apex Inset LowHalf
+aset_2u				Apex Inset HighHalf
+s_3					Root 3 Split
+vr					Vertex Removed
+vr_2				Vertex Removed LowHalf
+vr_2u				Vertex Removed HighHalf
+micro				Microstone
+panel				Panel
+flat_1				Flat
+flat_2				Flat L
+flat_3				Flat K
+flat_3a				Flat U
+flat_4				Flat O
+stair_3				3 Step
+stair_2				2 Step
+diagsteps_52rv		Steps R5/2 Right to Vert
+diagsteps_52lv		Steps R5/2 Left to Vert
+diagsteps_52rh		Steps R5/2 Right to Horizontal
+diagsteps_52lh		Steps R5/2 Left to Horizontal
+stair_2of3			2/3 Step
+stair_3_half_l		Half 3 Step Left
+stair_3_half_r		Half 3 Step Right
+stair_half_l			Half 2 Step Left
+stair_half_r			Half 2 Step Right
+stair_2of3_half_l		Half 2/3 Step Left
+stair_2of3_half_r		Half 2/3 Step Right
+stair_7				Inner 2 Step
+stair_5				Outer 2 step
+stair_941			Outer 3 step
+stair_5of14			Outer 2/3 step
+stair_3_inner			Inner 3 Step
+stair_2of3_inner		Inner 2/3 Step
+}
+
+sto4.lua
+stones: {
+roch				Lowhalf
+pyra				Square Based Pyramid
+pyra_2				Square Based Pyramid HighHalf
+pyre				Square Based Pyramid Edged
+estamp				Star Pyramid
+sku_20				Diagonal SkewSlab CornerVac
+sku_202			Diagonal SkewSlab CornerVac Half
+skud_202r			Diagonal SkewSlab CornerVac Right
+octa				Octahedron
+diagstep_2			Diagonal Step 1/8
+diagstep_7			Diagonal Step 7/8
+diaq				Diagonal 1/4
+diagsteps_8l			Diagonal Half-N-Eighth Steps Left
+diagsteps_8r		Diagonal Half-N-Eighth Steps Right
+spirdiag_r			Diagonal Spiral Steps Right
+spirdiag_l			Diagonal Spiral Steps Left
+spirdiag				Diagonal Spiral Slab
+spircol_8			Spiral Step Column 8 Sides
+spirstax_r			Spiral StepSide Extd Right
+spirstax_l			Spiral StepSide Extd Left
+spirout_r			Spiral Step-Out Extd Right
+spircod				Spiral Column Unit Diag
+spirjoin				Spiral Column Wall Joinder
+spirjoin2			Spiral Column Wall Joinder Lowhalf
+spirjoin_2l			Spiral Column Wall Joinder Left Lowhalf
+}
+
+sto5.lua
+stones: {
+plot				Plot
+shrub				Dry Shrub
+isokar				Icosahedron
+isocol				Pentagonal Column
+iso54				Pentagon / Square Joiner
+estruk				Star Struck HalfSlab
+steps				Steps
+diagsteps_13		Quart to 3 Quart Steps
+diagsteps_31		3 Quart to Quart Steps
+cish				Round Corner Slab
+cis					Round Corner
+hex					Hexagonal Prism R3
+hexp				Hexagonal Lattice Pyramid Joinder
+hexar				Hexagonal Lattice Arrowhead Joinder
+arschil				Shallow to Arch Left Slim
+arcshil				Arch to Shallow Left Slim
+arschir				Shallow to Arch Right Slim
+arcshir				Arch to Shallow Right Slim
+diagsteps_52s		Steps R5/2 S
+diagsteps_52z		Steps R5/2 Z
+dias52r				R5/2 Diagstep Siding R
+dias52d				R5/2 Diagstep Siding D
+dias52b				R5/2 Diagstep Siding B
+vsedr				Part Lowhalf Vsect D
+vsebr				Part Lowhalf Vsect B
+vsadl				Part Lowhalf Vsect A
+}
+
+sto6.lua				
+stones:{				
+c8[s][h]				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}
+*[h] is a hex from 1 to f
+**[s] is 'l' or 'r'
+koin				Classic Spinning Coin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

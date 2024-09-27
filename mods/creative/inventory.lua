@@ -110,24 +110,43 @@ function creative.register_tab(name, title, items)
 			local pagemax = math.ceil(inv.size / (3*8))
 			local esc = minetest.formspec_escape
 			return sfinv.make_formspec(player, context,
-				"label[5.55,3.35;" .. minetest.colorize("#FFFF00", tostring(pagenum)) .. " / " .. tostring(pagemax) .. "]" ..
+				"label[2.1,3;" .. minetest.colorize("#FFFF00", tostring(pagenum)) .. " / " .. tostring(pagemax) .. "]" ..
 				[[
-					image[3.15,3.35;0.8,0.8;hoop.png]
+					image[2.1,3.7;0.8,0.8;hoop.png]
 					listcolors[#00000069;#5A5A5A;#141318;#30434C;#FFF]
-					list[detached:creative_trash;main;3.1,3.3;1,1;]
+					list[detached:creative_trash;main;2,3.6;1,1;]
 					listring[]
-					image_button[4.2,3.25;1.5,1.2;creative_prev_icon.png;creative_prev;]
-					image_button[6.6,3.25;1.5,1.2;creative_next_icon.png;creative_next;]
-					image_button[2.1,3.1;1,0.8;creative_search_icon.png;creative_search;]
-					image_button[2.1,3.9;1,0.8;creative_clear_icon.png;creative_clear;]
+					image_button[2.95,3;1.1,1.7;creative_prev_icon.png;creative_prev;]
+					image_button[4,3;1.1,0.6;creative_p1.png;creative_p1;]
+					image_button[5,3;1.1,0.6;creative_p2.png;creative_p2;]
+					image_button[6,3;1.1,0.6;creative_p3.png;creative_p3;]
+					image_button[4,3.5;1.1,0.6;creative_p4.png;creative_p4;]
+					image_button[5,3.5;1.1,0.6;creative_p5.png;creative_p5;]
+					image_button[6,3.5;1.1,0.6;creative_p6.png;creative_p6;]
+					image_button[4,4;1.1,0.6;creative_p7.png;creative_p7;]
+					image_button[5,4;1.1,0.6;creative_p8.png;creative_p8;]
+					image_button[6,4;1.1,0.6;creative_p9.png;creative_p9;]
+					image_button[7,3;1.1,1.7;creative_next_icon.png;creative_next;]
+					image_button[0,3.84;1,0.8;creative_clear_icon.png;creative_clear;]
+					image_button[1,3.84;1,0.8;creative_search_icon.png;creative_search;]
+
 				]] ..
 				"tooltip[creative_search;" .. esc(S("Search")) .. "]" ..
 				"tooltip[creative_clear;" .. esc(S("Reset")) .. "]" ..
 				"tooltip[creative_prev;" .. esc(S("Previous page")) .. "]" ..
 				"tooltip[creative_next;" .. esc(S("Next page")) .. "]" ..
+				"tooltip[creative_p1;" .. esc(S("Page 1")) .. "]" ..
+				"tooltip[creative_p2;" .. esc(S("Page 2")) .. "]" ..
+				"tooltip[creative_p3;" .. esc(S("Page 3")) .. "]" ..
+				"tooltip[creative_p4;" .. esc(S("Page 4")) .. "]" ..
+				"tooltip[creative_p5;" .. esc(S("Page 5")) .. "]" ..
+				"tooltip[creative_p6;" .. esc(S("Page 6")) .. "]" ..
+				"tooltip[creative_p7;" .. esc(S("Page 7")) .. "]" ..
+				"tooltip[creative_p8;" .. esc(S("Page 8")) .. "]" ..
+				"tooltip[creative_p9;" .. esc(S("Page 9")) .. "]" ..
 				"listring[current_player;main]" ..
 				"field_close_on_enter[creative_filter;false]" ..
-				"field[0.3,3.65;2.2,1;creative_filter;;" .. esc(inv.filter) .. "]" ..
+				"field[0.3,3.25;2,1;creative_filter;;" .. esc(inv.filter) .. "]" ..
 				"listring[detached:creative_" .. player_name .. ";main]" ..
 				"list[detached:creative_" .. player_name .. ";main;0,0;8,3;" .. tostring(start_i) .. "]" ..
 				creative.formspec_add, true)
@@ -158,6 +177,33 @@ function creative.register_tab(name, title, items)
 			elseif not fields.quit then
 				local start_i = inv.start_i or 0
 
+				if fields.creative_p1 then
+					start_i = 0
+				end
+				if fields.creative_p2 then
+					start_i = 24
+				end
+				if fields.creative_p3 then
+					start_i = 48
+				end
+				if fields.creative_p4 then
+					start_i = 72
+				end
+				if fields.creative_p5 then
+					start_i = 96
+				end
+				if fields.creative_p6 then
+					start_i = 120
+				end
+				if fields.creative_p7 then
+					start_i = 144
+				end
+				if fields.creative_p8 then
+					start_i = 168
+				end
+				if fields.creative_p9 then
+					start_i = 192
+				end
 				if fields.creative_prev then
 					start_i = start_i - 3*8
 					if start_i < 0 then

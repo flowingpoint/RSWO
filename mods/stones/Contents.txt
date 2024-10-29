@@ -5,22 +5,39 @@ rock				Rock
 rubble				Rubble
 rush				Rush
 brush				Brush
+blush				Lush Brush
 brushrock_0			Brush | Rock
+blushrock_0			Lush Brush | Rock
 brushrock_1			Brush / Rock
+blushrock_1			Lush Brush / Rock
 brushrock_2			Brush+Rock 3/1
+blushrock_2			Lush Brush+Rock 3/1
 brushrock_3			Brush+Rock 1/3
+blushrock_3         Lush Brush+Rock 1/3
 brushrock_4			Brush+Rock 3\1
+brushrock_4			Lush Brush+Rock 3\1
 brushrock_8			Brush / Rock
+blushrock_8			Lush Brush / Rock
 brushrock_5			Brush+Rock 1\3
+blushrock_5			Lush Brush+Rock 1\3
 brushrock_52ul		R5/2 Brush+Rock Left HighHalf
+blushrock_52ul		Lush R5/2 Brush+Rock Left HighHalf
 brushrock_52ur		R5/2 Brush+Rock Right HighHalf
+blushrock_52ur		Lush R5/2 Brush+Rock Right HighHalf
 brushrock_527l		R5/2 7/8 Brush+Rock Left
+blushrock_527l		Lush R5/2 7/8 Brush+Rock Left
 brushrock_527r		R5/2 7/8 Brush+Rock Right
-brushrock_22		Root 2 Brushrock
+blushrock_527r		Lush R5/2 7/8 Brush+Rock Right
+brushrock_28		Root 2 Brushrock
+blushrock_28		Lush Root 2 Brushrock
 brushrock_2u		Root 2 Brushrock Diagstep
+blushrock_2u		Lush Root 2 Brushrock Diagstep
 brushrock_21		4Brush 3Rock /8
+blushrock_21        4Blush 3Rock /8
 brushrock_c			Brush Curved Into Rock
+blushrock_c			Lush Brush Curved Into Rock
 brushrock_11		Brush+Rock+Brush //
+blushrock_11		Lush Brush+Rock+Brush //
 sku					Diagonal SkewSlab
 sku2_r				RightHalf SkewSlab
 sku2_l				LeftHalf SkewSlab
@@ -172,6 +189,8 @@ c8[s][h]				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}
 *[h] is a hex from 1 to f
 **[s] is 'l' or 'r'
 koin				Classic Spinning Coin
+dragon              Classic Spyro Dragon Statue
+kow                 Cow Statue
 
 
 

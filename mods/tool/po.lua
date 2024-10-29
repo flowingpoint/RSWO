@@ -13,9 +13,8 @@ minetest.register_entity("tool:pow", {
 			if minetest.env:get_node(self.object:getpos()).name ~= "air" then
 				self.hit_node(self, pos, node)
 				self.object:remove()
-				return	
-				end
-			end,
+				return				
+end end,
 	hit_node = function(self, pos, node)
 		for dx=-0,0 do
 		for dy=-0,0 do
@@ -40,7 +39,112 @@ minetest.register_entity("tool:pow", {
 		if s.name == "runes:lit_ke"	then 
 		p2lk = s.param2
 		minetest.env:set_node(p, {name="runes:ke", param2=p2lk}) end
-	minetest.add_particlespawner({
+        if s.name == "stones:brush"	then 
+		p2brush = s.param2
+		minetest.env:set_node(p, {name="stones:blush", param2=p2brush}) end
+        if s.name == "stones:blush"	then 
+		p2lbrush = (s.param2+math.random(1,4))%4
+		minetest.env:set_node(p, {name="stones:brush", param2=p2lbrush}) end
+        if s.name == "stones:brushrock_0"	then 
+		p2b0 = (s.param2+1)%4
+		minetest.env:set_node(p, {name="stones:blushrock_0", param2=p2b0}) end
+        if s.name == "stones:blushrock_0"	then 
+		p2lb0 = (s.param2-1)%4
+		minetest.env:set_node(p, {name="stones:brushrock_0", param2=p2lb0}) end
+        if s.name == "stones:brushrock_1"	then 
+		p2b1 = (s.param2+1)%4
+		minetest.env:set_node(p, {name="stones:blushrock_1", param2=p2b1}) end
+        if s.name == "stones:blushrock_1"	then 
+		p2lb1 = (s.param2-1)%4
+		minetest.env:set_node(p, {name="stones:brushrock_1", param2=p2lb1}) end
+        if s.name == "stones:brushrock_11"	then 
+		p2b11 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_11", param2=p2b11}) end
+        if s.name == "stones:blushrock_11"	then 
+		p2lb11 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_11", param2=p2lb11}) end
+        if s.name == "stones:brushrock_2"	then 
+		p2b2 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_2", param2=p2b2}) end
+        if s.name == "stones:blushrock_2"	then 
+		p2lb2 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_2", param2=p2lb2}) end
+        if s.name == "stones:brushrock_5"	then 
+		p2b5 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_5", param2=p2b5}) end
+        if s.name == "stones:blushrock_5"	then 
+		p2lb5 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_5", param2=p2lb5}) end
+        if s.name == "stones:brushrock_8"	then 
+		p2b8 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_8", param2=p2b8}) end
+        if s.name == "stones:blushrock_8"	then 
+		p2lb8 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_8", param2=p2lb8}) end
+        if s.name == "stones:brushrock_c"	then 
+		p2bc = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_c", param2=p2bc}) end
+        if s.name == "stones:blushrock_c"	then 
+		p2lbc = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_c", param2=p2lbc}) end
+        if s.name == "stones:brushrock_21"	then 
+		p2b21 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_21", param2=p2b21}) end
+        if s.name == "stones:blushrock_21"	then 
+		p2lb21 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_21", param2=p2lb21}) end
+        if s.name == "stones:brushrock_3"	then 
+		p2b3 = (s.param2+1)%4
+		minetest.env:set_node(p, {name="stones:blushrock_3", param2=p2b3}) end
+        if s.name == "stones:blushrock_3"	then 
+		p2lb3 = (s.param2-1)%4
+		minetest.env:set_node(p, {name="stones:brushrock_3", param2=p2lb3}) end
+        if s.name == "stones:brushrock_4"	then 
+		p2b4 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_4", param2=p2b4}) end
+        if s.name == "stones:blushrock_4"	then 
+		p2lb4 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_4", param2=p2lb4}) end
+        if s.name == "stones:brushrock_28"	then 
+		p2b28 = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_28", param2=p2b28}) end
+        if s.name == "stones:blushrock_28"	then 
+		p2lb28 = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_28", param2=p2lb28}) end
+        if s.name == "stones:brushrock_2u"	then 
+		p2b2u = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_2u", param2=p2b2u}) end
+        if s.name == "stones:blushrock_2u"	then 
+		p2lb2u = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_2u", param2=p2lb2u}) end
+        if s.name == "stones:brushrock_52ul"	then 
+		p2b52ul = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_52ul", param2=p2b52ul}) end
+        if s.name == "stones:blushrock_52ul"	then 
+		p2lb52ul = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_52ul", param2=p2lb52ul}) end
+        if s.name == "stones:brushrock_52ur"	then 
+		p2b52ur = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_52ur", param2=p2b52ur}) end
+        if s.name == "stones:blushrock_52ur"	then 
+		p2lb52ur = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_52ur", param2=p2lb52ur}) end
+        if s.name == "stones:brushrock_527l"	then 
+		p2b527l = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_527l", param2=p2b527l}) end
+        if s.name == "stones:blushrock_527l"	then 
+		p2lb527l = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_527l", param2=p2lb527l}) end
+        if s.name == "stones:brushrock_527r"	then 
+		p2b527r = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_527r", param2=p2b527r}) end
+        if s.name == "stones:blushrock_527r"	then 
+		p2lb527r = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_527r", param2=p2lb527r}) end
+        if s.name == "stones:rush"	then 
+		p2r = s.param2
+		minetest.env:set_node(p, {name="stones:brush", param2=p2r}) end
+minetest.add_particlespawner({
 		amount = 100,
 		time = 3,
 		glow = 10,
@@ -54,10 +158,10 @@ minetest.register_entity("tool:pow", {
 		texpool = {
 			{name = 'yellow.png', blend='alpha', scale_tween={{x=1,y=1},{x=2,y=2}}}, {name = 'yellow.png', blend = 'alpha', scale_tween = {{x=0.5,y=0.5},{x=1,y=1}}}, {name = 'yellow.png', blend = 'alpha', scale_tween = {{x=0.25,y=0.25},{x=0.5,y=0.5}}}, {name = 'yellow.png', blend = 'alpha', scale_tween = {{x=0.125,y=0.125},{x=0.25,y=0.25}}}}
 		})
-end end end end
+end end
+
+end end
 })
-
-
 minetest.register_tool("tool:pok", {
 	description = "Popper",
 	inventory_image = "smokestaff.png",

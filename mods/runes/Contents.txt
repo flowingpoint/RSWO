@@ -1,0 +1,26 @@
+Runes
+runes: {
+lit_bu*          Bu = Not
+bu              Bu = Not
+lit_ke*          Ke = May
+ke              Ke = May
+lit_hui*         Hui = Return
+hui             Hui = Return
+nbdx1*           Niu Bi Da Xue Yi
+rbdx1*           Ru Bli Da Xue Yi
+nbdx2*           Niu Bi Da Xue Er
+rbdx2*           Ru Bli Da Xue Er
+nbdx3*           Niu Bi Da Xue San
+rbdx3*           Ru Bli Da Xue San
+nbdx4*           Niu Bi Da Xue Si
+rbdx4*           Ru Bli Da Xue Si
+0ur             0◣ red
+0br             0◤ blue
+0bl             ◥0 green
+0ul             ◢0 black
+sl1*             Lit Bit 1
+sl2*             Lit Bit 2
+sl3*             Lit Bit 3
+sl4*             Lit Bit 4
+
+'*' indicates absence from menu

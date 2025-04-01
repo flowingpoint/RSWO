@@ -5,194 +5,350 @@ rock				Rock
 rubble				Rubble
 rush				Rush
 brush				Brush
-blush				Lush Brush
-brushrock_0			Brush | Rock
-blushrock_0			Lush Brush | Rock
-brushrock_1			Brush / Rock
-blushrock_1			Lush Brush / Rock
-brushrock_2			Brush+Rock 3/1
-blushrock_2			Lush Brush+Rock 3/1
-brushrock_3			Brush+Rock 1/3
-blushrock_3         Lush Brush+Rock 1/3
-brushrock_4			Brush+Rock 3\1
-brushrock_4			Lush Brush+Rock 3\1
-brushrock_8			Brush / Rock
-blushrock_8			Lush Brush / Rock
-brushrock_5			Brush+Rock 1\3
-blushrock_5			Lush Brush+Rock 1\3
-brushrock_52ul		R5/2 Brush+Rock Left HighHalf
-blushrock_52ul		Lush R5/2 Brush+Rock Left HighHalf
-brushrock_52ur		R5/2 Brush+Rock Right HighHalf
-blushrock_52ur		Lush R5/2 Brush+Rock Right HighHalf
-brushrock_527l		R5/2 7/8 Brush+Rock Left
-blushrock_527l		Lush R5/2 7/8 Brush+Rock Left
-brushrock_527r		R5/2 7/8 Brush+Rock Right
-blushrock_527r		Lush R5/2 7/8 Brush+Rock Right
-brushrock_28		Root 2 Brushrock
-blushrock_28		Lush Root 2 Brushrock
-brushrock_2u		Root 2 Brushrock Diagstep
-blushrock_2u		Lush Root 2 Brushrock Diagstep
-brushrock_21		4Brush 3Rock /8
-blushrock_21        4Blush 3Rock /8
-brushrock_c			Brush Curved Into Rock
-blushrock_c			Lush Brush Curved Into Rock
-brushrock_11		Brush+Rock+Brush //
-blushrock_11		Lush Brush+Rock+Brush //
+blush*				Lush Brush
+brushrock_0*		Brush | Rock
+rushrock_0          Rush | Rock
+rublish_0*          Rush | Rubble
+blushrock_0*			Lush Brush | Rock
+brushrock_1*			Brush / Rock
+rushrock_1			Rush / Rock
+rublish_1*			Rush / Rubble
+blushrock_1*			Lush Brush / Rock
+brushrock_2*			Brush+Rock 3/1
+rushrock_2			Rush+Rock 3/1
+rublish_2*			Rush+Rock 3/1
+blushrock_2*			Lush Brush+Rock 3/1
+brushrock_3*			Brush+Rock 1/3
+rushrock_3			Rush+Rock 1/3
+blushrock_3*         Lush Brush+Rock 1/3
+brushrock_4*			Brush+Rock 3\1
+rushrock_4			Rush+Rock 3\1
+blushrock_4*			Lush Brush+Rock 3\1
+brushrock_8*			Brush / Rock
+rushrock_8			Rush / Rock
+rublish_8*			Rush / Rock Rubble
+blushrock_8*			Lush Brush / Rock
+brushrock_5*			Brush+Rock 1\3
+rushrock_5			Rush+Rock 1\3
+rublish_5*			Rush+Rock 1\3 Rubble
+blushrock_5*			Lush Brush+Rock 1\3
+brushrock_52ul*		R5/2 Brush+Rock Left HighHalf
+rushrock_52ul		R5/2 Rush+Rock Left HighHalf
+rublish_52ul*		R5/2 Rush+Rock Left HighHalf Rubble
+blushrock_52ul*		Lush R5/2 Brush+Rock Left HighHalf
+brushrock_52ur*		R5/2 Brush+Rock Right HighHalf
+rushrock_52ur		R5/2 Rush+Rock Right HighHalf
+rublish_52ur*		R5/2 Rush+Rock Right HighHalf Rubble
+blushrock_52ur*		Lush R5/2 Brush+Rock Right HighHalf
+brushrock_527l*		R5/2 7/8 Brush+Rock Left
+rushrock_527l		R5/2 7/8 Rush+Rock Left
+rublish_527l*		R5/2 7/8 Rush+Rock Left Rubble
+blushrock_527l*		Lush R5/2 7/8 Brush+Rock Left
+brushrock_527r*		R5/2 7/8 Brush+Rock Right
+rushrock_527r		R5/2 7/8 Rush+Rock Right
+rublish_527r		R5/2 7/8 Rush+Rock Right Rubble
+blushrock_527r*		Lush R5/2 7/8 Brush+Rock Right
+brushrock_28*		Root 2 Brushrock
+rushrock_28		    Root 2 Rushrock
+rublish_28*		    Root 2 Rushrock Rubble
+blushrock_28*		Lush Root 2 Brushrock
+brushrock_2u*		Root 2 Brushrock Diagstep
+rushrock_2u		    Root 2 Rushrock Diagstep
+rublish_2u*		    Root 2 Rushrock Diagstep Rubble
+blushrock_2u*		Lush Root 2 Brushrock Diagstep
+brushrock_21*		4Brush 3Rock /8
+rushrock_21		    4Rush 3Rock /8
+rublish_21*		    4Rush 3Rock /8 Rubble
+blushrock_21*        4Blush 3Rock /8
+brushrock_c*			Brush Curved Into Rock
+rushrock_c			Rush Curved Into Rock
+rublish_c*			Rush Curved Into Rock Rubble
+blushrock_c*			Lush Brush Curved Into Rock
+brushrock_11*		Brush+Rock+Brush //
+rushrock_11		    Rush+Rock+Rush //
+rublish_11*		    Rubble+Rock+Rubble //
+blushrock_11*		Lush Brush+Rock+Brush //
 sku					Diagonal SkewSlab
+skubl*					Diagonal SkewSlab Rubble
 sku2_r				RightHalf SkewSlab
+skub2_r*				RightHalf SkewSlab Rubble
 sku2_l				LeftHalf SkewSlab
+skub2_l*				LeftHalf SkewSlab Rubble
 sku3_l				R3 SkewSlab
+skub3_l*				R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt
+skub3_r*				R3 SkewSlab Alt Rubble
 diagsteps			Diagonal Steps
+diagsterps*			Diagonal Steps Rubble
 diagstep			Diagonal Step
+diagsterp*			Diagonal Step Rubble
 arch				Arch
+aruch*				Arch Rubble
 arsh				Shallow Arch
+arush*				Shallow Arch Rubble
 arschol				Shallow to Arch Outer Left
-arshcol				Arch to Shallow Left
+aruschol*				Shallow to Arch Outer Left Rubble
+arcshol				Arch to Shallow Left
+arucshol*				Arch to Shallow Left Rubble
 arschor				Shallow to Arch Right
+aruschor*				Shallow to Arch Right Rubble
 arcshor				Arch to Shallow Right
+arucshor*				Arch to Shallow Right Rubble
 arco				Outer Arc
-arci					Inner Arc
+aruco*				Outer Arc Rubble
+arci				Inner Arc
+aruci*				Inner Arc Rubble
 }
 
 sto2.lua
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
-r_2					Root 2 Slope Rubble
+sb_222*				R2 Diagsteps 1/8 1/2 Rubble
+r_2		        	Root 2 Slope Rush
+brush_2*             Root 2 Slope Brush
+rubble_2*            Root 2 Slope Rubble
 s_2					Root 2 Slope
 s_52				R5/2 Slope LowHalf
+sb_52*				R5/2 Slope LowHalf Rubble
 s_252l				R2, R5/2 Left
+sb_252l*				R2, R5/2 Left Rubble
 s_252r				R2, R5/2 Right
+sb_252r*				R2, R5/2 Right Rubble
 s_52pr				R5/2 Slope LowHalf Pyramid Right
+sb_52pr*				R5/2 Slope LowHalf Pyramid Right Rubble
 s_52pl				R5/2 Slope LowHalf Pyramid Left
+sb_52pl*				R5/2 Slope LowHalf Pyramid Left Rubble
 s_52l				R5/2 Slope LowHalf Left
+sb_52l*				R5/2 Slope LowHalf Left Rubble
 s_52r				R5/2 Slope LowHalf Right
+sb_52r*				R5/2 Slope LowHalf Right Rubble
 s_22				R2/2 Slope Edgefill
+sb_22*				R2/2 Slope Edgefill Rubble
 s_21				R2 Slope 7/8
+sb_21*				R2 Slope 7/8 Rubble
+s_221				R2 Slab 7/8 
+sb_221*				R2 Slab 7/8 Rubble
 s_21u				R2 Slope Upper 15/16
-s_22l				R2/2 Slope Cornerfill Left
-s_22r				R2/2 Slope Cornerfill Right
+sb_21u*				R2 Slope Upper 15/16 Rubble
+s_2216              R2/2 Slope Cornerfill 1/16
+s_22l				R2/2 Slope Cornerfill
 spike				Spike
+spruke*				Spike Rubble
 spikle				Spikle
+sprukle*				Spikle Rubble
 s_52u				R5/2 Slope HighHalf
-s_52hul				R5/2 Slope HighHalf to Left
-s_52hur				R5/2 Slope HighHalf to Right
+sb_52u*				R5/2 Slope HighHalf Rubble
+s_52hq				R5/2 Slope HighHalf to Quarter
+sb_52hq*				R5/2 Slope HighHalf to Quarter Rubble
 s_52ul				R5/2 Slope HighHalf Left
+sb_52ul*				R5/2 Slope HighHalf Left Rubble
 s_52ur				R5/2 Slope HighHalf Right
+sb_52ur*				R5/2 Slope HighHalf Right Rubble
 asect				Apex Inset Nsecting
+asectr*				Apex Inset Nsecting Rubble
 asect_2				Apex Inset Nsecting LowHalf
+asectr_2*				Apex Inset Nsecting LowHalf Rubble
 asect_2u			Apex Inset Nsecting HighHalf
+asectr_2u*			Apex Inset Nsecting HighHalf Rubble
 vsect				Vertex Filled Nsecting
+vsectr*				Vertex Filled Nsecting Rubble
 vsect_2				Vertex Filled Nsecting LowHalf
+vsectr_2*				Vertex Filled Nsecting LowHalf Rubble
 vsect_2u			Vertex Filled Nsecting HighHalf
+vsectr_2u*			Vertex Filled Nsecting HighHalf Rubble
 }
 
 sto3.lua
 stones: {
 aset				Apex Inset
+asetr*				Apex Inset Rubble
 aset_2				Apex Inset LowHalf
+asetr_2*				Apex Inset LowHalf Rubble
 aset_2u				Apex Inset HighHalf
+asetr_2u*				Apex Inset HighHalf Rubble
 s_3					Root 3 Split
+sb_3*					Root 3 Split Rubble
+s_38                Truncated R2 3/8
+sb_38*                Truncated R2 3/8 Rubble
+s_58                Slabbed R2 5/8
+sb_58*                Slabbed R2 5/8 Rubble
 vr					Vertex Removed
+vrbl*					Vertex Removed Rubble
 vr_2				Vertex Removed LowHalf
+vrbl_2*				Vertex Removed LowHalf Rubble
 vr_2u				Vertex Removed HighHalf
+vrbl_2u*				Vertex Removed HighHalf Rubble
 micro				Microstone
+micru*				Microstone Rubble
 panel				Panel
+parul*				Panel Rubble
 flat_1				Flat
+flart_1*				Flat Rubble
 flat_2				Flat L
+flart_2*				Flat L Rubble
 flat_3				Flat K
+flart_3*			Flat K Rubble
 flat_3a				Flat U
+flart_3a*				Flat U Rubble
 flat_4				Flat O
+flart_4*				Flat O Rubble
 stair_3				3 Step
+strubl_3				3 Step Rubble
 stair_2				2 Step
+strubl_2*				2 Step Rubble
+stair_2p            2 Step P
+struble_2p*           2 Step P Rubble
+stair_2q            2 Step Q
+struble_2q*            2 Step Q Rubble
 diagsteps_52rv		Steps R5/2 Right to Vert
+diagsterps_52rv		Steps R5/2 Right to Vert Rubble
 diagsteps_52lv		Steps R5/2 Left to Vert
+diagsterps_52lv*		Steps R5/2 Left to Vert Rubble
 diagsteps_52rh		Steps R5/2 Right to Horizontal
+diagsterps_52rh		Steps R5/2 Right to Horizontal Rubble
 diagsteps_52lh		Steps R5/2 Left to Horizontal
+diagsterps_52lh*		Steps R5/2 Left to Horizontal Rubble
 stair_2of3			2/3 Step
-stair_3_half_l		Half 3 Step Left
-stair_3_half_r		Half 3 Step Right
-stair_half_l			Half 2 Step Left
-stair_half_r			Half 2 Step Right
-stair_2of3_half_l		Half 2/3 Step Left
-stair_2of3_half_r		Half 2/3 Step Right
+strubl_2of3*			2/3 Step Rubble
+stair_3_half_l		Half 3 Step
+strubl_3_half_l*		Half 3 Step Rubble
+stair_half			Half 2 Step Left
+strubl_half*			Half 2 Step Left Rubble
+stair_2of3h		Half 2/3 Step
+strubl_2of3h*		Half 2/3 Step Rubble
 stair_7				Inner 2 Step
+strubl_7*				Inner 2 Step Rubble
 stair_5				Outer 2 step
+strubl_5*				Outer 2 step Rubble
 stair_941			Outer 3 step
+strubl_941*			Outer 3 step Rubble
 stair_5of14			Outer 2/3 step
+strubl_5of14*			Outer 2/3 step Rubble
 stair_3_inner			Inner 3 Step
+strubl_3_inner*			Inner 3 Step Rubble
 stair_2of3_inner		Inner 2/3 Step
+strubl_2of3_inner*		Inner 2/3 Step Rubble
 }
 
 sto4.lua
 stones: {
 roch				Lowhalf
+ruvl*				Lowhalf Rubble
 pyra				Square Based Pyramid
+pyru*				Square Based Pyramid Rubble
 pyra_2				Square Based Pyramid HighHalf
+pyru_2*				Square Based Pyramid HighHalf Rubble
 pyre				Square Based Pyramid Edged
+pyrue*				Square Based Pyramid Edged Rubble
 estamp				Star Pyramid
 sku_20				Diagonal SkewSlab CornerVac
+skub_20*				Diagonal SkewSlab CornerVac Rubble
 sku_202			Diagonal SkewSlab CornerVac Half
+skub_202*			Diagonal SkewSlab CornerVac Half Rubble
 skud_202r			Diagonal SkewSlab CornerVac Right
+skrud_202r*			Diagonal SkewSlab CornerVac Right Rubble
 octa				Octahedron
 diagstep_2			Diagonal Step 1/8
+diagsterp_2*			Diagonal Step 1/8 Rubble
 diagstep_7			Diagonal Step 7/8
+diagsterp_7*			Diagonal Step 7/8 Rubble
 diaq				Diagonal 1/4
+diraq*				Diagonal 1/4 Rubble
 diagsteps_8l			Diagonal Half-N-Eighth Steps Left
+diagsterps_8l*			Diagonal Half-N-Eighth Steps Left Rubble
 diagsteps_8r		Diagonal Half-N-Eighth Steps Right
+diagsterps_8r*		Diagonal Half-N-Eighth Steps Right Rubble
 spirdiag_r			Diagonal Spiral Steps Right
+spirblag_r*			Diagonal Spiral Steps Right Rubble
 spirdiag_l			Diagonal Spiral Steps Left
+spirblag_l*			Diagonal Spiral Steps Left Rubble
 spirdiag				Diagonal Spiral Slab
+spirblag*				Diagonal Spiral Slab Rubble
 spircol_8			Spiral Step Column 8 Sides
+spircobl_8*			Spiral Step Column 8 Sides Rubble
 spirstax_r			Spiral StepSide Extd Right
+spirblux_r*			Spiral StepSide Extd Right Rubble
 spirstax_l			Spiral StepSide Extd Left
+spirblux_l*			Spiral StepSide Extd Left Rubble
+spirout_l			Spiral Step-Out Extd Left
+spirbut_l*			Spiral Step-Out Extd Left Rubble
 spirout_r			Spiral Step-Out Extd Right
+spirbut_r*			Spiral Step-Out Extd Right Rubble
 spircod				Spiral Column Unit Diag
+spircob*				Spiral Column Unit Diag Rubble
 spirjoin				Spiral Column Wall Joinder
+spijrubl*				Spiral Column Wall Joinder Rubble
 spirjoin2			Spiral Column Wall Joinder Lowhalf
+spijrubl2*			Spiral Column Wall Joinder Lowhalf Rubble
 spirjoin_2l			Spiral Column Wall Joinder Left Lowhalf
+spijrubl_2l*			Spiral Column Wall Joinder Left Lowhalf Rubble
+spirjoin_2r			Spiral Column Wall Joinder Right Lowhalf
+spijrubl_2r*			Spiral Column Wall Joinder Right Lowhalf Rubble
 }
 
 sto5.lua
 stones: {
 plot				Plot
+prob*				Plot Rubble
 shrub				Dry Shrub
-isokar				Icosahedron
+isokar*				Icosahedron Flamed
+isodark				Icosahedron Dark
 isocol				Pentagonal Column
+irocol*				Pentagonal Column Rubble
 iso54				Pentagon / Square Joiner
+isor54*				Pentagon / Square Joiner Rubble
 estruk				Star Struck HalfSlab
+estruble*				Star Struck HalfSlab Rubble
 steps				Steps
+stru*				Steps Rubble
 diagsteps_13		Quart to 3 Quart Steps
+diagsterps_13*		Quart to 3 Quart Steps Rubble
 diagsteps_31		3 Quart to Quart Steps
+diagsterps_31		3 Quart to Quart Steps Rubble
 cish				Round Corner Slab
+crish*				Round Corner Slab Rubble
 cis					Round Corner
+cris*				Round Corner Rubble
 hex					Hexagonal Prism R3
+hrex*				Hexagonal Prism R3 Rubble
 hexp				Hexagonal Lattice Pyramid Joinder
+hrexp*				Hexagonal Lattice Pyramid Joinder Rubble
 hexar				Hexagonal Lattice Arrowhead Joinder
+hrexar*				Hexagonal Lattice Arrowhead Joinder Rubble
 arschil				Shallow to Arch Left Slim
+aruschil*				Shallow to Arch Left Slim Rubble
 arcshil				Arch to Shallow Left Slim
+arucshil*				Arch to Shallow Left Slim Rubble
 arschir				Shallow to Arch Right Slim
+aruschir*				Shallow to Arch Right Slim Rubble
 arcshir				Arch to Shallow Right Slim
+arucshir*				Arch to Shallow Right Slim Rubble
 diagsteps_52s		Steps R5/2 S
+diagsterps_52s*		Steps R5/2 S Rubble
 diagsteps_52z		Steps R5/2 Z
+diagsterps_52z*		Steps R5/2 Z Rubble
 dias52r				R5/2 Diagstep Siding R
+diras52r*				R5/2 Diagstep Siding R Rubble
 dias52d				R5/2 Diagstep Siding D
+diras52d*				R5/2 Diagstep Siding D Rubble
 dias52b				R5/2 Diagstep Siding B
+diras52b*				R5/2 Diagstep Siding B Rubble
 vsedr				Part Lowhalf Vsect D
-vsebr				Part Lowhalf Vsect B
-vsadl				Part Lowhalf Vsect A
+vsrud*				Part Lowhalf Vsect D Rubble
+vsedl				Part Lowhalf Vsect A
+vsudl*				Part Lowhalf Vsect A Rubble
+
 }
 
 sto6.lua				
 stones:{				
-c8[s][h]				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}
-*[h] is a hex from 1 to f
-**[s] is 'l' or 'r'
-koin				Classic Spinning Coin
+c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef} (+Rubble)
+![h] is a hex from 1 to f
+!![s] is 'l' or 'r'
 dragon              Classic Spyro Dragon Statue
 kow                 Cow Statue
 
-
+--Those labelled '*' are not in the creative 9-page menu
 
 
 

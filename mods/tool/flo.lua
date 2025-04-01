@@ -10,6 +10,7 @@ minetest.register_node(":default:flo", {
 	tiles = {{name = "flo.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 3.3}}},
 --tiles = {{name = "black.png", backface_culling = false}},
 	paramtype = "light",
+	use_texture_alpha = "clip",
 	walkable = false,
 	pointable = true,
 	diggable = true,
@@ -51,3 +52,13 @@ minetest.register_node(":default:flo", {
 --	{-1.5,-0.5,-1.45, 1.5,-0.47,1.45},
 --	{-1.45,-0.5,-1.5, 1.45,-0.47,-0.5},
 --	{-1.45,-0.5,0.5, 1.45,-0.47,1.5}}}]
+
+minetest.register_abm({
+    nodenames = {"default:flo"},
+    interval = 2,
+    chance = 12,
+    action = function(pos, node)
+        minetest.env:remove_node(pos)
+    end,
+})
+		

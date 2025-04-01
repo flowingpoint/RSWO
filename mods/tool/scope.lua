@@ -2,7 +2,7 @@
 scope = {}
 
 minetest.register_craftitem(":default:scope", {
-	description = "'B' Zooms",
+	description = "'Z' Zooms",
 	inventory_image = "bubble.png",
 	wield_image = "bubble.png",
 	stack_max = 1,

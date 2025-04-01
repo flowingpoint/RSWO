@@ -44,7 +44,7 @@ local function wrench_handler(itemstack, user, pointed_thing, mode)
 	minetest.swap_node(pos, node)
 
 	local item_wear = tonumber(itemstack:get_wear())
-	item_wear = item_wear + 300 -- was 327
+	item_wear = item_wear + 256 -- was 327
 	if item_wear > 65535 then
 		itemstack:clear()
 		return itemstack

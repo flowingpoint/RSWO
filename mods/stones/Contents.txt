@@ -190,8 +190,6 @@ flat_3				Flat K
 flart_3*			Flat K Rubble
 flat_3a				Flat U
 flart_3a*				Flat U Rubble
-flat_4				Flat O
-flart_4*				Flat O Rubble
 stair_3				3 Step
 strubl_3				3 Step Rubble
 stair_2				2 Step
@@ -350,8 +348,9 @@ kow                 Cow Statue
 
 --Those labelled '*' are not in the creative 9-page menu
 
-
-
+sus.lua
+stones:[
+flat_O               Flat 'O'
 
 
 

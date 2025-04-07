@@ -1647,37 +1647,7 @@ minetest.register_node("stones:flart_3a", {
 {0.375,-0.375,-0.5, 0.5,0.5,0.5}}}
 })
 
-minetest.register_node("stones:flat_4", {
-	description = "Flat O",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"rock.png"},
-	groups = {vcol=0.469, cracky=1, oddly_breakable_by_hand=1},
-	drop = "stones:flat_4",
-	drawtype = "nodebox",
-	climbable = true,
-	node_box = {type="fixed",fixed={
-{-0.375,-0.5,-0.5, 0.375,-0.375,0.5},
-{-0.5,-0.5,-0.5, -0.375,0.5,0.5},
-{0.375,-0.5,-0.5, 0.5,0.5,0.5},
-{-0.375,0.375,-0.5, 0.375,0.5,0.5}}}
-})
 
-minetest.register_node("stones:flart_4", {
-	description = "Flat O Rubble",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"rubble.png"},
-	groups = {vcol=0.469, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:flart_4",
-	drawtype = "nodebox",
-	climbable = true,
-	node_box = {type="fixed",fixed={
-{-0.375,-0.5,-0.5, 0.375,-0.375,0.5},
-{-0.5,-0.5,-0.5, -0.375,0.5,0.5},
-{0.375,-0.5,-0.5, 0.5,0.5,0.5},
-{-0.375,0.375,-0.5, 0.375,0.5,0.5}}}
-})
 
 minetest.register_node("stones:stair_3", {
 	description = "3 Step",

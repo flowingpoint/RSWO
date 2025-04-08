@@ -38,12 +38,6 @@ minetest.register_entity("stones:item",{
 })
 
 
-local facedir = {}
-facedir[0] = {x=0,y=0,z=1}
-facedir[1] = {x=1,y=0,z=0}
-facedir[2] = {x=0,y=0,z=-1}
-facedir[3] = {x=-1,y=0,z=0}
-
 local remove_item = function(pos, node)
 	local objs = nil
 	if node.name == "stones:flat_O" then
@@ -94,33 +88,20 @@ minetest.register_node("stones:flat_O",{
 	--selection_box = { type = "fixed", fixed = {-7/16, -0.5, -7/16, 7/16, 12/16, 7/16} },
 	tiles = {"rock.png"},
 	paramtype = "light",
+    paramtype2 = "facedir",
 	groups = {vcol=0.469, cracky=1, oddly_breakable_by_hand=1},
-	after_place_node = function(pos, placer, itemstack)
-		local meta = minetest.env:get_meta(pos)
-		meta:set_string("owner",placer:get_player_name())
-		meta:set_string("infotext","Flat 'O' (owned by "..placer:get_player_name()..")")
-	end,
 	on_rightclick = function(pos, node, clicker, itemstack)
 		if not itemstack then return end
 		local meta = minetest.env:get_meta(pos)
-		if clicker:get_player_name() == meta:get_string("owner") then
 			drop_item(pos,node)
-			local s = itemstack:take_item()
+		local s = itemstack:take_item()
 			meta:set_string("item",s:to_string())
 			update_item(pos,node)
-		end
 		return itemstack
 	end,
 	on_punch = function(pos,node,puncher)
 		local meta = minetest.env:get_meta(pos)
-		if puncher:get_player_name() == meta:get_string("owner") then
 			drop_item(pos,node)
-		end
-	end,
-	can_dig = function(pos,player)
-		
-		local meta = minetest.env:get_meta(pos)
-		return player:get_player_name() == meta:get_string("owner")
 	end
 })
 

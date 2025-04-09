@@ -7,4 +7,4 @@ dofile(path .. "/sto4.lua")
 dofile(path .. "/sto5.lua")
 dofile(path .. "/sto6.lua")
 
-dofile(path .. "/sus.lua")
+--dofile(path .. "/sus.lua")

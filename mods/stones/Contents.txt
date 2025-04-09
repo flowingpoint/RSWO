@@ -340,7 +340,7 @@ vsudl*				Part Lowhalf Vsect A Rubble
 
 sto6.lua				
 stones:{				
-c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef} (+Rubble)
+c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume)
 ![h] is a hex from 1 to f
 !![s] is 'l' or 'r'
 dragon              Classic Spyro Dragon Statue

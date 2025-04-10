@@ -112,8 +112,12 @@ s_52				R5/2 Slope LowHalf
 sb_52*				R5/2 Slope LowHalf Rubble
 s_252l				R2, R5/2 Left
 sb_252l*				R2, R5/2 Left Rubble
+s_h52l*				High-half, R5/2 Left
+sb_h52l*				High-half, R5/2 Left Rubble
 s_252r				R2, R5/2 Right
 sb_252r*				R2, R5/2 Right Rubble
+s_h52r*				High-half, R5/2 Right
+sb_h52r*				High-half, R5/2 Right Rubble
 s_52pr				R5/2 Slope LowHalf Pyramid Right
 sb_52pr*				R5/2 Slope LowHalf Pyramid Right Rubble
 s_52pl				R5/2 Slope LowHalf Pyramid Left

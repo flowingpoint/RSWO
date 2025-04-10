@@ -198,14 +198,24 @@ stair_2p            2 Step P
 struble_2p*           2 Step P Rubble
 stair_2q            2 Step Q
 struble_2q*            2 Step Q Rubble
-diagsteps_52rv		Steps R5/2 Right to Vert
-diagsterps_52rv		Steps R5/2 Right to Vert Rubble
-diagsteps_52lv		Steps R5/2 Left to Vert
-diagsterps_52lv*		Steps R5/2 Left to Vert Rubble
-diagsteps_52rh		Steps R5/2 Right to Horizontal
-diagsterps_52rh		Steps R5/2 Right to Horizontal Rubble
 diagsteps_52lh		Steps R5/2 Left to Horizontal
 diagsterps_52lh*		Steps R5/2 Left to Horizontal Rubble
+diagsteps_2wr*      Steps R5/2 2-way Right
+diagsterps_2wr*      Steps R5/2 2-way Right Rubble
+diagsteps_52rh		Steps R5/2 Right to Horizontal
+diagsterps_52rh*		Steps R5/2 Right to Horizontal Rubble
+diagsteps_2wl*      Steps R5/2 2-way Left
+diagsterps_2wl*      Steps R5/2 2-way Left Rubble
+diagsteps_52rv		Steps R5/2 Right to Vert
+diagsterps_52rv*	Steps R5/2 Right to Vert Rubble
+diagsteps_57vr*		Steps R5/2 7/8 Vert to Right
+diagsterps_57vr*		Steps R5/2 7/8 Vert to Right Rubble
+diagsteps_52lv		Steps R5/2 Left to Vert
+diagsterps_52lv*		Steps R5/2 Left to Vert Rubble
+diagsteps_57vl*		Steps R5/2 7/8 Vert to Left
+diagsterps_57vl*		Steps R5/2 7/8 Vert to Left Rubble
+
+
 stair_2of3			2/3 Step
 strubl_2of3*			2/3 Step Rubble
 stair_3_half_l		Half 3 Step
@@ -323,8 +333,12 @@ arcshir				Arch to Shallow Right Slim
 arucshir*				Arch to Shallow Right Slim Rubble
 diagsteps_52s		Steps R5/2 S
 diagsterps_52s*		Steps R5/2 S Rubble
+diagsteps_58s*		Steps R5/2 5/8 S
+diagsterps_58s*		Steps R5/2 5/8 S Rubble
 diagsteps_52z		Steps R5/2 Z
 diagsterps_52z*		Steps R5/2 Z Rubble
+diagsteps_58z*		Steps R5/2 5/8 Z
+diagsterps_58z*		Steps R5/2 5/8 Z Rubble
 dias52r				R5/2 Diagstep Siding R
 diras52r*				R5/2 Diagstep Siding R Rubble
 dias52d				R5/2 Diagstep Siding D

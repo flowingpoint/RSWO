@@ -363,6 +363,7 @@ c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf
 !![s] is 'l' or 'r'
 dragon              Classic Spyro Dragon Statue
 kow                 Cow Statue
+bear                Bear Statue
 
 --Those labelled '*' are not in the creative 9-page menu
 

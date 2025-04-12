@@ -146,8 +146,12 @@ s_52hq				R5/2 Slope HighHalf to Quarter
 sb_52hq*				R5/2 Slope HighHalf to Quarter Rubble
 s_52ul				R5/2 Slope HighHalf Left
 sb_52ul*				R5/2 Slope HighHalf Left Rubble
+s_62ul*				R5/2 Slope HighHalf Left
+sb_62ul*				R5/2 Slope HighHalf Left Rubble
 s_52ur				R5/2 Slope HighHalf Right
 sb_52ur*				R5/2 Slope HighHalf Right Rubble
+s_62ur*				R6/2 Slope HighHalf Right
+sb_62ur*				R6/2 Slope HighHalf Right Rubble
 asect				Apex Inset Nsecting
 asectr*				Apex Inset Nsecting Rubble
 asect_2				Apex Inset Nsecting LowHalf

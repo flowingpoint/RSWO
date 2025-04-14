@@ -5,7 +5,7 @@ minetest.register_entity("tool:pow", {
 	visual_size = {x=0.2, y=0.2},
 	textures = {"bubble.png"},
 	velocity = 7,
-	light_source = 12,
+	light_source = 14,
 	selection_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
 	collision_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
 	on_step = function(self, dtime)
@@ -540,6 +540,104 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:diagsterps_2wl"	then 
 		p2dr2wlb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_52rh", param2=p2dr2wlb}) end
+        if s.name == "stones:s_252l"	then 
+		p2d2hl = s.param2
+		minetest.env:set_node(p, {name="stones:s_h52l", param2=p2d2hl}) end
+        if s.name == "stones:s_h52l"	then 
+		p2dh2l = s.param2
+		minetest.env:set_node(p, {name="stones:s_252l", param2=p2dh2l}) end
+        if s.name == "stones:sb_252l"	then 
+		p2dr2hl = s.param2
+		minetest.env:set_node(p, {name="stones:sb_h52l", param2=p2dr2hl}) end
+        if s.name == "stones:sb_h52l"	then 
+		p2drh2l = s.param2
+		minetest.env:set_node(p, {name="stones:sb_252l", param2=p2drh2l}) end
+        if s.name == "stones:s_252r"	then 
+		p2d2hr = s.param2
+		minetest.env:set_node(p, {name="stones:s_h52r", param2=p2d2hr}) end
+        if s.name == "stones:s_h52r"	then 
+		p2dh2r = s.param2
+		minetest.env:set_node(p, {name="stones:s_252r", param2=p2dh2r}) end
+        if s.name == "stones:sb_252r"	then 
+		p2dr2hr = s.param2
+		minetest.env:set_node(p, {name="stones:sb_h52r", param2=p2dr2hr}) end
+        if s.name == "stones:sb_h52r"	then 
+		p2drh2r = s.param2
+		minetest.env:set_node(p, {name="stones:sb_252r", param2=p2drh2r}) end
+        if s.name == "stones:s_52ur"	then 
+		p256a = s.param2
+		minetest.env:set_node(p, {name="stones:s_62ur", param2=p256a}) end
+        if s.name == "stones:s_62ur"	then 
+		p265a = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ur", param2=p265a}) end
+        if s.name == "stones:sb_52ur"	then 
+		p2r56b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_62ur", param2=p2r56b}) end
+        if s.name == "stones:sb_62ur"	then 
+		p2r65b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52ur", param2=p2r65b}) end
+        if s.name == "stones:s_52ul"	then 
+		p256a = s.param2
+		minetest.env:set_node(p, {name="stones:s_62ul", param2=p256a}) end
+        if s.name == "stones:s_62ul"	then 
+		p265a = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ul", param2=p265a}) end
+        if s.name == "stones:sb_52ul"	then 
+		p2r56b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_62ul", param2=p2r56b}) end
+        if s.name == "stones:sb_62ul"	then 
+		p2r65b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52ul", param2=p2r65b}) end
+        if s.name == "stones:spirstax_r"	then 
+		p2xra = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_3r", param2=p2xra}) end
+        if s.name == "stones:spirblux_r"	then 
+		p2xrb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_3r", param2=p2xrb}) end
+        if s.name == "stones:spirstax_3r"	then 
+		p2x3ra = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_hr", param2=p2x3ra}) end
+        if s.name == "stones:spirblux_3r"	then 
+		p2x3rb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_hr", param2=p2x3rb}) end
+        if s.name == "stones:spirstax_hr"	then 
+		p2xhra = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_qr", param2=p2xhra}) end
+        if s.name == "stones:spirblux_hr"	then 
+		p2xhrb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_qr", param2=p2xhrb}) end
+        if s.name == "stones:spirstax_qr"	then 
+		p2xqra = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_r", param2=p2xqra}) end
+        if s.name == "stones:spirblux_qr"	then 
+		p2xqrb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_r", param2=p2xqrb}) end
+        if s.name == "stones:spirstax_l"	then 
+		p2xla = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_3l", param2=p2xla}) end
+        if s.name == "stones:spirblux_l"	then 
+		p2xlb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_3l", param2=p2xlb}) end
+        if s.name == "stones:spirstax_3l"	then 
+		p2x3la = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_hl", param2=p2x3la}) end
+        if s.name == "stones:spirblux_3l"	then 
+		p2x3lb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_hl", param2=p2x3lb}) end
+        if s.name == "stones:spirstax_hl"	then 
+		p2xhla = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_ql", param2=p2xhla}) end
+        if s.name == "stones:spirblux_hl"	then 
+		p2xhlb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_ql", param2=p2xhlb}) end
+        if s.name == "stones:spirstax_ql"	then 
+		p2xqla = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_l", param2=p2xqla}) end
+        if s.name == "stones:spirblux_ql"	then 
+		p2xqlb = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_l", param2=p2xqlb}) end
+
+
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -613,7 +711,7 @@ minetest.register_entity("tool:row", {
 	visual_size = {x=0.2, y=0.2},
 	textures = {"rushout.png"},
 	velocity = 7,
-	light_source = 12,
+	light_source = 14,
 	selection_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
 	collision_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
 	on_step = function(self, dtime)
@@ -2021,6 +2119,66 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diagsterps_2wl"	then 
 		p2d2wlb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_2wl", param2=p2d2wlb}) end
+        if s.name == "stones:s_h52l"	then 
+		p2dhla = s.param2
+		minetest.env:set_node(p, {name="stones:sb_h52l", param2=p2dhla}) end
+        if s.name == "stones:sb_h52l"	then 
+		p2dhlb = s.param2
+		minetest.env:set_node(p, {name="stones:s_h52l", param2=p2dhlb}) end
+        if s.name == "stones:s_h52r"	then 
+		p2dhra = s.param2
+		minetest.env:set_node(p, {name="stones:sb_h52r", param2=p2dhra}) end
+        if s.name == "stones:sb_h52r"	then 
+		p2dhrb = s.param2
+		minetest.env:set_node(p, {name="stones:s_h52r", param2=p2dhrb}) end
+        if s.name == "stones:s_62ur"	then 
+		p262a = s.param2
+		minetest.env:set_node(p, {name="stones:sb_62ur", param2=p262a}) end
+        if s.name == "stones:sb_62ur"	then 
+		p262b = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ur", param2=p262b}) end
+        if s.name == "stones:s_62ul"	then 
+		p262c = s.param2
+		minetest.env:set_node(p, {name="stones:sb_62ul", param2=p262c}) end
+        if s.name == "stones:sb_62ul"	then 
+		p262d = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ul", param2=p262d}) end
+        if s.name == "stones:spirstax_3r"	then 
+		p2x3ra = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_3r", param2=p2x3ra}) end
+        if s.name == "stones:spirblux_3r"	then 
+		p2x3rb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_3r", param2=p2x3rb}) end
+        if s.name == "stones:spirstax_hr"	then 
+		p2xhra = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_hr", param2=p2xhra}) end
+        if s.name == "stones:spirblux_hr"	then 
+		p2xhrb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_hr", param2=p2xhrb}) end
+        if s.name == "stones:spirstax_qr"	then 
+		p2xqra = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_qr", param2=p2xqra}) end
+        if s.name == "stones:spirblux_qr"	then 
+		p2xqrb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_qr", param2=p2xqrb}) end
+        if s.name == "stones:spirstax_3l"	then 
+		p2x3la = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_3l", param2=p2x3la}) end
+        if s.name == "stones:spirblux_3l"	then 
+		p2x3lb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_3l", param2=p2x3lb}) end
+        if s.name == "stones:spirstax_hl"	then 
+		p2xhla = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_hl", param2=p2xhla}) end
+        if s.name == "stones:spirblux_hl"	then 
+		p2xhlb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_hl", param2=p2xhlb}) end
+        if s.name == "stones:spirstax_ql"	then 
+		p2xqla = s.param2
+		minetest.env:set_node(p, {name="stones:spirblux_ql", param2=p2xqla}) end
+        if s.name == "stones:spirblux_ql"	then 
+		p2xqlb = s.param2
+		minetest.env:set_node(p, {name="stones:spirstax_ql", param2=p2xqlb}) end
 	end
 
 minetest.add_particlespawner({
@@ -2063,7 +2221,7 @@ minetest.register_tool("tool:pok", {
 		itemstack:take_item()
 		return itemstack
 	end,
-	light_source = 12,
+	light_source = 14,
 })
 
 minetest.register_tool("tool:rok", {
@@ -2086,7 +2244,7 @@ minetest.register_tool("tool:rok", {
 		itemstack:take_item()
 		return itemstack
 	end,
-	light_source = 5,
+	light_source = 9,
     groups = {not_in_creative_inventory=1}
 })
 

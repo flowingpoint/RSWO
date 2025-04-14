@@ -284,8 +284,20 @@ spircol_8			Spiral Step Column 8 Sides
 spircobl_8*			Spiral Step Column 8 Sides Rubble
 spirstax_r			Spiral StepSide Extd Right
 spirblux_r*			Spiral StepSide Extd Right Rubble
+spirstax_3r			Spiral StepSide Extd 3/4 Right
+spirblux_3r*			Spiral StepSide Extd 3/4 Right Rubble
+spirstax_qr*		Spiral StepSide Extd Quart Right
+spirblux_qr*			Spiral StepSide Extd Quart Right Rubble
+spirstax_hr*			Spiral StepSide Extd Half Right
+spirblux_hr*		Spiral StepSide Extd Half Right Rubble
 spirstax_l			Spiral StepSide Extd Left
 spirblux_l*			Spiral StepSide Extd Left Rubble
+spirstax_3l			Spiral StepSide Extd 3/4 Left
+spirblux_3l*			Spiral StepSide Extd 3/4 Left Rubble
+spirstax_ql*			Spiral StepSide Extd Quart Left
+spirblux_ql*			Spiral StepSide Extd Quart Left Rubble
+spirstax_hl*			Spiral StepSide Extd Half Left
+spirblux_hl*			Spiral StepSide Extd Half Left Rubble
 spirout_l			Spiral Step-Out Extd Left
 spirbut_l*			Spiral Step-Out Extd Left Rubble
 spirout_r			Spiral Step-Out Extd Right

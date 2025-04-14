@@ -1420,6 +1420,153 @@ minetest.register_node("stones:spirblux_r", {
 	mesh = "spirstax_r.obj"
 })
 
+minetest.register_node("stones:spirstax_3r", {
+	description = "Spiral StepSide Extd 3/4 Right",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_3r",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0,0},
+{-0.5,-0.5,0, 0.5,0.5,0.5},
+{0.5,-0.5,-0.45, 0.55,0,-0.0312},
+{0.55,-0.5,-0.4, 0.6,0,-0.125},
+{0.6,-0.5,-0.3536, 0.6464,0,-0.24},
+{0.5,-0.5,0.0312, 0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0,0},
+{-0.5,-0.5,0, 0.5,0.5,0.5},
+{0.5,-0.5,-0.45, 0.55,0,-0.0312},
+{0.55,-0.5,-0.4, 0.6,0,-0.125},
+{0.6,-0.5,-0.3536, 0.6464,0,-0.24},
+{0.5,-0.5,0.0312, 0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_3r.obj"
+})
+minetest.register_node("stones:spirblux_3r", {
+	description = "Spiral StepSide Extd 3/4 Right Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_3r",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0,0},
+{-0.5,-0.5,0, 0.5,0.5,0.5},
+{0.5,-0.5,-0.45, 0.55,0,-0.0312},
+{0.55,-0.5,-0.4, 0.6,0,-0.125},
+{0.6,-0.5,-0.3536, 0.6464,0,-0.24},
+{0.5,-0.5,0.0312, 0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0,0},
+{-0.5,-0.5,0, 0.5,0.5,0.5},
+{0.5,-0.5,-0.45, 0.55,0,-0.0312},
+{0.55,-0.5,-0.4, 0.6,0,-0.125},
+{0.6,-0.5,-0.3536, 0.6464,0,-0.24},
+{0.5,-0.5,0.0312, 0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_3r.obj"
+})
+
+minetest.register_node("stones:spirstax_qr", {
+	description = "Spiral StepSide Extd Quart Right",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_qr",
+	collision_box={type="fixed",fixed={
+{-0.5,0,0,0.5,0.5,0.5},
+{0.5,0,0.0312,0.55,0.5,0.45},
+{0.55,0,0.125,0.6,0.5,0.4},
+{0.6,0,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,0,0,0.5,0.5,0.5},
+{0.5,0,0.0312,0.55,0.5,0.45},
+{0.55,0,0.125,0.6,0.5,0.4},
+{0.6,0,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_qr.obj"
+})
+
+minetest.register_node("stones:spirblux_qr", {
+	description = "Spiral StepSide Extd Quart Right Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_qr",
+	collision_box={type="fixed",fixed={
+{-0.5,0,0,0.5,0.5,0.5},
+{0.5,0,0.0312,0.55,0.5,0.45},
+{0.55,0,0.125,0.6,0.5,0.4},
+{0.6,0,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,0,0,0.5,0.5,0.5},
+{0.5,0,0.0312,0.55,0.5,0.45},
+{0.55,0,0.125,0.6,0.5,0.4},
+{0.6,0,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_qr.obj"
+})
+
+minetest.register_node("stones:spirstax_hr", {
+	description = "Spiral StepSide Extd Half Right",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_r",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,0,0.5,0.5,0.5},
+{0.5,-0.5,0.0312,0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,0,0.5,0.5,0.5},
+{0.5,-0.5,0.0312,0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_hr.obj"
+})
+
+minetest.register_node("stones:spirblux_hr", {
+	description = "Spiral StepSide Extd Half Right Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_r",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,0,0.5,0.5,0.5},
+{0.5,-0.5,0.0312,0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,0,0.5,0.5,0.5},
+{0.5,-0.5,0.0312,0.55,0.5,0.45},
+{0.55,-0.5,0.125,0.6,0.5,0.4},
+{0.6,-0.5,0.24,0.6464,0.5,0.3536}}},
+	drawtype="mesh",
+	mesh = "spirstax_hr.obj"
+})
+
 minetest.register_node("stones:spirstax_l", {
 	description = "Spiral StepSide Extd Left",
 	paramtype = "light",
@@ -1480,6 +1627,153 @@ minetest.register_node("stones:spirblux_l", {
 	mesh = "spirstax_l.obj"
 })
 
+minetest.register_node("stones:spirstax_3l", {
+	description = "Spiral StepSide Extd 3/4 Left",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_3l",
+	collision_box={type="fixed",fixed={
+{0,-0.5,-0.5,0.5,0,0.5},
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{0.0312,-0.5,-0.55, 0.45,0,-0.5},
+{0.125,-0.5,-0.6, 0.4,0,-0.55},
+{0.24,-0.5,-0.6464, 0.3536,0,-0.6},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{0,-0.5,-0.5,0.5,0,0.5},
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{0.0312,-0.5,-0.55, 0.45,0,-0.5},
+{0.125,-0.5,-0.6, 0.4,0,-0.55},
+{0.24,-0.5,-0.6464, 0.3536,0,-0.6},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_3l.obj"
+})
+
+minetest.register_node("stones:spirblux_3l", {
+	description = "Spiral StepSide Extd 3/4 Left Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_3l",
+	collision_box={type="fixed",fixed={
+{0,-0.5,-0.5,0.5,0,0.5},
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{0.0312,-0.5,-0.55, 0.45,0,-0.5},
+{0.125,-0.5,-0.6, 0.4,0,-0.55},
+{0.24,-0.5,-0.6464, 0.3536,0,-0.6},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{0,-0.5,-0.5,0.5,0,0.5},
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{0.0312,-0.5,-0.55, 0.45,0,-0.5},
+{0.125,-0.5,-0.6, 0.4,0,-0.55},
+{0.24,-0.5,-0.6464, 0.3536,0,-0.6},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_3l.obj"
+})
+
+minetest.register_node("stones:spirstax_ql", {
+	description = "Spiral StepSide Extd Quart Left",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_ql",
+	collision_box={type="fixed",fixed={
+{-0.5,0,-0.5,0,0.5,0.5},
+{-0.45,0,-0.55, -0.0312,0.5,-0.5},
+{-0.4,0,-0.6, -0.125,0.5,-0.55},
+{-0.3536,0,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{-0.5,0,-0.5,0,0.5,0.5},
+{-0.45,0,-0.55, -0.0312,0.5,-0.5},
+{-0.4,0,-0.6, -0.125,0.5,-0.55},
+{-0.3536,0,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_ql.obj"
+})
+
+minetest.register_node("stones:spirblux_ql", {
+	description = "Spiral StepSide Extd Quart Left Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_ql",
+	collision_box={type="fixed",fixed={
+{-0.5,0,-0.5,0,0.5,0.5},
+{-0.45,0,-0.55, -0.0312,0.5,-0.5},
+{-0.4,0,-0.6, -0.125,0.5,-0.55},
+{-0.3536,0,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{-0.5,0,-0.5,0,0.5,0.5},
+{-0.45,0,-0.55, -0.0312,0.5,-0.5},
+{-0.4,0,-0.6, -0.125,0.5,-0.55},
+{-0.3536,0,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_ql.obj"
+})
+
+minetest.register_node("stones:spirstax_hl", {
+	description = "Spiral StepSide Extd Half Left",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirstax_hl",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_hl.obj"
+})
+
+minetest.register_node("stones:spirblux_hl", {
+	description = "Spiral StepSide Extd Half Left Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirblux_l",
+	collision_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	selection_box={type="fixed",fixed={
+{-0.5,-0.5,-0.5,0,0.5,0.5},
+{-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
+{-0.4,-0.5,-0.6, -0.125,0.5,-0.55},
+{-0.3536,-0.5,-0.6464, -0.24,0.5,-0.6}}},
+	drawtype="mesh",
+	mesh = "spirstax_hl.obj"
+})
 
 minetest.register_node("stones:spirout_r", {
 	description = "Spiral Step-Out Extd Right",

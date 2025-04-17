@@ -3590,7 +3590,7 @@ minetest.register_node("stones:bear",{
 	description = "Bear",
 	inventory_image = "bear_inv.png",
 	drawtype = "mesh",
-    mesh = "bear9.obj",
+    mesh = "bear.obj",
 	visual_scale = 0.07,
 	tiles = {"rock.png"},
 	paramtype = "light",

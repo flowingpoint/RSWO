@@ -55,6 +55,46 @@ minetest.register_node("stones:shrub", {
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}
 })
 
+minetest.register_node("stones:delum", {
+	description = "Dodeca-Lum",
+	paramtype = "light",
+	light_source = 14,
+	paramtype2 = "facedir",
+	tiles = {{name="C16x4608.png", animation = {type = "vertical_frames", length=31.8}}},
+	inventory_image = "denum.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:denum",
+	selection_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	collision_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	drawtype = "mesh",
+	mesh = "dedalum.obj",
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "stones:denum", param2 = node.param2})
+	end,
+})
+
+minetest.register_node("stones:denum", {
+	description = "Dodeca-Lum-Nil",
+	paramtype = "light",
+	light_source = 0,
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:denum",
+	inventory_image = "denum.png",
+	selection_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	collision_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	drawtype = "mesh",
+	mesh = "dedalum.obj",
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "stones:delum", param2 = node.param2})
+	end,
+})
+
 minetest.register_node("stones:isokar", {
 	description = "Icosahedron Flamed",
 	paramtype = "light",

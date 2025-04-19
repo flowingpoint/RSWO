@@ -365,7 +365,7 @@ minetest.register_node("stones:rushrock_8", {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"rushrock_8.png", "rushrock_8.png^[transformR90", {name = "dirt.png", tileable_vertical = true}, {name = "rushrock_0.png^[transformR90", tileable_vertical = true}, {name = "rushrock_0.png^[transformR270", tileable_vertical = true}, {name = "dirt.png", tileable_vertical = true}},
+	tiles = {"rushrock_8.png", "rushrock_8.png^[transformR90", {name = "dirt.png", tileable_vertical = true}, {name = "rushrock_0.png^[transformR90", tileable_vertical = true}, {name = "rushrock_0.png^[transformR90^[transformFX", tileable_vertical = true}, {name = "dirt.png", tileable_vertical = true}},
 	groups = {cvol=0.125, cracky=2, soil=1},
 	light_source = 0,
 	drop = "stones:rushrock_8",

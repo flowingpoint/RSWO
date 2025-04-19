@@ -3590,7 +3590,7 @@ minetest.register_node("stones:bear",{
 	description = "Bear",
 	inventory_image = "bear_inv.png",
 	drawtype = "mesh",
-    mesh = "bear.obj",
+    mesh = "bear9.obj",
 	visual_scale = 0.07,
 	tiles = {"rock.png"},
 	paramtype = "light",
@@ -3603,6 +3603,8 @@ minetest.register_node("stones:bear",{
 {-0.5,-0.5,-1,0.5,-0.49,1}}},
     collision_box = {type = "fixed", fixed = {{-0.3, 0.1, -0.8, 0.3, 0.6, 0.5},{-0.5,-0.5,-1,0.5,-0.49,1}}},
 })
+
+
 
 --{-0.04,-0.45,-0.04, 0.04,0.45,0.04} covered by coin
 --{-0.5,-0.5,-0.5, 0.5,0.5,0.5} e-z pickings

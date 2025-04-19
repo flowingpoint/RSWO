@@ -319,6 +319,8 @@ stones: {
 plot				Plot
 prob*				Plot Rubble
 shrub				Dry Shrub
+delum*               Dodeca-Lum
+denum*               Dodeca-Lum-Nil
 isokar*				Icosahedron Flamed
 isodark				Icosahedron Dark
 isocol				Pentagonal Column

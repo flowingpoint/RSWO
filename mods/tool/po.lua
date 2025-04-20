@@ -636,7 +636,21 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:spirblux_ql"	then 
 		p2xqlb = s.param2
 		minetest.env:set_node(p, {name="stones:spirblux_l", param2=p2xqlb}) end
-
+	if s.name == "stones:rushrock_21u"	then 
+		p2r21ua = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_21u", param2=p2r21ua}) end
+        if s.name == "stones:brushrock_21u"	then 
+		p2r21ub = s.param2
+		minetest.env:set_node(p, {name="stones:blushrock_21u", param2=p2r21ub}) end
+        if s.name == "stones:blushrock_21u"	then 
+		p2r21uc = s.param2
+		minetest.env:set_node(p, {name="stones:brushrock_21u", param2=p2r21uc}) end
+        if s.name == "stones:rublish_21u"	then 
+		p2r21uxa = s.param2
+		minetest.env:set_node(p, {name="stones:rublish_21", param2=p2r21uxa}) end
+        if s.name == "stones:rublish_21"	then 
+		p2r21uxb = s.param2
+		minetest.env:set_node(p, {name="stones:rublish_21u", param2=p2r21uxb}) end
 
 minetest.add_particlespawner({
 		amount = 50,
@@ -2179,7 +2193,17 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:spirblux_ql"	then 
 		p2xqlb = s.param2
 		minetest.env:set_node(p, {name="stones:spirstax_ql", param2=p2xqlb}) end
+	if s.name == "stones:rushrock_21u"	then 
+		p2r21ua = s.param2
+		minetest.env:set_node(p, {name="stones:rublish_21u", param2=p2r21ua}) end
+        if s.name == "stones:rublish_21u"	then 
+		p2r21ub = s.param2
+		minetest.env:set_node(p, {name="stones:rushrock_21u", param2=p2r21ub}) end
+        if s.name == "stones:brushrock_21u"	then 
+		p2r21uc = s.param2
+		minetest.env:set_node(p, {name="stones:rushrock_21u", param2=p2r21uc}) end
 	end
+	
 
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

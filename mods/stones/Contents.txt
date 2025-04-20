@@ -2,7 +2,7 @@ Stones
 sto1.lua
 stones: {
 rock				Rock
-rubble				Rubble
+rubble*				Rubble
 rush				Rush
 brush				Brush
 blush*				Lush Brush
@@ -60,6 +60,10 @@ brushrock_21*		4Brush 3Rock /8
 rushrock_21		    4Rush 3Rock /8
 rublish_21*		    4Rush 3Rock /8 Rubble
 blushrock_21*        4Blush 3Rock /8
+brushrock_21u*		4Brush 3Rock /8
+rushrock_21u*		    4Rush 3Rock /8
+rublish_21u*		    4Rush 3Rock /8 Rubble
+blushrock_21u*        4Blush 3Rock /8
 brushrock_c*			Brush Curved Into Rock
 rushrock_c			Rush Curved Into Rock
 rublish_c*			Rush Curved Into Rock Rubble
@@ -334,7 +338,7 @@ stru*				Steps Rubble
 diagsteps_13		Quart to 3 Quart Steps
 diagsterps_13*		Quart to 3 Quart Steps Rubble
 diagsteps_31		3 Quart to Quart Steps
-diagsterps_31		3 Quart to Quart Steps Rubble
+diagsterps_31*		3 Quart to Quart Steps Rubble
 cish				Round Corner Slab
 crish*				Round Corner Slab Rubble
 cis					Round Corner
@@ -383,7 +387,7 @@ dragon              Classic Spyro Dragon Statue
 kow                 Cow Statue
 bear                Bear Statue
 
---Those labelled '*' are not in the creative 9-page menu
+--Those labelled '*' are not in the creative 8-page menu
 
 sus.lua
 stones:[

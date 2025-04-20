@@ -957,7 +957,7 @@ minetest.register_node("stones:arschil", {
 	tiles = {"rock.png"},
 	drawtype = "mesh",
 	mesh = "arschil.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {-0.5,-0.4375,0.4938, -0.4688,0.5,0.5},
 {-0.4688,-0.2344,0.4813, -0.4063,0.5,0.5},
@@ -991,7 +991,7 @@ minetest.register_node("stones:aruschil", {
 	tiles = {"rubble.png"},
 	drawtype = "mesh",
 	mesh = "arschil.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {-0.5,-0.4375,0.4938, -0.4688,0.5,0.5},
 {-0.4688,-0.2344,0.4813, -0.4063,0.5,0.5},
@@ -1025,7 +1025,7 @@ minetest.register_node("stones:arcshil", {
 	tiles = {"rock.png"},
 	drawtype = "mesh",
 	mesh = "arcshil.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {-0.5,-0.4375,0, -0.4688,0.5,0.5},
 {-0.4688,-0.2344,0.0469, -0.4063,0.5,0.5},
@@ -1059,7 +1059,7 @@ minetest.register_node("stones:arucshil", {
 	tiles = {"rubble.png"},
 	drawtype = "mesh",
 	mesh = "arcshil.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {-0.5,-0.4375,0, -0.4688,0.5,0.5},
 {-0.4688,-0.2344,0.0469, -0.4063,0.5,0.5},
@@ -1094,7 +1094,7 @@ minetest.register_node("stones:arschir", {
 	tiles = {"rock.png"},
 	drawtype = "mesh",
 	mesh = "arschir.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {0.4688,-0.4375,0.4906, 0.5,0.5,0.5},
 {0.4063,-0.2344,0.4844, 0.4688,0.5,0.5},
@@ -1128,7 +1128,7 @@ minetest.register_node("stones:aruschir", {
 	tiles = {"rubble.png"},
 	drawtype = "mesh",
 	mesh = "arschir.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {0.4688,-0.4375,0.4906, 0.5,0.5,0.5},
 {0.4063,-0.2344,0.4844, 0.4688,0.5,0.5},
@@ -1162,7 +1162,7 @@ minetest.register_node("stones:arcshir", {
 	tiles = {"rock.png"},
 	drawtype = "mesh",
 	mesh = "arcshir.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {0.4688,-0.4375,0.0156, 0.5,0.5,0.5},
 {0.4063,-0.2344,0.0469, 0.4688,0.5,0.5},
@@ -1196,7 +1196,7 @@ minetest.register_node("stones:arucshir", {
 	tiles = {"rubble.png"},
 	drawtype = "mesh",
 	mesh = "arcshir.obj",
-	climbable = true,
+	climbable = false,
 	selection_box = {type = "fixed", fixed = {
 {0.4688,-0.4375,0.0156, 0.5,0.5,0.5},
 {0.4063,-0.2344,0.0469, 0.4688,0.5,0.5},

@@ -268,7 +268,7 @@ minetest.register_node("tool:tess", {
 	pointable = true,
 	sunlight_propagates = true,
 	walkable = false,
-	groups = {coinvalue=1, cracky=3, not_in_creative_inventory=1},
+	groups = {cracky=3, not_in_creative_inventory=1},
 	drop = "tool:tess",
 	use_texture_alpha = "clip",
 	light_source = 14

@@ -35,6 +35,7 @@ minetest.register_node("tool:koin_1", {
 	groups = {coinvalue=1, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_1",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_2", {
@@ -57,6 +58,7 @@ minetest.register_node("tool:koin_2", {
 	groups = {coinvalue=2, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_2",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_3", {
@@ -79,6 +81,7 @@ minetest.register_node("tool:koin_3", {
 	groups = {coinvalue=3, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_3",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_4", {
@@ -101,6 +104,7 @@ minetest.register_node("tool:koin_4", {
 	groups = {coinvalue=4, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_4",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_5", {
@@ -123,6 +127,7 @@ minetest.register_node("tool:koin_5", {
 	groups = {coinvalue=5, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_5",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_6", {
@@ -145,6 +150,7 @@ minetest.register_node("tool:koin_6", {
 	groups = {coinvalue=6, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_6",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koin_7", {
@@ -167,6 +173,7 @@ minetest.register_node("tool:koin_7", {
 	groups = {coinvalue=7, cracky=3, not_in_creative_inventory=1},
 	drop = "tool:koin_7",
 	use_texture_alpha = "clip",
+	light_source = 6
 })
 
 minetest.register_node("tool:koins", {
@@ -187,7 +194,8 @@ minetest.register_node("tool:koins", {
 	sunlight_propagates = false,
 	walkable = true,
 	groups = {coinvalue=8, cracky=3, not_in_creative_inventory=1},
-	drop = "tool:koins"
+	drop = "tool:koins",
+	light_source = 7
 })
 
 minetest.register_entity("tool:flip", {
@@ -239,4 +247,29 @@ minetest.register_entity("tool:flip", {
     minetest.env:set_node(q, {name="tool:koins", param2=0}) 
         end
     end
+})
+
+---
+--tesseract
+
+minetest.register_node("tool:tess", {
+	description = "Classic Tesseract",
+	paramtype = "light",
+	paramtype2 = "facedir",
+    tiles = {{name = "tess32x384.png", animation = {type = "vertical_frames", length = 1}}},
+	drawtype = "mesh",
+	mesh = "tess.obj",
+	inventory_image = "tess.png",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+	visual_scale = 1,
+	pointable = true,
+	sunlight_propagates = true,
+	walkable = false,
+	groups = {coinvalue=1, cracky=3, not_in_creative_inventory=1},
+	drop = "tool:tess",
+	use_texture_alpha = "clip",
+	light_source = 14
 })

@@ -38,7 +38,7 @@ minetest.register_node("stones:c8l1", {
 })
 
 minetest.register_node("stones:c8l2", {
-	description = "8-Cycle R5/2 Diagstep L2",
+	description = "*2 8-Cycle R5/2 Diagstep L2",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -87,7 +87,7 @@ minetest.register_node("stones:c8l2", {
 })
 
 minetest.register_node("stones:c8l2C", {
-	description = "8-Cycle R5/2 Diagstep L2 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep L2 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -154,7 +154,7 @@ minetest.register_node("stones:c8l3", {
 })
 
 minetest.register_node("stones:c8l4", {
-	description = "8-Cycle R5/2 Diagstep L4",
+	description = "*2 8-Cycle R5/2 Diagstep L4",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -201,7 +201,7 @@ minetest.register_node("stones:c8l4", {
 })
 
 minetest.register_node("stones:c8l4C", {
-	description = "8-Cycle R5/2 Diagstep L4 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep L4 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -277,7 +277,7 @@ minetest.register_node("stones:c8l5", {
 })
 
 minetest.register_node("stones:c8l6", {
-	description = "8-Cycle R5/2 Diagstep L6",
+	description = "*2 8-Cycle R5/2 Diagstep L6",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -318,7 +318,7 @@ minetest.register_node("stones:c8l6", {
 })
 
 minetest.register_node("stones:c8l6C", {
-	description = "8-Cycle R5/2 Diagstep L6 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep L6 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -386,7 +386,7 @@ minetest.register_node("stones:c8l7", {
 })
 
 minetest.register_node("stones:c8l8", {
-	description = "8-Cycle R5/2 Diagstep L8",
+	description = "*2 8-Cycle R5/2 Diagstep L8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -433,7 +433,7 @@ minetest.register_node("stones:c8l8", {
 })
 
 minetest.register_node("stones:c8l8C", {
-	description = "8-Cycle R5/2 Diagstep L8 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep L8 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -509,7 +509,7 @@ minetest.register_node("stones:c8l9", {
 })
 
 minetest.register_node("stones:c8la", {
-	description = "8-Cycle R5/2 Diagstep LA",
+	description = "*2 8-Cycle R5/2 Diagstep LA",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -546,7 +546,7 @@ minetest.register_node("stones:c8la", {
 })
 
 minetest.register_node("stones:c8laC", {
-	description = "8-Cycle R5/2 Diagstep LA Covol",
+	description = "*2 8-Cycle R5/2 Diagstep LA Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -571,7 +571,7 @@ minetest.register_node("stones:c8laC", {
 })
 
 minetest.register_node("stones:c8lb", {
-	description = "8-Cycle R5/2 Diagstep LB",
+	description = "*2 8-Cycle R5/2 Diagstep LB",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -614,7 +614,7 @@ minetest.register_node("stones:c8lb", {
 })
 
 minetest.register_node("stones:c8lbC", {
-	description = "8-Cycle R5/2 Diagstep LB Covol",
+	description = "*2 8-Cycle R5/2 Diagstep LB Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -676,7 +676,7 @@ minetest.register_node("stones:c8lc", {
 })
 
 minetest.register_node("stones:c8ld", {
-	description = "8-Cycle R5/2 Diagstep LD",
+	description = "*2 8-Cycle R5/2 Diagstep LD",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -723,7 +723,7 @@ minetest.register_node("stones:c8ld", {
 })
 
 minetest.register_node("stones:c8ldC", {
-	description = "8-Cycle R5/2 Diagstep LD Covol",
+	description = "*2 8-Cycle R5/2 Diagstep LD Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -795,7 +795,7 @@ minetest.register_node("stones:c8le", {
 })
 
 minetest.register_node("stones:c8lf", {
-	description = "8-Cycle R5/2 Diagstep LF",
+	description = "*2 8-Cycle R5/2 Diagstep LF",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -823,7 +823,7 @@ minetest.register_node("stones:c8lf", {
 })
 
 minetest.register_node("stones:c8lfC", {
-	description = "8-Cycle R5/2 Diagstep LF Covol",
+	description = "*2 8-Cycle R5/2 Diagstep LF Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -893,7 +893,7 @@ minetest.register_node("stones:c8r1", {
 })
 
 minetest.register_node("stones:c8r2", {
-	description = "8-Cycle R5/2 Diagstep R2",
+	description = "*2 8-Cycle R5/2 Diagstep R2",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -944,7 +944,7 @@ minetest.register_node("stones:c8r2", {
 })
 
 minetest.register_node("stones:c8r2C", {
-	description = "8-Cycle R5/2 Diagstep R2 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep R2 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1010,7 +1010,7 @@ minetest.register_node("stones:c8r3", {
 })
 
 minetest.register_node("stones:c8r4", {
-	description = "8-Cycle R5/2 Diagstep R4",
+	description = "*2 8-Cycle R5/2 Diagstep R4",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1059,7 +1059,7 @@ minetest.register_node("stones:c8r4", {
 })
 
 minetest.register_node("stones:c8r4C", {
-	description = "8-Cycle R5/2 Diagstep R4 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep R4 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1136,7 +1136,7 @@ minetest.register_node("stones:c8r5", {
 })
 
 minetest.register_node("stones:c8r6", {
-	description = "8-Cycle R5/2 Diagstep R6",
+	description = "*2 8-Cycle R5/2 Diagstep R6",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1183,7 +1183,7 @@ minetest.register_node("stones:c8r6", {
 })
 
 minetest.register_node("stones:c8r6C", {
-	description = "8-Cycle R5/2 Diagstep R6 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep R6 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1261,7 +1261,7 @@ minetest.register_node("stones:c8r7", {
 })
 
 minetest.register_node("stones:c8r8", {
-	description = "8-Cycle R5/2 Diagstep R8",
+	description = "*2 8-Cycle R5/2 Diagstep R8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1316,7 +1316,7 @@ minetest.register_node("stones:c8r8", {
 })
 
 minetest.register_node("stones:c8r8C", {
-	description = "8-Cycle R5/2 Diagstep R8 Covol",
+	description = "*2 8-Cycle R5/2 Diagstep R8 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1402,7 +1402,7 @@ minetest.register_node("stones:c8r9", {
 })
 
 minetest.register_node("stones:c8ra", {
-	description = "8-Cycle R5/2 Diagstep RA",
+	description = "*2 8-Cycle R5/2 Diagstep RA",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1439,7 +1439,7 @@ minetest.register_node("stones:c8ra", {
 })
 
 minetest.register_node("stones:c8raC", {
-	description = "8-Cycle R5/2 Diagstep RA Covol",
+	description = "*2 8-Cycle R5/2 Diagstep RA Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1464,7 +1464,7 @@ minetest.register_node("stones:c8raC", {
 })
 
 minetest.register_node("stones:c8rb", {
-	description = "8-Cycle R5/2 Diagstep RB",
+	description = "*2 8-Cycle R5/2 Diagstep RB",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1509,7 +1509,7 @@ minetest.register_node("stones:c8rb", {
 })
 
 minetest.register_node("stones:c8rbC", {
-	description = "8-Cycle R5/2 Diagstep RB Covol",
+	description = "*2 8-Cycle R5/2 Diagstep RB Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1573,7 +1573,7 @@ minetest.register_node("stones:c8rc", {
 })
 
 minetest.register_node("stones:c8rd", {
-	description = "8-Cycle R5/2 Diagstep RD",
+	description = "*2 8-Cycle R5/2 Diagstep RD",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1622,7 +1622,7 @@ minetest.register_node("stones:c8rd", {
 })
 
 minetest.register_node("stones:c8rdC", {
-	description = "8-Cycle R5/2 Diagstep RD Covol",
+	description = "*2 8-Cycle R5/2 Diagstep RD Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1698,7 +1698,7 @@ minetest.register_node("stones:c8re", {
 })
 
 minetest.register_node("stones:c8rf", {
-	description = "8-Cycle R5/2 Diagstep RF",
+	description = "*2 8-Cycle R5/2 Diagstep RF",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1741,7 +1741,7 @@ minetest.register_node("stones:c8rf", {
 })
 
 minetest.register_node("stones:c8rfC", {
-	description = "8-Cycle R5/2 Diagstep RF Covol",
+	description = "*2 8-Cycle R5/2 Diagstep RF Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1809,7 +1809,7 @@ minetest.register_node("stones:b8l1", {
 })
 
 minetest.register_node("stones:b8l2", {
-	description = "8-Cycle R5/2 Diagstep L2 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L2 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1858,7 +1858,7 @@ minetest.register_node("stones:b8l2", {
 })
 
 minetest.register_node("stones:b8l2C", {
-	description = "8-Cycle R5/2 Diagstep L2 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L2 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1924,7 +1924,7 @@ minetest.register_node("stones:b8l3", {
 })
 
 minetest.register_node("stones:b8l4", {
-	description = "8-Cycle R5/2 Diagstep L4 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1971,7 +1971,7 @@ minetest.register_node("stones:b8l4", {
 })
 
 minetest.register_node("stones:b8l4C", {
-	description = "8-Cycle R5/2 Diagstep L4 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L4 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2047,7 +2047,7 @@ minetest.register_node("stones:b8l5", {
 })
 
 minetest.register_node("stones:b8l6", {
-	description = "8-Cycle R5/2 Diagstep L6 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L6 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2088,7 +2088,7 @@ minetest.register_node("stones:b8l6", {
 })
 
 minetest.register_node("stones:b8l6C", {
-	description = "8-Cycle R5/2 Diagstep L6 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L6 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2156,7 +2156,7 @@ minetest.register_node("stones:b8l7", {
 })
 
 minetest.register_node("stones:b8l8", {
-	description = "8-Cycle R5/2 Diagstep L8 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2187,7 +2187,7 @@ minetest.register_node("stones:b8l8", {
 })
 
 minetest.register_node("stones:b8l8C", {
-	description = "8-Cycle R5/2 Diagstep L8 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L8 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2263,7 +2263,7 @@ minetest.register_node("stones:b8l9", {
 })
 
 minetest.register_node("stones:b8la", {
-	description = "8-Cycle R5/2 Diagstep LA Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LA Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2300,7 +2300,7 @@ minetest.register_node("stones:b8la", {
 })
 
 minetest.register_node("stones:b8laC", {
-	description = "8-Cycle R5/2 Diagstep LA Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LA Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2325,7 +2325,7 @@ minetest.register_node("stones:b8laC", {
 })
 
 minetest.register_node("stones:b8lb", {
-	description = "8-Cycle R5/2 Diagstep LB Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LB Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2368,7 +2368,7 @@ minetest.register_node("stones:b8lb", {
 })
 
 minetest.register_node("stones:b8lbC", {
-	description = "8-Cycle R5/2 Diagstep LB Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LB Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2430,7 +2430,7 @@ minetest.register_node("stones:b8lc", {
 })
 
 minetest.register_node("stones:b8ld", {
-	description = "8-Cycle R5/2 Diagstep LD Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LD Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2477,7 +2477,7 @@ minetest.register_node("stones:b8ld", {
 })
 
 minetest.register_node("stones:b8ldC", {
-	description = "8-Cycle R5/2 Diagstep LD Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LD Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2549,7 +2549,7 @@ minetest.register_node("stones:b8le", {
 })
 
 minetest.register_node("stones:b8lf", {
-	description = "8-Cycle R5/2 Diagstep LF Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LF Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2590,7 +2590,7 @@ minetest.register_node("stones:b8lf", {
 })
 
 minetest.register_node("stones:b8lfC", {
-	description = "8-Cycle R5/2 Diagstep LF Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LF Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2660,7 +2660,7 @@ minetest.register_node("stones:b8r1", {
 })
 
 minetest.register_node("stones:b8r2", {
-	description = "8-Cycle R5/2 Diagstep R2 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R2 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2711,7 +2711,7 @@ minetest.register_node("stones:b8r2", {
 })
 
 minetest.register_node("stones:b8r2C", {
-	description = "8-Cycle R5/2 Diagstep R2 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R2 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2777,7 +2777,7 @@ minetest.register_node("stones:b8r3", {
 })
 
 minetest.register_node("stones:b8r4", {
-	description = "8-Cycle R5/2 Diagstep R4 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2826,7 +2826,7 @@ minetest.register_node("stones:b8r4", {
 })
 
 minetest.register_node("stones:b8r4C", {
-	description = "8-Cycle R5/2 Diagstep R4 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R4 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2902,7 +2902,7 @@ minetest.register_node("stones:b8r5", {
 })
 
 minetest.register_node("stones:b8r6", {
-	description = "8-Cycle R5/2 Diagstep R6 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R6 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2949,7 +2949,7 @@ minetest.register_node("stones:b8r6", {
 })
 
 minetest.register_node("stones:b8r6C", {
-	description = "8-Cycle R5/2 Diagstep R6 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R6 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3027,7 +3027,7 @@ minetest.register_node("stones:b8r7", {
 })
 
 minetest.register_node("stones:b8r8", {
-	description = "8-Cycle R5/2 Diagstep R8 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3082,7 +3082,7 @@ minetest.register_node("stones:b8r8", {
 })
 
 minetest.register_node("stones:b8r8C", {
-	description = "8-Cycle R5/2 Diagstep R8 Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R8 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3168,7 +3168,7 @@ minetest.register_node("stones:b8r9", {
 })
 
 minetest.register_node("stones:b8ra", {
-	description = "8-Cycle R5/2 Diagstep RA Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RA Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3205,7 +3205,7 @@ minetest.register_node("stones:b8ra", {
 })
 
 minetest.register_node("stones:b8raC", {
-	description = "8-Cycle R5/2 Diagstep RA Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RA Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3230,7 +3230,7 @@ minetest.register_node("stones:b8raC", {
 })
 
 minetest.register_node("stones:b8rb", {
-	description = "8-Cycle R5/2 Diagstep RB Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RB Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3275,7 +3275,7 @@ minetest.register_node("stones:b8rb", {
 })
 
 minetest.register_node("stones:b8rbC", {
-	description = "8-Cycle R5/2 Diagstep RB Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RB Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3339,7 +3339,7 @@ minetest.register_node("stones:b8rc", {
 })
 
 minetest.register_node("stones:b8rd", {
-	description = "8-Cycle R5/2 Diagstep RD Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RD Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3388,7 +3388,7 @@ minetest.register_node("stones:b8rd", {
 })
 
 minetest.register_node("stones:b8rdC", {
-	description = "8-Cycle R5/2 Diagstep RD Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RD Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3464,7 +3464,7 @@ minetest.register_node("stones:b8re", {
 })
 
 minetest.register_node("stones:b8rf", {
-	description = "8-Cycle R5/2 Diagstep RF Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RF Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3507,7 +3507,7 @@ minetest.register_node("stones:b8rf", {
 })
 
 minetest.register_node("stones:b8rfC", {
-	description = "8-Cycle R5/2 Diagstep RF Covol Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep RF Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

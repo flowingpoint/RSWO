@@ -1224,7 +1224,7 @@ minetest.register_node("stones:arucshir", {
 })
 
 minetest.register_node("stones:diagsteps_52s", {
-	description = "Steps R5/2 S",
+	description = "*2 Steps R5/2 S",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1269,7 +1269,7 @@ minetest.register_node("stones:diagsteps_52s", {
 })
 
 minetest.register_node("stones:diagsterps_52s", {
-	description = "Steps R5/2 S Rubble",
+	description = "*2 Steps R5/2 S Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1314,7 +1314,7 @@ minetest.register_node("stones:diagsterps_52s", {
 })
 
 minetest.register_node("stones:diagsteps_58s", {
-	description = "Steps R5/2 5/8 S",
+	description = "*2 Steps R5/2 5/8 S",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1357,7 +1357,7 @@ minetest.register_node("stones:diagsteps_58s", {
 })
 
 minetest.register_node("stones:diagsterps_58s", {
-	description = "Steps R5/2 5/8 S Rubble",
+	description = "*2 Steps R5/2 5/8 S Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1400,7 +1400,7 @@ minetest.register_node("stones:diagsterps_58s", {
 })
 
 minetest.register_node("stones:diagsteps_52z", {
-	description = "Steps R5/2 Z",
+	description = "*2 Steps R5/2 Z",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1445,7 +1445,7 @@ minetest.register_node("stones:diagsteps_52z", {
 })
 
 minetest.register_node("stones:diagsterps_52z", {
-	description = "Steps R5/2 Z Rubble",
+	description = "*2 Steps R5/2 Z Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1490,7 +1490,7 @@ minetest.register_node("stones:diagsterps_52z", {
 })
 
 minetest.register_node("stones:diagsteps_58z", {
-	description = "Steps R5/2 5/8 Z",
+	description = "*2 Steps R5/2 5/8 Z",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1533,7 +1533,7 @@ minetest.register_node("stones:diagsteps_58z", {
 })
 
 minetest.register_node("stones:diagsterps_58z", {
-	description = "Steps R5/2 5/8 Z Rubble",
+	description = "*2 Steps R5/2 5/8 Z Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

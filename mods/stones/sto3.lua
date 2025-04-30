@@ -1919,7 +1919,7 @@ minetest.register_node("stones:strubl_2q", {
 })
 
 minetest.register_node("stones:diagsteps_52lh", {
-	description = "Steps R5/2 Left to Horiz",
+	description = "*2 Steps R5/2 Left to Horiz",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1948,7 +1948,7 @@ minetest.register_node("stones:diagsteps_52lh", {
 })
 
 minetest.register_node("stones:diagsterps_52lh", {
-	description = "Steps R5/2 Left to Horiz Rubble",
+	description = "*2 Steps R5/2 Left to Horiz Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1977,7 +1977,7 @@ minetest.register_node("stones:diagsterps_52lh", {
 })
 
 minetest.register_node("stones:diagsteps_2wr", {
-	description = "Steps R5/2 2-way Right",
+	description = "*2 Steps R5/2 2-way Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2020,7 +2020,7 @@ minetest.register_node("stones:diagsteps_2wr", {
 })
 
 minetest.register_node("stones:diagsterps_2wr", {
-	description = "Steps R5/2 2-way Right Rubble",
+	description = "*2 Steps R5/2 2-way Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2063,7 +2063,7 @@ minetest.register_node("stones:diagsterps_2wr", {
 })
 
 minetest.register_node("stones:diagsteps_52rh", {
-	description = "Steps R5/2 Right to Horiz",
+	description = "*2 Steps R5/2 Right to Horiz",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2092,7 +2092,7 @@ minetest.register_node("stones:diagsteps_52rh", {
 })
 
 minetest.register_node("stones:diagsterps_52rh", {
-	description = "Steps R5/2 Right to Horiz Rubble",
+	description = "*2 Steps R5/2 Right to Horiz Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2121,7 +2121,7 @@ minetest.register_node("stones:diagsterps_52rh", {
 })
 
 minetest.register_node("stones:diagsteps_2wl", {
-	description = "Steps R5/2 2-way Left",
+	description = "*2 Steps R5/2 2-way Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2164,7 +2164,7 @@ minetest.register_node("stones:diagsteps_2wl", {
 })
 
 minetest.register_node("stones:diagsterps_2wl", {
-	description = "Steps R5/2 2-way Left Rubble",
+	description = "*2 Steps R5/2 2-way Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2207,7 +2207,7 @@ minetest.register_node("stones:diagsterps_2wl", {
 })
 
 minetest.register_node("stones:diagsteps_52rv", {
-	description = "Steps R5/2 Right to Vert",
+	description = "*2 Steps R5/2 Right to Vert",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2236,7 +2236,7 @@ minetest.register_node("stones:diagsteps_52rv", {
 })
 
 minetest.register_node("stones:diagsterps_52rv", {
-	description = "Steps R5/2 Right to Vertical Rubble",
+	description = "*2 Steps R5/2 Right to Vertical Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2265,7 +2265,7 @@ minetest.register_node("stones:diagsterps_52rv", {
 })
 
 minetest.register_node("stones:diagsteps_57vr", {
-	description = "Steps R5/2 7/8 Vert to Right",
+	description = "*2 Steps R5/2 7/8 Vert to Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2296,7 +2296,7 @@ minetest.register_node("stones:diagsteps_57vr", {
 })
 
 minetest.register_node("stones:diagsterps_57vr", {
-	description = "Steps R5/2 7/8 Vert to Right Rubble",
+	description = "*2 Steps R5/2 7/8 Vert to Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2327,7 +2327,7 @@ minetest.register_node("stones:diagsterps_57vr", {
 })
 
 minetest.register_node("stones:diagsteps_52lv", {
-	description = "Steps R5/2 Left to Vert",
+	description = "*2 Steps R5/2 Left to Vert",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2356,7 +2356,7 @@ minetest.register_node("stones:diagsteps_52lv", {
 })
 
 minetest.register_node("stones:diagsterps_52lv", {
-	description = "Steps R5/2 Left to Vert Rubble",
+	description = "*2 Steps R5/2 Left to Vert Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2385,7 +2385,7 @@ minetest.register_node("stones:diagsterps_52lv", {
 })
 
 minetest.register_node("stones:diagsteps_57vl", {
-	description = "Steps R5/2 7/8 Vert to Left",
+	description = "*2 Steps R5/2 7/8 Vert to Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2416,7 +2416,7 @@ minetest.register_node("stones:diagsteps_57vl", {
 })
 
 minetest.register_node("stones:diagsterps_57vl", {
-	description = "Steps R5/2 7/8 Vert to Left Rubble",
+	description = "*2 Steps R5/2 7/8 Vert to Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

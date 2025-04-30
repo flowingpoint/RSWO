@@ -1361,7 +1361,7 @@ minetest.register_node("stones:spircobl_8", {
 })
 
 minetest.register_node("stones:spirstax_r", {
-	description = "Spiral StepSide Extd Right",
+	description = "*4 Spiral StepSide Extd Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1391,7 +1391,7 @@ minetest.register_node("stones:spirstax_r", {
 })
 
 minetest.register_node("stones:spirblux_r", {
-	description = "Spiral StepSide Extd Right Rubble",
+	description = "*4 Spiral StepSide Extd Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1421,7 +1421,7 @@ minetest.register_node("stones:spirblux_r", {
 })
 
 minetest.register_node("stones:spirstax_3r", {
-	description = "Spiral StepSide Extd 3/4 Right",
+	description = "*4 Spiral StepSide Extd 3/4 Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1450,7 +1450,7 @@ minetest.register_node("stones:spirstax_3r", {
 	mesh = "spirstax_3r.obj"
 })
 minetest.register_node("stones:spirblux_3r", {
-	description = "Spiral StepSide Extd 3/4 Right Rubble",
+	description = "*4 Spiral StepSide Extd 3/4 Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1480,7 +1480,7 @@ minetest.register_node("stones:spirblux_3r", {
 })
 
 minetest.register_node("stones:spirstax_qr", {
-	description = "Spiral StepSide Extd Quart Right",
+	description = "*4 Spiral StepSide Extd Quart Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1502,7 +1502,7 @@ minetest.register_node("stones:spirstax_qr", {
 })
 
 minetest.register_node("stones:spirblux_qr", {
-	description = "Spiral StepSide Extd Quart Right Rubble",
+	description = "*4 Spiral StepSide Extd Quart Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1524,7 +1524,7 @@ minetest.register_node("stones:spirblux_qr", {
 })
 
 minetest.register_node("stones:spirstax_hr", {
-	description = "Spiral StepSide Extd Half Right",
+	description = "*4 Spiral StepSide Extd Half Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1546,7 +1546,7 @@ minetest.register_node("stones:spirstax_hr", {
 })
 
 minetest.register_node("stones:spirblux_hr", {
-	description = "Spiral StepSide Extd Half Right Rubble",
+	description = "*4 Spiral StepSide Extd Half Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1568,7 +1568,7 @@ minetest.register_node("stones:spirblux_hr", {
 })
 
 minetest.register_node("stones:spirstax_l", {
-	description = "Spiral StepSide Extd Left",
+	description = "*4 Spiral StepSide Extd Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1598,7 +1598,7 @@ minetest.register_node("stones:spirstax_l", {
 })
 
 minetest.register_node("stones:spirblux_l", {
-	description = "Spiral StepSide Extd Left Rubble",
+	description = "*4 Spiral StepSide Extd Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1628,7 +1628,7 @@ minetest.register_node("stones:spirblux_l", {
 })
 
 minetest.register_node("stones:spirstax_3l", {
-	description = "Spiral StepSide Extd 3/4 Left",
+	description = "*4 Spiral StepSide Extd 3/4 Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1658,7 +1658,7 @@ minetest.register_node("stones:spirstax_3l", {
 })
 
 minetest.register_node("stones:spirblux_3l", {
-	description = "Spiral StepSide Extd 3/4 Left Rubble",
+	description = "*4 Spiral StepSide Extd 3/4 Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1688,7 +1688,7 @@ minetest.register_node("stones:spirblux_3l", {
 })
 
 minetest.register_node("stones:spirstax_ql", {
-	description = "Spiral StepSide Extd Quart Left",
+	description = "*4 Spiral StepSide Extd Quart Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1710,7 +1710,7 @@ minetest.register_node("stones:spirstax_ql", {
 })
 
 minetest.register_node("stones:spirblux_ql", {
-	description = "Spiral StepSide Extd Quart Left Rubble",
+	description = "*4 Spiral StepSide Extd Quart Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1732,7 +1732,7 @@ minetest.register_node("stones:spirblux_ql", {
 })
 
 minetest.register_node("stones:spirstax_hl", {
-	description = "Spiral StepSide Extd Half Left",
+	description = "*4 Spiral StepSide Extd Half Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1754,7 +1754,7 @@ minetest.register_node("stones:spirstax_hl", {
 })
 
 minetest.register_node("stones:spirblux_hl", {
-	description = "Spiral StepSide Extd Half Left Rubble",
+	description = "*4 Spiral StepSide Extd Half Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

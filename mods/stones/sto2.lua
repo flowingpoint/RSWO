@@ -1445,7 +1445,7 @@ minetest.register_node("stones:sb_52hq", {
 
 
 minetest.register_node("stones:s_52ul", {
-	description = "R5/2 Slope HighHalf Left",
+	description = "*2 R5/2 Slope HighHalf Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1474,7 +1474,7 @@ minetest.register_node("stones:s_52ul", {
 })
 
 minetest.register_node("stones:sb_52ul", {
-	description = "R5/2 Slope HighHalf Left Rubble",
+	description = "*2 R5/2 Slope HighHalf Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1503,7 +1503,7 @@ minetest.register_node("stones:sb_52ul", {
 })
 
 minetest.register_node("stones:s_62ul", {
-	description = "R6/2 Slope HighHalf Left",
+	description = "*2 R6/2 Slope HighHalf Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1588,7 +1588,7 @@ minetest.register_node("stones:s_62ul", {
 })
 
 minetest.register_node("stones:sb_62ul", {
-	description = "R6/2 Slope HighHalf Left Rubble",
+	description = "*2 R6/2 Slope HighHalf Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1673,7 +1673,7 @@ minetest.register_node("stones:sb_62ul", {
 })
 
 minetest.register_node("stones:s_52ur", {
-	description = "R5/2 Slope HighHalf Right",
+	description = "*2 R5/2 Slope HighHalf Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1702,7 +1702,7 @@ minetest.register_node("stones:s_52ur", {
 })
 
 minetest.register_node("stones:sb_52ur", {
-	description = "R5/2 Slope HighHalf Right Rubble",
+	description = "*2 R5/2 Slope HighHalf Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1731,7 +1731,7 @@ minetest.register_node("stones:sb_52ur", {
 })
 
 minetest.register_node("stones:s_62ur", {
-	description = "R6/2 Slope HighHalf Right",
+	description = "*2 R6/2 Slope HighHalf Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1816,7 +1816,7 @@ minetest.register_node("stones:s_62ur", {
 })
 
 minetest.register_node("stones:sb_62ur", {
-	description = "R6/2 Slope HighHalf Right Rubble",
+	description = "*2 R6/2 Slope HighHalf Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

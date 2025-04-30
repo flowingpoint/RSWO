@@ -56,14 +56,14 @@ brushrock_2u*		Root 2 Brushrock Diagstep
 rushrock_2u		    Root 2 Rushrock Diagstep
 rublish_2u*		    Root 2 Rushrock Diagstep Rubble
 blushrock_2u*		Lush Root 2 Brushrock Diagstep
-brushrock_21*		4Brush 3Rock /8
-rushrock_21		    4Rush 3Rock /8
-rublish_21*		    4Rush 3Rock /8 Rubble
-blushrock_21*        4Blush 3Rock /8
-brushrock_21u*		4Brush 3Rock /8
-rushrock_21u*		    4Rush 3Rock /8
-rublish_21u*		    4Rush 3Rock /8 Rubble
-blushrock_21u*        4Blush 3Rock /8
+brushrock_21*		*2 4Brush 3Rock /8
+rushrock_21		    *2 4Rush 3Rock /8
+rublish_21*		    *2 4Rush 3Rock /8 Rubble
+blushrock_21*       *2 4Blush 3Rock /8
+brushrock_21u*		*2 8Brush 7Rock /16
+rushrock_21u*		*2 8Rush 7Rock /16
+rublish_21u*		*2 8Rush 7Rock /16 Rubble
+blushrock_21u*      *2 8Blush 7Rock /16
 brushrock_c*			Brush Curved Into Rock
 rushrock_c			Rush Curved Into Rock
 rublish_c*			Rush Curved Into Rock Rubble
@@ -148,14 +148,14 @@ s_52u				R5/2 Slope HighHalf
 sb_52u*				R5/2 Slope HighHalf Rubble
 s_52hq				R5/2 Slope HighHalf to Quarter
 sb_52hq*				R5/2 Slope HighHalf to Quarter Rubble
-s_52ul				R5/2 Slope HighHalf Left
-sb_52ul*				R5/2 Slope HighHalf Left Rubble
-s_62ul*				R5/2 Slope HighHalf Left
-sb_62ul*				R5/2 Slope HighHalf Left Rubble
-s_52ur				R5/2 Slope HighHalf Right
-sb_52ur*				R5/2 Slope HighHalf Right Rubble
-s_62ur*				R6/2 Slope HighHalf Right
-sb_62ur*				R6/2 Slope HighHalf Right Rubble
+s_52ul				*2 R5/2 Slope HighHalf Left
+sb_52ul*			*2 R5/2 Slope HighHalf Left Rubble
+s_62ul*				*2 R5/2 Slope HighHalf Left
+sb_62ul*			*2 R5/2 Slope HighHalf Left Rubble
+s_52ur				*2 R5/2 Slope HighHalf Right
+sb_52ur*			*2 R5/2 Slope HighHalf Right Rubble
+s_62ur*				*2 R6/2 Slope HighHalf Right
+sb_62ur*			*2 R6/2 Slope HighHalf Right Rubble
 asect				Apex Inset Nsecting
 asectr*				Apex Inset Nsecting Rubble
 asect_2				Apex Inset Nsecting LowHalf
@@ -210,24 +210,22 @@ stair_2p            2 Step P
 struble_2p*           2 Step P Rubble
 stair_2q            2 Step Q
 struble_2q*            2 Step Q Rubble
-diagsteps_52lh		Steps R5/2 Left to Horizontal
-diagsterps_52lh*		Steps R5/2 Left to Horizontal Rubble
-diagsteps_2wr*      Steps R5/2 2-way Right
-diagsterps_2wr*      Steps R5/2 2-way Right Rubble
-diagsteps_52rh		Steps R5/2 Right to Horizontal
-diagsterps_52rh*		Steps R5/2 Right to Horizontal Rubble
-diagsteps_2wl*      Steps R5/2 2-way Left
-diagsterps_2wl*      Steps R5/2 2-way Left Rubble
-diagsteps_52rv		Steps R5/2 Right to Vert
-diagsterps_52rv*	Steps R5/2 Right to Vert Rubble
-diagsteps_57vr*		Steps R5/2 7/8 Vert to Right
-diagsterps_57vr*		Steps R5/2 7/8 Vert to Right Rubble
-diagsteps_52lv		Steps R5/2 Left to Vert
-diagsterps_52lv*		Steps R5/2 Left to Vert Rubble
-diagsteps_57vl*		Steps R5/2 7/8 Vert to Left
-diagsterps_57vl*		Steps R5/2 7/8 Vert to Left Rubble
-
-
+diagsteps_52lh		*2 Steps R5/2 Left to Horizontal
+diagsterps_52lh*	*2 Steps R5/2 Left to Horizontal Rubble
+diagsteps_2wr*      *2 Steps R5/2 2-way Right
+diagsterps_2wr*     *2 Steps R5/2 2-way Right Rubble
+diagsteps_52rh		*2 Steps R5/2 Right to Horizontal
+diagsterps_52rh*	*2 Steps R5/2 Right to Horizontal Rubble
+diagsteps_2wl*      *2 Steps R5/2 2-way Left
+diagsterps_2wl*     *2 Steps R5/2 2-way Left Rubble
+diagsteps_52rv		*2 Steps R5/2 Right to Vert
+diagsterps_52rv*	*2 Steps R5/2 Right to Vert Rubble
+diagsteps_57vr*		*2 Steps R5/2 7/8 Vert to Right
+diagsterps_57vr*	*2 Steps R5/2 7/8 Vert to Right Rubble
+diagsteps_52lv		*2 Steps R5/2 Left to Vert
+diagsterps_52lv*	*2 Steps R5/2 Left to Vert Rubble
+diagsteps_57vl*		*2 Steps R5/2 7/8 Vert to Left
+diagsterps_57vl*	*2 Steps R5/2 7/8 Vert to Left Rubble
 stair_2of3			2/3 Step
 strubl_2of3*			2/3 Step Rubble
 stair_3_half_l		Half 3 Step
@@ -286,22 +284,22 @@ spirdiag				Diagonal Spiral Slab
 spirblag*				Diagonal Spiral Slab Rubble
 spircol_8			Spiral Step Column 8 Sides
 spircobl_8*			Spiral Step Column 8 Sides Rubble
-spirstax_r			Spiral StepSide Extd Right
-spirblux_r*			Spiral StepSide Extd Right Rubble
-spirstax_3r			Spiral StepSide Extd 3/4 Right
-spirblux_3r*			Spiral StepSide Extd 3/4 Right Rubble
-spirstax_qr*		Spiral StepSide Extd Quart Right
-spirblux_qr*			Spiral StepSide Extd Quart Right Rubble
-spirstax_hr*			Spiral StepSide Extd Half Right
-spirblux_hr*		Spiral StepSide Extd Half Right Rubble
-spirstax_l			Spiral StepSide Extd Left
-spirblux_l*			Spiral StepSide Extd Left Rubble
-spirstax_3l			Spiral StepSide Extd 3/4 Left
-spirblux_3l*			Spiral StepSide Extd 3/4 Left Rubble
-spirstax_ql*			Spiral StepSide Extd Quart Left
-spirblux_ql*			Spiral StepSide Extd Quart Left Rubble
-spirstax_hl*			Spiral StepSide Extd Half Left
-spirblux_hl*			Spiral StepSide Extd Half Left Rubble
+spirstax_r			*4 Spiral StepSide Extd Right
+spirblux_r*			*4 Spiral StepSide Extd Right Rubble
+spirstax_3r			*4 Spiral StepSide Extd 3/4 Right
+spirblux_3r*		*4 Spiral StepSide Extd 3/4 Right Rubble
+spirstax_qr*		*4 Spiral StepSide Extd Quart Right
+spirblux_qr*		*4 Spiral StepSide Extd Quart Right Rubble
+spirstax_hr*		*4 Spiral StepSide Extd Half Right
+spirblux_hr*		*4 Spiral StepSide Extd Half Right Rubble
+spirstax_l			*4 Spiral StepSide Extd Left
+spirblux_l*			*4 Spiral StepSide Extd Left Rubble
+spirstax_3l			*4 Spiral StepSide Extd 3/4 Left
+spirblux_3l*		*4 Spiral StepSide Extd 3/4 Left Rubble
+spirstax_ql*		*4 Spiral StepSide Extd Quart Left
+spirblux_ql*		*4 Spiral StepSide Extd Quart Left Rubble
+spirstax_hl*		*4 Spiral StepSide Extd Half Left
+spirblux_hl*		*4 Spiral StepSide Extd Half Left Rubble
 spirout_l			Spiral Step-Out Extd Left
 spirbut_l*			Spiral Step-Out Extd Left Rubble
 spirout_r			Spiral Step-Out Extd Right
@@ -357,14 +355,14 @@ arschir				Shallow to Arch Right Slim
 aruschir*				Shallow to Arch Right Slim Rubble
 arcshir				Arch to Shallow Right Slim
 arucshir*				Arch to Shallow Right Slim Rubble
-diagsteps_52s		Steps R5/2 S
-diagsterps_52s*		Steps R5/2 S Rubble
-diagsteps_58s*		Steps R5/2 5/8 S
-diagsterps_58s*		Steps R5/2 5/8 S Rubble
-diagsteps_52z		Steps R5/2 Z
-diagsterps_52z*		Steps R5/2 Z Rubble
-diagsteps_58z*		Steps R5/2 5/8 Z
-diagsterps_58z*		Steps R5/2 5/8 Z Rubble
+diagsteps_52s		*2 Steps R5/2 S
+diagsterps_52s*		*2 Steps R5/2 S Rubble
+diagsteps_58s*		*2 Steps R5/2 5/8 S
+diagsterps_58s*		*2 Steps R5/2 5/8 S Rubble
+diagsteps_52z		*2 Steps R5/2 Z
+diagsterps_52z*		*2 Steps R5/2 Z Rubble
+diagsteps_58z*		*2 Steps R5/2 5/8 Z
+diagsterps_58z*		*2 Steps R5/2 5/8 Z Rubble
 dias52r				R5/2 Diagstep Siding R
 diras52r*				R5/2 Diagstep Siding R Rubble
 dias52d				R5/2 Diagstep Siding D
@@ -387,8 +385,8 @@ dragon              Classic Spyro Dragon Statue
 kow                 Cow Statue
 bear                Bear Statue
 
---Those labelled '*' are not in the creative 8-page menu
-
+--Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
+--Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 
 sus.lua
 stones:[
 flat_O               Flat 'O'

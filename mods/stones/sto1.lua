@@ -1168,7 +1168,7 @@ minetest.register_node("stones:blushrock_2u", {
 })
 
 minetest.register_node("stones:brushrock_21", {
-	description = "4Brush 3Rock /8",
+	description = "*2 4Brush 3Rock /8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_r_r9.png"},
@@ -1210,7 +1210,7 @@ minetest.register_node("stones:brushrock_21", {
 })
 
 minetest.register_node("stones:rushrock_21", {
-	description = "4Rush 3Rock /8",
+	description = "*2 4Rush 3Rock /8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_r_r9_1.png"},
@@ -1252,7 +1252,7 @@ minetest.register_node("stones:rushrock_21", {
 })
 
 minetest.register_node("stones:rublish_21", {
-	description = "4Rush 3Rock /8 Rubble",
+	description = "*2 4Rush 3Rock /8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_rb_r9_1.png"},
@@ -1294,7 +1294,7 @@ minetest.register_node("stones:rublish_21", {
 })
 
 minetest.register_node("stones:blushrock_21", {
-	description = "4Blush 3Rock /8",
+	description = "*2 4Blush 3Rock /8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"blushrock_1.png"},
@@ -1337,7 +1337,7 @@ minetest.register_node("stones:blushrock_21", {
 })
 
 minetest.register_node("stones:brushrock_21u", {
-	description = "4Brush 3Rock 15/16",
+	description = "*2 4Brush 3Rock 15/16",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_r_r9.png"},
@@ -1381,7 +1381,7 @@ minetest.register_node("stones:brushrock_21u", {
 })
 
 minetest.register_node("stones:rushrock_21u", {
-	description = "4Rush 3Rock 15/16",
+	description = "*2 4Rush 3Rock 15/16",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_r_r9_1.png"},
@@ -1425,7 +1425,7 @@ minetest.register_node("stones:rushrock_21u", {
 })
 
 minetest.register_node("stones:rublish_21u", {
-	description = "4Rush 3Rock 15/16 Rubble",
+	description = "*2 4Rush 3Rock 15/16 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"b9_dg_rb_r9_1.png"},
@@ -1469,7 +1469,7 @@ minetest.register_node("stones:rublish_21u", {
 })
 
 minetest.register_node("stones:blushrock_21u", {
-	description = "4Blush 3Rock 15/16",
+	description = "*2 4Blush 3Rock 15/16",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"blushrock_1.png"},

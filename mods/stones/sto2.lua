@@ -192,7 +192,7 @@ minetest.register_node("stones:s_2", {
 })
 
 minetest.register_node("stones:s_52", {
-	description = "R5/2 Slope LowHalf",
+	description = "*2 R5/2 Slope LowHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -219,7 +219,7 @@ minetest.register_node("stones:s_52", {
 })
 
 minetest.register_node("stones:sb_52", {
-	description = "R5/2 Slope LowHalf Rubble",
+	description = "*2 R5/2 Slope LowHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -243,6 +243,58 @@ minetest.register_node("stones:sb_52", {
 {-0.5,-0.125,0.375, 0.5,-0.0625,0.5}}},
 	drawtype = "mesh",
 	mesh = "s_52.obj"
+})
+
+minetest.register_node("stones:s_52k", {
+	description = "*2 R5/2 Slope LowHalf Siding",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.25, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:s_52k",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375,  0.5,-0.4375,0.4688},
+{-0.5,-0.4375,-0.25, 0.5,-0.375,0.4375},
+{-0.5,-0.375,-0.125, 0.5,-0.3125,0.4063},
+{-0.5,-0.3125,0, 0.5,-0.25,0.375},
+{-0.5,-0.25,0.125, 0.5,-0.1875,0.3438},
+{-0.5,-0.1875,0.25, 0.5,-0.125,0.3125}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375,  0.5,-0.4375,0.4688},
+{-0.5,-0.4375,-0.25, 0.5,-0.375,0.4375},
+{-0.5,-0.375,-0.125, 0.5,-0.3125,0.4063},
+{-0.5,-0.3125,0, 0.5,-0.25,0.375},
+{-0.5,-0.25,0.125, 0.5,-0.1875,0.3438},
+{-0.5,-0.1875,0.25, 0.5,-0.125,0.3125}}},
+	drawtype = "mesh",
+	mesh = "s_52k.obj"
+})
+
+minetest.register_node("stones:sb_52k", {
+	description = "*2 R5/2 Slope LowHalf Siding Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.25, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:sb_52k",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375,  0.5,-0.4375,0.4688},
+{-0.5,-0.4375,-0.25, 0.5,-0.375,0.4375},
+{-0.5,-0.375,-0.125, 0.5,-0.3125,0.4063},
+{-0.5,-0.3125,0, 0.5,-0.25,0.375},
+{-0.5,-0.25,0.125, 0.5,-0.1875,0.3438},
+{-0.5,-0.1875,0.25, 0.5,-0.125,0.3125},
+{-0.5,-0.125,0.375, 0.5,-0.0625,0.2813}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375,  0.5,-0.4375,0.4688},
+{-0.5,-0.4375,-0.25, 0.5,-0.375,0.4375},
+{-0.5,-0.375,-0.125, 0.5,-0.3125,0.4063},
+{-0.5,-0.3125,0, 0.5,-0.25,0.375},
+{-0.5,-0.25,0.125, 0.5,-0.1875,0.3438},
+{-0.5,-0.1875,0.25, 0.5,-0.125,0.3125},
+{-0.5,-0.125,0.375, 0.5,-0.0625,0.2813}}},
+	drawtype = "mesh",
+	mesh = "s_52k.obj"
 })
 
 minetest.register_node("stones:s_252r", {

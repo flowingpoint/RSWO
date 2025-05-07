@@ -1,7 +1,7 @@
 stones = {}
 
 minetest.register_node("stones:c8l1", {
-	description = "8-Cycle R5/2 Diagstep L1",
+	description = "*2 8-Cycle R5/2 Diagstep L1",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -35,6 +35,41 @@ minetest.register_node("stones:c8l1", {
 {-0.5,0,0.0625, -0.375,0.5,0.125}}},
 	drawtype = "mesh",
 	mesh = "c8l1.obj"
+})
+
+minetest.register_node("stones:c8l1t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top L1",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8l1t",
+	collision_box = {type="fixed",fixed={
+{0.4375,-0.5,-0.375, 0.5,0,0.5},
+{0.375,-0.5,-0.25, 0.4375,0,0.3125},
+{0.3125,-0.5,-0.125, 0.375,0,0.3125},
+{0.25,-0.5,0, 0.3125,0,0.3125},
+{0.1875,-0.5,0.125, 0.25,0,0.3125},
+{0.125,-0.5,0.25, 0.1875,0,0.3125},
+{-0.5,-0.5,0.3125, 0.4375,0,0.5},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	selection_box = {type="fixed",fixed={
+{0.4375,-0.5,-0.375, 0.5,0,0.5},
+{0.375,-0.5,-0.25, 0.4375,0,0.3125},
+{0.3125,-0.5,-0.125, 0.375,0,0.3125},
+{0.25,-0.5,0, 0.3125,0,0.3125},
+{0.1875,-0.5,0.125, 0.25,0,0.3125},
+{0.125,-0.5,0.25, 0.1875,0,0.3125},
+{-0.5,-0.5,0.3125, 0.4375,0,0.5},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	drawtype = "mesh",
+	mesh = "c8l1t.obj"
 })
 
 minetest.register_node("stones:c8l2", {
@@ -125,7 +160,7 @@ minetest.register_node("stones:c8l2C", {
 
 
 minetest.register_node("stones:c8l3", {
-	description = "8-Cycle R5/2 Diagstep L3",
+	description = "*2 8-Cycle R5/2 Diagstep L3",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -153,8 +188,35 @@ minetest.register_node("stones:c8l3", {
 	mesh = "c8l3.obj"
 })
 
+minetest.register_node("stones:c8l3t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top L3",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8l3t",
+	collision_box = {type="fixed",fixed={
+{0,-0.5,-0.5, 0.5,0,0.5},
+{-0.5,-0.5,0.125, 0,0,0.5},
+{-0.5,-0.5,0.0625, -0.375,0,0.125},
+{-0.0625,-0.5,-0.375, 0,0,0.125},
+{-0.125,-0.5,-0.25, -0.0615,0,0.125},
+{-0.1875,-0.5,-0.125, -0.125,0,0.125},
+{-0.25,-0.5,0, -0.1875,0,0.125}}},
+	selection_box = {type="fixed",fixed={
+{0,-0.5,-0.5, 0.5,0,0.5},
+{-0.5,-0.5,0.125, 0,0,0.5},
+{-0.5,-0.5,0.0625, -0.375,0,0.125},
+{-0.0625,-0.5,-0.375, 0,0,0.125},
+{-0.125,-0.5,-0.25, -0.0615,0,0.125},
+{-0.1875,-0.5,-0.125, -0.125,0,0.125},
+{-0.25,-0.5,0, -0.1875,0,0.125}}},
+	drawtype = "mesh",
+	mesh = "c8l3t.obj"
+})
+
 minetest.register_node("stones:c8l4", {
-	description = "*2 8-Cycle R5/2 Diagstep L4",
+	description = "*3 8-Cycle R5/2 Diagstep L4",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -201,7 +263,7 @@ minetest.register_node("stones:c8l4", {
 })
 
 minetest.register_node("stones:c8l4C", {
-	description = "*2 8-Cycle R5/2 Diagstep L4 Covol",
+	description = "*3 8-Cycle R5/2 Diagstep L4 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -233,6 +295,51 @@ minetest.register_node("stones:c8l4C", {
 {0.375,0,-0.25, 0.4375,0.5,0}}},
 	drawtype = "mesh",
 	mesh = "c8l4C.obj"
+})
+
+minetest.register_node("stones:c8l4t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top L4",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8l4t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0.4375,-0.5,-0.375, 0.5,0,0},
+{0.375,-0.5,-0.25, 0.4375,0,0}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0.4375,-0.5,-0.375, 0.5,0,0},
+{0.375,-0.5,-0.25, 0.4375,0,0}}},
+	drawtype = "mesh",
+	mesh = "c8l4t.obj"
 })
 
 minetest.register_node("stones:c8l5", {
@@ -277,7 +384,7 @@ minetest.register_node("stones:c8l5", {
 })
 
 minetest.register_node("stones:c8l6", {
-	description = "*2 8-Cycle R5/2 Diagstep L6",
+	description = "*3 8-Cycle R5/2 Diagstep L6",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -318,7 +425,7 @@ minetest.register_node("stones:c8l6", {
 })
 
 minetest.register_node("stones:c8l6C", {
-	description = "*2 8-Cycle R5/2 Diagstep L6 Covol",
+	description = "*3 8-Cycle R5/2 Diagstep L6 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -344,6 +451,45 @@ minetest.register_node("stones:c8l6C", {
 {-0.0625,0,-0.375, 0,0.5,-0.25}}},
 	drawtype = "mesh",
 	mesh = "c8l6C.obj"
+})
+
+minetest.register_node("stones:c8l6t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top L6",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8l6t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0,-0.5,-0.5, 0.5,0,0},
+{-0.0625,-0.5,-0.375, 0,0,-0.25}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0,-0.5,-0.5, 0.5,0,0},
+{-0.0625,-0.5,-0.375, 0,0,-0.25}}},
+	drawtype = "mesh",
+	mesh = "c8l6t.obj"
 })
 
 minetest.register_node("stones:c8l7", {
@@ -509,7 +655,7 @@ minetest.register_node("stones:c8l9", {
 })
 
 minetest.register_node("stones:c8la", {
-	description = "*2 8-Cycle R5/2 Diagstep LA",
+	description = "*3 8-Cycle R5/2 Diagstep LA",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -546,7 +692,7 @@ minetest.register_node("stones:c8la", {
 })
 
 minetest.register_node("stones:c8laC", {
-	description = "*2 8-Cycle R5/2 Diagstep LA Covol",
+	description = "*3 8-Cycle R5/2 Diagstep LA Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -568,6 +714,41 @@ minetest.register_node("stones:c8laC", {
 {0,-0.5,-0.5, 0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "c8laC.obj"
+})
+
+minetest.register_node("stones:c8lat", {
+	description = "*3 8-Cycle R5/2 Diagstep Top LA",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8lat",
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.3, 0.5,0,0.5},
+{0.25,-0.5,-0.375, 0.5,0,-0.3},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375}}},
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.3, 0.5,0,0.5},
+{0.25,-0.5,-0.375, 0.5,0,-0.3},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375}}},
+	drawtype = "mesh",
+	mesh = "c8lat.obj"
 })
 
 minetest.register_node("stones:c8lb", {
@@ -645,7 +826,7 @@ minetest.register_node("stones:c8lbC", {
 })
 
 minetest.register_node("stones:c8lc", {
-	description = "8-Cycle R5/2 Diagstep LC",
+	description = "*2 8-Cycle R5/2 Diagstep LC",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -673,6 +854,35 @@ minetest.register_node("stones:c8lc", {
 {-0.4375,0,-0.25, -0.375,0.5,-0.1}}},
 	drawtype = "mesh",
 	mesh = "c8lc.obj"
+})
+
+minetest.register_node("stones:c8lct", {
+	description = "*2 8-Cycle R5/2 Diagstep Top LC",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8lct",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.1},
+{0,0-0.5,-0.25, 0.5,0,-0.1875},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{-0.5,-0.5,-0.375, -0.4375,0,-0.1},
+{-0.4375,-0.5,-0.25, -0.375,0,-0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.1},
+{0,0-0.5,-0.25, 0.5,0,-0.1875},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{-0.5,-0.5,-0.375, -0.4375,0,-0.1},
+{-0.4375,-0.5,-0.25, -0.375,0,-0.1}}},
+	drawtype = "mesh",
+	mesh = "c8lct.obj"
 })
 
 minetest.register_node("stones:c8ld", {
@@ -795,14 +1005,27 @@ minetest.register_node("stones:c8le", {
 })
 
 minetest.register_node("stones:c8lf", {
-	description = "*2 8-Cycle R5/2 Diagstep LF",
+	description = "*3 8-Cycle R5/2 Diagstep LF",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
 	groups = {cracky=1, oddly_breakable_by_hand=1},
 	drop = "stones:c8lf",
 	collision_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+{-0.4375,-0.5,-0.5, -0.375,0.5,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0.5,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0.5,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0.5,0},
+{-0.1875,-0.5,-0.5, -0.125,0.5,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0.5,0.25},
+{-0.0625,-0.5,-0.5, 0,0.5,0.375},
+{0,0,-0.375, 0.0625,0.5,0.5},
+{0.0625,0,-0.25, 0.125,0.5,0.5},
+{0.125,0,-0.125, 0.1875,0.5,0.5},
+{0.1875,0,0, 0.25,0.5,0.5},
+{0.25,0,0.1, 0.5,0.5,0.5},
+{0.4,0,0.05, 0.5,0.5,0.1},
+{0,-0.5,-0.5, 0.5,0,0.5}}},
 	selection_box = {type="fixed",fixed={
 {-0.4375,-0.5,-0.5, -0.375,0.5,-0.375},
 {-0.375,-0.5,-0.5, -0.3125,0.5,-0.25},
@@ -823,7 +1046,7 @@ minetest.register_node("stones:c8lf", {
 })
 
 minetest.register_node("stones:c8lfC", {
-	description = "*2 8-Cycle R5/2 Diagstep LF Covol",
+	description = "*3 8-Cycle R5/2 Diagstep LF Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -851,8 +1074,47 @@ minetest.register_node("stones:c8lfC", {
 	mesh = "c8lfC.obj"
 })
 
+minetest.register_node("stones:c8lft", {
+	description = "*3 8-Cycle R5/2 Diagstep Top LF",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8lft",
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.25, 0.125,0,0.5},
+{0.125,-0.5,-0.125, 0.1875,0,0.5},
+{0.1875,-0.5,0, 0.25,0,0.5},
+{0.25,-0.5,0.1, 0.5,0,0.5},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.25, 0.125,0,0.5},
+{0.125,-0.5,-0.125, 0.1875,0,0.5},
+{0.1875,-0.5,0, 0.25,0,0.5},
+{0.25,-0.5,0.1, 0.5,0,0.5},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	drawtype = "mesh",
+	mesh = "c8lft.obj"
+})
+
 minetest.register_node("stones:c8r1", {
-	description = "8-Cycle R5/2 Diagstep R1",
+	description = "*2 8-Cycle R5/2 Diagstep R1",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -890,6 +1152,45 @@ minetest.register_node("stones:c8r1", {
 {-0.1875,0,0.25, -0.125,0.5,0.375}}},
 	drawtype = "mesh",
 	mesh = "c8r1.obj"
+})
+
+minetest.register_node("stones:c8r1t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top R1",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8r1t",
+	collision_box = {type="fixed",fixed={
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125},
+{-0.5,-0.5,-0.375, -0.4375,0,0.5},
+{-0.4375,-0.5,-0.25, -0.375,0,0.5},
+{-0.375,-0.5,-0.125, -0.3125,0,0.4375},
+{-0.3125,-0.5,0, -0.25,0,0.4375},
+{-0.25,-0.5,0.125, -0.1875,0,0.375},
+{-0.1875,-0.5,0.25, -0.125,0,0.375}}},
+		selection_box = {type="fixed",fixed={
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125},
+{-0.5,-0.5,-0.375, -0.4375,0,0.5},
+{-0.4375,-0.5,-0.25, -0.375,0,0.5},
+{-0.375,-0.5,-0.125, -0.3125,0,0.4375},
+{-0.3125,-0.5,0, -0.25,0,0.4375},
+{-0.25,-0.5,0.125, -0.1875,0,0.375},
+{-0.1875,-0.5,0.25, -0.125,0,0.375}}},
+	drawtype = "mesh",
+	mesh = "c8r1t.obj"
 })
 
 minetest.register_node("stones:c8r2", {
@@ -981,7 +1282,7 @@ minetest.register_node("stones:c8r2C", {
 })
 
 minetest.register_node("stones:c8r3", {
-	description = "8-Cycle R5/2 Diagstep R3",
+	description = "*2 8-Cycle R5/2 Diagstep R3",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1009,8 +1310,35 @@ minetest.register_node("stones:c8r3", {
 	mesh = "c8r3.obj"
 })
 
+minetest.register_node("stones:c8r3t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top R3",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8r3t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0,-0.5,0.1, 0.5,0,0.5},
+{0,0,-0.375, 0.0625,0,0.1},
+{0.0625,-0.5,-0.25, 0.125,0,0.1},
+{0.125,-0.5,-0.125, 0.1875,0,0.1},
+{0.1875,-0.5,0, 0.25,0,0.1},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0,-0.5,0.1, 0.5,0,0.5},
+{0,0,-0.375, 0.0625,0,0.1},
+{0.0625,-0.5,-0.25, 0.125,0,0.1},
+{0.125,-0.5,-0.125, 0.1875,0,0.1},
+{0.1875,-0.5,0, 0.25,0,0.1},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	drawtype = "mesh",
+	mesh = "c8r3t.obj"
+})
+
 minetest.register_node("stones:c8r4", {
-	description = "*2 8-Cycle R5/2 Diagstep R4",
+	description = "*3 8-Cycle R5/2 Diagstep R4",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1059,7 +1387,7 @@ minetest.register_node("stones:c8r4", {
 })
 
 minetest.register_node("stones:c8r4C", {
-	description = "*2 8-Cycle R5/2 Diagstep R4 Covol",
+	description = "*3 8-Cycle R5/2 Diagstep R4 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1093,6 +1421,52 @@ minetest.register_node("stones:c8r4C", {
 	mesh = "c8r4C.obj"
 })
 
+minetest.register_node("stones:c8r4t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top R4",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8r4t",
+	collision_box = {type="fixed",fixed={
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.125},
+{-0.25,-0.5,-0.125, 0.5,0,-0.0625},
+{-0.375,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5},
+{-0.5,-0.5,-0.375, -0.4375,0,0},
+{-0.4375,-0.5,-0.25, -0.375,0,0}}},
+	selection_box = {type="fixed",fixed={
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.125},
+{-0.25,-0.5,-0.125, 0.5,0,-0.0625},
+{-0.375,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5},
+{-0.5,-0.5,-0.375, -0.4375,0,0},
+{-0.4375,-0.5,-0.25, -0.375,0,0}}},
+	drawtype = "mesh",
+	mesh = "c8r4t.obj"
+})
 
 minetest.register_node("stones:c8r5", {
 	description = "8-Cycle R5/2 Diagstep R5",
@@ -1136,7 +1510,7 @@ minetest.register_node("stones:c8r5", {
 })
 
 minetest.register_node("stones:c8r6", {
-	description = "*2 8-Cycle R5/2 Diagstep R6",
+	description = "*3 8-Cycle R5/2 Diagstep R6",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1183,7 +1557,7 @@ minetest.register_node("stones:c8r6", {
 })
 
 minetest.register_node("stones:c8r6C", {
-	description = "*2 8-Cycle R5/2 Diagstep R6 Covol",
+	description = "*3 8-Cycle R5/2 Diagstep R6 Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1213,6 +1587,51 @@ minetest.register_node("stones:c8r6C", {
 {-0.5,-0.5,0, 0.5,0.5,0.5}}},
 	drawtype = "mesh",
 	mesh = "c8r6C.obj"
+})
+
+minetest.register_node("stones:c8r6t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top R6",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8r6t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{0,-0.5,-0.1875, 0.5,0,-0.125},
+{0,-0.5,-0.125, 0.5,0,-0.0625},
+{0,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{0,-0.5,-0.1875, 0.5,0,-0.125},
+{0,-0.5,-0.125, 0.5,0,-0.0625},
+{0,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "c8r6t.obj"
 })
 
 minetest.register_node("stones:c8r7", {
@@ -1402,7 +1821,7 @@ minetest.register_node("stones:c8r9", {
 })
 
 minetest.register_node("stones:c8ra", {
-	description = "*2 8-Cycle R5/2 Diagstep RA",
+	description = "*3 8-Cycle R5/2 Diagstep RA",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1417,8 +1836,7 @@ minetest.register_node("stones:c8ra", {
 {0.0625,-0.5,-0.5, 0.125,0.5,0.25},
 {0,-0.5,-0.5, 0.0625,0.5,0.375},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	selection_box = {type="fixed",fixed={
@@ -1430,8 +1848,7 @@ minetest.register_node("stones:c8ra", {
 {0.0625,-0.5,-0.5, 0.125,0.5,0.25},
 {0,-0.5,-0.5, 0.0625,0.5,0.375},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	drawtype = "mesh",
@@ -1439,7 +1856,7 @@ minetest.register_node("stones:c8ra", {
 })
 
 minetest.register_node("stones:c8raC", {
-	description = "*2 8-Cycle R5/2 Diagstep RA Covol",
+	description = "*3 8-Cycle R5/2 Diagstep RA Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1448,19 +1865,50 @@ minetest.register_node("stones:c8raC", {
 	collision_box = {type="fixed",fixed={
 {0,-0.5,-0.5, 0.5,0.5,0.5},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	selection_box = {type="fixed",fixed={
 {0,-0.5,-0.5, 0.5,0.5,0.5},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	drawtype = "mesh",
 	mesh = "c8raC.obj"
+})
+
+minetest.register_node("stones:c8rat", {
+	description = "*3 8-Cycle R5/2 Diagstep Top RA",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8rat",
+	collision_box = {type="fixed",fixed={
+{0.375,-0.5,-0.5, 0.4375,0,-0.375},
+{0.3125,-0.5,-0.5, 0.375,0,-0.25},
+{0.25,-0.5,-0.5, 0.3125,0,-0.125},
+{0.1875,-0.5,-0.5, 0.25,0,0},
+{0.125,-0.5,-0.5, 0.1875,0,0.125},
+{0.0625,-0.5,-0.5, 0.125,0,0.25},
+{0,-0.5,-0.5, 0.0625,0,0.375},
+{-0.0625,-0.5,-0.375, 0,0,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
+{-0.5,-0.5,-0.4, -0.3,0,-0.3}}},
+	selection_box = {type="fixed",fixed={
+{0.375,-0.5,-0.5, 0.4375,0,-0.375},
+{0.3125,-0.5,-0.5, 0.375,0,-0.25},
+{0.25,-0.5,-0.5, 0.3125,0,-0.125},
+{0.1875,-0.5,-0.5, 0.25,0,0},
+{0.125,-0.5,-0.5, 0.1875,0,0.125},
+{0.0625,-0.5,-0.5, 0.125,0,0.25},
+{0,-0.5,-0.5, 0.0625,0,0.375},
+{-0.0625,-0.5,-0.375, 0,0,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
+{-0.5,-0.5,-0.4, -0.3,0,-0.3}}},
+	drawtype = "mesh",
+	mesh = "c8rat.obj"
 })
 
 minetest.register_node("stones:c8rb", {
@@ -1542,7 +1990,7 @@ minetest.register_node("stones:c8rbC", {
 })
 
 minetest.register_node("stones:c8rc", {
-	description = "8-Cycle R5/2 Diagstep RC",
+	description = "*2 8-Cycle R5/2 Diagstep RC",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1570,6 +2018,35 @@ minetest.register_node("stones:c8rc", {
 {0.4,0,-0.3, 0.5,0.5,-0.1}}},
 	drawtype = "mesh",
 	mesh = "c8rc.obj"
+})
+
+minetest.register_node("stones:c8rct", {
+	description = "*2 8-Cycle R5/2 Diagstep Top RC",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8rct",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.5,-0.5,-0.125, 0.25,0,-0.1},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{0.4,-0.5,-0.3, 0.5,0,-0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.5,-0.5,-0.125, 0.25,0,-0.1},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{0.4,-0.5,-0.3, 0.5,0,-0.1}}},
+	drawtype = "mesh",
+	mesh = "c8rct.obj"
 })
 
 minetest.register_node("stones:c8rd", {
@@ -1698,7 +2175,7 @@ minetest.register_node("stones:c8re", {
 })
 
 minetest.register_node("stones:c8rf", {
-	description = "*2 8-Cycle R5/2 Diagstep RF",
+	description = "*3 8-Cycle R5/2 Diagstep RF",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1740,8 +2217,49 @@ minetest.register_node("stones:c8rf", {
 	mesh = "c8rf.obj"
 })
 
+minetest.register_node("stones:c8rft", {
+	description = "*3 8-Cycle R5/2 Diagstep Top RF",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8rft",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, -0.0313,0,-0.4375},
+{-0.5,-0.5,-0.4375, -0.0625,0,-0.375},
+{-0.5,-0.5,-0.375, -0.1,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0.,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, -0.0313,0,-0.4375},
+{-0.5,-0.5,-0.4375, -0.0625,0,-0.375},
+{-0.5,-0.5,-0.375, -0.1,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0.,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375}}},
+	drawtype = "mesh",
+	mesh = "c8rft.obj"
+})
+
 minetest.register_node("stones:c8rfC", {
-	description = "*2 8-Cycle R5/2 Diagstep RF Covol",
+	description = "*3 8-Cycle R5/2 Diagstep RF Covol",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1772,7 +2290,7 @@ minetest.register_node("stones:c8rfC", {
 })
 
 minetest.register_node("stones:b8l1", {
-	description = "8-Cycle R5/2 Diagstep L1 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L1 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1806,6 +2324,41 @@ minetest.register_node("stones:b8l1", {
 {-0.5,0,0.0625, -0.375,0.5,0.125}}},
 	drawtype = "mesh",
 	mesh = "c8l1.obj"
+})
+
+minetest.register_node("stones:b8l1t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top L1 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8l1t",
+	collision_box = {type="fixed",fixed={
+{0.4375,-0.5,-0.375, 0.5,0,0.5},
+{0.375,-0.5,-0.25, 0.4375,0,0.3125},
+{0.3125,-0.5,-0.125, 0.375,0,0.3125},
+{0.25,-0.5,0, 0.3125,0,0.3125},
+{0.1875,-0.5,0.125, 0.25,0,0.3125},
+{0.125,-0.5,0.25, 0.1875,0,0.3125},
+{-0.5,-0.5,0.3125, 0.4375,0,0.5},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	selection_box = {type="fixed",fixed={
+{0.4375,-0.5,-0.375, 0.5,0,0.5},
+{0.375,-0.5,-0.25, 0.4375,0,0.3125},
+{0.3125,-0.5,-0.125, 0.375,0,0.3125},
+{0.25,-0.5,0, 0.3125,0,0.3125},
+{0.1875,-0.5,0.125, 0.25,0,0.3125},
+{0.125,-0.5,0.25, 0.1875,0,0.3125},
+{-0.5,-0.5,0.3125, 0.4375,0,0.5},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	drawtype = "mesh",
+	mesh = "c8l1t.obj"
 })
 
 minetest.register_node("stones:b8l2", {
@@ -1895,7 +2448,7 @@ minetest.register_node("stones:b8l2C", {
 })
 
 minetest.register_node("stones:b8l3", {
-	description = "8-Cycle R5/2 Diagstep L3 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep L3 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1923,8 +2476,35 @@ minetest.register_node("stones:b8l3", {
 	mesh = "c8l3.obj"
 })
 
+minetest.register_node("stones:b8l3t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top L3 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8l3t",
+	collision_box = {type="fixed",fixed={
+{0,-0.5,-0.5, 0.5,0,0.5},
+{-0.5,-0.5,0.125, 0,0,0.5},
+{-0.5,-0.5,0.0625, -0.375,0,0.125},
+{-0.0625,-0.5,-0.375, 0,0,0.125},
+{-0.125,-0.5,-0.25, -0.0615,0,0.125},
+{-0.1875,-0.5,-0.125, -0.125,0,0.125},
+{-0.25,-0.5,0, -0.1875,0,0.125}}},
+	selection_box = {type="fixed",fixed={
+{0,-0.5,-0.5, 0.5,0,0.5},
+{-0.5,-0.5,0.125, 0,0,0.5},
+{-0.5,-0.5,0.0625, -0.375,0,0.125},
+{-0.0625,-0.5,-0.375, 0,0,0.125},
+{-0.125,-0.5,-0.25, -0.0615,0,0.125},
+{-0.1875,-0.5,-0.125, -0.125,0,0.125},
+{-0.25,-0.5,0, -0.1875,0,0.125}}},
+	drawtype = "mesh",
+	mesh = "c8l3t.obj"
+})
+
 minetest.register_node("stones:b8l4", {
-	description = "*2 8-Cycle R5/2 Diagstep L4 Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep L4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1971,7 +2551,7 @@ minetest.register_node("stones:b8l4", {
 })
 
 minetest.register_node("stones:b8l4C", {
-	description = "*2 8-Cycle R5/2 Diagstep L4 Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep L4 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2003,6 +2583,51 @@ minetest.register_node("stones:b8l4C", {
 {0.375,0,-0.25, 0.4375,0.5,0}}},
 	drawtype = "mesh",
 	mesh = "c8l4C.obj"
+})
+
+minetest.register_node("stones:b8l4t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top L4 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8l4t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0.4375,-0.5,-0.375, 0.5,0,0},
+{0.375,-0.5,-0.25, 0.4375,0,0}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0.4375,-0.5,-0.375, 0.5,0,0},
+{0.375,-0.5,-0.25, 0.4375,0,0}}},
+	drawtype = "mesh",
+	mesh = "c8l4t.obj"
 })
 
 minetest.register_node("stones:b8l5", {
@@ -2047,7 +2672,7 @@ minetest.register_node("stones:b8l5", {
 })
 
 minetest.register_node("stones:b8l6", {
-	description = "*2 8-Cycle R5/2 Diagstep L6 Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep L6 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2088,7 +2713,7 @@ minetest.register_node("stones:b8l6", {
 })
 
 minetest.register_node("stones:b8l6C", {
-	description = "*2 8-Cycle R5/2 Diagstep L6 Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep L6 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2114,6 +2739,45 @@ minetest.register_node("stones:b8l6C", {
 {-0.0625,0,-0.375, 0,0.5,-0.25}}},
 	drawtype = "mesh",
 	mesh = "c8l6C.obj"
+})
+
+minetest.register_node("stones:b8l6t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top L6 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8l6t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0,-0.5,-0.5, 0.5,0,0},
+{-0.0625,-0.5,-0.375, 0,0,-0.25}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,0},
+{-0.375,-0.5,0, 0.5,0,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375},
+{0,-0.5,-0.5, 0.5,0,0},
+{-0.0625,-0.5,-0.375, 0,0,-0.25}}},
+	drawtype = "mesh",
+	mesh = "c8l6t.obj"
 })
 
 minetest.register_node("stones:b8l7", {
@@ -2263,7 +2927,7 @@ minetest.register_node("stones:b8l9", {
 })
 
 minetest.register_node("stones:b8la", {
-	description = "*2 8-Cycle R5/2 Diagstep LA Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep LA Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2300,7 +2964,7 @@ minetest.register_node("stones:b8la", {
 })
 
 minetest.register_node("stones:b8laC", {
-	description = "*2 8-Cycle R5/2 Diagstep LA Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep LA Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2322,6 +2986,41 @@ minetest.register_node("stones:b8laC", {
 {0,-0.5,-0.5, 0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "c8laC.obj"
+})
+
+minetest.register_node("stones:b8lat", {
+	description = "*3 8-Cycle R5/2 Diagstep Top LA Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8lat",
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.3, 0.5,0,0.5},
+{0.25,-0.5,-0.375, 0.5,0,-0.3},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375}}},
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.3, 0.5,0,0.5},
+{0.25,-0.5,-0.375, 0.5,0,-0.3},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375}}},
+	drawtype = "mesh",
+	mesh = "c8lat.obj"
 })
 
 minetest.register_node("stones:b8lb", {
@@ -2399,7 +3098,7 @@ minetest.register_node("stones:b8lbC", {
 })
 
 minetest.register_node("stones:b8lc", {
-	description = "8-Cycle R5/2 Diagstep LC Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep LC Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2427,6 +3126,35 @@ minetest.register_node("stones:b8lc", {
 {-0.4375,0,-0.25, -0.375,0.5,-0.1}}},
 	drawtype = "mesh",
 	mesh = "c8lc.obj"
+})
+
+minetest.register_node("stones:b8lct", {
+	description = "*2 8-Cycle R5/2 Diagstep Top LC Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8lct",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.1},
+{0,0-0.5,-0.25, 0.5,0,-0.1875},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{-0.5,-0.5,-0.375, -0.4375,0,-0.1},
+{-0.4375,-0.5,-0.25, -0.375,0,-0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.1},
+{0,0-0.5,-0.25, 0.5,0,-0.1875},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{-0.5,-0.5,-0.375, -0.4375,0,-0.1},
+{-0.4375,-0.5,-0.25, -0.375,0,-0.1}}},
+	drawtype = "mesh",
+	mesh = "c8lct.obj"
 })
 
 minetest.register_node("stones:b8ld", {
@@ -2549,7 +3277,7 @@ minetest.register_node("stones:b8le", {
 })
 
 minetest.register_node("stones:b8lf", {
-	description = "*2 8-Cycle R5/2 Diagstep LF Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep LF Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2590,7 +3318,7 @@ minetest.register_node("stones:b8lf", {
 })
 
 minetest.register_node("stones:b8lfC", {
-	description = "*2 8-Cycle R5/2 Diagstep LF Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep LF Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2618,8 +3346,47 @@ minetest.register_node("stones:b8lfC", {
 	mesh = "c8lfC.obj"
 })
 
+minetest.register_node("stones:b8lft", {
+	description = "*3 8-Cycle R5/2 Diagstep Top LF Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8lft",
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.25, 0.125,0,0.5},
+{0.125,-0.5,-0.125, 0.1875,0,0.5},
+{0.1875,-0.5,0, 0.25,0,0.5},
+{0.25,-0.5,0.1, 0.5,0,0.5},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.5, -0.375,0,-0.375},
+{-0.375,-0.5,-0.5, -0.3125,0,-0.25},
+{-0.3125,-0.5,-0.5,-0.25,0,-0.125},
+{-0.25,-0.5,-0.5, -0.1875,0,0},
+{-0.1875,-0.5,-0.5, -0.125,0,0.125},
+{-0.125,-0.5,-0.5, -0.0625,0,0.25},
+{-0.0625,-0.5,-0.5, 0,0,0.375},
+{0,-0.5,-0.375, 0.0625,0,0.5},
+{0.0625,-0.5,-0.25, 0.125,0,0.5},
+{0.125,-0.5,-0.125, 0.1875,0,0.5},
+{0.1875,-0.5,0, 0.25,0,0.5},
+{0.25,-0.5,0.1, 0.5,0,0.5},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	drawtype = "mesh",
+	mesh = "c8lft.obj"
+})
+
 minetest.register_node("stones:b8r1", {
-	description = "8-Cycle R5/2 Diagstep R1 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R1 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2657,6 +3424,45 @@ minetest.register_node("stones:b8r1", {
 {-0.1875,0,0.25, -0.125,0.5,0.375}}},
 	drawtype = "mesh",
 	mesh = "c8r1.obj"
+})
+
+minetest.register_node("stones:b8r1t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top R1 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8r1t",
+	collision_box = {type="fixed",fixed={
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125},
+{-0.5,-0.5,-0.375, -0.4375,0,0.5},
+{-0.4375,-0.5,-0.25, -0.375,0,0.5},
+{-0.375,-0.5,-0.125, -0.3125,0,0.4375},
+{-0.3125,-0.5,0, -0.25,0,0.4375},
+{-0.25,-0.5,0.125, -0.1875,0,0.375},
+{-0.1875,-0.5,0.25, -0.125,0,0.375}}},
+		selection_box = {type="fixed",fixed={
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125},
+{-0.5,-0.5,-0.375, -0.4375,0,0.5},
+{-0.4375,-0.5,-0.25, -0.375,0,0.5},
+{-0.375,-0.5,-0.125, -0.3125,0,0.4375},
+{-0.3125,-0.5,0, -0.25,0,0.4375},
+{-0.25,-0.5,0.125, -0.1875,0,0.375},
+{-0.1875,-0.5,0.25, -0.125,0,0.375}}},
+	drawtype = "mesh",
+	mesh = "c8r1t.obj"
 })
 
 minetest.register_node("stones:b8r2", {
@@ -2748,7 +3554,7 @@ minetest.register_node("stones:b8r2C", {
 })
 
 minetest.register_node("stones:b8r3", {
-	description = "8-Cycle R5/2 Diagstep R3 Rubble",
+	description = "*2 8-Cycle R5/2 Diagstep R3 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2776,8 +3582,35 @@ minetest.register_node("stones:b8r3", {
 	mesh = "c8r3.obj"
 })
 
+minetest.register_node("stones:b8r3t", {
+	description = "*2 8-Cycle R5/2 Diagstep Top R3 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8r3t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0,-0.5,0.1, 0.5,0,0.5},
+{0,0,-0.375, 0.0625,0,0.1},
+{0.0625,-0.5,-0.25, 0.125,0,0.1},
+{0.125,-0.5,-0.125, 0.1875,0,0.1},
+{0.1875,-0.5,0, 0.25,0,0.1},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0,-0.5,0.1, 0.5,0,0.5},
+{0,0,-0.375, 0.0625,0,0.1},
+{0.0625,-0.5,-0.25, 0.125,0,0.1},
+{0.125,-0.5,-0.125, 0.1875,0,0.1},
+{0.1875,-0.5,0, 0.25,0,0.1},
+{0.4,-0.5,0.05, 0.5,0,0.1}}},
+	drawtype = "mesh",
+	mesh = "c8r3t.obj"
+})
+
 minetest.register_node("stones:b8r4", {
-	description = "*2 8-Cycle R5/2 Diagstep R4 Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep R4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2826,7 +3659,7 @@ minetest.register_node("stones:b8r4", {
 })
 
 minetest.register_node("stones:b8r4C", {
-	description = "*2 8-Cycle R5/2 Diagstep R4 Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep R4 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2858,6 +3691,53 @@ minetest.register_node("stones:b8r4C", {
 {-0.4375,0,-0.25, -0.375,0.5,0}}},
 	drawtype = "mesh",
 	mesh = "c8r4C.obj"
+})
+
+minetest.register_node("stones:b8r4t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top R4 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8r4t",
+	collision_box = {type="fixed",fixed={
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.125},
+{-0.25,-0.5,-0.125, 0.5,0,-0.0625},
+{-0.375,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5},
+{-0.5,-0.5,-0.375, -0.4375,0,0},
+{-0.4375,-0.5,-0.25, -0.375,0,0}}},
+	selection_box = {type="fixed",fixed={
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{-0.125,-0.5,-0.1875, 0.5,0,-0.125},
+{-0.25,-0.5,-0.125, 0.5,0,-0.0625},
+{-0.375,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5},
+{-0.5,-0.5,-0.375, -0.4375,0,0},
+{-0.4375,-0.5,-0.25, -0.375,0,0}}},
+	drawtype = "mesh",
+	mesh = "c8r4t.obj"
 })
 
 minetest.register_node("stones:b8r5", {
@@ -2902,7 +3782,7 @@ minetest.register_node("stones:b8r5", {
 })
 
 minetest.register_node("stones:b8r6", {
-	description = "*2 8-Cycle R5/2 Diagstep R6 Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep R6 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2949,7 +3829,7 @@ minetest.register_node("stones:b8r6", {
 })
 
 minetest.register_node("stones:b8r6C", {
-	description = "*2 8-Cycle R5/2 Diagstep R6 Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep R6 Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2980,6 +3860,52 @@ minetest.register_node("stones:b8r6C", {
 	drawtype = "mesh",
 	mesh = "c8r6C.obj"
 })
+
+minetest.register_node("stones:b8r6t", {
+	description = "*3 8-Cycle R5/2 Diagstep Top R6 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8r6t",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{0,-0.5,-0.1875, 0.5,0,-0.125},
+{0,-0.5,-0.125, 0.5,0,-0.0625},
+{0,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0,0,0},
+{0.375,-0.5,-0.4375, 0.5,0,-0.375},
+{0.25,-0.5,-0.375, 0.5,0,-0.3125},
+{0.125,-0.5,-0.3125, 0.5,0,-0.25},
+{0,-0.5,-0.25, 0.5,0,-0.1875},
+{0,-0.5,-0.1875, 0.5,0,-0.125},
+{0,-0.5,-0.125, 0.5,0,-0.0625},
+{0,-0.5,-0.0625, 0.5,0,0},
+{-0.5,-0.5,0, 0.375,0,0.0625},
+{-0.5,-0.5,0.0625, 0.25,0,0.125},
+{-0.5,-0.5,0.125, 0.125,0,0.1875},
+{-0.5,-0.5,0.1875, 0,0,0.25},
+{-0.5,-0.5,0.25, -0.125,0,0.3125},
+{-0.5,-0.5,0.3125, -0.25,0,0.375},
+{-0.5,-0.5,0.375, -0.375,0,0.4375},
+{-0.5,-0.5,0.4375, -0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "c8r6t.obj"
+})
+
 
 minetest.register_node("stones:b8r7", {
 	description = "8-Cycle R5/2 Diagstep R7 Rubble",
@@ -3168,7 +4094,7 @@ minetest.register_node("stones:b8r9", {
 })
 
 minetest.register_node("stones:b8ra", {
-	description = "*2 8-Cycle R5/2 Diagstep RA Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep RA Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3183,8 +4109,7 @@ minetest.register_node("stones:b8ra", {
 {0.0625,-0.5,-0.5, 0.125,0.5,0.25},
 {0,-0.5,-0.5, 0.0625,0.5,0.375},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	selection_box = {type="fixed",fixed={
@@ -3196,8 +4121,7 @@ minetest.register_node("stones:b8ra", {
 {0.0625,-0.5,-0.5, 0.125,0.5,0.25},
 {0,-0.5,-0.5, 0.0625,0.5,0.375},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	drawtype = "mesh",
@@ -3205,7 +4129,7 @@ minetest.register_node("stones:b8ra", {
 })
 
 minetest.register_node("stones:b8raC", {
-	description = "*2 8-Cycle R5/2 Diagstep RA Covol Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep RA Covol Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3214,19 +4138,50 @@ minetest.register_node("stones:b8raC", {
 	collision_box = {type="fixed",fixed={
 {0,-0.5,-0.5, 0.5,0.5,0.5},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	selection_box = {type="fixed",fixed={
 {0,-0.5,-0.5, 0.5,0.5,0.5},
 {-0.0625,0,-0.375, 0,0.5,0.5},
-{-0.1,0,-0.3, -0.0625,0.5,0.5},
-{-0.5,0,-0.3, -0.1,0.5,0.5},
+{-0.5,0,-0.3, -0.0625,0.5,0.5},
 {-0.5,-0.5,-0.5, 0,0,0.5},
 {-0.5,0,-0.4, -0.3,0.5,-0.3}}},
 	drawtype = "mesh",
 	mesh = "c8raC.obj"
+})
+
+minetest.register_node("stones:b8rat", {
+	description = "*3 8-Cycle R5/2 Diagstep Top RA Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8rat",
+	collision_box = {type="fixed",fixed={
+{0.375,-0.5,-0.5, 0.4375,0,-0.375},
+{0.3125,-0.5,-0.5, 0.375,0,-0.25},
+{0.25,-0.5,-0.5, 0.3125,0,-0.125},
+{0.1875,-0.5,-0.5, 0.25,0,0},
+{0.125,-0.5,-0.5, 0.1875,0,0.125},
+{0.0625,-0.5,-0.5, 0.125,0,0.25},
+{0,-0.5,-0.5, 0.0625,0,0.375},
+{-0.0625,-0.5,-0.375, 0,0,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
+{-0.5,-0.5,-0.4, -0.3,0,-0.3}}},
+	selection_box = {type="fixed",fixed={
+{0.375,-0.5,-0.5, 0.4375,0,-0.375},
+{0.3125,-0.5,-0.5, 0.375,0,-0.25},
+{0.25,-0.5,-0.5, 0.3125,0,-0.125},
+{0.1875,-0.5,-0.5, 0.25,0,0},
+{0.125,-0.5,-0.5, 0.1875,0,0.125},
+{0.0625,-0.5,-0.5, 0.125,0,0.25},
+{0,-0.5,-0.5, 0.0625,0,0.375},
+{-0.0625,-0.5,-0.375, 0,0,0.5},
+{-0.5,-0.5,-0.3, -0.0625,0,0.5},
+{-0.5,-0.5,-0.4, -0.3,0,-0.3}}},
+	drawtype = "mesh",
+	mesh = "c8rat.obj"
 })
 
 minetest.register_node("stones:b8rb", {
@@ -3308,7 +4263,7 @@ minetest.register_node("stones:b8rbC", {
 })
 
 minetest.register_node("stones:b8rc", {
-	description = "8-Cycle R5/2 Diagstep RC Rubble",
+	description = "*3 8-Cycle R5/2 Diagstep RC Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3336,6 +4291,35 @@ minetest.register_node("stones:b8rc", {
 {0.4,0,-0.3, 0.5,0.5,-0.1}}},
 	drawtype = "mesh",
 	mesh = "c8rc.obj"
+})
+
+minetest.register_node("stones:b8rct", {
+	description = "*3 8-Cycle R5/2 Diagstep Top RC Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:b8rct",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.5,-0.5,-0.125, 0.25,0,-0.1},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{0.4,-0.5,-0.3, 0.5,0,-0.1}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.1, 0.5,0,0.5},
+{-0.5,-0.5,-0.125, 0.25,0,-0.1},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.3125, -0.125,0,-0.25},
+{-0.5,-0.5,-0.375, -0.25,0,-0.3125},
+{-0.5,-0.5,-0.4375, -0.375,0,-0.375},
+{0.4,-0.5,-0.3, 0.5,0,-0.1}}},
+	drawtype = "mesh",
+	mesh = "c8rct.obj"
 })
 
 minetest.register_node("stones:b8rd", {
@@ -3506,6 +4490,47 @@ minetest.register_node("stones:b8rf", {
 	mesh = "c8rf.obj"
 })
 
+minetest.register_node("stones:b8rft", {
+	description = "*2 8-Cycle R5/2 Diagstep Top RF Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:c8rft",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, -0.0313,0,-0.4375},
+{-0.5,-0.5,-0.4375, -0.0625,0,-0.375},
+{-0.5,-0.5,-0.375, -0.1,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0.,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, -0.0313,0,-0.4375},
+{-0.5,-0.5,-0.4375, -0.0625,0,-0.375},
+{-0.5,-0.5,-0.375, -0.1,0,-0.25},
+{-0.5,-0.5,-0.25, 0,0,-0.1875},
+{-0.5,-0.5,-0.1875, 0.125,0,-0.125},
+{-0.5,-0.5,-0.125, 0.25,0,-0.0625},
+{-0.5,-0.5,-0.0625, 0.375,0,0},
+{-0.375,-0.5,0, 0.5,0.,0.0625},
+{-0.25,-0.5,0.0625, 0.5,0,0.125},
+{-0.125,-0.5,0.125, 0.5,0,0.1875},
+{0,-0.5,0.1875, 0.5,0,0.25},
+{0.125,-0.5,0.25, 0.5,0,0.3125},
+{0.25,-0.5,0.3125, 0.5,0,0.375},
+{0.375,-0.5,0.375, 0.5,0,0.4375}}},
+	drawtype = "mesh",
+	mesh = "c8rft.obj"
+})
+
 minetest.register_node("stones:b8rfC", {
 	description = "*2 8-Cycle R5/2 Diagstep RF Covol Rubble",
 	paramtype = "light",
@@ -3603,7 +4628,6 @@ minetest.register_node("stones:bear",{
 {-0.5,-0.5,-1,0.5,-0.49,1}}},
     collision_box = {type = "fixed", fixed = {{-0.3, 0.1, -0.8, 0.3, 0.6, 0.5},{-0.5,-0.5,-1,0.5,-0.49,1}}},
 })
-
 
 
 --{-0.04,-0.45,-0.04, 0.04,0.45,0.04} covered by coin

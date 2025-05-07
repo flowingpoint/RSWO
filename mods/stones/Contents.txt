@@ -72,8 +72,10 @@ brushrock_11*		Brush+Rock+Brush //
 rushrock_11		    Rush+Rock+Rush //
 rublish_11*		    Rubble+Rock+Rubble //
 blushrock_11*		Lush Brush+Rock+Brush //
-sku					Diagonal SkewSlab
-skubl*					Diagonal SkewSlab Rubble
+sku					*2 Diagonal SkewSlab
+skubl*				*2 Diagonal SkewSlab Rubble
+skuk*				*2 Diagonal SkewSlab
+sbukl*				*2 Diagonal SkewSlab Rubble
 sku2_r				RightHalf SkewSlab
 skub2_r*				RightHalf SkewSlab Rubble
 sku2_l				LeftHalf SkewSlab
@@ -82,8 +84,12 @@ sku3_l				R3 SkewSlab
 skub3_l*				R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt
 skub3_r*				R3 SkewSlab Alt Rubble
-diagsteps			Diagonal Steps
-diagsterps*			Diagonal Steps Rubble
+diagsteps			*3 Diagonal Steps
+diagsterps*			*3 Diagonal Steps Rubble
+dia9s16ps*			*3 Diagonal Steps 9/16
+d16gster9s*			*3 Diagonal Steps 9/16 Rubble
+d1a8s7eps*			*3 Diagonal Steps 1+7/16
+d7a8s1erps*			*3 Diagonal Steps 1+7/16 Rubble
 diagstep			Diagonal Step
 diagsterp*			Diagonal Step Rubble
 arch				Arch
@@ -112,8 +118,10 @@ r_2		        	Root 2 Slope Rush
 brush_2*             Root 2 Slope Brush
 rubble_2*            Root 2 Slope Rubble
 s_2					Root 2 Slope
-s_52				R5/2 Slope LowHalf
-sb_52*				R5/2 Slope LowHalf Rubble
+s_52				*2 R5/2 Slope LowHalf
+sb_52*				*2 R5/2 Slope LowHalf Rubble
+s_52*				*2 R5/2 Slope LowHalf Siding
+sb_52*				*2 R5/2 Slope LowHalf Siding Rubble
 s_252l				R2, R5/2 Left
 sb_252l*				R2, R5/2 Left Rubble
 s_h52l*				High-half, R5/2 Left
@@ -210,14 +218,18 @@ stair_2p            2 Step P
 struble_2p*           2 Step P Rubble
 stair_2q            2 Step Q
 struble_2q*            2 Step Q Rubble
-diagsteps_52lh		*2 Steps R5/2 Left to Horizontal
-diagsterps_52lh*	*2 Steps R5/2 Left to Horizontal Rubble
-diagsteps_2wr*      *2 Steps R5/2 2-way Right
-diagsterps_2wr*     *2 Steps R5/2 2-way Right Rubble
-diagsteps_52rh		*2 Steps R5/2 Right to Horizontal
-diagsterps_52rh*	*2 Steps R5/2 Right to Horizontal Rubble
-diagsteps_2wl*      *2 Steps R5/2 2-way Left
-diagsterps_2wl*     *2 Steps R5/2 2-way Left Rubble
+diagsteps_52lh		*3 Steps R5/2 Left to Horizontal
+diagsterps_52lh*	*3 Steps R5/2 Left to Horizontal Rubble
+diagsteps_2wr*      *3 Steps R5/2 2-way Right
+diagsterps_2wr*     *3 Steps R5/2 2-way Right Rubble
+diagsteps_r2p*      *3 Steps R5/2 Right to Panel
+diagsterps_r2p*     *3 Steps R5/2 Right to Panel Rubble
+diagsteps_52rh		*3 Steps R5/2 Right to Horizontal
+diagsterps_52rh*	*3 Steps R5/2 Right to Horizontal Rubble
+diagsteps_2wl*      *3 Steps R5/2 2-way Left
+diagsterps_2wl*     *3 Steps R5/2 2-way Left Rubble
+diagsteps_l2p*      *3 Steps R5/2 Left to Panel
+diagsterps_l2p*     *3 Steps R5/2 Left to Panel Rubble
 diagsteps_52rv		*2 Steps R5/2 Right to Vert
 diagsterps_52rv*	*2 Steps R5/2 Right to Vert Rubble
 diagsteps_57vr*		*2 Steps R5/2 7/8 Vert to Right
@@ -237,6 +249,7 @@ strubl_2of3h*		Half 2/3 Step Rubble
 stair_7				Inner 2 Step
 strubl_7*				Inner 2 Step Rubble
 stair_5				Outer 2 step
+stair_4				Outer Tet step
 strubl_5*				Outer 2 step Rubble
 stair_941			Outer 3 step
 strubl_941*			Outer 3 step Rubble
@@ -259,8 +272,10 @@ pyru_2*				Square Based Pyramid HighHalf Rubble
 pyre				Square Based Pyramid Edged
 pyrue*				Square Based Pyramid Edged Rubble
 estamp				Star Pyramid
-sku_20				Diagonal SkewSlab CornerVac
-skub_20*				Diagonal SkewSlab CornerVac Rubble
+sku_20				*2 Diagonal SkewSlab CornerVac
+skub_20*			*2 Diagonal SkewSlab CornerVac Rubble
+sku_20k*			*2 Diagonal SkewSlab CornerVac Siding
+skub_20k*			*2 Diagonal SkewSlab CornerVac Siding Rubble
 sku_202			Diagonal SkewSlab CornerVac Half
 skub_202*			Diagonal SkewSlab CornerVac Half Rubble
 skud_202r			Diagonal SkewSlab CornerVac Right
@@ -268,14 +283,22 @@ skrud_202r*			Diagonal SkewSlab CornerVac Right Rubble
 octa				Octahedron
 diagstep_2			Diagonal Step 1/8
 diagsterp_2*			Diagonal Step 1/8 Rubble
-diagstep_7			Diagonal Step 7/8
-diagsterp_7*			Diagonal Step 7/8 Rubble
+diagstep_7			*3 Diagonal Step 7/8
+diagsterp_7*		*3 Diagonal Step 7/8 Rubble
+diagstep_6*			*3 Diagonal Step 3/4
+diagsterp_6*		*3 Diagonal Step 3/4 Rubble
+diagstep_3*			*3 Diagonal Step 3/8
+diagsterp_3*		*3 Diagonal Step 3/8 Rubble
 diaq				Diagonal 1/4
 diraq*				Diagonal 1/4 Rubble
-diagsteps_8l			Diagonal Half-N-Eighth Steps Left
-diagsterps_8l*			Diagonal Half-N-Eighth Steps Left Rubble
+diagsteps_8l		*2 Diagonal Half-N-Eighth Steps Left
+diagsterps_8l*		*2 Diagonal Half-N-Eighth Steps Left Rubble
+diagsteps_38l*		*2 Diagonal 3/8 Steps Left
+diagsterps_38l*		*2 Diagonal 3/8 Steps Left Rubble
 diagsteps_8r		Diagonal Half-N-Eighth Steps Right
 diagsterps_8r*		Diagonal Half-N-Eighth Steps Right Rubble
+diagsteps_38r*		Diagonal 3/8 Steps Right
+diagsterps_38r*		Diagonal 3/8 Steps Right Rubble
 spirdiag_r			Diagonal Spiral Steps Right
 spirblag_r*			Diagonal Spiral Steps Right Rubble
 spirdiag_l			Diagonal Spiral Steps Left
@@ -378,7 +401,7 @@ vsudl*				Part Lowhalf Vsect A Rubble
 
 sto6.lua				
 stones:{				
-c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume)
+c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume 16) {1346acf}:(+Tops 14)
 ![h] is a hex from 1 to f
 !![s] is 'l' or 'r'
 dragon              Classic Spyro Dragon Statue

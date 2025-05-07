@@ -2062,8 +2062,66 @@ minetest.register_node("stones:diagsterps_2wr", {
 	mesh = "diagsteps_2wr.obj"
 })
 
+minetest.register_node("stones:diagsteps_r2p", {
+	description = "*2 Steps R5/2 Right to Panel",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.375, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:diagsteps_r2p",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,0, 0.5,0,0.5},
+{-0.375,-0.5,-0.5, 0.5,-0.4375,0},
+{-0.25,-0.4375,-0.5, 0.5,-0.375,0},
+{-0.125,-0.375,-0.5, 0.5,-0.3125,0},
+{0,-0.3125,-0.5, 0.5,-0.25,0},
+{0.125,-0.25,-0.5, 0.5,-0.1875,0},
+{0.25,-0.1875,-0.5, 0.5,-0.125,0},
+{0.375,-0.125,-0.5, 0.5,-0.0625,0}}},
+		selection_box = {type="fixed",fixed={
+{-0.5,-0.5,0, 0.5,0,0.5},
+{-0.375,-0.5,-0.5, 0.5,-0.4375,0},
+{-0.25,-0.4375,-0.5, 0.5,-0.375,0},
+{-0.125,-0.375,-0.5, 0.5,-0.3125,0},
+{0,-0.3125,-0.5, 0.5,-0.25,0},
+{0.125,-0.25,-0.5, 0.5,-0.1875,0},
+{0.25,-0.1875,-0.5, 0.5,-0.125,0},
+{0.375,-0.125,-0.5, 0.5,-0.0625,0}}},
+	drawtype = "mesh",
+	mesh = "diagsteps_r2p.obj"
+})
+
+minetest.register_node("stones:diagsterps_r2p", {
+	description = "*2 Steps R5/2 Right to Panel Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.375, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:diagsterps_r2p",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,0, 0.5,0,0.5},
+{-0.375,-0.5,-0.5, 0.5,-0.4375,0},
+{-0.25,-0.4375,-0.5, 0.5,-0.375,0},
+{-0.125,-0.375,-0.5, 0.5,-0.3125,0},
+{0,-0.3125,-0.5, 0.5,-0.25,0},
+{0.125,-0.25,-0.5, 0.5,-0.1875,0},
+{0.25,-0.1875,-0.5, 0.5,-0.125,0},
+{0.375,-0.125,-0.5, 0.5,-0.0625,0}}},
+		selection_box = {type="fixed",fixed={
+{-0.5,-0.5,0, 0.5,0,0.5},
+{-0.375,-0.5,-0.5, 0.5,-0.4375,0},
+{-0.25,-0.4375,-0.5, 0.5,-0.375,0},
+{-0.125,-0.375,-0.5, 0.5,-0.3125,0},
+{0,-0.3125,-0.5, 0.5,-0.25,0},
+{0.125,-0.25,-0.5, 0.5,-0.1875,0},
+{0.25,-0.1875,-0.5, 0.5,-0.125,0},
+{0.375,-0.125,-0.5, 0.5,-0.0625,0}}},
+	drawtype = "mesh",
+	mesh = "diagsteps_r2p.obj"
+})
+
 minetest.register_node("stones:diagsteps_52rh", {
-	description = "*2 Steps R5/2 Right to Horiz",
+	description = "*3 Steps R5/2 Right to Horiz",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2092,7 +2150,7 @@ minetest.register_node("stones:diagsteps_52rh", {
 })
 
 minetest.register_node("stones:diagsterps_52rh", {
-	description = "*2 Steps R5/2 Right to Horiz Rubble",
+	description = "*3 Steps R5/2 Right to Horiz Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2121,7 +2179,7 @@ minetest.register_node("stones:diagsterps_52rh", {
 })
 
 minetest.register_node("stones:diagsteps_2wl", {
-	description = "*2 Steps R5/2 2-way Left",
+	description = "*3 Steps R5/2 2-way Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2164,7 +2222,7 @@ minetest.register_node("stones:diagsteps_2wl", {
 })
 
 minetest.register_node("stones:diagsterps_2wl", {
-	description = "*2 Steps R5/2 2-way Left Rubble",
+	description = "*3 Steps R5/2 2-way Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2204,6 +2262,64 @@ minetest.register_node("stones:diagsterps_2wl", {
 {0.375,0.375,0, 0.5,0.4375,0.5}}},
 	drawtype = "mesh",
 	mesh = "diagsteps_2wl.obj"
+})
+
+minetest.register_node("stones:diagsteps_l2p", {
+	description = "*3 Steps R5/2 Left to Panel",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.375, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:diagsteps_l2p",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.375,-0.4375,0},
+{-0.5,-0.4375,-0.5, 0.25,-0.375,0},
+{-0.5,-0.375,-0.5, 0.125,-0.3125,0},
+{-0.5,-0.3125,-0.5, 0,-0.25,0},
+{-0.5,-0.25,-0.5, -0.125,-0.1875,0},
+{-0.5,-0.1875,-0.5, -0.25,-0.125,0},
+{-0.5,-0.125,-0.5, -0.375,-0.0625,0},
+{-0.5,-0.5,0, 0.5,0,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.375,-0.4375,0},
+{-0.5,-0.4375,-0.5, 0.25,-0.375,0},
+{-0.5,-0.375,-0.5, 0.125,-0.3125,0},
+{-0.5,-0.3125,-0.5, 0,-0.25,0},
+{-0.5,-0.25,-0.5, -0.125,-0.1875,0},
+{-0.5,-0.1875,-0.5, -0.25,-0.125,0},
+{-0.5,-0.125,-0.5, -0.375,-0.0625,0},
+{-0.5,-0.5,0, 0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "diagsteps_l2p.obj"
+})
+
+minetest.register_node("stones:diagsterps_l2p", {
+	description = "*3 Steps R5/2 Left to Panel Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.375, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:diagsterps_l2p",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.375,-0.4375,0},
+{-0.5,-0.4375,-0.5, 0.25,-0.375,0},
+{-0.5,-0.375,-0.5, 0.125,-0.3125,0},
+{-0.5,-0.3125,-0.5, 0,-0.25,0},
+{-0.5,-0.25,-0.5, -0.125,-0.1875,0},
+{-0.5,-0.1875,-0.5, -0.25,-0.125,0},
+{-0.5,-0.125,-0.5, -0.375,-0.0625,0},
+{-0.5,-0.5,0, 0.5,0,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.5, 0.375,-0.4375,0},
+{-0.5,-0.4375,-0.5, 0.25,-0.375,0},
+{-0.5,-0.375,-0.5, 0.125,-0.3125,0},
+{-0.5,-0.3125,-0.5, 0,-0.25,0},
+{-0.5,-0.25,-0.5, -0.125,-0.1875,0},
+{-0.5,-0.1875,-0.5, -0.25,-0.125,0},
+{-0.5,-0.125,-0.5, -0.375,-0.0625,0},
+{-0.5,-0.5,0, 0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "diagsteps_l2p.obj"
 })
 
 minetest.register_node("stones:diagsteps_52rv", {
@@ -2523,6 +2639,20 @@ minetest.register_node("stones:stair_5", {
 	drawtype = "nodebox",
 	node_box = {type="fixed",fixed={
 {-0.5, -0.5, -0.5, 0.5, 0, 0.5},
+{-0.5, 0, 0, 0, 0.5, 0.5}}}
+})
+
+minetest.register_node("stones:stair_4", {
+	description = "Outer Tet step",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.625, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:stair_4",
+	drawtype = "nodebox",
+	node_box = {type="fixed",fixed={
+{-0.5, -0.5, 0, 0.5, 0, 0.5},
+{-0.5, -0.5, -0.5, 0,0,0},
 {-0.5, 0, 0, 0, 0.5, 0.5}}}
 })
 

@@ -2,7 +2,7 @@
 scope = {}
 
 minetest.register_craftitem(":default:scope", {
-	description = "'Z' Zooms",
+	description = "'B' Zooms",
 	inventory_image = "bubble.png",
 	wield_image = "bubble.png",
 	stack_max = 1,
@@ -10,6 +10,13 @@ minetest.register_craftitem(":default:scope", {
 	on_use = function(itemstack, user, pointed_thing)
 		scope.update_player_property(user)
 	end,
+	on_drop = function(itemstack, dropper, pos)
+		local dir = dropper:get_look_dir();
+		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+		minetest.add_item(pos, "tape_measure:tape_measure")
+		itemstack:take_item()
+		return itemstack
+	end
 })
 local creative_mod = minetest.get_modpath("creative")
 local creative_mode_cache = minetest.settings:get_bool("creative_mode")

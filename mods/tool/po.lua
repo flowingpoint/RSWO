@@ -57,13 +57,31 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="stones:s_2216", param2=p2s4}) end
         if s.name == "tool:ladder"	then 
 		p2la = s.param2
-		minetest.env:set_node(p, {name="tool:lid", param2=p2la}) end
-        if s.name == "tool:lid"	then 
-		p2li = s.param2
-		minetest.env:set_node(p, {name="tool:ladder", param2=p2li}) end
+		minetest.env:set_node(p, {name="tool:lid_open", param2=p2la}) end
+        if s.name == "tool:lid_open"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:ladder", param2=p2lb}) end
+        if s.name == "tool:lid_closed"	then 
+		p2lc = s.param2
+		minetest.env:set_node(p, {name="tool:ladder", param2=p2lc}) end
         if s.name == "stones:isokar"	then 
 		p2isoka = s.param2
-		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) end
+		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) 
+        minetest.add_particlespawner({
+		amount = 1,
+		time = 1,
+		glow = 14,
+		pos = minetest.env:get_node(self.object:getpos()),
+		pos = {x=pos.x, y=pos.y, z=pos.z},
+		minvel = {x=-0.2, y=0, z=-0.2},
+		maxvel = {x=0.2, y=0, z=0.2},
+		minacc = {x=0, y=0.2, z=0},
+		maxacc = {x=0, y=0.7, z=0},
+		exptime = {min=2, max=2},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
+        end
         if s.name == "stones:isodark"	then 
 		minetest.sound_play({name="whoosh", gain=0.05}, {pos=selfpos}, true)
 		p2isokb = s.param2
@@ -76,23 +94,23 @@ minetest.register_entity("tool:pow", {
 		pos = {x=pos.x, y=pos.y, z=pos.z},
 		minvel = {x=0, y=0, z=0},
 		maxvel = {x=0, y=0, z=0},
-		minacc = {x=0, y=0, z=0},
-		maxacc = {x=0, y=0, z=0},
+		minacc = {x=0, y=0.1, z=0},
+		maxacc = {x=0, y=0.2, z=0},
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
 		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=20,y=20}}}}}) end
         if s.name == "stones:brush"	then 
-		p2brush = s.param2
+		p2brush = math.floor((s.param2)/4)*s.param2+(s.param2+math.random(1,4))%4
 		minetest.env:set_node(p, {name="stones:blush", param2=p2brush}) end
         if s.name == "stones:blush"	then 
-		p2lbrush = (s.param2+math.random(1,4))%4
+		p2lbrush = math.floor((s.param2)/4)*s.param2+(s.param2+math.random(1,4))%4
 		minetest.env:set_node(p, {name="stones:brush", param2=p2lbrush}) end
         if s.name == "stones:brushrock_0"	then 
-		p2b0 = (s.param2+1)%4
+		p2b0 = math.floor((s.param2)/4)*4+(s.param2+1)%4
 		minetest.env:set_node(p, {name="stones:blushrock_0", param2=p2b0}) end
         if s.name == "stones:blushrock_0"	then 
-		p2lb0 = (s.param2-1)%4
+		p2lb0 = math.floor((s.param2)/4)*4+(s.param2-1)%4
 		minetest.env:set_node(p, {name="stones:brushrock_0", param2=p2lb0}) end
         if s.name == "stones:brushrock_1"	then 
 		p2b1 = (s.param2+1)%4
@@ -276,6 +294,18 @@ minetest.register_entity("tool:pow", {
         if s.name == "runes:0bk"	then 
 		p20ulb = s.param2
 		minetest.env:set_node(p, {name="runes:0ul", param2=p20ulb}) end
+        if s.name == "stones:c8l1"	then 
+		p2c8l1ca = s.param2
+		minetest.env:set_node(p, {name="stones:c8l1t", param2=p2c8l1ca}) end
+        if s.name == "stones:c8l1t"	then 
+		p2c8l1tcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l1", param2=p2c8l1tcb}) end
+        if s.name == "stones:b8l1"	then 
+		p2b8l1ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8l1t", param2=p2b8l1ca}) end
+        if s.name == "stones:b8l1t"	then 
+		p2b8l1tcb = s.param2
+		minetest.env:set_node(p, {name="stones:b8l1", param2=p2b8l1tcb}) end
         if s.name == "stones:c8l2"	then 
 		p2c8l2ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8l2C", param2=p2c8l2ca}) end
@@ -288,12 +318,27 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:b8l2C"	then 
 		p2b8l2cb = s.param2
 		minetest.env:set_node(p, {name="stones:b8l2", param2=p2b8l2cb}) end
+        if s.name == "stones:c8l3"	then 
+		p2c8l3ta = s.param2
+		minetest.env:set_node(p, {name="stones:c8l3t", param2=p2c8l3ta}) end
+        if s.name == "stones:c8l3t"	then 
+		p2c8l3tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l3", param2=p2c8l3tb}) end
+        if s.name == "stones:b8l3"	then 
+		p2b8l3ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8l3t", param2=p2b8l3ta}) end
+        if s.name == "stones:b8l3t"	then 
+		p2b8l3tb = s.param2
+		minetest.env:set_node(p, {name="stones:b8l3t", param2=p2b8l3tb}) end
         if s.name == "stones:c8l4"	then 
-		p2c8l4ca = s.param2
-		minetest.env:set_node(p, {name="stones:c8l4C", param2=p2c8l4ca}) end
+		p2c8l4a = s.param2
+		minetest.env:set_node(p, {name="stones:c8l4C", param2=p2c8l4a}) end
         if s.name == "stones:c8l4C"	then 
-		p2c8l4cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l4", param2=p2c8l4cb}) end
+		p2c8l4b = s.param2
+		minetest.env:set_node(p, {name="stones:c8l4t", param2=p2c8l4b}) end
+        if s.name == "stones:c8l4t"	then 
+		p2c8l4c = s.param2
+		minetest.env:set_node(p, {name="stones:c8l4", param2=p2c8l4c}) end
         if s.name == "stones:b8l4"	then 
 		p2b8l4ca = s.param2
 		minetest.env:set_node(p, {name="stones:b8l4C", param2=p2b8l4ca}) end
@@ -301,17 +346,23 @@ minetest.register_entity("tool:pow", {
 		p2b8l4cb = s.param2
 		minetest.env:set_node(p, {name="stones:b8l4", param2=p2b8l4cb}) end
         if s.name == "stones:c8l6"	then 
-		p2c8l6ca = s.param2
-		minetest.env:set_node(p, {name="stones:c8l6C", param2=p2c8l6ca}) end
+		p2c8l6a = s.param2
+		minetest.env:set_node(p, {name="stones:c8l6C", param2=p2c8l6a}) end
         if s.name == "stones:c8l6C"	then 
-		p2c8l6cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l6", param2=p2c8l6cb}) end
+		p2c8l6b = s.param2
+		minetest.env:set_node(p, {name="stones:c8l6t", param2=p2c8l6b}) end
+        if s.name == "stones:c8l6t"	then 
+		p2c8l6c = s.param2
+		minetest.env:set_node(p, {name="stones:c8l6", param2=p2c8l6c}) end
         if s.name == "stones:b8l6"	then 
-		p2b8l6ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8l6C", param2=p2b8l6ca}) end
+		p2b8l6a = s.param2
+		minetest.env:set_node(p, {name="stones:b8l6C", param2=p2b8l6a}) end
         if s.name == "stones:b8l6C"	then 
-		p2b8l6cb = s.param2
-		minetest.env:set_node(p, {name="stones:b8l6", param2=p2b8l6cb}) end
+		p2b8l6b = s.param2
+		minetest.env:set_node(p, {name="stones:b8l6t", param2=p2b8l6b}) end
+        if s.name == "stones:b8l6t"	then 
+		p2b8l6c = s.param2
+		minetest.env:set_node(p, {name="stones:b8l6", param2=p2b8l6c}) end
         if s.name == "stones:c8l8"	then 
 		p2c8l8ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8l8C", param2=p2c8l8ca}) end
@@ -325,17 +376,23 @@ minetest.register_entity("tool:pow", {
 		p2b8l8cb = s.param2
 		minetest.env:set_node(p, {name="stones:b8l8", param2=p2b8l8cb}) end
         if s.name == "stones:c8la"	then 
-		p2c8laca = s.param2
-		minetest.env:set_node(p, {name="stones:c8laC", param2=p2c8laca}) end
+		p2c8laa = s.param2
+		minetest.env:set_node(p, {name="stones:c8laC", param2=p2c8laa}) end
         if s.name == "stones:c8laC"	then 
-		p2c8lacb = s.param2
-		minetest.env:set_node(p, {name="stones:c8la", param2=p2c8lacb}) end
+		p2c8lab = s.param2
+		minetest.env:set_node(p, {name="stones:c8lat", param2=p2c8lab}) end
+        if s.name == "stones:c8lat"	then 
+		p2c8lac = s.param2
+		minetest.env:set_node(p, {name="stones:c8la", param2=p2c8lac}) end
         if s.name == "stones:b8la"	then 
-		p2b8laca = s.param2
-		minetest.env:set_node(p, {name="stones:b8laC", param2=p2b8laca}) end
+		p2b8laa = s.param2
+		minetest.env:set_node(p, {name="stones:b8laC", param2=p2b8laa}) end
         if s.name == "stones:b8laC"	then 
-		p2b8lacb = s.param2
-		minetest.env:set_node(p, {name="stones:b8la", param2=p2b8lacb}) end
+		p2b8lab = s.param2
+		minetest.env:set_node(p, {name="stones:b8lt", param2=p2b8lab}) end
+        if s.name == "stones:b8lat"	then 
+		p2b8lac = s.param2
+		minetest.env:set_node(p, {name="stones:b8la", param2=p2b8lac}) end
         if s.name == "stones:c8lb"	then 
 		p2c8lbca = s.param2
 		minetest.env:set_node(p, {name="stones:c8lbC", param2=p2c8lbca}) end
@@ -348,6 +405,18 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:b8lbC"	then 
 		p2b8lbcb = s.param2
 		minetest.env:set_node(p, {name="stones:b8lb", param2=p2b8lbcb}) end
+        if s.name == "stones:c8lc"	then 
+		p2c8lca = s.param2
+		minetest.env:set_node(p, {name="stones:c8lct", param2=p2c8lca}) end
+        if s.name == "stones:c8lct"	then 
+		p2c8lcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lc", param2=p2c8lcb}) end
+        if s.name == "stones:b8lc"	then 
+		p2b8lca = s.param2
+		minetest.env:set_node(p, {name="stones:b8lct", param2=p2b8lca}) end
+        if s.name == "stones:b8lct"	then 
+		p2b8lcb = s.param2
+		minetest.env:set_node(p, {name="stones:b8lc", param2=p2b8lcb}) end
         if s.name == "stones:c8ld"	then 
 		p2c8ldca = s.param2
 		minetest.env:set_node(p, {name="stones:c8ldC", param2=p2c8ldca}) end
@@ -361,17 +430,35 @@ minetest.register_entity("tool:pow", {
 		p2b8ldcb = s.param2
 		minetest.env:set_node(p, {name="stones:b8ld", param2=p2b8ldcb}) end
         if s.name == "stones:c8lf"	then 
-		p2c8lfca = s.param2
-		minetest.env:set_node(p, {name="stones:c8lfC", param2=p2c8lfca}) end
+		p2c8lfa = s.param2
+		minetest.env:set_node(p, {name="stones:c8lfC", param2=p2c8lfa}) end
         if s.name == "stones:c8lfC"	then 
-		p2c8lfcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8lf", param2=p2c8lfcb}) end
+		p2c8lfb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lft", param2=p2c8lfb}) end
+        if s.name == "stones:c8lft"	then 
+		p2c8lfc = s.param2
+		minetest.env:set_node(p, {name="stones:c8lf", param2=p2c8lfc}) end
         if s.name == "stones:b8lf"	then 
-		p2b8lfca = s.param2
-		minetest.env:set_node(p, {name="stones:b8lfC", param2=p2b8lfca}) end
+		p2b8lfa = s.param2
+		minetest.env:set_node(p, {name="stones:b8lfC", param2=p2b8lfa}) end
         if s.name == "stones:b8lfC"	then 
-		p2b8lfcb = s.param2
-		minetest.env:set_node(p, {name="stones:b8lf", param2=p2b8lfcb}) end
+		p2b8lfb = s.param2
+		minetest.env:set_node(p, {name="stones:b8lft", param2=p2b8lfb}) end
+        if s.name == "stones:b8lft"	then 
+		p2b8lfc = s.param2
+		minetest.env:set_node(p, {name="stones:b8lf", param2=p2b8lfc}) end
+        if s.name == "stones:c8r1"	then 
+		p2c8r1ca = s.param2
+		minetest.env:set_node(p, {name="stones:c8r1t", param2=p2c8r1ca}) end
+        if s.name == "stones:c8r1t"	then 
+		p2c8r21tcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r1", param2=p2c8r1tcb}) end
+        if s.name == "stones:b8r1"	then 
+		p2b8r1ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8r1t", param2=p2b8r1ca}) end
+        if s.name == "stones:b8r1t"	then 
+		p2b8r21tcb = s.param2
+		minetest.env:set_node(p, {name="stones:b8r1", param2=p2b8r1tcb}) end
         if s.name == "stones:c8r2"	then 
 		p2c8r2ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8r2C", param2=p2c8r2ca}) end
@@ -384,30 +471,54 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:b8r2C"	then 
 		p2b8r2cb = s.param2
 		minetest.env:set_node(p, {name="stones:b8r2", param2=p2b8r2cb}) end
+        if s.name == "stones:c8r3"	then 
+		p2c8r3ta = s.param2
+		minetest.env:set_node(p, {name="stones:c8r3t", param2=p2c8r3ta}) end
+        if s.name == "stones:c8r3t"	then 
+		p2c8r3tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r3", param2=p2c8r3tb}) end
+        if s.name == "stones:b8r3"	then 
+		p2b8r3ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8r3t", param2=p2b8r3ta}) end
+        if s.name == "stones:b8r3t"	then 
+		p2b8r3tb = s.param2
+		minetest.env:set_node(p, {name="stones:b8r3", param2=p2b8r3tb}) end
         if s.name == "stones:c8r4"	then 
 		p2c8r4ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8r4C", param2=p2c8r4ca}) end
         if s.name == "stones:c8r4C"	then 
 		p2c8r4cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r4", param2=p2c8r4cb}) end
+		minetest.env:set_node(p, {name="stones:c8r4t", param2=p2c8r4cb}) end
+        if s.name == "stones:c8r4t"	then 
+		p2c8r4cc = s.param2
+		minetest.env:set_node(p, {name="stones:c8r4", param2=p2c8r4cc}) end
         if s.name == "stones:b8r4"	then 
 		p2b8r4ca = s.param2
 		minetest.env:set_node(p, {name="stones:b8r4C", param2=p2b8r4ca}) end
         if s.name == "stones:b8r4C"	then 
 		p2b8r4cb = s.param2
-		minetest.env:set_node(p, {name="stones:b8r4", param2=p2b8r4cb}) end
+		minetest.env:set_node(p, {name="stones:b8r4t", param2=p2b8r4cb}) end
+        if s.name == "stones:b8r4t"	then 
+		p2b8r4cc = s.param2
+		minetest.env:set_node(p, {name="stones:b8r4", param2=p2b8r4cc}) end
         if s.name == "stones:c8r6"	then 
 		p2c8r6ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8r6C", param2=p2c8r6ca}) end
         if s.name == "stones:c8r6C"	then 
-		p2c8r6cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r6", param2=p2c8r6cb}) end
+		p2c8r6ctb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r6t", param2=p2c8r6ctb}) end
+        if s.name == "stones:c8r6t"	then 
+		p2c8r6tc = s.param2
+		minetest.env:set_node(p, {name="stones:c8r6", param2=p2c8r6tc}) end
         if s.name == "stones:b8r6"	then 
 		p2b8r6ca = s.param2
 		minetest.env:set_node(p, {name="stones:b8r6C", param2=p2b8r6ca}) end
         if s.name == "stones:b8r6C"	then 
-		p2b8r6cb = s.param2
-		minetest.env:set_node(p, {name="stones:b8r6", param2=p2b8r6cb}) end
+		p2b8r6ctb = s.param2
+		minetest.env:set_node(p, {name="stones:b8r6t", param2=p2b8r6ctb}) end
+        if s.name == "stones:b8r6t"	then 
+		p2b8r6tb = s.param2
+		minetest.env:set_node(p, {name="stones:b8r6", param2=p2b8r6tb}) end
         if s.name == "stones:c8r8"	then 
 		p2c8r8ca = s.param2
 		minetest.env:set_node(p, {name="stones:c8r8C", param2=p2c8r8ca}) end
@@ -424,14 +535,20 @@ minetest.register_entity("tool:pow", {
 		p2c8raca = s.param2
 		minetest.env:set_node(p, {name="stones:c8raC", param2=p2c8raca}) end
         if s.name == "stones:c8raC"	then 
-		p2c8racb = s.param2
-		minetest.env:set_node(p, {name="stones:c8ra", param2=p2c8racb}) end
+		p2c8ratb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rat", param2=p2c8ratb}) end
+        if s.name == "stones:c8rat"	then 
+		p2c8rac = s.param2
+		minetest.env:set_node(p, {name="stones:c8ra", param2=p2c8rac}) end
         if s.name == "stones:b8ra"	then 
 		p2b8raca = s.param2
 		minetest.env:set_node(p, {name="stones:b8raC", param2=p2b8raca}) end
         if s.name == "stones:b8raC"	then 
-		p2b8racb = s.param2
-		minetest.env:set_node(p, {name="stones:b8ra", param2=p2b8racb}) end
+		p2b8ratb = s.param2
+		minetest.env:set_node(p, {name="stones:b8rat", param2=p2b8ratb}) end
+        if s.name == "stones:b8rat"	then 
+		p2b8rac = s.param2
+		minetest.env:set_node(p, {name="stones:b8ra", param2=p2b8rac}) end
         if s.name == "stones:c8rb"	then 
 		p2c8rbca = s.param2
 		minetest.env:set_node(p, {name="stones:c8rbC", param2=p2c8rbca}) end
@@ -444,6 +561,18 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:b8rbC"	then 
 		p2b8rbcb = s.param2
 		minetest.env:set_node(p, {name="stones:b8rb", param2=p2b8rbcb}) end
+        if s.name == "stones:c8rc"	then 
+		p2c8rcta = s.param2
+		minetest.env:set_node(p, {name="stones:c8rct", param2=p2c8rcta}) end
+        if s.name == "stones:c8rct"	then 
+		p2c8rca = s.param2
+		minetest.env:set_node(p, {name="stones:c8rc", param2=p2c8rca}) end
+        if s.name == "stones:b8rc"	then 
+		p2c8rctb = s.param2
+		minetest.env:set_node(p, {name="stones:b8rct", param2=p2c8rctb}) end
+        if s.name == "stones:b8rct"	then 
+		p2c8rcb = s.param2
+		minetest.env:set_node(p, {name="stones:b8rc", param2=p2c8rcb}) end
         if s.name == "stones:c8rd"	then 
 		p2c8rdca = s.param2
 		minetest.env:set_node(p, {name="stones:c8rdC", param2=p2c8rdca}) end
@@ -461,13 +590,37 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="stones:c8rfC", param2=p2c8rfca}) end
         if s.name == "stones:c8rfC"	then 
 		p2c8rfcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8rf", param2=p2c8rfcb}) end
+		minetest.env:set_node(p, {name="stones:c8rft", param2=p2c8rfcb}) end
+        if s.name == "stones:c8rft"	then 
+		p2c8rfcc = s.param2
+		minetest.env:set_node(p, {name="stones:c8rf", param2=p2c8rfcc}) end
         if s.name == "stones:b8rf"	then 
-		p2b8rfca = s.param2
-		minetest.env:set_node(p, {name="stones:b8rfC", param2=p2b8rfca}) end
+		p2b8rfba = s.param2
+		minetest.env:set_node(p, {name="stones:b8rfC", param2=p2b8rfba}) end
         if s.name == "stones:b8rfC"	then 
-		p2b8rfcb = s.param2
-		minetest.env:set_node(p, {name="stones:b8rf", param2=p2b8rfcb}) end
+		p2b8rfbb = s.param2
+		minetest.env:set_node(p, {name="stones:b8rft", param2=p2b8rfbb}) end
+        if s.name == "stones:b8rft"	then 
+		p2b8rfbc = s.param2
+		minetest.env:set_node(p, {name="stones:b8rf", param2=p2b8rfbc}) end 
+        if s.name == "stones:diagsterps"	then 
+		p2dsa = s.param2
+		minetest.env:set_node(p, {name="stones:d1a6ster9s", param2=p2dsa}) end
+        if s.name == "stones:d1a6ster9s"	then 
+		p2dsb = s.param2
+		minetest.env:set_node(p, {name="stones:d7a8s1erps", param2=p2dsb}) end
+        if s.name == "stones:d7a8s1erps"	then 
+		p2dsc = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps", param2=p2dsc}) end
+        if s.name == "stones:diagsteps"	then 
+		p2dsd = s.param2
+		minetest.env:set_node(p, {name="stones:dia9s16ps", param2=p2dsd}) end
+        if s.name == "stones:dia9s16ps"	then 
+		p2dse = s.param2
+		minetest.env:set_node(p, {name="stones:d1a8s7eps", param2=p2dse}) end
+        if s.name == "stones:d1a8s7eps"	then 
+		p2dsf = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps", param2=p2dsf}) end
         if s.name == "stones:diagsteps_52s"	then 
 		p2ds28a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_58s", param2=p2ds28a}) end
@@ -521,25 +674,79 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="stones:diagsteps_2wr", param2=p2d2wra}) end
         if s.name == "stones:diagsteps_2wr"	then 
 		p2d2wrb = s.param2
-		minetest.env:set_node(p, {name="stones:diagsteps_52lh", param2=p2d2wrb}) end
+		minetest.env:set_node(p, {name="stones:diagsteps_r2p", param2=p2d2wrb}) end
+        if s.name == "stones:diagsteps_r2p"	then 
+		p2d2wrc = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_52lh", param2=p2d2wrc}) end
         if s.name == "stones:diagsterps_52lh"	then 
 		p2dr2wra = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_2wr", param2=p2dr2wra}) end
         if s.name == "stones:diagsterps_2wr"	then 
 		p2dr2wrb = s.param2
-		minetest.env:set_node(p, {name="stones:diagsterps_52lh", param2=p2dr2wrb}) end
+		minetest.env:set_node(p, {name="stones:diagsterps_r2p", param2=p2dr2wrb}) end
+        if s.name == "stones:diagsterps_r2p"	then 
+		p2dr2wrc = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_52lh", param2=p2dr2wrc}) end
         if s.name == "stones:diagsteps_52rh"	then 
-		p2d2wla = s.param2
-		minetest.env:set_node(p, {name="stones:diagsteps_2wl", param2=p2d2wla}) end
+		p2d5wa = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_2wl", param2=p2d5wa}) end
         if s.name == "stones:diagsteps_2wl"	then 
-		p2d2wlb = s.param2
-		minetest.env:set_node(p, {name="stones:diagsteps_52rh", param2=p2d2wlb}) end
+		p2dwla = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_l2p", param2=p2dwla}) end
+        if s.name == "stones:diagsteps_l2p"	then 
+		p2dlpa = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_52rh", param2=p2dlpa}) end
         if s.name == "stones:diagsterps_52rh"	then 
-		p2dr2wla = s.param2
-		minetest.env:set_node(p, {name="stones:diagsterps_2wl", param2=p2dr2wla}) end
+		p2dr5wb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_2wl", param2=p2dr5wb}) end
         if s.name == "stones:diagsterps_2wl"	then 
-		p2dr2wlb = s.param2
-		minetest.env:set_node(p, {name="stones:diagsterps_52rh", param2=p2dr2wlb}) end
+		p2drwlb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_l2p", param2=p2drwlb}) end
+        if s.name == "stones:diagsterps_l2p"	then 
+		p2drlpb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_52rh", param2=p2drlpb}) end
+        if s.name == "stones:diagsteps_8l"	then 
+		p2d834a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_38l", param2=p2d834a}) end
+        if s.name == "stones:diagsteps_38l"	then 
+		p2d348b = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_8l", param2=p2d348b}) end
+        if s.name == "stones:diagsterps_8l"	then 
+		p2dr834a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_38l", param2=p2dr834a}) end
+        if s.name == "stones:diagsterps_38l"	then 
+		p2dr348b = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_8l", param2=p2dr348b}) end
+        if s.name == "stones:diagsteps_8r"	then 
+		p2d83ra = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_38r", param2=p2d83ra}) end
+        if s.name == "stones:diagsteps_38r"	then 
+		p2d3r8b = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_8r", param2=p2d3r8b}) end
+        if s.name == "stones:diagsterps_8r"	then 
+		p2dr8r4a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_38r", param2=p2dr8r4a}) end
+        if s.name == "stones:diagsterps_38r"	then 
+		p2dr3r8b = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_8r", param2=p2dr3r8b}) end
+        if s.name == "stones:diagstep_7"	then 
+		p2d76a = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_6", param2=p2d76a}) end
+        if s.name == "stones:diagstep_6"	then 
+		p2d63b = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_3", param2=p2d63b}) end
+        if s.name == "stones:diagstep_3"	then 
+		p2d37c = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_7", param2=p2d37c}) end
+        if s.name == "stones:diagsterp_7"	then 
+		p2dr76a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterp_6", param2=p2dr76a}) end
+        if s.name == "stones:diagsterp_6"	then 
+		p2dr63b = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterp_3", param2=p2dr63b}) end
+        if s.name == "stones:diagsterp_3"	then 
+		p2dr37c = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterp_7", param2=p2dr37c}) end
         if s.name == "stones:s_252l"	then 
 		p2d2hl = s.param2
 		minetest.env:set_node(p, {name="stones:s_h52l", param2=p2d2hl}) end
@@ -588,6 +795,36 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:sb_62ul"	then 
 		p2r65b = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52ul", param2=p2r65b}) end
+        if s.name == "stones:s_52"	then 
+		p2r52a = s.param2
+		minetest.env:set_node(p, {name="stones:s_52k", param2=p2r52a}) end
+        if s.name == "stones:s_52k"	then 
+		p2r52b= s.param2
+		minetest.env:set_node(p, {name="stones:s_52", param2=p2r52b}) end
+        if s.name == "stones:sku"	then 
+		p2ska = s.param2
+		minetest.env:set_node(p, {name="stones:skuk", param2=p2ska}) end
+        if s.name == "stones:skuk"	then 
+		p2ksb= s.param2
+		minetest.env:set_node(p, {name="stones:sku", param2=p2ksb}) end
+        if s.name == "stones:skubl"	then 
+		p2skb = s.param2
+		minetest.env:set_node(p, {name="stones:sbukl", param2=p2skb}) end
+        if s.name == "stones:sbukl"	then 
+		p2sbk= s.param2
+		minetest.env:set_node(p, {name="stones:skubl", param2=p2sbk}) end
+        if s.name == "stones:sku_20"	then 
+		p2s20ka = s.param2
+		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2s20ka}) end
+        if s.name == "stones:sku_20k"	then 
+		p2k20sa= s.param2
+		minetest.env:set_node(p, {name="stones:sku_20", param2=p2k20sa}) end
+        if s.name == "stones:skub_20"	then 
+		p2s20kb = s.param2
+		minetest.env:set_node(p, {name="stones:skub_20k", param2=p2s20kb}) end
+        if s.name == "stones:skub_20k"	then 
+		p2sb20k= s.param2
+		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2sb20k}) end
         if s.name == "stones:spirstax_r"	then 
 		p2xra = s.param2
 		minetest.env:set_node(p, {name="stones:spirstax_3r", param2=p2xra}) end
@@ -636,7 +873,7 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:spirblux_ql"	then 
 		p2xqlb = s.param2
 		minetest.env:set_node(p, {name="stones:spirblux_l", param2=p2xqlb}) end
-	if s.name == "stones:rushrock_21u"	then 
+        if s.name == "stones:rushrock_21u"	then 
 		p2r21ua = s.param2
 		minetest.env:set_node(p, {name="stones:brushrock_21u", param2=p2r21ua}) end
         if s.name == "stones:brushrock_21u"	then 
@@ -651,6 +888,12 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:rublish_21"	then 
 		p2r21uxb = s.param2
 		minetest.env:set_node(p, {name="stones:rublish_21u", param2=p2r21uxb}) end
+        if s.name == "tool:car"	then 
+		p2car = s.param2
+		minetest.env:set_node(p, {name="tool:cardiag", param2=p2car}) end
+        if s.name == "tool:cardiag"	then 
+		p2card = s.param2
+		minetest.env:set_node(p, {name="tool:car", param2=p2card}) end
 
 minetest.add_particlespawner({
 		amount = 50,
@@ -838,7 +1081,24 @@ minetest.register_entity("tool:row", {
 		minetest.env:set_node(p, {name="tool:ladder", param2=p2li}) end
         if s.name == "stones:isokar"	then 
 		p2isoka = s.param2
-		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) end
+		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) 
+		p2isoka = s.param2
+		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) 
+        minetest.add_particlespawner({
+		amount = 1,
+		time = 1,
+		glow = 14,
+		pos = minetest.env:get_node(self.object:getpos()),
+		pos = {x=pos.x, y=pos.y, z=pos.z},
+		minvel = {x=-0.2, y=0, z=-0.2},
+		maxvel = {x=0.2, y=0, z=0.2},
+		minacc = {x=0, y=0.2, z=0},
+		maxacc = {x=0, y=0.7, z=0},
+		exptime = {min=2, max=2},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
+        end
         if s.name == "stones:isodark"	then 
 		minetest.sound_play({name="whoosh", gain=0.05}, {pos=selfpos}, true)
 		p2isokb = s.param2
@@ -851,8 +1111,8 @@ minetest.register_entity("tool:row", {
 		pos = {x=pos.x, y=pos.y, z=pos.z},
 		minvel = {x=0, y=0, z=0},
 		maxvel = {x=0, y=0, z=0},
-		minacc = {x=0, y=0, z=0},
-		maxacc = {x=0, y=0, z=0},
+		minacc = {x=0, y=0.1, z=0},
+		maxacc = {x=0, y=0.2, z=0},
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
@@ -1112,24 +1372,54 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8l1"	then 
 		p2c8l1b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l1", param2=p2c8l1b}) end
+        if s.name == "stones:c8l1t"	then 
+		p2c8l1ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8l1t", param2=p2c8l1ta}) end
+        if s.name == "stones:b8l1t"	then 
+		p2c8l1tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l1t", param2=p2c8l1tb}) end
         if s.name == "stones:c8l2"	then 
 		p2c8l2a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l2", param2=p2c8l2a}) end
         if s.name == "stones:b8l2"	then 
 		p2c8l2b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l2", param2=p2c8l2b}) end
+        if s.name == "stones:c8l2C"	then 
+		p2c8l2ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8l2C", param2=p2c8l2ca}) end
+        if s.name == "stones:b8l2C"	then 
+		p2c8l2cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l2C", param2=p2c8l2cb}) end
         if s.name == "stones:c8l3"	then 
 		p2c8l3a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l3", param2=p2c8l3a}) end
         if s.name == "stones:b8l3"	then 
 		p2c8l3b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l3", param2=p2c8l3b}) end
+        if s.name == "stones:c8l3t"	then 
+		p2c8l3ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8l3t", param2=p2c8l3ta}) end
+        if s.name == "stones:b8l3t"	then 
+		p2c8l3tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l3t", param2=p2c8l3tb}) end
         if s.name == "stones:c8l4"	then 
 		p2c8l4a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l4", param2=p2c8l4a}) end
         if s.name == "stones:b8l4"	then 
 		p2c8l4b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l4", param2=p2c8l4b}) end
+        if s.name == "stones:c8l4C"	then 
+		p2c8l4ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8l4C", param2=p2c8l4ca}) end
+        if s.name == "stones:b8l4C"	then 
+		p2c8l4cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l4C", param2=p2c8l4cb}) end
+        if s.name == "stones:c8l4t"	then 
+		p2c8l4ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8l4t", param2=p2c8l4ta}) end
+        if s.name == "stones:b8l4t"	then 
+		p2c8l4tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l4t", param2=p2c8l4tb}) end
         if s.name == "stones:c8l5"	then 
 		p2c8l5a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l5", param2=p2c8l5a}) end
@@ -1142,6 +1432,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8l6"	then 
 		p2c8l6b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l6", param2=p2c8l6b}) end
+        if s.name == "stones:c8l6C"	then 
+		p2c8l6ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8l6C", param2=p2c8l6ca}) end
+        if s.name == "stones:b8l6C"	then 
+		p2c8l6cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l6C", param2=p2c8l6cb}) end
+        if s.name == "stones:c8l6t"	then 
+		p2c8l6ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8l6t", param2=p2c8l6ta}) end
+        if s.name == "stones:b8l6t"	then 
+		p2c8l6tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l6t", param2=p2c8l6tb}) end
         if s.name == "stones:c8l7"	then 
 		p2c8l7a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l7", param2=p2c8l7a}) end
@@ -1154,6 +1456,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8l8"	then 
 		p2c8l8b = s.param2
 		minetest.env:set_node(p, {name="stones:c8l8", param2=p2c8l8b}) end
+        if s.name == "stones:c8l8C"	then 
+		p2c8l8ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8l8C", param2=p2c8l8ca}) end
+        if s.name == "stones:b8l8C"	then 
+		p2c8l8cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8l8C", param2=p2c8l8cb}) end
         if s.name == "stones:c8l9"	then 
 		p2c8l9a = s.param2
 		minetest.env:set_node(p, {name="stones:b8l9", param2=p2c8l9a}) end
@@ -1166,24 +1474,55 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8la"	then 
 		p2c8lab = s.param2
 		minetest.env:set_node(p, {name="stones:c8la", param2=p2c8lab}) end
+        if s.name == "stones:c8laC"	then 
+		p2c8laca = s.param2
+		minetest.env:set_node(p, {name="stones:b8laC", param2=p2c8laca}) end
+        if s.name == "stones:b8laC"	then 
+		p2c8lacb = s.param2
+		minetest.env:set_node(p, {name="stones:c8laC", param2=p2c8lacb}) end
+        if s.name == "stones:c8lat"	then 
+		p2c8lata = s.param2
+		minetest.env:set_node(p, {name="stones:b8lat", param2=p2c8lata}) end
+        if s.name == "stones:b8lat"	then 
+		p2c8latb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lat", param2=p2c8latb}) end
+
         if s.name == "stones:c8lb"	then 
 		p2c8lba = s.param2
 		minetest.env:set_node(p, {name="stones:b8lb", param2=p2c8lba}) end
         if s.name == "stones:b8lb"	then 
 		p2c8lbb = s.param2
 		minetest.env:set_node(p, {name="stones:c8lb", param2=p2c8lbb}) end
+        if s.name == "stones:c8lbC"	then 
+		p2c8lbca = s.param2
+		minetest.env:set_node(p, {name="stones:b8lbC", param2=p2c8lbca}) end
+        if s.name == "stones:b8lbC"	then 
+		p2c8lbcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lbC", param2=p2c8lbcb}) end
         if s.name == "stones:c8lc"	then 
 		p2c8lca = s.param2
 		minetest.env:set_node(p, {name="stones:b8lc", param2=p2c8lca}) end
         if s.name == "stones:b8lc"	then 
 		p2c8lcb = s.param2
 		minetest.env:set_node(p, {name="stones:c8lc", param2=p2c8lcb}) end
+        if s.name == "stones:c8lct"	then 
+		p2c8lcta = s.param2
+		minetest.env:set_node(p, {name="stones:b8lct", param2=p2c8lcta}) end
+        if s.name == "stones:b8lct"	then 
+		p2c8lfcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lct", param2=p2c8lfcb}) end
         if s.name == "stones:c8ld"	then 
 		p2c8lda = s.param2
 		minetest.env:set_node(p, {name="stones:b8ld", param2=p2c8lda}) end
         if s.name == "stones:b8ld"	then 
 		p2c8ldb = s.param2
 		minetest.env:set_node(p, {name="stones:c8ld", param2=p2c8ldb}) end
+        if s.name == "stones:c8ldC"	then 
+		p2c8ldca = s.param2
+		minetest.env:set_node(p, {name="stones:b8ldC", param2=p2c8ldca}) end
+        if s.name == "stones:b8ldC"	then 
+		p2c8ldcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8ldC", param2=p2c8ldcb}) end
         if s.name == "stones:c8le"	then 
 		p2c8lea = s.param2
 		minetest.env:set_node(p, {name="stones:b8le", param2=p2c8lea}) end
@@ -1196,12 +1535,36 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8lf"	then 
 		p2c8lfb = s.param2
 		minetest.env:set_node(p, {name="stones:c8lf", param2=p2c8lfb}) end
+        if s.name == "stones:c8lfC"	then 
+		p2c8lfca = s.param2
+		minetest.env:set_node(p, {name="stones:b8lfC", param2=p2c8lfca}) end
+        if s.name == "stones:b8lfC"	then 
+		p2c8lfcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lfC", param2=p2c8lfcb}) end
+        if s.name == "stones:c8lft"	then 
+		p2c8lfta = s.param2
+		minetest.env:set_node(p, {name="stones:b8lft", param2=p2c8lfta}) end
+        if s.name == "stones:b8lft"	then 
+		p2c8lftb = s.param2
+		minetest.env:set_node(p, {name="stones:c8lft", param2=p2c8lftb}) end
         if s.name == "stones:c8r1"	then 
 		p2c8r1a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r1", param2=p2c8r1a}) end
         if s.name == "stones:b8r1"	then 
 		p2c8r1b = s.param2
 		minetest.env:set_node(p, {name="stones:c8r1", param2=p2c8r1b}) end
+        if s.name == "stones:c8r1t"	then 
+		p2c8r1ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8r1t", param2=p2c8r1ta}) end
+        if s.name == "stones:b8r1t"	then 
+		p2c8r1tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r1t", param2=p2c8r1tb}) end
+        if s.name == "stones:c8r2C"	then 
+		p2c8r2ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8r2C", param2=p2c8r2ca}) end
+        if s.name == "stones:b8r2C"	then 
+		p2c8r2cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r2C", param2=p2c8r2cb}) end
         if s.name == "stones:c8r2"	then 
 		p2c8r2a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r2", param2=p2c8r2a}) end
@@ -1214,12 +1577,30 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8r3"	then 
 		p2c8r3b = s.param2
 		minetest.env:set_node(p, {name="stones:c8r3", param2=p2c8r3b}) end
+        if s.name == "stones:c8r3t"	then 
+		p2c8r3ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8r3t", param2=p2c8r3ta}) end
+        if s.name == "stones:b8r3t"	then 
+		p2c8r3tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r3t", param2=p2c8r3tb}) end
         if s.name == "stones:c8r4"	then 
 		p2c8r4a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r4", param2=p2c8r4a}) end
         if s.name == "stones:b8r4"	then 
 		p2c8r4b = s.param2
 		minetest.env:set_node(p, {name="stones:c8r4", param2=p2c8r4b}) end
+        if s.name == "stones:c8r4C"	then 
+		p2c8r4ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8r4C", param2=p2c8r4ca}) end
+        if s.name == "stones:b8r4C"	then 
+		p2c8r4cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r4C", param2=p2c8r4cb}) end
+        if s.name == "stones:c8r4t"	then 
+		p2c8r4ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8r4t", param2=p2c8r4ta}) end
+        if s.name == "stones:b8r4t"	then 
+		p2c8r4tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r4t", param2=p2c8r4tb}) end
         if s.name == "stones:c8r5"	then 
 		p2c8r5a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r5", param2=p2c8r5a}) end
@@ -1232,6 +1613,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8r6"	then 
 		p2c8r6b = s.param2
 		minetest.env:set_node(p, {name="stones:c8r6", param2=p2c8r6b}) end
+        if s.name == "stones:c8r6C"	then 
+		p2c8r6ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8r6C", param2=p2c8r6ca}) end
+        if s.name == "stones:b8r6C"	then 
+		p2c8r6cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r6C", param2=p2c8r6cb}) end
+        if s.name == "stones:c8r6t"	then 
+		p2c8r6ta = s.param2
+		minetest.env:set_node(p, {name="stones:b8r6t", param2=p2c8r6ta}) end
+        if s.name == "stones:b8r6t"	then 
+		p2c8r6tb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r6t", param2=p2c8r6tb}) end
         if s.name == "stones:c8r7"	then 
 		p2c8r7a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r7", param2=p2c8r7a}) end
@@ -1244,6 +1637,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8r8"	then 
 		p2c8r8b = s.param2
 		minetest.env:set_node(p, {name="stones:c8r8", param2=p2c8r8b}) end
+        if s.name == "stones:c8r8C"	then 
+		p2c8r8ca = s.param2
+		minetest.env:set_node(p, {name="stones:b8r8C", param2=p2c8r8ca}) end
+        if s.name == "stones:b8r8C"	then 
+		p2c8r8cb = s.param2
+		minetest.env:set_node(p, {name="stones:c8r8C", param2=p2c8r8cb}) end
         if s.name == "stones:c8r9"	then 
 		p2c8r9a = s.param2
 		minetest.env:set_node(p, {name="stones:b8r9", param2=p2c8r9a}) end
@@ -1256,24 +1655,54 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8ra"	then 
 		p2c8rab = s.param2
 		minetest.env:set_node(p, {name="stones:c8ra", param2=p2c8rab}) end
+        if s.name == "stones:c8raC"	then 
+		p2c8raca = s.param2
+		minetest.env:set_node(p, {name="stones:b8raC", param2=p2c8raca}) end
+        if s.name == "stones:b8raC"	then 
+		p2c8racb = s.param2
+		minetest.env:set_node(p, {name="stones:c8raC", param2=p2c8racb}) end
+        if s.name == "stones:c8rat"	then 
+		p2c8rata = s.param2
+		minetest.env:set_node(p, {name="stones:b8rat", param2=p2c8rata}) end
+        if s.name == "stones:b8rat"	then 
+		p2c8ratb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rat", param2=p2c8ratb}) end
         if s.name == "stones:c8rb"	then 
 		p2c8rba = s.param2
 		minetest.env:set_node(p, {name="stones:b8rb", param2=p2c8rba}) end
         if s.name == "stones:b8rb"	then 
 		p2c8rbb = s.param2
 		minetest.env:set_node(p, {name="stones:c8rb", param2=p2c8rbb}) end
+        if s.name == "stones:c8rbC"	then 
+		p2c8rbca = s.param2
+		minetest.env:set_node(p, {name="stones:b8rbC", param2=p2c8rbca}) end
+        if s.name == "stones:b8rbC"	then 
+		p2c8rbcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rbC", param2=p2c8rbcb}) end
         if s.name == "stones:c8rc"	then 
 		p2c8rca = s.param2
 		minetest.env:set_node(p, {name="stones:b8rc", param2=p2c8rca}) end
         if s.name == "stones:b8rc"	then 
 		p2c8rcb = s.param2
 		minetest.env:set_node(p, {name="stones:c8rc", param2=p2c8rcb}) end
+        if s.name == "stones:c8rct"	then 
+		p2c8rcta = s.param2
+		minetest.env:set_node(p, {name="stones:b8rct", param2=p2c8rcta}) end
+        if s.name == "stones:b8rct"	then 
+		p2c8rctb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rct", param2=p2c8rctb}) end
         if s.name == "stones:c8rd"	then 
 		p2c8rda = s.param2
 		minetest.env:set_node(p, {name="stones:b8rd", param2=p2c8rda}) end
         if s.name == "stones:b8rd"	then 
 		p2c8rdb = s.param2
 		minetest.env:set_node(p, {name="stones:c8rd", param2=p2c8rdb}) end
+        if s.name == "stones:c8rdC"	then 
+		p2c8rdca = s.param2
+		minetest.env:set_node(p, {name="stones:b8rdC", param2=p2c8rdca}) end
+        if s.name == "stones:b8rdC"	then 
+		p2c8rdcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rdC", param2=p2c8rdcb}) end
         if s.name == "stones:c8re"	then 
 		p2c8rea = s.param2
 		minetest.env:set_node(p, {name="stones:b8re", param2=p2c8rea}) end
@@ -1286,6 +1715,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:b8rf"	then 
 		p2c8rfb = s.param2
 		minetest.env:set_node(p, {name="stones:c8rf", param2=p2c8rfb}) end
+        if s.name == "stones:c8rfC"	then 
+		p2c8rfca = s.param2
+		minetest.env:set_node(p, {name="stones:b8rfC", param2=p2c8rfca}) end
+        if s.name == "stones:b8rfC"	then 
+		p2c8rfcb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rfC", param2=p2c8rfcb}) end
+        if s.name == "stones:c8rft"	then 
+		p2c8rfta = s.param2
+		minetest.env:set_node(p, {name="stones:b8rft", param2=p2c8rfta}) end
+        if s.name == "stones:b8rft"	then 
+		p2c8rftb = s.param2
+		minetest.env:set_node(p, {name="stones:c8rft", param2=p2c8rftb}) end
         if s.name == "stones:diagstep_2"	then 
 		p2ds2a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterp_2", param2=p2ds2a}) end
@@ -1298,6 +1739,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diagsterp_7"	then 
 		p2ds7b = s.param2
 		minetest.env:set_node(p, {name="stones:diagstep_7", param2=p2ds7b}) end
+        if s.name == "stones:diagstep_6"	then 
+		p2ds6a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterp_6", param2=p2ds6a}) end
+        if s.name == "stones:diagsterp_6"	then 
+		p2ds6b = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_6", param2=p2ds6b}) end
+        if s.name == "stones:diagstep_3"	then 
+		p2ds3a = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterp_3", param2=p2ds3a}) end
+        if s.name == "stones:diagsterp_3"	then 
+		p2ds3b = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_3", param2=p2ds3b}) end
         if s.name == "stones:diagsteps_13"	then 
 		p2ds13a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_13", param2=p2ds13a}) end
@@ -1665,6 +2118,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:sb_52"	then 
 		p2sb52b = s.param2
 		minetest.env:set_node(p, {name="stones:s_52", param2=p2sb52b}) end
+        if s.name == "stones:s_52k"	then 
+		p2sb52ka = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52k", param2=p2sb52ka}) end
+        if s.name == "stones:sb_52k"	then 
+		p2sb52kb = s.param2
+		minetest.env:set_node(p, {name="stones:s_52k", param2=p2sb52kb}) end
         if s.name == "stones:s_52hq"	then 
 		p2sb52hqa = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52hq", param2=p2sb52hqa}) end
@@ -1719,6 +2178,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:skubl"	then 
 		p2skub = s.param2
 		minetest.env:set_node(p, {name="stones:sku", param2=p2skub}) end
+        if s.name == "stones:skuk"	then 
+		p2ska = s.param2
+		minetest.env:set_node(p, {name="stones:sbukl", param2=p2ska}) end
+        if s.name == "stones:sbukl"	then 
+		p2skb = s.param2
+		minetest.env:set_node(p, {name="stones:skuk", param2=p2skb}) end
         if s.name == "stones:sku2_r"	then 
 		p2sk2a = s.param2
 		minetest.env:set_node(p, {name="stones:skub2_r", param2=p2sk2a}) end
@@ -1749,6 +2214,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:skub_20"	then 
 		p2sk6b = s.param2
 		minetest.env:set_node(p, {name="stones:sku_20", param2=p2sk6b}) end
+        if s.name == "stones:sku_20k"	then 
+		p2skk6a = s.param2
+		minetest.env:set_node(p, {name="stones:skub_20k", param2=p2skk6a}) end
+        if s.name == "stones:skub_20k"	then 
+		p2skk6b = s.param2
+		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2skk6b}) end
         if s.name == "stones:sku_202"	then 
 		p2sk7a = s.param2
 		minetest.env:set_node(p, {name="stones:skub_202", param2=p2sk7a}) end
@@ -2001,102 +2472,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:vsudl"	then 
 		p2v8b = s.param2
 		minetest.env:set_node(p, {name="stones:vsedl", param2=p2v8b}) end
-        if s.name == "stones:c8l2C"	then 
-		p2c8l2ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8l2C", param2=p2c8l2ca}) end
-        if s.name == "stones:b8l2C"	then 
-		p2c8l2cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l2C", param2=p2c8l2cb}) end
-        if s.name == "stones:c8l4C"	then 
-		p2c8l4ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8l4C", param2=p2c8l4ca}) end
-        if s.name == "stones:b8l4C"	then 
-		p2c8l4cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l4C", param2=p2c8l4cb}) end
-        if s.name == "stones:c8l6C"	then 
-		p2c8l6ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8l6C", param2=p2c8l6ca}) end
-        if s.name == "stones:b8l6C"	then 
-		p2c8l6cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l6C", param2=p2c8l6cb}) end
-        if s.name == "stones:c8l8C"	then 
-		p2c8l8ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8l8C", param2=p2c8l8ca}) end
-        if s.name == "stones:b8l8C"	then 
-		p2c8l8cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8l8C", param2=p2c8l8cb}) end
-        if s.name == "stones:c8laC"	then 
-		p2c8laca = s.param2
-		minetest.env:set_node(p, {name="stones:b8laC", param2=p2c8laca}) end
-        if s.name == "stones:b8laC"	then 
-		p2c8lacb = s.param2
-		minetest.env:set_node(p, {name="stones:c8laC", param2=p2c8lacb}) end
-        if s.name == "stones:c8lbC"	then 
-		p2c8lbca = s.param2
-		minetest.env:set_node(p, {name="stones:b8lbC", param2=p2c8lbca}) end
-        if s.name == "stones:b8lbC"	then 
-		p2c8lbcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8lbC", param2=p2c8lbcb}) end
-        if s.name == "stones:c8ldC"	then 
-		p2c8ldca = s.param2
-		minetest.env:set_node(p, {name="stones:b8ldC", param2=p2c8ldca}) end
-        if s.name == "stones:b8ldC"	then 
-		p2c8ldcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8ldC", param2=p2c8ldcb}) end
-        if s.name == "stones:c8lfC"	then 
-		p2c8lfca = s.param2
-		minetest.env:set_node(p, {name="stones:b8lfC", param2=p2c8lfca}) end
-        if s.name == "stones:b8lfC"	then 
-		p2c8lfcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8lfC", param2=p2c8lfcb}) end
-        if s.name == "stones:c8r2C"	then 
-		p2c8r2ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8r2C", param2=p2c8r2ca}) end
-        if s.name == "stones:b8r2C"	then 
-		p2c8r2cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r2C", param2=p2c8r2cb}) end
-        if s.name == "stones:c8r4C"	then 
-		p2c8r4ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8r4C", param2=p2c8r4ca}) end
-        if s.name == "stones:b8r4C"	then 
-		p2c8r4cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r4C", param2=p2c8r4cb}) end
-        if s.name == "stones:c8r6C"	then 
-		p2c8r6ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8r6C", param2=p2c8r6ca}) end
-        if s.name == "stones:b8r6C"	then 
-		p2c8r6cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r6C", param2=p2c8r6cb}) end
-        if s.name == "stones:c8r8C"	then 
-		p2c8r8ca = s.param2
-		minetest.env:set_node(p, {name="stones:b8r8C", param2=p2c8r8ca}) end
-        if s.name == "stones:b8r8C"	then 
-		p2c8r8cb = s.param2
-		minetest.env:set_node(p, {name="stones:c8r8C", param2=p2c8r8cb}) end
-        if s.name == "stones:c8raC"	then 
-		p2c8raca = s.param2
-		minetest.env:set_node(p, {name="stones:b8raC", param2=p2c8raca}) end
-        if s.name == "stones:b8raC"	then 
-		p2c8racb = s.param2
-		minetest.env:set_node(p, {name="stones:c8raC", param2=p2c8racb}) end
-        if s.name == "stones:c8rbC"	then 
-		p2c8rbca = s.param2
-		minetest.env:set_node(p, {name="stones:b8rbC", param2=p2c8rbca}) end
-        if s.name == "stones:b8rbC"	then 
-		p2c8rbcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8rbC", param2=p2c8rbcb}) end
-        if s.name == "stones:c8rdC"	then 
-		p2c8rdca = s.param2
-		minetest.env:set_node(p, {name="stones:b8rdC", param2=p2c8rdca}) end
-        if s.name == "stones:b8rdC"	then 
-		p2c8rdcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8rdC", param2=p2c8rdcb}) end
-        if s.name == "stones:c8rfC"	then 
-		p2c8rfca = s.param2
-		minetest.env:set_node(p, {name="stones:b8rfC", param2=p2c8rfca}) end
-        if s.name == "stones:b8rfC"	then 
-		p2c8rfcb = s.param2
-		minetest.env:set_node(p, {name="stones:c8rfC", param2=p2c8rfcb}) end
+        if s.name == "stones:dia9s16ps"	then 
+		p2ds916 = s.param2
+		minetest.env:set_node(p, {name="stones:d1a6ster9s", param2=p2ds916}) end
+        if s.name == "stones:d1a6ster9s"	then 
+		p2ds169 = s.param2
+		minetest.env:set_node(p, {name="stones:dia9s16ps", param2=p2ds169}) end
+        if s.name == "stones:d1a8s7eps"	then 
+		p2ds187 = s.param2
+		minetest.env:set_node(p, {name="stones:d7a8s1erps", param2=p2ds187}) end
+        if s.name == "stones:d7a8s1erps"	then 
+		p2ds781 = s.param2
+		minetest.env:set_node(p, {name="stones:d1a8s7eps", param2=p2ds781}) end
         if s.name == "stones:diagsteps_58s"	then 
 		p2ds58a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_58s", param2=p2ds58a}) end
@@ -2133,6 +2520,30 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diagsterps_2wl"	then 
 		p2d2wlb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_2wl", param2=p2d2wlb}) end
+        if s.name == "stones:diagsteps_l2p"	then 
+		p2dl2pa = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_l2p", param2=p2dl2pa}) end
+        if s.name == "stones:diagsterps_l2p"	then 
+		p2dl2pb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_l2p", param2=p2dl2pb}) end
+        if s.name == "stones:diagsteps_r2p"	then 
+		p2dr2pa = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_r2p", param2=p2dr2pa}) end
+        if s.name == "stones:diagsterps_r2p"	then 
+		p2dr2pb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_r2p", param2=p2dr2pb}) end
+        if s.name == "stones:diagsteps_38l"	then 
+		p2d34lra = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_38l", param2=p2d34lra}) end
+        if s.name == "stones:diagsterps_38l"	then 
+		p2d3rb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_38r", param2=p2d3rb}) end
+        if s.name == "stones:diagsteps_38r"	then 
+		p2d3ra = s.param2
+		minetest.env:set_node(p, {name="stones:diagsterps_38r", param2=p2d3ra}) end
+        if s.name == "stones:diagsterps_38r"	then 
+		p2d3rb = s.param2
+		minetest.env:set_node(p, {name="stones:diagsteps_38l", param2=p2d3rb}) end
         if s.name == "stones:s_h52l"	then 
 		p2dhla = s.param2
 		minetest.env:set_node(p, {name="stones:sb_h52l", param2=p2dhla}) end
@@ -2193,7 +2604,7 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:spirblux_ql"	then 
 		p2xqlb = s.param2
 		minetest.env:set_node(p, {name="stones:spirstax_ql", param2=p2xqlb}) end
-	if s.name == "stones:rushrock_21u"	then 
+        if s.name == "stones:rushrock_21u"	then 
 		p2r21ua = s.param2
 		minetest.env:set_node(p, {name="stones:rublish_21u", param2=p2r21ua}) end
         if s.name == "stones:rublish_21u"	then 
@@ -2202,8 +2613,10 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:brushrock_21u"	then 
 		p2r21uc = s.param2
 		minetest.env:set_node(p, {name="stones:rushrock_21u", param2=p2r21uc}) end
+        if s.name == "stones:brushrock_52ur"	then 
+		p252urc = s.param2
+		minetest.env:set_node(p, {name="stones:rushrock_52ur", param2=p252urc}) end
 	end
-	
 
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

@@ -1,5 +1,5 @@
-local old_nodes = {""}
-local old_entities = {""}
+local old_nodes = {"flying_carpet:carpet"}
+local old_entities = {"flying_carpet:carpet"}
 
 for _,node_name in ipairs(old_nodes) do
     minetest.register_node(":"..node_name, {

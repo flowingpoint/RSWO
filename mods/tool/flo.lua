@@ -46,6 +46,13 @@ minetest.register_node(":default:flo", {
 	{-0.0625,-0.5,-0.0625, 0.0625,-0.4375,0.0625}}},
 	selection_box = {type = "fixed", fixed = {
 	{-0.0625,-0.5,-0.0625, 0.0625,-0.4375,0.0625}}},
+	on_drop = function(itemstack, dropper, pos)
+		local dir = dropper:get_look_dir();
+		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+		minetest.add_item(pos, "noter:book")
+		itemstack:take_item()
+		return itemstack
+	end
 })
 
 --[	node_box = {type = "fixed", fixed = {

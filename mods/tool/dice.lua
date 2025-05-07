@@ -36,6 +36,13 @@ minetest.register_node("tool:dice", {
 	on_rightclick = function(pos,node)
 		try_set_portal(pos)
 	end,
+	on_drop = function(itemstack, dropper, pos)
+		local dir = dropper:get_look_dir();
+		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+		minetest.add_item(pos, "teletool:teletool_mana")
+		itemstack:take_item()
+		return itemstack
+	end
 })
 
 --This produces a number between 0 and 15 but only one per log, so even taking it and placing it again, isn't a roll. Just the first place per log is a roll. If it's already placed it'll be different. math.random was set in the img description bracket so that's sort of why but the way it works better with general grass assuming a state out of 5 makes me want to find some reset mechanic method by checking the grass file in ... default/nodes.lua but the math.random there is for selection out of a group of different nodes, not textures, so to use that would be to make another mess of duplicates the way I filled the menu with 25 pockmons...

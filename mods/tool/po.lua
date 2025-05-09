@@ -888,12 +888,43 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:rublish_21"	then 
 		p2r21uxb = s.param2
 		minetest.env:set_node(p, {name="stones:rublish_21u", param2=p2r21uxb}) end
+        if s.name == "stones:s_22"	then 
+		p2s22ga = s.param2
+		minetest.env:set_node(p, {name="stones:s_22g", param2=p2s22ga}) end
+        if s.name == "stones:s_22g"	then 
+		p2s22gb = s.param2
+		minetest.env:set_node(p, {name="stones:s_22", param2=p2s22gb}) end
+        if s.name == "stones:sb_22"	then 
+		p2s22gc = s.param2
+		minetest.env:set_node(p, {name="stones:sb_22g", param2=p2s22gc}) end
+        if s.name == "stones:sb_22g"	then 
+		p2s22gd = s.param2
+		minetest.env:set_node(p, {name="stones:sb_22", param2=p2s22gd}) end
         if s.name == "tool:car"	then 
 		p2car = s.param2
 		minetest.env:set_node(p, {name="tool:cardiag", param2=p2car}) end
         if s.name == "tool:cardiag"	then 
 		p2card = s.param2
 		minetest.env:set_node(p, {name="tool:car", param2=p2card}) end
+        if s.name == "stones:roch"	then 
+		p2dha = s.param2
+		minetest.env:set_node(p, {name="stones:rodhr", param2=p2dha}) end
+        if s.name == "stones:rodhr"	then 
+		p2dhb = s.param2
+		minetest.env:set_node(p, {name="stones:rodhb", param2=p2dhb}) end
+        if s.name == "stones:rodhb"	then 
+		p2dhc = s.param2
+		minetest.env:set_node(p, {name="stones:roch", param2=p2dhc}) end
+        if s.name == "stones:ruvl"	then 
+		p2dhd = s.param2
+		minetest.env:set_node(p, {name="stones:rudhr", param2=p2dhd}) end
+        if s.name == "stones:rudhr"	then 
+		p2dhe = s.param2
+		minetest.env:set_node(p, {name="stones:rudhb", param2=p2dhe}) end
+        if s.name == "stones:rudhb"	then 
+		p2dhf = s.param2
+		minetest.env:set_node(p, {name="stones:ruvl", param2=p2dhf}) end
+
 
 minetest.add_particlespawner({
 		amount = 50,
@@ -2616,6 +2647,24 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:brushrock_52ur"	then 
 		p252urc = s.param2
 		minetest.env:set_node(p, {name="stones:rushrock_52ur", param2=p252urc}) end
+        if s.name == "stones:s_22g"	then 
+		p2s22ga = s.param2
+		minetest.env:set_node(p, {name="stones:sb_22g", param2=p2s22ga}) end
+        if s.name == "stones:sb_22g"	then 
+		p2s22gb = s.param2
+		minetest.env:set_node(p, {name="stones:s_22g", param2=p2s22gb}) end
+        if s.name == "stones:rodhr"	then 
+		p2dhru = s.param2
+		minetest.env:set_node(p, {name="stones:rudhr", param2=p2dhru}) end
+        if s.name == "stones:rudhr"	then 
+		p2dhro = s.param2
+		minetest.env:set_node(p, {name="stones:rodhr", param2=p2dhro}) end
+        if s.name == "stones:rodhb"	then 
+		p2dhbu = s.param2
+		minetest.env:set_node(p, {name="stones:rudhb", param2=p2dhbu}) end
+        if s.name == "stones:rudhb"	then 
+		p2dhbo = s.param2
+		minetest.env:set_node(p, {name="stones:rodhb", param2=p2dhbo}) end
 	end
 
 minetest.add_particlespawner({

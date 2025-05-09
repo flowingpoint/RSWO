@@ -24,6 +24,66 @@ minetest.register_node("stones:ruvl", {
 	drawtype = "nodebox"
 })
 
+minetest.register_node("stones:rodhr", {
+	description = "Dual Hexatess Lowhalf Red",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png^barred.png"},
+	groups = {vcol=0.5, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:rodhr",
+	selection_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	collision_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "rodhr.obj"
+})
+
+minetest.register_node("stones:rudhr", {
+	description = "Dual Hexatess Lowhalf Red Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png^barred.png"},
+	groups = {vcol=0.5, cracky=3, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:rudhr",
+	selection_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	collision_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "rodhr.obj"
+})
+
+minetest.register_node("stones:rodhb", {
+	description = "Dual Hexatess Lowhalf Blue",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png^barblue.png"},
+	groups = {vcol=0.5, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:rodhb",
+	selection_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	collision_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "rodhb.obj"
+})
+
+minetest.register_node("stones:rudhb", {
+	description = "Dual Hexatess Lowhalf Blue Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png^barblue.png"},
+	groups = {vcol=0.5, cracky=3, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:rudhb",
+	selection_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	collision_box = {type="fixed",fixed={
+	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
+	drawtype = "mesh",
+	mesh = "rodhb.obj"
+})
+
 minetest.register_node("stones:pyra", {
 	description = "Square Based Pyramid",
 	paramtype = "light",

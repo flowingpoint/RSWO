@@ -265,8 +265,12 @@ strubl_2of3_inner*		Inner 2/3 Step Rubble
 
 sto4.lua
 stones: {
-roch				Lowhalf
-ruvl*				Lowhalf Rubble
+roch				*3 Lowhalf
+ruvl*				*3 Lowhalf Rubble
+rodhr*				*3 Dual Hexatess Lowhalf Red
+rudhr*				*3 Dual Hexatess Lowhalf Red Rubble
+rodhb*				*3 Dual Hexatess Lowhalf Blue
+rudhb*				*3 Dual Hexatess Lowhalf Blue Rubble
 pyra				Square Based Pyramid
 pyru*				Square Based Pyramid Rubble
 pyra_2				Square Based Pyramid HighHalf

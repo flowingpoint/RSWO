@@ -939,6 +939,60 @@ minetest.register_node("stones:sb_22", {
 	mesh = "s_22.obj"
 })
 
+minetest.register_node("stones:s_22g", {
+	description = "R2/2 Slope Edgefill Gotdots",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png^gotdot.png"},
+	groups = {vcol=0.125, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:s_22g",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0.5,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0.5,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0.5,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0.5,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0.5,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0.5,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0.5,-0.0625,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0.5,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0.5,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0.5,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0.5,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0.5,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0.5,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0.5,-0.0625,0.5}}},
+	drawtype = "mesh",
+	mesh = "s_22.obj"
+})
+
+minetest.register_node("stones:sb_22g", {
+	description = "R2/2 Slope Edgefill Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png^gotdot.png"},
+	groups = {vcol=0.125, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:sb_22g",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0.5,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0.5,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0.5,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0.5,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0.5,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0.5,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0.5,-0.0625,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0.5,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0.5,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0.5,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0.5,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0.5,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0.5,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0.5,-0.0625,0.5}}},
+	drawtype = "mesh",
+	mesh = "s_22.obj"
+})
+
 minetest.register_node("stones:s_21", {
 	description = "R2 Slope 7/8",
 	paramtype = "light",

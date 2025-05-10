@@ -278,10 +278,12 @@ pyru_2*				Square Based Pyramid HighHalf Rubble
 pyre				Square Based Pyramid Edged
 pyrue*				Square Based Pyramid Edged Rubble
 estamp				Star Pyramid
-sku_20				*2 Diagonal SkewSlab CornerVac
-skub_20*			*2 Diagonal SkewSlab CornerVac Rubble
-sku_20k*			*2 Diagonal SkewSlab CornerVac Siding
-skub_20k*			*2 Diagonal SkewSlab CornerVac Siding Rubble
+sku_20				*3 Diagonal SkewSlab CornerVac
+skub_20*			*3 Diagonal SkewSlab CornerVac
+sku_207*				*3 Diagonal SkewSlab CornerVac
+skub_207*			*3 Diagonal SkewSlab CornerVac Rubble
+sku_20k*			*3 Diagonal SkewSlab CornerVac Siding
+skub_20k*			*3 Diagonal SkewSlab CornerVac Siding Rubble
 sku_202			Diagonal SkewSlab CornerVac Half
 skub_202*			Diagonal SkewSlab CornerVac Half Rubble
 skud_202r			Diagonal SkewSlab CornerVac Right

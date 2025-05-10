@@ -1721,6 +1721,62 @@ minetest.register_node("stones:flart_1", {
 {-0.5, -0.5, -0.5, 0.5, -0.375, 0.5}}}
 })
 
+minetest.register_node("stones:flat_c", {
+	description = "Flat Corner",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.0625, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:flat_c",
+	drawtype = "nodebox",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375, -0.375,-0.375,0.5},
+{-0.375,-0.5,-0.25, -0.25,-0.375,0.5},
+{-0.25,-0.5,-0.125, -0.125,-0.375,0.5},
+{-0.125,-0.5,0, 0,-0.375,0.5},
+{0,-0.5,0.125, 0.125,-0.375,0.5},
+{0.125,-0.5,0.25, 0.25,-0.375,0.5},
+{0.25,-0.5,0.375, 0.375,-0.375,0.5}}},
+		selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375, -0.375,-0.375,0.5},
+{-0.375,-0.5,-0.25, -0.25,-0.375,0.5},
+{-0.25,-0.5,-0.125, -0.125,-0.375,0.5},
+{-0.125,-0.5,0, 0,-0.375,0.5},
+{0,-0.5,0.125, 0.125,-0.375,0.5},
+{0.125,-0.5,0.25, 0.25,-0.375,0.5},
+{0.25,-0.5,0.375, 0.375,-0.375,0.5}}},
+	drawtype = "mesh",
+	mesh = "flat_c.obj"
+})
+
+minetest.register_node("stones:flart_c", {
+	description = "Flat Corner Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.0625, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:flart_c",
+	drawtype = "nodebox",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375, -0.375,-0.375,0.5},
+{-0.375,-0.5,-0.25, -0.25,-0.375,0.5},
+{-0.25,-0.5,-0.125, -0.125,-0.375,0.5},
+{-0.125,-0.5,0, 0,-0.375,0.5},
+{0,-0.5,0.125, 0.125,-0.375,0.5},
+{0.125,-0.5,0.25, 0.25,-0.375,0.5},
+{0.25,-0.5,0.375, 0.375,-0.375,0.5}}},
+		selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.375, -0.375,-0.375,0.5},
+{-0.375,-0.5,-0.25, -0.25,-0.375,0.5},
+{-0.25,-0.5,-0.125, -0.125,-0.375,0.5},
+{-0.125,-0.5,0, 0,-0.375,0.5},
+{0,-0.5,0.125, 0.125,-0.375,0.5},
+{0.125,-0.5,0.25, 0.25,-0.375,0.5},
+{0.25,-0.5,0.375, 0.375,-0.375,0.5}}},
+	drawtype = "mesh",
+	mesh = "flat_c.obj"
+})
+
 minetest.register_node("stones:flat_2", {
 	description = "Flat L",
 	paramtype = "light",

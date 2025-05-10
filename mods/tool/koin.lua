@@ -216,7 +216,7 @@ minetest.register_entity("tool:flip", {
         end 
     end,
     hit_node = function(self, pos, node)
-	minetest.sound_play({name="koin", gain=0.5}, {pos=selfpos}, true)
+	minetest.sound_play({name="koin", gain=0.03}, {pos=selfpos}, true)
     local p = {x=pos.x, y=pos.y+1, z=pos.z}
     local q = {x=pos.x, y=pos.y, z=pos.z}
     s = minetest.env:get_node(self.object:getpos())

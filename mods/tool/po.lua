@@ -814,17 +814,23 @@ minetest.register_entity("tool:pow", {
 		p2sbk= s.param2
 		minetest.env:set_node(p, {name="stones:skubl", param2=p2sbk}) end
         if s.name == "stones:sku_20"	then 
-		p2s20ka = s.param2
-		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2s20ka}) end
+		p2s207a = s.param2
+		minetest.env:set_node(p, {name="stones:sku_207", param2=p2s207a}) end
+        if s.name == "stones:sku_207"	then 
+		p2k20ka= s.param2
+		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2k20ka}) end
         if s.name == "stones:sku_20k"	then 
 		p2k20sa= s.param2
 		minetest.env:set_node(p, {name="stones:sku_20", param2=p2k20sa}) end
         if s.name == "stones:skub_20"	then 
-		p2s20kb = s.param2
-		minetest.env:set_node(p, {name="stones:skub_20k", param2=p2s20kb}) end
+		p2s207b = s.param2
+		minetest.env:set_node(p, {name="stones:skub_207", param2=p2s207b}) end
+        if s.name == "stones:skub_207"	then 
+		p2sb20kb= s.param2
+		minetest.env:set_node(p, {name="stones:skub_20k", param2=p2sb20kb}) end
         if s.name == "stones:skub_20k"	then 
-		p2sb20k= s.param2
-		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2sb20k}) end
+		p2sb20b= s.param2
+		minetest.env:set_node(p, {name="stones:skub_20", param2=p2sb20b}) end
         if s.name == "stones:spirstax_r"	then 
 		p2xra = s.param2
 		minetest.env:set_node(p, {name="stones:spirstax_3r", param2=p2xra}) end
@@ -924,6 +930,12 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:rudhb"	then 
 		p2dhf = s.param2
 		minetest.env:set_node(p, {name="stones:ruvl", param2=p2dhf}) end
+        if s.name == "stones:flat_1"	then 
+		p2f1 = s.param2
+		minetest.env:set_node(p, {name="stones:flat_c", param2=p2f1}) end
+        if s.name == "stones:flat_c"	then 
+		p2f2 = s.param2
+		minetest.env:set_node(p, {name="stones:flat_1", param2=p2f2}) end
 
 
 minetest.add_particlespawner({
@@ -2251,6 +2263,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:skub_20k"	then 
 		p2skk6b = s.param2
 		minetest.env:set_node(p, {name="stones:sku_20k", param2=p2skk6b}) end
+        if s.name == "stones:sku_207"	then 
+		p2sk76a = s.param2
+		minetest.env:set_node(p, {name="stones:skub_207", param2=p2sk76a}) end
+        if s.name == "stones:skub_207"	then 
+		p2sk76b = s.param2
+		minetest.env:set_node(p, {name="stones:sku_207", param2=p2sk76b}) end
         if s.name == "stones:sku_202"	then 
 		p2sk7a = s.param2
 		minetest.env:set_node(p, {name="stones:skub_202", param2=p2sk7a}) end
@@ -2665,6 +2683,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:rudhb"	then 
 		p2dhbo = s.param2
 		minetest.env:set_node(p, {name="stones:rodhb", param2=p2dhbo}) end
+        if s.name == "stones:flat_c"	then 
+		p2fc1 = s.param2
+		minetest.env:set_node(p, {name="stones:flart_c", param2=p2fc1}) end
+        if s.name == "stones:flart_c"	then 
+		p2fc2 = s.param2
+		minetest.env:set_node(p, {name="stones:flat_c", param2=p2fc2}) end
 	end
 
 minetest.add_particlespawner({

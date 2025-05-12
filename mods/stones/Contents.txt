@@ -76,10 +76,14 @@ sku					*2 Diagonal SkewSlab
 skubl*				*2 Diagonal SkewSlab Rubble
 skuk*				*2 Diagonal SkewSlab
 sbukl*				*2 Diagonal SkewSlab Rubble
-sku2_r				RightHalf SkewSlab
-skub2_r*				RightHalf SkewSlab Rubble
-sku2_l				LeftHalf SkewSlab
-skub2_l*				LeftHalf SkewSlab Rubble
+sku2_r				*2 RightHalf SkewSlab
+skub2_r*			*2 RightHalf SkewSlab Rubble
+skus_l*			    *2 LeftHalf SkewSlab over Slab
+skubs_l*			*2 LeftHalf SkewSlab over Slab Rubble
+sku2_l				*2 LeftHalf SkewSlab
+skub2_l*			*2 LeftHalf SkewSlab Rubble
+skus_r*			    *2 RightHalf SkewSlab over Slab
+skubs_r*			*2 RightHalf SkewSlab over Slab Rubble
 sku3_l				R3 SkewSlab
 skub3_l*				R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt
@@ -146,9 +150,17 @@ s_21				R2 Slope 7/8
 sb_21*				R2 Slope 7/8 Rubble
 s_221				R2 Slab 7/8 
 sb_221*				R2 Slab 7/8 Rubble
-s_21u				R2 Slope Upper 15/16
-sb_21u*				R2 Slope Upper 15/16 Rubble
+s_21u				*4 R2 Slope Upper 15/16
+sb_21u*				*4 R2 Slope Upper 15/16 Rubble
+diagsteps_83*        *4 R2 Slope Upper 11/16
+diagsterps_83*       *4 R2 Slope Upper 11/16 Rubble
+diagsteps_73*        *4 R2 Slope Upper 10/16
+diagsterps_73*       *4 R2 Slope Upper 10/16 Rubble
+diagsteps_43*        *4 R2 Slope Upper 7/16
+diagsterps_43*       *4 R2 Slope Upper 7/16 Rubble
 s_2216              R2/2 Slope Cornerfill 1/16
+s_22162*            *2 R2/2 Slope Cornerfill 2/16
+sb_22162*           *2 R2/2 Slope Cornerfill 2/16 Rubble
 s_22l				R2/2 Slope Cornerfill
 spike				Spike
 spruke*				Spike Rubble
@@ -289,8 +301,10 @@ skub_202*			Diagonal SkewSlab CornerVac Half Rubble
 skud_202r			Diagonal SkewSlab CornerVac Right
 skrud_202r*			Diagonal SkewSlab CornerVac Right Rubble
 octa				Octahedron
-diagstep_2			Diagonal Step 1/8
-diagsterp_2*			Diagonal Step 1/8 Rubble
+diagstep_2			*2 Diagonal Step 1/8
+diagsterp_2*		*2 Diagonal Step 1/8 Rubble
+diagstep_2s			*2 Diagonal Step 1/8
+diagsterp_2s*		*2 Diagonal Step 1/8 Rubble
 diagstep_7			*3 Diagonal Step 7/8
 diagsterp_7*		*3 Diagonal Step 7/8 Rubble
 diagstep_6*			*3 Diagonal Step 3/4
@@ -407,7 +421,7 @@ vsudl*				Part Lowhalf Vsect A Rubble
 
 }
 
-sto6.lua				
+sto6.lua, sto7.lua				
 stones:{				
 c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume 16) {1346acf}:(+Tops 14)
 ![h] is a hex from 1 to f
@@ -422,62 +436,3 @@ hudi                Mister Hudi
 sus.lua
 stones:[
 flat_O               Flat 'O'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

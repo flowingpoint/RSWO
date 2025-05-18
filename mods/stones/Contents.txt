@@ -138,8 +138,10 @@ s_52pr				R5/2 Slope LowHalf Pyramid Right
 sb_52pr*				R5/2 Slope LowHalf Pyramid Right Rubble
 s_52pl				R5/2 Slope LowHalf Pyramid Left
 sb_52pl*				R5/2 Slope LowHalf Pyramid Left Rubble
-s_52l				R5/2 Slope LowHalf Left
-sb_52l*				R5/2 Slope LowHalf Left Rubble
+s_52l				*2 R5/2 Slope LowHalf Left
+sb_52l*				*2 R5/2 Slope LowHalf Left Rubble
+s_52dlr*			*2 R5/2 Slope LowHalf Double L&R
+sb_52dlr*			*2 R5/2 Slope LowHalf Double L&R Rubble
 s_52r				R5/2 Slope LowHalf Right
 sb_52r*				R5/2 Slope LowHalf Right Rubble
 s_22				*2 R2/2 Slope Edgefill

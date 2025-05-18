@@ -732,6 +732,18 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:diagsterps_l2p"	then 
 		p2drlpb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_52rh", param2=p2drlpb}) end
+        if s.name == "stones:s_52l"	then 
+		p2ld = s.param2
+		minetest.env:set_node(p, {name="stones:s_52d", param2=p2ld}) end
+        if s.name == "stones:s_52d"	then 
+		p2dl = s.param2
+		minetest.env:set_node(p, {name="stones:s_52l", param2=p2dl}) end
+        if s.name == "stones:sb_52l"	then 
+		p2bld = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52d", param2=p2bld}) end
+        if s.name == "stones:sb_52d"	then 
+		p2bdl = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52l", param2=p2bdl}) end
         if s.name == "stones:diagsteps_8l"	then 
 		p2d834a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_38l", param2=p2d834a}) end
@@ -1921,6 +1933,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diagsterps_8r"	then 
 		p28rb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_8r", param2=p28rb}) end
+        if s.name == "stones:s_52d"	then 
+		p2db = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52d", param2=p2db}) end
+        if s.name == "stones:sb_52d"	then 
+		p2bd = s.param2
+		minetest.env:set_node(p, {name="stones:s_52d", param2=p2bd}) end
         if s.name == "stones:diaq"	then 
 		p2qa = s.param2
 		minetest.env:set_node(p, {name="stones:diraq", param2=p2qa}) end

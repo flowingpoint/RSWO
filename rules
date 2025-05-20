@@ -1,0 +1,30 @@
+Rules
+Press 'E' for the creative menu. Most contents are stone shapes, including some 'Rushrocks'.
+
+A note on special items:
+Pg 9: Ratchet
+Use this to rotate the stones between any of the 24 orientations characterised by the ley lines of the world. Right click 6-cycles the base of the figure, defining which way the axis points, and a further left click 4-cycles around that axis. Drop (Q) and it becomes the 'Rhotator', which rotates stones about the axis normal to the face pointed at. It also has a memory function, to copy orientations for multiple placement on a per-block basis. Drop (Q) again to return it to the Ratchet.
+
+Pg 9: Popper
+Use this on rush (Pg5) to grow brush, and on brush to grow blush, by Left-clicking a bubble projectile into contact with the block containing soil. You can 'cut' blush to get brush again with the same action. Also it can be used to access alternative shapes for some of the items on the menu. Those with a '*' and then a number (the cycle-number) before the item description as you hover the cursor over the item will cycle through those alternative shapes when acted on using a Popperstaff in the world. It will add/remove the ladder's lid, turn on/off glow on runes, center/uncenter the inner-planet rings, and ignite/extinguish the dodecahedral burner. Drop (Q) to flip it around and it becomes the Rublerstaff, which changes any stones to rubble (except the runes and blushrocks). If you're not happy with the rublification you can strike a second time. Note that one of the rushrocks (Pg5#12: '*2 4Rush 3Rock /8') must be rublified to reach its alt. The Rublerstaff does damage if a player is hit by its projectile.
+
+Pg 9: Dice/Portal Out, and Pg 1: Flo/Portal In
+If you are planning a trip and want to save a place to return to if things get messy, place the Dice at the checkpoint. It will display a random number of green orbs ranging from 0 to 15, (reset each log). The particular type of stone you place it on is important: the input portal Flo must be placed on top of THE SAME type, so make a note of which type it is at the checkpoint. After travelling, when you have chosen to return to your particular checkpoint and place the input portal, it immediately begins to absorb dark energy from the space around it and will only exist for a matter of seconds before itself vanishing, so act fast.
+Drop (Q) Dice to get 'Magical Point Teleporter' and Flo to get 'Noter'.
+
+Pg 9: Classic Spinning Coin
+The 'O' coin on the menu dispenses single coin amounts, which act to increment any values on coins already in the world, ranging from 1 to 7. It turns a 7-coin into a stack of 8, labelled 'N'. The coin will always appear ON TOP of the place it strikes when thrown, and it removes any other node that's there, so be careful where you throw it!
+
+Pg 6: Dry Shrub
+This replenishes health when stood in, and only grows on soil.
+
+Pg 1: 'B Zooms'
+This scope is obsoleted, because pressing 'Z' Zooms, but if you drop (Q) it becomes the 'Tape Measure'. Dropping again turns it back to the scope.
+
+Pg 1: Gyroid Translational Units
+These can be fitted together to make an official GYROID. A Gyroid is a triply periodic minimal surface curve.
+
+Pg 1: O {blue,black,green,red}
+These fit together to make the inner solar system model, which centers over a true node (between 8 conventional nodes).
+
+

@@ -2392,5 +2392,30 @@ minetest.register_node("stones:wiz",{
     collision_box = {type = "fixed", fixed = {{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36}}},
 })
 
+minetest.register_node("stones:modk",{
+	description = "Monkey Don",
+	inventory_image = "modk.png",
+	drawtype = "mesh",
+    mesh = "modk.obj",
+	visual_scale = 0.5,
+	tiles = {"rock.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky=1, not_in_creative_inventory=1},
+	drop = 'stones:modk',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {
+{-0.5,-0.5,-1,0.5,-0.49,1},
+{-0.132, 0.32, -0.4, 0.2, 0.7, 0.5},
+{-0.16,0.55,-0.7, 0.26,1,-0.4},
+{-0.1,0.85,-1, 0.2,1.14,-0.7}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.5,-0.5,-1,0.5,-0.49,1},
+{-0.132, 0.32, -0.4, 0.2, 0.7, 0.5},
+{-0.16,0.55,-0.7, 0.26,1,-0.4},
+{-0.1,0.85,-1, 0.2,1.14,-0.7}}},
+})
+
 --{-0.04,-0.45,-0.04, 0.04,0.45,0.04} covered by coin
 --{-0.5,-0.5,-0.5, 0.5,0.5,0.5} e-z pickings

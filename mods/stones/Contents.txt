@@ -432,6 +432,7 @@ dragon              Classic Spyro Dragon Statue
 kow                 Cow Statue
 bear                Bear Statue
 hudi                Mister Hudi
+modk                Monkey Don
 
 --Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
 --Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 

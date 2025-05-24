@@ -71,6 +71,26 @@ minetest.register_node("stones:delum", {
 	drawtype = "mesh",
 	mesh = "dedalum.obj",
 	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "stones:deluma", param2 = node.param2})
+	end,
+})
+
+minetest.register_node("stones:deluma", {
+	description = "Dodeca-Lum A",
+	paramtype = "light",
+	light_source = 14,
+	paramtype2 = "facedir",
+	tiles = {{name="K8x4608.png", animation = {type = "vertical_frames", length=31.8}}},
+	inventory_image = "denum.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:denum",
+	selection_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	collision_box = {type="fixed",fixed={
+{-0.28,-0.28,-0.28, 0.28,0.28,0.28}}},
+	drawtype = "mesh",
+	mesh = "dedalum.obj",
+	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "stones:denum", param2 = node.param2})
 	end,
 })
@@ -2060,4 +2080,3 @@ minetest.register_node("stones:vsudl", {
 	drawtype = "mesh",
 	mesh = "vsedl.obj"
 })
-

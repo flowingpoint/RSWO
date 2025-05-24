@@ -2319,7 +2319,7 @@ minetest.register_node("stones:dragon", {
 })
 
 minetest.register_node("stones:kow", {
-	description = "Cow Statue",
+	description = "Cow Gate Statue",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2339,7 +2339,7 @@ minetest.register_node("stones:kow", {
 })
 
 minetest.register_node("stones:bear",{
-	description = "Bear",
+	description = "Bear of the Brush",
 	inventory_image = "bear_inv.png",
 	drawtype = "mesh",
     mesh = "bear.obj",
@@ -2351,9 +2351,30 @@ minetest.register_node("stones:bear",{
 	drop = 'stones:rubble 2',
 	light_source = 0.5,
 	use_texture_alpha = "clip",
-	selection_box = {type = "fixed", fixed = {{-0.3, 0.1, -0.8, 0.3, 0.6, 0.5},
-{-0.5,-0.5,-1,0.5,-0.49,1}}},
-    collision_box = {type = "fixed", fixed = {{-0.3, 0.1, -0.8, 0.3, 0.6, 0.5},{-0.5,-0.5,-1,0.5,-0.49,1}}},
+	selection_box = {type = "fixed", fixed = {
+{-0.5,-0.5,-1,0.5,-0.49,1},
+{-0.3,0.1,-0.85, 0.3,0.3,0.5},
+{-0.3,-0.49,-0.85, -0.2,0.1,-0.65},
+{0.2,-0.49,-0.85, 0.3,0.1,-0.65},
+{-0.32,-0.49,0.3, -0.2,0.1,0.45},
+{0.2,-0.49,0.3, 0.32,0.1,0.45},
+{-0.25,0.3,-0.65, 0.25,0.6,0.6},
+{-0.2,0.4,0.6, 0.2,0.7,0.8},
+{-0.15,0.6,-0.5, 0.15,0.7,0.6},
+{-0.15,0.5,0.8, 0.15,0.8,0.9},
+{-0.05,0.58,0.9, 0.05,0.68,1.25}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.5,-0.5,-1,0.5,-0.49,1},
+{-0.3, 0.1, -0.85, 0.3, 0.3, 0.5},
+{-0.3,-0.49,-0.85, -0.2,0.1,-0.65},
+{-0.32,-0.49,0.4, -0.2,0.1,0.5},
+{-0.32,-0.49,0.3, -0.2,0.1,0.45},
+{0.2,-0.49,0.3, 0.32,0.1,0.45},
+{-0.25,0.3,-0.65, 0.25,0.6,0.6},
+{-0.2,0.4,0.6, 0.2,0.7,0.8},
+{-0.15,0.6,-0.5, 0.15,0.7,0.6},
+{-0.15,0.5,0.8, 0.15,0.8,0.9},
+{-0.05,0.58,0.9, 0.05,0.68,1.25}}},
 })
 
 minetest.register_node("stones:hudi",{
@@ -2376,7 +2397,7 @@ minetest.register_node("stones:hudi",{
 })
 
 minetest.register_node("stones:wiz",{
-	description = "Wizard Statue",
+	description = "Poleman Wizero",
 	inventory_image = "wiz.png",
 	drawtype = "mesh",
     mesh = "wiz.obj",
@@ -2388,8 +2409,22 @@ minetest.register_node("stones:wiz",{
 	drop = 'stones:wiz',
 	light_source = 0.5,
 	use_texture_alpha = "clip",
-	selection_box = {type = "fixed", fixed = {{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36}}},
-    collision_box = {type = "fixed", fixed = {{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36}}},
+	selection_box = {type = "fixed", fixed = {
+{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36},
+{-0.15,-0.37,-0.15, 0.15,1.15,0.15},
+{-0.1,1.15,-0.12, 0.1,1.41,0.08},
+{-0.18,1.41,-0.22, 0.18,1.44,0.12},
+{-0.03,1.44,-0.09, 0.03,1.7,-0.01},
+{-0.03,-0.37,-0.33, 0.03,1.07,-0.28},
+{-0.04,1.07,-0.34, 0.04,1.13,-0.27}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36},
+{-0.15,-0.37,-0.15, 0.15,1.15,0.15},
+{-0.1,1.15,-0.12, 0.1,1.41,0.08},
+{-0.18,1.41,-0.22, 0.18,1.44,0.12},
+{-0.03,1.44,-0.09, 0.03,1.7,-0.01},
+{-0.03,-0.37,-0.33, 0.03,1.07,-0.28},
+{-0.04,1.07,-0.34, 0.04,1.13,-0.27}}},
 })
 
 minetest.register_node("stones:modk",{
@@ -2402,7 +2437,7 @@ minetest.register_node("stones:modk",{
 	paramtype = "light",
 	paramtype2 = "facedir",
 	groups = {cracky=1, not_in_creative_inventory=1},
-	drop = 'stones:modk',
+	drop = 'stones:rubble 2',
 	light_source = 0.5,
 	use_texture_alpha = "clip",
 	selection_box = {type = "fixed", fixed = {
@@ -2415,6 +2450,25 @@ minetest.register_node("stones:modk",{
 {-0.132, 0.32, -0.4, 0.2, 0.7, 0.5},
 {-0.16,0.55,-0.7, 0.26,1,-0.4},
 {-0.1,0.85,-1, 0.2,1.14,-0.7}}},
+})
+
+minetest.register_node("stones:defr",{
+	description = "Deputy Frog",
+	inventory_image = "defr.png",
+	drawtype = "mesh",
+    mesh = "defr.obj",
+	visual_scale = 0.5,
+	tiles = {"rock.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky=1, not_in_creative_inventory=1},
+	drop = 'stones:rubble 2',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {
+{-0.25, -0.5, -0.15, 0.25, 1.1, 0.22}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.25, -0.5, -0.15, 0.25, 1.1, 0.22}}},
 })
 
 --{-0.04,-0.45,-0.04, 0.04,0.45,0.04} covered by coin

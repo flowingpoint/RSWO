@@ -429,10 +429,12 @@ c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf
 ![h] is a hex from 1 to f
 !![s] is 'l' or 'r'
 dragon              Classic Spyro Dragon Statue
-kow                 Cow Statue
-bear                Bear Statue
+kow                 Cow Gate Statue
+bear                Bear of the Brush
 hudi                Mister Hudi
+wiz                 Poleman Wizero
 modk                Monkey Don
+defr                Deputy Frog
 
 --Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
 --Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 

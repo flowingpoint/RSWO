@@ -72,22 +72,28 @@ brushrock_11*		Brush+Rock+Brush //
 rushrock_11		    Rush+Rock+Rush //
 rublish_11*		    Rubble+Rock+Rubble //
 blushrock_11*		Lush Brush+Rock+Brush //
-sku					*2 Diagonal SkewSlab
-skubl*				*2 Diagonal SkewSlab Rubble
-skuk*				*2 Diagonal SkewSlab
-sbukl*				*2 Diagonal SkewSlab Rubble
-sku2_r				*3 RightHalf SkewSlab
-skub2_r*			*3 RightHalf SkewSlab Rubble
-skus_l*			    *3 LeftHalf SkewSlab over Slab
-skubs_l*			*3 LeftHalf SkewSlab over Slab Rubble
-sku2_rc*			*3 RightHalf SkewSlab Cornered
-skub2_r*			*3 RightHalf SkewSlab Cornered Rubble
-sku2_l				*3 LeftHalf SkewSlab
-skub2_l*			*3 LeftHalf SkewSlab Rubble
-sku2_lc*			*3 LeftHalf SkewSlab Cornered
-skub2_lc*			*3 LeftHalf SkewSlab Cornered Rubble
-skus_r*			    *3 RightHalf SkewSlab over Slab
-skubs_r*			*3 RightHalf SkewSlab over Slab Rubble
+sku					*3 Diagonal SkewSlab
+skubl*				*3 Diagonal SkewSlab Rubble
+skuk*				*3 Diagonal SkewSlab
+sbukl*				*3 Diagonal SkewSlab Rubble
+skuz*				*3 Diagonal SkewSlab Dual Siding Z
+sukz*				*3 Diagonal SkewSlab Dual Siding Z Rubble
+sku2_r				*4 RightHalf SkewSlab
+skub2_r*			*4 RightHalf SkewSlab Rubble
+skus_l*			    *4 LeftHalf SkewSlab over Slab
+skubs_l*			*4 LeftHalf SkewSlab over Slab Rubble
+sku2_rc*			*4 RightHalf SkewSlab Cornered
+skub2_r*			*4 RightHalf SkewSlab Cornered Rubble
+sku2_rk*			*4 RightHalf SkewSlab
+skub2_rk*			*4 RightHalf SkewSlab Rubble
+sku2_l				*4 LeftHalf SkewSlab
+skub2_l*			*4 LeftHalf SkewSlab Rubble
+skus_r*			    *4 RightHalf SkewSlab over Slab
+skubs_r*			*4 RightHalf SkewSlab over Slab Rubble
+sku2_lc*			*4 LeftHalf SkewSlab Cornered
+skub2_lc*			*4 LeftHalf SkewSlab Cornered Rubble
+sku2_lk*			*4 LeftHalf SkewSlab Siding
+skub2_lk*			*4 LeftHalf SkewSlab Siding Rubble
 sku3_l				R3 SkewSlab
 skub3_l*			R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt

@@ -733,17 +733,29 @@ minetest.register_entity("tool:pow", {
 		p2drlpb = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_52rh", param2=p2drlpb}) end
         if s.name == "stones:s_52l"	then 
-		p2ld = s.param2
-		minetest.env:set_node(p, {name="stones:s_52d", param2=p2ld}) end
-        if s.name == "stones:s_52d"	then 
-		p2dl = s.param2
-		minetest.env:set_node(p, {name="stones:s_52l", param2=p2dl}) end
+		p2kl = s.param2
+		minetest.env:set_node(p, {name="stones:s_52kl", param2=p2kl}) end
+        if s.name == "stones:s_52kl"	then 
+		p2lk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52l", param2=p2lk}) end
         if s.name == "stones:sb_52l"	then 
-		p2bld = s.param2
-		minetest.env:set_node(p, {name="stones:sb_52d", param2=p2bld}) end
-        if s.name == "stones:sb_52d"	then 
-		p2bdl = s.param2
-		minetest.env:set_node(p, {name="stones:sb_52l", param2=p2bdl}) end
+		p2blk = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52kl", param2=p2blk}) end
+        if s.name == "stones:sb_52kl"	then 
+		p2bkl = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52l", param2=p2bkl}) end
+        if s.name == "stones:s_52r"	then 
+		p2kr = s.param2
+		minetest.env:set_node(p, {name="stones:s_52kr", param2=p2kr}) end
+        if s.name == "stones:s_52kr"	then 
+		p2rk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52r", param2=p2rk}) end
+        if s.name == "stones:sb_52r"	then 
+		p2brk = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52kr", param2=p2brk}) end
+        if s.name == "stones:sb_52kr"	then 
+		p2bkr = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52r", param2=p2bkr}) end
         if s.name == "stones:diagsteps_8l"	then 
 		p2d834a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_38l", param2=p2d834a}) end
@@ -775,8 +787,11 @@ minetest.register_entity("tool:pow", {
 		p2d63b = s.param2
 		minetest.env:set_node(p, {name="stones:diagstep_3", param2=p2d63b}) end
         if s.name == "stones:diagstep_3"	then 
-		p2d37c = s.param2
-		minetest.env:set_node(p, {name="stones:diagstep_7", param2=p2d37c}) end
+		p2d3dc = s.param2
+		minetest.env:set_node(p, {name="stones:s_52d", param2=p2d3dc}) end
+        if s.name == "stones:s_52d"	then 
+		p2dd7d = s.param2
+		minetest.env:set_node(p, {name="stones:diagstep_7", param2=p2dd7d}) end
         if s.name == "stones:diagsterp_7"	then 
 		p2dr76a = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterp_6", param2=p2dr76a}) end
@@ -839,7 +854,13 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="stones:s_52k", param2=p2r52a}) end
         if s.name == "stones:s_52k"	then 
 		p2r52b= s.param2
-		minetest.env:set_node(p, {name="stones:s_52", param2=p2r52b}) end
+		minetest.env:set_node(p, {name="stones:s_52dkl", param2=p2r52b}) end
+        if s.name == "stones:s_52dkl"	then 
+		p2r52c= s.param2
+		minetest.env:set_node(p, {name="stones:s_52dkr", param2=p2r52c}) end
+        if s.name == "stones:s_52dkr"	then 
+		p2r52d= s.param2
+		minetest.env:set_node(p, {name="stones:s_52", param2=p2r52d}) end
         if s.name == "stones:sku"	then 
 		p2ska = s.param2
 		minetest.env:set_node(p, {name="stones:skuk", param2=p2ska}) end
@@ -979,26 +1000,38 @@ minetest.register_entity("tool:pow", {
 		p22s = s.param2
 		minetest.env:set_node(p, {name="stones:skus_r", param2=p22s}) end
         if s.name == "stones:skus_r"	then 
-		p2s2 = s.param2
-		minetest.env:set_node(p, {name="stones:sku2_l", param2=p2s2}) end
+		p2sc = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_lc", param2=p2sc}) end
+        if s.name == "stones:sku2_lc"	then 
+		p2c2 = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_l", param2=p2c2}) end
         if s.name == "stones:skub2_l"	then 
-		p22bs = s.param2
-		minetest.env:set_node(p, {name="stones:skubs_r", param2=p22bs}) end
+		p2b2s = s.param2
+		minetest.env:set_node(p, {name="stones:skubs_r", param2=p2b2s}) end
         if s.name == "stones:skubs_r"	then 
-		p2bs2 = s.param2
-		minetest.env:set_node(p, {name="stones:skub2_l", param2=p2bs2}) end
+		p2bsc = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_lc", param2=p2bsc}) end
+        if s.name == "stones:skub2_lc"	then 
+		p2bc2 = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_l", param2=p2bc2}) end
         if s.name == "stones:sku2_r"	then 
 		p22sa = s.param2
 		minetest.env:set_node(p, {name="stones:skus_l", param2=p22sa}) end
         if s.name == "stones:skus_l"	then 
-		p2s2a = s.param2
-		minetest.env:set_node(p, {name="stones:sku2_r", param2=p2s2a}) end
+		p2sca = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_rc", param2=p2sca}) end
+        if s.name == "stones:sku2_rc"	then 
+		p2c2a = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_r", param2=p2c2a}) end
         if s.name == "stones:skub2_r"	then 
 		p22bsa = s.param2
 		minetest.env:set_node(p, {name="stones:skubs_l", param2=p22bsa}) end
         if s.name == "stones:skubs_l"	then 
-		p2bs2a = s.param2
-		minetest.env:set_node(p, {name="stones:skub2_r", param2=p2bs2a}) end
+		p2bsca = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_rc", param2=p2bsca}) end
+        if s.name == "stones:skub2_rc"	then 
+		p2bc2a = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_r", param2=p2bc2a}) end
         if s.name == "stones:diagstep_2"	then 
 		p2ds2s = s.param2
 		minetest.env:set_node(p, {name="stones:diagstep_2s", param2=p2ds2s}) end
@@ -2252,6 +2285,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:sb_52k"	then 
 		p2sb52kb = s.param2
 		minetest.env:set_node(p, {name="stones:s_52k", param2=p2sb52kb}) end
+        if s.name == "stones:s_52dkl"	then 
+		p2sb52dkla = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52dkl", param2=p2sb52dkla}) end
+        if s.name == "stones:sb_52dkl"	then 
+		p2sb52dklb = s.param2
+		minetest.env:set_node(p, {name="stones:s_52dkl", param2=p2sb52dklb}) end
+        if s.name == "stones:s_52dkr"	then 
+		p2sb52dkra = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52dkr", param2=p2sb52dkra}) end
+        if s.name == "stones:sb_52dkr"	then 
+		p2sb52dkrb = s.param2
+		minetest.env:set_node(p, {name="stones:s_52dkr", param2=p2sb52dkrb}) end
         if s.name == "stones:s_52hq"	then 
 		p2sb52hqa = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52hq", param2=p2sb52hqa}) end
@@ -2264,12 +2309,24 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:sb_52l"	then 
 		p2sb52lb = s.param2
 		minetest.env:set_node(p, {name="stones:s_52l", param2=p2sb52lb}) end
+        if s.name == "stones:s_52kl"	then 
+		p2sb52kla = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52kl", param2=p2sb52kla}) end
+        if s.name == "stones:sb_52kl"	then 
+		p2sb52klb = s.param2
+		minetest.env:set_node(p, {name="stones:s_52kl", param2=p2sb52klb}) end
         if s.name == "stones:s_52r"	then 
 		p2sb52ra = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52r", param2=p2sb52ra}) end
         if s.name == "stones:sb_52r"	then 
 		p2sb52rb = s.param2
 		minetest.env:set_node(p, {name="stones:s_52r", param2=p2sb52rb}) end
+        if s.name == "stones:s_52kr"	then 
+		p2sb52kra = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52kr", param2=p2sb52kra}) end
+        if s.name == "stones:sb_52kr"	then 
+		p2sb52krb = s.param2
+		minetest.env:set_node(p, {name="stones:s_52kr", param2=p2sb52krb}) end
         if s.name == "stones:s_52ul"	then 
 		p2sb52ula = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52ul", param2=p2sb52ula}) end
@@ -2318,12 +2375,24 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:skub2_r"	then 
 		p2sk2b = s.param2
 		minetest.env:set_node(p, {name="stones:sku2_r", param2=p2sk2b}) end
+        if s.name == "stones:sku2_rc"	then 
+		p2skca = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_rc", param2=p2skca}) end
+        if s.name == "stones:skub2_rc"	then 
+		p2skcb = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_rc", param2=p2skcb}) end
         if s.name == "stones:sku2_l"	then 
 		p2sk3a = s.param2
 		minetest.env:set_node(p, {name="stones:skub2_l", param2=p2sk3a}) end
         if s.name == "stones:skub2_l"	then 
 		p2sk3b = s.param2
 		minetest.env:set_node(p, {name="stones:sku2_l", param2=p2sk3b}) end
+        if s.name == "stones:sku2_lc"	then 
+		p2sk3ca = s.param2
+		minetest.env:set_node(p, {name="stones:skub2_lc", param2=p2sk3ca}) end
+        if s.name == "stones:skub2_lc"	then 
+		p2sk3cb = s.param2
+		minetest.env:set_node(p, {name="stones:sku2_lc", param2=p2sk3cb}) end
         if s.name == "stones:sku3_r"	then 
 		p2sk4a = s.param2
 		minetest.env:set_node(p, {name="stones:skub3_r", param2=p2sk4a}) end

@@ -64,10 +64,10 @@ brushrock_21u*		*2 8Brush 7Rock /16
 rushrock_21u*		*2 8Rush 7Rock /16
 rublish_21u*		*2 8Rush 7Rock /16 Rubble
 blushrock_21u*      *2 8Blush 7Rock /16
-brushrock_c*			Brush Curved Into Rock
+brushrock_c*		Brush Curved Into Rock
 rushrock_c			Rush Curved Into Rock
 rublish_c*			Rush Curved Into Rock Rubble
-blushrock_c*			Lush Brush Curved Into Rock
+blushrock_c*		Lush Brush Curved Into Rock
 brushrock_11*		Brush+Rock+Brush //
 rushrock_11		    Rush+Rock+Rush //
 rublish_11*		    Rubble+Rock+Rubble //
@@ -76,18 +76,22 @@ sku					*2 Diagonal SkewSlab
 skubl*				*2 Diagonal SkewSlab Rubble
 skuk*				*2 Diagonal SkewSlab
 sbukl*				*2 Diagonal SkewSlab Rubble
-sku2_r				*2 RightHalf SkewSlab
-skub2_r*			*2 RightHalf SkewSlab Rubble
-skus_l*			    *2 LeftHalf SkewSlab over Slab
-skubs_l*			*2 LeftHalf SkewSlab over Slab Rubble
-sku2_l				*2 LeftHalf SkewSlab
-skub2_l*			*2 LeftHalf SkewSlab Rubble
-skus_r*			    *2 RightHalf SkewSlab over Slab
-skubs_r*			*2 RightHalf SkewSlab over Slab Rubble
+sku2_r				*3 RightHalf SkewSlab
+skub2_r*			*3 RightHalf SkewSlab Rubble
+skus_l*			    *3 LeftHalf SkewSlab over Slab
+skubs_l*			*3 LeftHalf SkewSlab over Slab Rubble
+sku2_rc*			*3 RightHalf SkewSlab Cornered
+skub2_r*			*3 RightHalf SkewSlab Cornered Rubble
+sku2_l				*3 LeftHalf SkewSlab
+skub2_l*			*3 LeftHalf SkewSlab Rubble
+sku2_lc*			*3 LeftHalf SkewSlab Cornered
+skub2_lc*			*3 LeftHalf SkewSlab Cornered Rubble
+skus_r*			    *3 RightHalf SkewSlab over Slab
+skubs_r*			*3 RightHalf SkewSlab over Slab Rubble
 sku3_l				R3 SkewSlab
-skub3_l*				R3 SkewSlab Rubble
+skub3_l*			R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt
-skub3_r*				R3 SkewSlab Alt Rubble
+skub3_r*			R3 SkewSlab Alt Rubble
 diagsteps			*3 Diagonal Steps
 diagsterps*			*3 Diagonal Steps Rubble
 dia9s16ps*			*3 Diagonal Steps 9/16
@@ -122,10 +126,14 @@ r_2		        	Root 2 Slope Rush
 brush_2*             Root 2 Slope Brush
 rubble_2*            Root 2 Slope Rubble
 s_2					Root 2 Slope
-s_52				*2 R5/2 Slope LowHalf
-sb_52*				*2 R5/2 Slope LowHalf Rubble
-s_52*				*2 R5/2 Slope LowHalf Siding
-sb_52*				*2 R5/2 Slope LowHalf Siding Rubble
+s_52				*4 R5/2 Slope LowHalf
+sb_52*				*4 R5/2 Slope LowHalf Rubble
+s_52k*				*4 R5/2 Slope LowHalf Siding
+sb_52k*				*4 R5/2 Slope LowHalf Siding Rubble
+s_52dkl*			*4 R5/2 Slope LowHalf Siding Left
+sb_52dkl*			*4 R5/2 Slope LowHalf Siding Rubble Left
+s_52dkr*			*4 R5/2 Slope LowHalf Siding Right
+sb_52dkr*			*4 R5/2 Slope LowHalf Siding Rubble Right
 s_252l				R2, R5/2 Left
 sb_252l*				R2, R5/2 Left Rubble
 s_h52l*				High-half, R5/2 Left
@@ -140,10 +148,12 @@ s_52pl				R5/2 Slope LowHalf Pyramid Left
 sb_52pl*				R5/2 Slope LowHalf Pyramid Left Rubble
 s_52l				*2 R5/2 Slope LowHalf Left
 sb_52l*				*2 R5/2 Slope LowHalf Left Rubble
-s_52d*			    *2 R5/2 Slope LowHalf Double L&R
-sb_52d*			    *2 R5/2 Slope LowHalf Double L&R Rubble
-s_52r				R5/2 Slope LowHalf Right
-sb_52r*				R5/2 Slope LowHalf Right Rubble
+s_52kl*				*2 R5/2 Slope LowHalf Siding Left
+sb_52kl*			*2 R5/2 Slope LowHalf Siding Left Rubble
+s_52r				*2 R5/2 Slope LowHalf Right
+sb_52r*				*2 R5/2 Slope LowHalf Right Rubble
+s_52kr*				*2 R5/2 Slope LowHalf Siding Right
+sb_52kr*			*2 R5/2 Slope LowHalf Siding Right Rubble
 s_22				*2 R2/2 Slope Edgefill
 sb_22*				*2 R2/2 Slope Edgefill Rubble
 s_22g*				*2 R2/2 Slope Edgefill Gotdots
@@ -307,12 +317,14 @@ diagstep_2			*2 Diagonal Step 1/8
 diagsterp_2*		*2 Diagonal Step 1/8 Rubble
 diagstep_2s			*2 Diagonal Step 1/8
 diagsterp_2s*		*2 Diagonal Step 1/8 Rubble
-diagstep_7			*3 Diagonal Step 7/8
-diagsterp_7*		*3 Diagonal Step 7/8 Rubble
-diagstep_6*			*3 Diagonal Step 3/4
-diagsterp_6*		*3 Diagonal Step 3/4 Rubble
-diagstep_3*			*3 Diagonal Step 3/8
-diagsterp_3*		*3 Diagonal Step 3/8 Rubble
+diagstep_7			*4 Diagonal Step 7/8
+diagsterp_7*		*4 Diagonal Step 7/8 Rubble
+diagstep_6*			*4 Diagonal Step 3/4
+diagsterp_6*		*4 Diagonal Step 3/4 Rubble
+diagstep_3*			*4 Diagonal Step 3/8
+diagsterp_3*		*4 Diagonal Step 3/8 Rubble
+s_52d*			    *4 R5/2 Slope LowHalf Double L&R
+sb_52d*			    *4 R5/2 Slope LowHalf Double L&R Rubble
 diaq				Diagonal 1/4
 diraq*				Diagonal 1/4 Rubble
 diagsteps_8l		*2 Diagonal Half-N-Eighth Steps Left

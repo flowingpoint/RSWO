@@ -7,13 +7,13 @@ local function get_eye_pos(player)
     return pos
 end
 
-local function wear_out(player_name, item, n_steps, size)
+local function wear_out(player_name, item, n_steps)
     if core.is_creative_enabled(player_name) then
         return item
     end
 
     item:add_wear_by_uses(shared.ETCH_DURATION / shared.ETCH_STEP_INTERVAL *
-            shared.NUM_ETCH_STEPS / n_steps / (size * size))
+            shared.NUM_ETCH_STEPS / n_steps )
     if item:is_empty() then
     itemstack:clear()
     return itemstack
@@ -53,7 +53,7 @@ local function etch_on_use(item, player)
     shared.etchcast(player, pos, dir, etch_def)
     player_lasts[player_name] = { pos = pos, dir = dir }
     shared.after_etchcasts()
-    return wear_out(player_name, item, 1, 1)
+    return wear_out(player_name, item, 1)
 end
 
 --local function etch_on_place(item, player) end
@@ -67,14 +67,14 @@ minetest.register_tool("chalk:chalk", {
         on_place = etch_on_place,
         on_secondary_use = etch_on_place,
         chardust = {applier = true},
-        groups = {chalk = 1, not_in_creative_inventory=0},
-    	on_drop = function(itemstack, dropper, pos)
+        groups = {chalk = 1, not_in_creative_inventory=1},
+--[[    	on_drop = function(itemstack, dropper, pos)
 	    	local dir = dropper:get_look_dir();
     		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
     		minetest.add_item(pos, "chalk:duster")
     		itemstack:take_item()
     		return itemstack
-    	end,
+    	end]]
 })
 
 minetest.register_tool("chalk:duster", {
@@ -85,14 +85,14 @@ minetest.register_tool("chalk:duster", {
     on_place = etch_on_place,
     on_secondary_use = etch_on_place,
     chardust = {remover = true},
-    groups = {chalk=1, not_in_creative_inventory=0},
-   	on_drop = function(itemstack, dropper, pos)
+    groups = {chalk=1, not_in_creative_inventory=1},
+--[[   	on_drop = function(itemstack, dropper, pos)
 	   	local dir = dropper:get_look_dir();
    		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
    		minetest.add_item(pos, "chalk:chalk")
    		itemstack:take_item()
    		return itemstack
-   	end,
+   	end]]
 })
 
 local function lerp_factory(t)

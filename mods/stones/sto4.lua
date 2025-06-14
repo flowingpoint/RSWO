@@ -793,7 +793,27 @@ minetest.register_node("stones:octa", {
 {-0.0884,0.3125,-0.0884, 0.0884,0.375,0.0884},
 {-0.0442,0.375,-0.0442, 0.0442,0.4375,0.0442}}},
 	drawtype = "mesh",
-	mesh = "octa.obj"
+	mesh = "octa.obj",
+    on_drop = function(itemstack, dropper, pos)
+	   	local dir = dropper:get_look_dir();
+    	local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+    	minetest.add_item(pos, "chalk:chalk")
+    	itemstack:take_item()
+        minetest.add_particlespawner({
+    		amount = 1,
+    		time = 1,
+    		glow = 14,
+       		pos = {x=pos.x, y=pos.y, z=pos.z},
+    		minvel = {x=-0.2, y=0, z=-0.2},
+    		maxvel = {x=0.2, y=0, z=0.2},
+    		minacc = {x=0, y=0.2, z=0},
+    		maxacc = {x=0, y=0.7, z=0},
+    		exptime = {min=2, max=2},
+    		collisiondetection = true,
+    		collision_removal = false,
+	    	texpool = {{name = "bubbles.png", animation = {type = "vertical_frames", aspect_w = 40, aspect_h = 40, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
+    	return itemstack
+    end,
 })
 
 minetest.register_node("stones:diagstep_2", {

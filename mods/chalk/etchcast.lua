@@ -1,5 +1,5 @@
 local shared = ...
-
+local S = core.get_translator("chalk")
 local get_node_selectionboxes_cache = {}
 
 local function is_etchable(pos)
@@ -147,7 +147,7 @@ function shared.etchcast(player, pos, dir, def)
             vector_prerot(vector.new(0, 0, rot_box_size.z * shared.CANVAS_OFFSET), canvas_prerot)
         canvas = find_canvas(canvas_pos)
 
-        if not canvas and not def.remover then
+        if not canvas --[[ and not def.remover]] then
             local canvas_size = { x = rot_box_size.x, y = rot_box_size.y }
             canvas = create_canvas(
                 node_pos, canvas_pos, canvas_rot, canvas_size, bitmap_size)
@@ -167,8 +167,8 @@ function shared.etchcast(player, pos, dir, def)
 
     local pos_on_bitmap_x = pos_on_canvas.x / rot_box_size.x * bitmap_size.x
     local pos_on_bitmap_y = pos_on_canvas.y / rot_box_size.y * bitmap_size.y
-
-    local color = shared.TRANSPARENT or "#f2ebd9"
+    local def = player:get_wielded_item()
+    local color = ("#00000000" and def.remover) or ("#f2ebd9" and def.applier)
     if def then
     canvas:draw_pixel(math.floor(pos_on_bitmap_x), math.floor(pos_on_bitmap_y), color, def.remover)
     end

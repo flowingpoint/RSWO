@@ -35,7 +35,10 @@ local function get_processed_etch_def(item, prompt_player)
 
     if etch_def.applier then
         etch_def.color = "#f2ebd9"
-
+    
+    else if etch_def.remover then
+        etch_def.color = "#00000000"
+    end
     if not etch_def.color then return end
     end
     return etch_def
@@ -66,15 +69,15 @@ minetest.register_tool("chalk:chalk", {
         on_use = etch_on_use,
         on_place = etch_on_place,
         on_secondary_use = etch_on_place,
-        chardust = {applier = true},
-        groups = {chalk = 1, not_in_creative_inventory=1},
---[[    	on_drop = function(itemstack, dropper, pos)
+        chardust = {applier = true, remover = false},
+        groups = {chalk=1, not_in_creative_inventory=1},
+        on_drop = function(itemstack, dropper, pos)
 	    	local dir = dropper:get_look_dir();
     		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
     		minetest.add_item(pos, "chalk:duster")
     		itemstack:take_item()
     		return itemstack
-    	end]]
+    	end
 })
 
 minetest.register_tool("chalk:duster", {
@@ -84,15 +87,15 @@ minetest.register_tool("chalk:duster", {
     on_use = etch_on_use,
     on_place = etch_on_place,
     on_secondary_use = etch_on_place,
-    chardust = {remover = true},
+    chardust = {remover = true, applier = false},
     groups = {chalk=1, not_in_creative_inventory=1},
---[[   	on_drop = function(itemstack, dropper, pos)
+    on_drop = function(itemstack, dropper, pos)
 	   	local dir = dropper:get_look_dir();
    		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
    		minetest.add_item(pos, "chalk:chalk")
    		itemstack:take_item()
    		return itemstack
-   	end]]
+   	end
 })
 
 local function lerp_factory(t)

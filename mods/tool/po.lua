@@ -1063,8 +1063,6 @@ minetest.register_entity("tool:pow", {
 		p2dr2 = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterp_2", param2=p2dr2}) end
 
-
-
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -1248,10 +1246,13 @@ minetest.register_entity("tool:row", {
 		minetest.env:set_node(p, {name="stones:s_22162", param2=p2s5}) end
         if s.name == "tool:ladder"	then 
 		p2la = s.param2
-		minetest.env:set_node(p, {name="tool:lid", param2=p2la}) end
-        if s.name == "tool:lid"	then 
-		p2li = s.param2
-		minetest.env:set_node(p, {name="tool:ladder", param2=p2li}) end
+		minetest.env:set_node(p, {name="tool:lid_open", param2=p2la}) end
+        if s.name == "tool:lid_open"	then 
+		p2lo = s.param2
+		minetest.env:set_node(p, {name="tool:ladder", param2=p2lo}) end
+        if s.name == "tool:lid_closed"	then 
+		p2cl = s.param2
+		minetest.env:set_node(p, {name="tool:ladder", param2=p2cl}) end
         if s.name == "stones:isokar"	then 
 		p2isoka = s.param2
 		minetest.env:set_node(p, {name="stones:isodark", param2=p2isoka}) 
@@ -2921,6 +2922,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diagsterp_2s"	then 
 		p2dsb = s.param2
 		minetest.env:set_node(p, {name="stones:diagstep_2s", param2=p2dsb}) end
+        if s.name == "stones:bear"	then 
+		p2dsb = s.param2
+		minetest.env:set_node(p, {name="stones:bear", param2=4*math.floor(p2dsb/4)+(p2dsb+2)%4}) end
+        if s.name == "stones:modk"	then 
+		p2dsb = s.param2
+		minetest.env:set_node(p, {name="stones:modk", param2=4*math.floor(p2dsb/4)+(p2dsb+2)%4}) end
 	end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

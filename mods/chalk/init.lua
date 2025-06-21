@@ -5,8 +5,8 @@ shared.NUM_ETCH_STEPS = 5
 shared.MAX_ETCH_DISTANCE = 4
 shared.DESIRED_PIXEL_SIZE = 1/16
 shared.TRANSPARENT = "#00000000"
-shared.WHITE = "#c8c8c8"
-shared.BLACK = "#373737"
+shared.WHITE = "#c9c9c9"
+shared.BLUE = "#3737c9"
 shared.CANVAS_OFFSET = 0.501
 shared.EPSILON = 0.0001
 
@@ -15,5 +15,4 @@ assert(loadfile(basepath .. "/aabb.lua"))(shared)
 assert(loadfile(basepath .. "/canvas.lua"))(shared)
 assert(loadfile(basepath .. "/etchcast.lua"))(shared)
 assert(loadfile(basepath .. "/items.lua"))(shared)
-assert(loadfile(basepath .. "/gui.lua"))(shared)
 

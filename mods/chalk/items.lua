@@ -1,23 +1,11 @@
 local shared = ...
 local S = core.get_translator("chalk")
+core.register_alias("chalk:chalk", "chalk")
 
 local function get_eye_pos(player)
     local pos = player:get_pos()
     pos.y = pos.y + player:get_properties().eye_height
     return pos
-end
-
-local function wear_out(player_name, item, n_steps)
-    if core.is_creative_enabled(player_name) then
-        return item
-    end
-
-    item:add_wear_by_uses(shared.ETCH_DURATION / shared.ETCH_STEP_INTERVAL *
-            shared.NUM_ETCH_STEPS / n_steps )
-    if item:is_empty() then
-    itemstack:clear()
-    return itemstack
-    end
 end
 
 local function table_copy_shallow(t)
@@ -28,35 +16,24 @@ local function table_copy_shallow(t)
     return t2
 end
 
-local function get_processed_etch_def(item, prompt_player)
-    local etch_def = shared.get_raw_etch_def(item)
-    if not etch_def then return end
-    etch_def = table_copy_shallow(etch_def)
-
-    if etch_def.applier then
-        etch_def.color = "#f2ebd9"
-    
-    else if etch_def.remover then
-        etch_def.color = "#00000000"
-    end
-    if not etch_def.color then return end
-    end
-    return etch_def
-end
-
-
 local player_lasts = {}
 
 local function etch_on_use(item, player)
     local player_name = player:get_player_name()
-    local etch_def = get_processed_etch_def(item, player)
-    if not etch_def then return end
     local pos = get_eye_pos(player)
     local dir = player:get_look_dir()
-    shared.etchcast(player, pos, dir, etch_def)
+    shared.etchcast(player, pos, dir)
     player_lasts[player_name] = { pos = pos, dir = dir }
     shared.after_etchcasts()
-    return wear_out(player_name, item, 1)
+end
+
+local function dust_on_use(item, player)
+    local player_name = player:get_player_name()
+    local pos = get_eye_pos(player)
+    local dir = player:get_look_dir()
+    shared.dustcast(player, pos, dir)
+    player_lasts[player_name] = { pos = pos, dir = dir }
+    shared.after_etchcasts()
 end
 
 --local function etch_on_place(item, player) end
@@ -69,11 +46,25 @@ minetest.register_tool("chalk:chalk", {
         on_use = etch_on_use,
         on_place = etch_on_place,
         on_secondary_use = etch_on_place,
-        chardust = {applier = true, remover = false},
         groups = {chalk=1, not_in_creative_inventory=1},
-        on_drop = function(itemstack, dropper, pos)
-	    	local dir = dropper:get_look_dir();
-    		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+        on_place = function(itemstack, placer, pointed_thing)
+        	if pointed_thing.type == "node" then
+    		local pos = pointed_thing.above
+    		local oldnode = minetest.get_node(pos)
+	    	local stackname = itemstack:get_name()
+    		while oldnode.name == "air" and not itemstack:is_empty() do
+    			local newnode = {name = "chalk:chardust", param1 = 0}
+    			minetest.set_node(pos, newnode)
+	    		itemstack:take_item()
+	    		pos.y = pos.y - 1
+    			oldnode = minetest.get_node(pos)
+          		end
+         	end
+	    return itemstack
+        end,
+        on_secondary_use = function(itemstack, placer, pos)
+	    	local dir = placer:get_look_dir();
+    		local pos = placer:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
     		minetest.add_item(pos, "chalk:duster")
     		itemstack:take_item()
     		return itemstack
@@ -84,18 +75,47 @@ minetest.register_tool("chalk:duster", {
     description = S("Duster"),
     inventory_image = "duster.png",
     range = shared.MAX_ETCH_DISTANCE,
-    on_use = etch_on_use,
-    on_place = etch_on_place,
-    on_secondary_use = etch_on_place,
-    chardust = {remover = true, applier = false},
+    on_use = dust_on_use,
+    on_place = function(itemstack, placer, pointed_thing)
+        	if pointed_thing.type == "node" then
+    		local pos = pointed_thing.above
+    		local oldnode = minetest.get_node(pos)
+	    	local stackname = itemstack:get_name()
+    		while oldnode.name == "air" and not itemstack:is_empty() do
+    			local newnode = {name = "chalk:chardust", param1 = 0}
+    			minetest.set_node(pos, newnode)
+	    		itemstack:take_item()
+	    		pos.y = pos.y - 1
+    			oldnode = minetest.get_node(pos)
+          		end
+         	end
+	    return itemstack
+        end,
+    on_secondary_use = function(itemstack, placer, pos)
+	    	local dir = placer:get_look_dir();
+    		local pos = placer:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+    		minetest.add_item(pos, "chalk:chalk")
+    		itemstack:take_item()
+    		return itemstack
+    	end,
     groups = {chalk=1, not_in_creative_inventory=1},
-    on_drop = function(itemstack, dropper, pos)
-	   	local dir = dropper:get_look_dir();
-   		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
-   		minetest.add_item(pos, "chalk:chalk")
-   		itemstack:take_item()
-   		return itemstack
-   	end
+})
+
+minetest.register_node("chalk:chardust", {
+	description = "Chalk and Duster",
+	paramtype = "light",
+	paramtype2 = "facedir",
+    inventory_image = "chalk_and_duster.png",
+	tiles = {"nb_irl.png", "nb_irl2.png", {name = "nb_irl.png",
+		tileable_vertical = true}},
+	groups = {vcol=0.03, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "chalk:chalk",
+	pointable = true,
+    node_box={type="fixed",fixed={
+    {-0.25,-0.5,0.3125, 0.25,-0.375,0.5},
+    {-0.125,-0.375,0.375, 0.125,-0.3125,0.4375}}},
+	drawtype = "nodebox",
+    use_texture_alpha = "clip"
 })
 
 local function lerp_factory(t)
@@ -113,8 +133,7 @@ local function etch_step(player)
     end
 
     local item = player:get_wielded_item()
-    local etch_def = get_processed_etch_def(item)
-    if not etch_def then
+    if item:get_name() ~= "chalk:chalk" then
         player_lasts[player_name] = nil
         return
     end
@@ -135,12 +154,9 @@ local function etch_step(player)
                 local pos = vector.combine(last.pos, now_pos, lerp)
                 local dir = vector.combine(last.dir, now_dir, lerp):normalize() -- "nlerp"
 
-                shared.etchcast(player, pos, dir, etch_def)
+                shared.etchcast(player, pos, dir)
             end
         end
-
-        item = wear_out(player_name, item, n_steps, 1)
-        player:set_wielded_item(item)
     end
 
     player_lasts[player_name] = { pos = now_pos, dir = now_dir }

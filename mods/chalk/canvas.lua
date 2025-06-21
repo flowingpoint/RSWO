@@ -128,22 +128,17 @@ end
 function CanvasEntity:pos_get_index(x, y)
     return y * self.bitmap_size.x + x + 1
 end
-
+--"#929bd9"
 -- If the pixel is outside the canvas area, nothing will be drawn.
-function CanvasEntity:draw_pixel(x, y, color, remover)
+function CanvasEntity:draw_pixel(x, y, color)
     if not self:pos_in_bounds(x, y) then
         return
     end
     local index = self:pos_get_index(x, y)
 
-    if self.bitmap[index] ~= "#f2ebd9" then
-        self.bitmap[index] = "#f2ebd9"
-
-        if remover and self:is_empty() then
-            self.object:remove()
-        else
-            self:update_later()
-        end
+    if self.bitmap[index] ~= "#929bd9" then
+        self.bitmap[index] = "#929bd9"
+        self:update_later()
     end
 end
 
@@ -158,30 +153,23 @@ end
 -- To get correct results, at least one pixel of the rectangle must be inside
 -- the canvas area. If this requirement is not fulfilled, the result will be
 -- incorrect (but there will be no errors / data invalidation).
-function CanvasEntity:draw_rect(x, y, size, color, remover)
-    assert(size >= 1)
-
+function CanvasEntity:draw_rect(x, y)
     local max_x = self.bitmap_size.x - 1
     local max_y = self.bitmap_size.y - 1
     local x1, y1 =
         clamp(x, 0, max_x),
         clamp(y, 0, max_y)
     local x2, y2 =
-        clamp(x + size - 1, 0, max_x),
-        clamp(y + size - 1, 0, max_y)
+        clamp(x + 4, 0, max_x),
+        clamp(y + 4, 0, max_y)
 
     -- TODO: make this more fancy using stride stuff (get rid of pos_get_index)
     for yy = y1, y2 do
         for xx = x1, x2 do
-            self.bitmap[self:pos_get_index(xx, yy)] = "#f2ebd9"
+            self.bitmap[self:pos_get_index(xx, yy)] = "#00000000"
         end
     end
-
-    if remover and self:is_empty() then
-        self.object:remove()
-    else
-        self:update_later()
-    end
+    --to do : don't draw if at edge. So something 'return''
 end
 
 function CanvasEntity:is_empty()

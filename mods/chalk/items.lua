@@ -34,6 +34,19 @@ local function dust_on_use(item, player)
     shared.dustcast(player, pos, dir)
     player_lasts[player_name] = { pos = pos, dir = dir }
     shared.after_etchcasts()
+    minetest.add_particlespawner({
+		amount = 3,
+		time = 1,
+		glow = 14,
+		pos = {x=pos.x, y=pos.y, z=pos.z},
+		minvel = {x=-0.1, y=0, z=-0.1},
+		maxvel = {x=0.1, y=0, z=0.1},
+		minacc = {x=0, y=-0.2, z=0},
+		maxacc = {x=0, y=-0.7, z=0},
+		exptime = {min=2, max=2},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=1,y=1}}}}})
 end
 
 --local function etch_on_place(item, player) end

@@ -19,6 +19,7 @@ dofile(path .. "/car.lua")
 --complex = dofile(path .. "/complex.lua")
 --dofile(path .. "/burst.lua")
 --dofile(path .. "/clean.lua")
+dofile(path .. "/prop.lua")
 
 ---
 --ref: https://github.com/davidm/lua-matrix

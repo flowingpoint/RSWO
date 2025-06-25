@@ -75,13 +75,13 @@ minetest.register_tool("chalk:chalk", {
          	end
 	    return itemstack
         end,
-        on_secondary_use = function(itemstack, placer, pos)
-	    	local dir = placer:get_look_dir();
-    		local pos = placer:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+    on_drop = function(itemstack, dropper, pos)
+	    	local dir = dropper:get_look_dir();
+    		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
     		minetest.add_item(pos, "chalk:duster")
     		itemstack:take_item()
     		return itemstack
-    	end
+    	end,
 })
 
 minetest.register_tool("chalk:duster", {
@@ -104,9 +104,9 @@ minetest.register_tool("chalk:duster", {
          	end
 	    return itemstack
         end,
-    on_secondary_use = function(itemstack, placer, pos)
-	    	local dir = placer:get_look_dir();
-    		local pos = placer:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
+    on_drop = function(itemstack, dropper, pos)
+	    	local dir = dropper:get_look_dir();
+    		local pos = dropper:get_pos() + {x=0+dir.x/2,y=1.5,z=0+dir.z/2}
     		minetest.add_item(pos, "chalk:chalk")
     		itemstack:take_item()
     		return itemstack
@@ -121,7 +121,7 @@ minetest.register_node("chalk:chardust", {
     inventory_image = "chalk_and_duster.png",
 	tiles = {"nb_irl.png", "nb_irl2.png", {name = "nb_irl.png",
 		tileable_vertical = true}},
-	groups = {vcol=0.03, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	groups = {vcol=0.03, choppy=2, dig_immediate=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "chalk:chalk",
 	pointable = true,
     node_box={type="fixed",fixed={
@@ -129,6 +129,16 @@ minetest.register_node("chalk:chardust", {
     {-0.125,-0.375,0.375, 0.125,-0.3125,0.4375}}},
 	drawtype = "nodebox",
     use_texture_alpha = "clip"
+})
+
+minetest.register_craft({
+	output = "chalk:chalk",
+	recipe = {{"chalk:duster"}}
+})
+
+minetest.register_craft({
+	output = "chalk:duster",
+	recipe = {{"chalk:chalk"}}
 })
 
 local function lerp_factory(t)

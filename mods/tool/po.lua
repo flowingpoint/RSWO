@@ -2969,6 +2969,21 @@ minetest.register_tool("tool:pok", {
 		itemstack:take_item()
 		return itemstack
 	end,
+    on_place = function(itemstack, placer, pointed_thing)
+        if pointed_thing.type == "node" then
+    	local pos = pointed_thing.above
+   		local oldnode = minetest.get_node(pos)
+    	local stackname = itemstack:get_name()    		
+            while oldnode.name == "air" and not itemstack:is_empty() do
+    		local newnode = {name = "tool:prop", param1 = 0}
+    		minetest.set_node(pos, newnode)
+	    	itemstack:take_item()
+	    	pos.y = pos.y - 1
+    		oldnode = minetest.get_node(pos)
+            return itemstack
+          	end
+        end
+    end,
 	light_source = 14,
 })
 
@@ -2992,8 +3007,63 @@ minetest.register_tool("tool:rok", {
 		itemstack:take_item()
 		return itemstack
 	end,
+    on_place = function(itemstack, placer, pointed_thing)
+        if pointed_thing.type == "node" then
+    	local pos = pointed_thing.above
+   		local oldnode = minetest.get_node(pos)
+    	local stackname = itemstack:get_name()    		
+            while oldnode.name == "air" and not itemstack:is_empty() do
+    		local newnode = {name = "tool:prup", param1 = 0}
+    		minetest.set_node(pos, newnode)
+	    	itemstack:take_item()
+	    	pos.y = pos.y - 1
+    		oldnode = minetest.get_node(pos)
+            return itemstack
+          	end
+        end
+    end,
 	light_source = 9,
     groups = {not_in_creative_inventory=1}
+})
+
+minetest.register_node("tool:prop", {
+	description = "Propped P-Staff",
+	paramtype = "light",
+	paramtype2 = "facedir",
+    inventory_image = "smokestaff.png",
+	tiles = {"proptop.png", "propbottom.png", {name = "propipd.png",
+		tileable_vertical = true}},
+	groups = {vcol=0.00, choppy=2, dig_immediate=3, oddly_breakable_by_hand=1, not_in_creative_inventory=0},
+	drop = "tool:pok",
+	pointable = true,
+	light_source = 14,
+    node_box={type="fixed",fixed={
+    {-0.0313,-0.5,-0.0313, 0.0313,0.5,0.0313}}},
+	drawtype = "nodebox",
+    use_texture_alpha = "clip",
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		minetest.set_node(pos, {name = "tool:prup", param2 = node.param2})
+	end,
+})
+
+minetest.register_node("tool:prup", {
+	description = "Propped R-Staff",
+	paramtype = "light",
+	paramtype2 = "facedir",
+    inventory_image = "wokestaff.png",
+	tiles = {"propbottom.png", "proptop.png", {name = "propipd.png^[transformFX",
+		tileable_vertical = true}},
+	groups = {vcol=0.00, choppy=2, dig_immediate=3, oddly_breakable_by_hand=1, not_in_creative_inventory=0},
+	drop = "tool:rok",
+	pointable = true,
+	light_source = 9,
+    node_box={type="fixed",fixed={
+    {-0.0313,-0.5,-0.0313, 0.0313,0.5,0.0313}}},
+	drawtype = "nodebox",
+    use_texture_alpha = "clip",
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		minetest.set_node(pos, {name = "tool:prop", param2 = node.param2})
+	end,
 })
 
 minetest.register_craft({

@@ -81,6 +81,7 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
 		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brush"})
 	end
 })
@@ -91,6 +92,7 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
 		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rush"})
 	end
 })
@@ -101,6 +103,7 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
 		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brush"})
 	end
 })
@@ -111,7 +114,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blush"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blush"}, {param2 = math.random(0,3)})
 	end
 })
 
@@ -121,7 +125,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_0"}, {param2 = node.param2})
 	end
 })
 
@@ -131,7 +136,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_0"}, {param2 = node.param2})
 	end
 })
 
@@ -141,7 +147,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_0"}, {param2 = node.param2})
 	end
 })
 
@@ -151,7 +158,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_0"}, {param2 = node.param2})
 	end
 })
 
@@ -161,7 +169,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_0"}, {param2 = node.param2})
 	end
 })
 
@@ -171,7 +180,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_0"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_0"}, {param2 = node.param2})
 	end
 })
 
@@ -181,7 +191,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_1", param2 = math.floor((node.param2)/4)*4+(node.param2-1)%4})
 	end
 })
 
@@ -191,7 +202,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_1"}, {param2 = node.param2})
 	end
 })
 
@@ -201,7 +213,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_1"}, {param2 = node.param2})
 	end
 })
 
@@ -211,7 +224,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_1"}, {param2 = node.param2})
 	end
 })
 
@@ -221,7 +235,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_1"}, {param2 = node.param2})
 	end
 })
 
@@ -231,7 +246,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_1"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_1",  param2 = math.floor((node.param2)/4)*4+(node.param2+1)%4})
 	end
 })
 
@@ -241,7 +257,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2"}, {param2 = node.param2})
 	end
 })
 
@@ -251,7 +268,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2"}, {param2 = node.param2})
 	end
 })
 
@@ -261,7 +279,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_2"}, {param2 = node.param2})
 	end
 })
 
@@ -271,7 +290,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2"}, {param2 = node.param2})
 	end
 })
 
@@ -281,7 +301,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2"}, {param2 = node.param2})
 	end
 })
 
@@ -291,7 +312,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_2"}, {param2 = node.param2})
 	end
 })
 
@@ -301,7 +323,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_3", param2 = math.floor((node.param2)/4)*4+(node.param2-1)%4})
 	end
 })
 
@@ -311,7 +334,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_3"}, {param2 = node.param2})
 	end
 })
 
@@ -321,7 +345,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_3"}, {param2 = node.param2})
 	end
 })
 
@@ -331,7 +356,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_3"}, {param2 = node.param2})
 	end
 })
 
@@ -341,7 +367,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_3"}, {param2 = node.param2})
 	end
 })
 
@@ -351,7 +378,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_3"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_3",  param2 = math.floor((node.param2)/4)*4+(node.param2+1)%4})
 	end
 })
 
@@ -361,7 +389,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_4"}, {param2 = node.param2})
 	end
 })
 
@@ -371,7 +400,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_4"}, {param2 = node.param2})
 	end
 })
 
@@ -381,7 +411,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_4"}, {param2 = node.param2})
 	end
 })
 
@@ -391,7 +422,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_4"}, {param2 = node.param2})
 	end
 })
 
@@ -401,7 +433,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_4"}, {param2 = node.param2})
 	end
 })
 
@@ -411,7 +444,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_4"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_4"}, {param2 = node.param2})
 	end
 })
 
@@ -421,7 +455,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_5"}, {param2 = node.param2})
 	end
 })
 
@@ -431,7 +466,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_5"}, {param2 = node.param2})
 	end
 })
 
@@ -441,7 +477,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_5"}, {param2 = node.param2})
 	end
 })
 
@@ -451,7 +488,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_5"}, {param2 = node.param2})
 	end
 })
 
@@ -461,7 +499,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_5"}, {param2 = node.param2})
 	end
 })
 
@@ -471,7 +510,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_5"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_5"}, {param2 = node.param2})
 	end
 })
 
@@ -481,7 +521,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -491,7 +532,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -501,7 +543,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -511,7 +554,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -521,7 +565,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -531,7 +576,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_52ul"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_52ul"}, {param2 = node.param2})
 	end
 })
 
@@ -541,7 +587,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -551,7 +598,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -561,7 +609,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -571,7 +620,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -581,7 +631,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -591,7 +642,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_52ur"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_52ur"}, {param2 = node.param2})
 	end
 })
 
@@ -601,7 +653,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527l"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527l"}, {param2 = node.param2})
 	end
 })
 
@@ -611,7 +664,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527l"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527l"}, {param2 = node.param2})
 	end
 })
 
@@ -621,7 +675,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_527l"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_527l"}, {param2 = node.param2})
 	end
 })
 
@@ -631,7 +686,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527l"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527l"}, {param2 = node.param2})
 	end
 })
 
@@ -641,7 +697,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -651,7 +708,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -661,7 +719,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -671,7 +730,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -681,7 +741,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -691,7 +752,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -701,7 +763,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -711,7 +774,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_527r"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_527r"}, {param2 = node.param2})
 	end
 })
 
@@ -721,7 +785,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_28"}, {param2 = node.param2})
 	end
 })
 
@@ -731,7 +796,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_28"}, {param2 = node.param2})
 	end
 })
 
@@ -741,7 +807,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_28"}, {param2 = node.param2})
 	end
 })
 
@@ -751,7 +818,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_28"}, {param2 = node.param2})
 	end
 })
 
@@ -761,7 +829,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_28"}, {param2 = node.param2})
 	end
 })
 
@@ -771,7 +840,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_28"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_28"}, {param2 = node.param2})
 	end
 })
 
@@ -781,7 +851,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -791,7 +862,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -801,7 +873,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -811,7 +884,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -821,7 +895,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -831,7 +906,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_2u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_2u"}, {param2 = node.param2})
 	end
 })
 
@@ -841,7 +917,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21"}, {param2 = node.param2})
 	end
 })
 
@@ -851,7 +928,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21"}, {param2 = node.param2})
 	end
 })
 
@@ -861,7 +939,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_21"}, {param2 = node.param2})
 	end
 })
 
@@ -871,7 +950,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21"}, {param2 = node.param2})
 	end
 })
 
@@ -881,7 +961,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21"}, {param2 = node.param2})
 	end
 })
 
@@ -891,7 +972,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_21"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_21"}, {param2 = node.param2})
 	end
 })
 
@@ -901,7 +983,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -911,7 +994,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -921,7 +1005,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -931,7 +1016,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -941,7 +1027,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -951,7 +1038,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_21u"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_21u"}, {param2 = node.param2})
 	end
 })
 
@@ -961,7 +1049,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_c"}, {param2 = node.param2})
 	end
 })
 
@@ -971,7 +1060,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_c"}, {param2 = node.param2})
 	end
 })
 
@@ -981,7 +1071,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_c"}, {param2 = node.param2})
 	end
 })
 
@@ -991,7 +1082,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_c"}, {param2 = node.param2})
 	end
 })
 
@@ -1001,7 +1093,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_c"}, {param2 = node.param2})
 	end
 })
 
@@ -1011,7 +1104,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_c"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_c"}, {param2 = node.param2})
 	end
 })
 
@@ -1021,7 +1115,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1031,7 +1126,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1041,7 +1137,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rublish_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1051,7 +1148,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:rushrock_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1061,7 +1159,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1071,7 +1170,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_11"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blushrock_11"}, {param2 = node.param2})
 	end
 })
 
@@ -1081,7 +1181,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:r_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:r_2"}, {param2 = node.param2})
 	end
 })
 
@@ -1091,7 +1192,8 @@ minetest.register_abm({
 	interval = 1.0, -- Run every 10 seconds
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brush_2"})
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brush_2"}, {param2 = node.param2})
 	end
 })
 

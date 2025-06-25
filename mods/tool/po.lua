@@ -140,10 +140,10 @@ minetest.register_entity("tool:pow", {
 		p2lb0 = math.floor((s.param2)/4)*4+(s.param2-1)%4
 		minetest.env:set_node(p, {name="stones:brushrock_0", param2=p2lb0}) end
         if s.name == "stones:brushrock_1"	then 
-		p2b1 = (s.param2+1)%4
+		p2b1 = math.floor((s.param2)/4)*4+(s.param2+1)%4
 		minetest.env:set_node(p, {name="stones:blushrock_1", param2=p2b1}) end
         if s.name == "stones:blushrock_1"	then 
-		p2lb1 = (s.param2-1)%4
+		p2lb1 = math.floor((s.param2)/4)*4+(s.param2-1)%4
 		minetest.env:set_node(p, {name="stones:brushrock_1", param2=p2lb1}) end
         if s.name == "stones:brushrock_11"	then 
 		p2b11 = s.param2

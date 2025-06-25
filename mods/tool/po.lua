@@ -3054,11 +3054,12 @@ minetest.register_abm({
     action = function(pos, node)
         minetest.env:remove_node(pos)
         minetest.set_node(pos, {name = "tool:prup", param2 = node.param2})
+        minetest.sound_play({name="whoosh", gain=0.05}, {pos=selfpos}, true)
         minetest.add_particlespawner({
     		amount = 1,
     		time = 1,
     		glow = 14,
-       		pos = {x=pos.x, y=pos.y, z=pos.z},
+       		pos = {x=pos.x, y=pos.y+0.5, z=pos.z},
     		minvel = {x=-0.2, y=0, z=-0.2},
     		maxvel = {x=0.2, y=0, z=0.2},
     		minacc = {x=0, y=0.2, z=0},
@@ -3081,6 +3082,21 @@ minetest.register_abm({
 		collision_removal = false,
 		texpool = {
 			{name = "glypy20.png", animation = {type = "vertical_frames", aspect_w = 6, aspect_h = 6, length = 2}, blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)}}}}
+        })
+minetest.add_particlespawner({
+		amount = 5+math.random(1,10),
+		time = 10+math.random(1,10),
+		glow = 14,
+		pos = {min={x=pos.x-0.5, y=pos.y+0.5, z=pos.z-0.5}, max={x=pos.x+0.5, y=pos.y+0.5, z=pos.z+0.5}, bias=math.random(0,1)},
+		minvel = {x=-0.1+math.sin(pos.x), y=-0.1+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxvel = {x=0.1+math.sin(pos.x), y=0.4+math.sin(pos.x), z=0.1+math.cos(pos.x)},
+		minacc = {x=-0.1+math.sin(pos.x), y=-0.4+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxacc = {x=0.1+math.cos(pos.x), y=0.1+math.sin(pos.x), z=0.1-math.sin(pos.x)},
+		exptime = {min=2, max=5},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {
+			{name = "glypy20.png", animation = {type = "vertical_frames", aspect_w = 6, aspect_h = 6, length = 2}, blend='alpha', scale_tween={{x=(math.random(10,20)/40),y=(math.random(10,20)/40)}}}}
 		})
     end
 })
@@ -3107,7 +3123,7 @@ minetest.register_node("tool:prup", {
     		amount = 1,
     		time = 1,
     		glow = 14,
-       		pos = {x=pos.x, y=pos.y, z=pos.z},
+       		pos = {x=pos.x, y=pos.y+0.5, z=pos.z},
     		minvel = {x=-0.2, y=0, z=-0.2},
     		maxvel = {x=0.2, y=0, z=0.2},
     		minacc = {x=0, y=0.2, z=0},

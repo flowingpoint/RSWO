@@ -302,7 +302,7 @@ minetest.register_abm({
 	chance = 5, -- Select every 1 in 50 nodes
 	action = function(pos, node, active_object_count, active_object_count_wider)
         minetest.env:remove_node(pos)
-		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2", param2 = math.floor((node.param2)/4)*4+(node.param2+1)%4})
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brushrock_2", param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
 	end
 })
 

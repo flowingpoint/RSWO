@@ -135,15 +135,14 @@ spread_rect_to_box = function(props, other_node_pos, raw_box)
     canvas:draw_rect(new_x, new_y, props.size)
 end
 
-
-local function calc_bitmap_size(canvas_size)
+function calc_bitmap_size(canvas_size)
     return { -- minimum 1x1 pixels
         x = math.max(math.round(canvas_size.x / shared.DESIRED_PIXEL_SIZE), 1),
         y = math.max(math.round(canvas_size.y / shared.DESIRED_PIXEL_SIZE), 1),
     }
 end
 
-local function find_canvas(pos)
+function find_canvas(pos)
     local findings = core.get_objects_inside_radius(pos, shared.EPSILON)
 
     for _, obj in ipairs(findings) do
@@ -154,7 +153,7 @@ local function find_canvas(pos)
     end
 end
 
-local function create_canvas(node_pos, pos, rot, size, bitmap_size)
+function create_canvas(node_pos, pos, rot, size, bitmap_size)
     local obj = core.add_entity(pos, "chalk:canvas")
     if not obj then return end
     obj:set_rotation(rot)
@@ -165,7 +164,8 @@ local function create_canvas(node_pos, pos, rot, size, bitmap_size)
     return canvas
 end
 
-local function vec_to_canvas_space(vec, canvas_prerot)
+
+function vec_to_canvas_space(vec, canvas_prerot)
     return vector_prerot(vector.new(-vec.x, -vec.y, vec.z), canvas_prerot)
 end
 

@@ -136,8 +136,8 @@ function CanvasEntity:draw_pixel(x, y, color)
     end
     local index = self:pos_get_index(x, y)
 
-    if self.bitmap[index] ~= "#929bd9" then
-        self.bitmap[index] = "#929bd9"
+    if self.bitmap[index] ~= "#e8d6ed" then
+        self.bitmap[index] = "#e8d6ed"
         self:update_later()
     end
 end

@@ -29,9 +29,8 @@ local player_current_book = { }
 		minetest.remove_node(pos)
 	end
 
-	minetest.register_node("noter:book", {
-		description = ("Book"),
-
+minetest.register_node("noter:book", {
+	description = ("Book"),
 	inventory_image = "default_book.png",
 	tiles = {
 		"books_book_closed_topbottom.png",	-- Top
@@ -45,16 +44,13 @@ local player_current_book = { }
 	node_box = {
 		type = "fixed",
 		fixed = {
-			{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125},
-		}
-	},
-
-		groups = { snappy=3, oddly_breakable_by_hand=3, book=1, not_in_creative_inventory=1},
-		walkable = false,
+			{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
+	groups = { dig_immediate=1, oddly_breakable_by_hand=3, book=1, not_in_creative_inventory=1},
+	walkable = false,
     paramtype = "light",
     sunlight_propagates = true,
     paramtype2 = "facedir",
-		stack_max = 1,
+	stack_max = 1,
 		on_rightclick = function(pos, node, puncher, pointed_thing)
 			local fdir = node.param2
 			minetest.swap_node(pos, { name = "noter:book_open", param2 = fdir })
@@ -92,9 +88,7 @@ local player_current_book = { }
 			if data.title and data.title ~= "" then
 				meta:set_string("infotext", data.title)
 			end
-			if not minetest.is_creative_enabled(plname) then
-				itemstack:take_item()
-			end
+			itemstack:take_item()
 			return itemstack
 		end,
 		on_dig = book_dig,
@@ -104,8 +98,7 @@ local player_current_book = { }
 		}
 	})
 
-	minetest.register_node("noter:book_open", {
-        
+minetest.register_node("noter:book_open", {
 	inventory_image = "default_book_written.png",
 	tiles = {
 		"books_book_open_top.png",	-- Top
@@ -160,12 +153,52 @@ local player_current_book = { }
 			local fdir = node.param2
 			minetest.swap_node(pos, { name = "noter:book", param2 = fdir })
 --			minetest.sound_play("homedecor_book_close", {pos=pos, max_hear_distance = 3, gain = 2,})
+            minetest.add_particlespawner({
+        		amount = 12,
+	        	time = 3,
+	        	glow = 10,
+	        	pos = {x=pos.x, y=pos.y, z=pos.z},
+	        	minvel = {x=-0.2, y=0, z=-0.2},
+	        	maxvel = {x=0.2, y=0, z=0.2},
+	        	minacc = {x=0, y=0.2, z=0},
+	        	maxacc = {x=0, y=0.7, z=0},
+	        	exptime = {min=2, max=2},
+	        	collisiondetection = true,
+	        	collision_removal = false,
+                    texpool = {
+                {name = 'alpha_a.png', blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_b.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_c.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, 
+                {name = 'alpha_d.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_e.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_f.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_g.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_h.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_i.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_j.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_k.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_l.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_m.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_n.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_o.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_p.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_q.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_r.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_s.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_t.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_u.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_v.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_w.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_x.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_y.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}},
+                {name = 'alpha_z.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}}
+            		})
 		end,
 		selection_box = {
 		        type = "fixed",
 				fixed = {-0.35, -0.5, -0.25, 0.35, -0.4, 0.25}
 		}
-	})
+})
 
 
 minetest.register_on_player_receive_fields(function(player, form_name, fields)

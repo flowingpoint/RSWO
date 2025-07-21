@@ -16,13 +16,15 @@ rublish_1*			Rush / Rubble
 blushrock_1*			Lush Brush / Rock
 brushrock_2*			Brush+Rock 3/1
 rushrock_2			Rush+Rock 3/1
-rublish_2*			Rush+Rock 3/1
+rublish_2*			Rush+Rubble 3/1
 blushrock_2*			Lush Brush+Rock 3/1
 brushrock_3*			Brush+Rock 1/3
 rushrock_3			Rush+Rock 1/3
+rublish_3			Rush+Rubble 1/3
 blushrock_3*         Lush Brush+Rock 1/3
 brushrock_4*			Brush+Rock 3\1
 rushrock_4			Rush+Rock 3\1
+rublish_4*			Rush+Rubble 3\1
 blushrock_4*			Lush Brush+Rock 3\1
 brushrock_8*			Brush / Rock
 rushrock_8			Rush / Rock
@@ -72,6 +74,10 @@ brushrock_11*		Brush+Rock+Brush //
 rushrock_11		    Rush+Rock+Rush //
 rublish_11*		    Rubble+Rock+Rubble //
 blushrock_11*		Lush Brush+Rock+Brush //
+brushrock_11a*		Brush+Rock+Brush \\
+rushrock_11a*		Rush+Rock+Rush \\
+rublish_11a*		Rubble+Rock+Rubble \\
+blushrock_11a*		Lush Brush+Rock+Brush \\
 sku					*3 Diagonal SkewSlab
 skubl*				*3 Diagonal SkewSlab Rubble
 skuk*				*3 Diagonal SkewSlab

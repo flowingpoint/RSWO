@@ -13,6 +13,8 @@ function default.node_sound_stone_defaults(table)
 	return table
 end
 
+--[[ falling_node = 1, for rubble nodes?]]
+
 minetest.register_node("stones:rock", {
 	description = "Rock",
 	drawtype = "nodebox",
@@ -1620,6 +1622,61 @@ minetest.register_node("stones:blushrock_11", {
 	drawtype = "mesh",
     mesh = "blushrock_11.obj"
 })
+
+minetest.register_node("stones:brushrock_11a", {
+	description = "Brush+Rock+Brush \\\\",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"brushrock_11.png^[transformFX", "rushrock_11.png", "dirt.png^grass_side.png", "dirt.png^grass_side.png", "brushrock_s.png^[transformFX", "brushrock_s.png^[transformFX"},
+	groups = {cracky=1, soil=1, not_in_creative_inventory=1},
+	light_source = 0,
+	drop = "stones:rushrock_11a",
+	node_box = {type= "fixed", fixed=
+{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+})
+
+minetest.register_node("stones:rushrock_11a", {
+	description = "Rush+Rock+Rush \\\\",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rushrock_11.png^[transformFY", "rushrock_11.png", "dirt.png", "dirt.png", "rushrock_0.png^[transformR90^[transformFX", "rushrock_0.png^[transformR90^[transformFX"},
+	groups = {cvol=0.5, cracky=2, soil=1, not_in_creative_inventory=1},
+	light_source = 0,
+	drop = "stones:rushrock_11a",
+	node_box = {type= "fixed", fixed=
+{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+})
+
+minetest.register_node("stones:rublish_11a", {
+	description = "Rubble+Rock+Rubble \\\\",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rublish_11.png^[transformFY", "rublish_11.png", "dirt.png", "dirt.png", "rublish_0.png^[transformR90^[transformFX", "rublish_0.png^[transformR90^[transformFX"},
+	groups = {cvol=0.5, cracky=3, soil=1, not_in_creative_inventory=1},
+	light_source = 0,
+	drop = "stones:rublish_11a",
+	node_box = {type= "fixed", fixed=
+{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+})
+
+minetest.register_node("stones:blushrock_11a", {
+	description = "Lush Brush+Rock+Brush \\\\",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles ={"blushrock_11.png^[transformFX"},
+	groups = {cvol=0.5, crumbly=1, soil=1, not_in_creative_inventory=1},
+	drop = 'stones:rushrock_11a',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+    collision_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+	drawtype = "mesh",
+    mesh = "blushrock_11a.obj"
+})
+
 
 minetest.register_node("stones:sku", {
 	description = "*2 Diagonal SkewSlab",

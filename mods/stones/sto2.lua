@@ -172,7 +172,7 @@ minetest.register_node("stones:brush_2", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"brush_2.png"},
-	groups = {cracky=1, soil=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	groups = {cracky=1, soil=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:r_2",
 	collision_box = {type="fixed",fixed={
 {-0.5,  -0.5,  -0.375, 0.5, -0.375, 0.5},
@@ -192,6 +192,92 @@ minetest.register_node("stones:brush_2", {
 {-0.5, 0.25, 0.375, 0.5, 0.375, 0.5}}},
 	drawtype = "mesh",
 	mesh = "brush_2.obj"
+})
+
+minetest.register_node("stones:r_3", {
+	description = "Root 3 Slope Rush",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"dirt.png"},
+	groups = {cracky=2, oddly_breakable_by_hand=1},
+	drop = "stones:r_3",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.2143, -0.3572,-0.3572,0.5},
+{-0.3572,-0.5,-0.0714, -0.2143,-0.3572,0.5},
+{-0.2143,-0.5,0.0714, -0.0714,-0.3572,0.5},
+{-0.0714,-0.5,0.2143, 0.0714,-0.3572,0.5},
+{0.0714,-0.5,0.3572, 0.2143,-0.3572,0.5},
+{-0.5,-0.3572,-0.0714, -0.3572,-0.2143,0.5},
+{-0.3572,-0.3572,0.0714, -0.2143,-0.2143,0.5},
+{-0.2143,-0.3572,0.2143, -0.0714,-0.2143,0.5},
+{-0.0614,-0.3572,0.3572, 0.0714,-0.2143,0.5},
+{-0.5,-0.2143,0.0714, -0.3572,-0.0714,0.5},
+{-0.3572,-0.2143,0.2143, -0.2143,-0.0714,0.5},
+{-0.2143,-0.2143,0.3572, -0.0714,-0.0714,0.5},
+{-0.5,-0.0714,0.2143, -0.3572,0.0714,0.5},
+{-0.3572,-0.0714,0.3572, -0.2143,0.0714,0.5},
+{-0.5,0.0714,0.3572, -0.3572,0.2143,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.2143, -0.3572,-0.3572,0.5},
+{-0.3572,-0.5,-0.0714, -0.2143,-0.3572,0.5},
+{-0.2143,-0.5,0.0714, -0.0714,-0.3572,0.5},
+{-0.0714,-0.5,0.2143, 0.0714,-0.3572,0.5},
+{0.0714,-0.5,0.3572, 0.2143,-0.3572,0.5},
+{-0.5,-0.3572,-0.0714, -0.3572,-0.2143,0.5},
+{-0.3572,-0.3572,0.0714, -0.2143,-0.2143,0.5},
+{-0.2143,-0.3572,0.2143, -0.0714,-0.2143,0.5},
+{-0.0614,-0.3572,0.3572, 0.0714,-0.2143,0.5},
+{-0.5,-0.2143,0.0714, -0.3572,-0.0714,0.5},
+{-0.3572,-0.2143,0.2143, -0.2143,-0.0714,0.5},
+{-0.2143,-0.2143,0.3572, -0.0714,-0.0714,0.5},
+{-0.5,-0.0714,0.2143, -0.3572,0.0714,0.5},
+{-0.3572,-0.0714,0.3572, -0.2143,0.0714,0.5},
+{-0.5,0.0714,0.3572, -0.3572,0.2143,0.5}}},
+	drawtype = "mesh",
+	mesh = "aset.obj"
+})
+
+minetest.register_node("stones:brush_3", {
+	description = "Root 3 Slope Brush",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"brush_2.png"},
+	groups = {cracky=1, soil=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:r_3",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.2143, -0.3572,-0.3572,0.5},
+{-0.3572,-0.5,-0.0714, -0.2143,-0.3572,0.5},
+{-0.2143,-0.5,0.0714, -0.0714,-0.3572,0.5},
+{-0.0714,-0.5,0.2143, 0.0714,-0.3572,0.5},
+{0.0714,-0.5,0.3572, 0.2143,-0.3572,0.5},
+{-0.5,-0.3572,-0.0714, -0.3572,-0.2143,0.5},
+{-0.3572,-0.3572,0.0714, -0.2143,-0.2143,0.5},
+{-0.2143,-0.3572,0.2143, -0.0714,-0.2143,0.5},
+{-0.0614,-0.3572,0.3572, 0.0714,-0.2143,0.5},
+{-0.5,-0.2143,0.0714, -0.3572,-0.0714,0.5},
+{-0.3572,-0.2143,0.2143, -0.2143,-0.0714,0.5},
+{-0.2143,-0.2143,0.3572, -0.0714,-0.0714,0.5},
+{-0.5,-0.0714,0.2143, -0.3572,0.0714,0.5},
+{-0.3572,-0.0714,0.3572, -0.2143,0.0714,0.5},
+{-0.5,0.0714,0.3572, -0.3572,0.2143,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,-0.2143, -0.3572,-0.3572,0.5},
+{-0.3572,-0.5,-0.0714, -0.2143,-0.3572,0.5},
+{-0.2143,-0.5,0.0714, -0.0714,-0.3572,0.5},
+{-0.0714,-0.5,0.2143, 0.0714,-0.3572,0.5},
+{0.0714,-0.5,0.3572, 0.2143,-0.3572,0.5},
+{-0.5,-0.3572,-0.0714, -0.3572,-0.2143,0.5},
+{-0.3572,-0.3572,0.0714, -0.2143,-0.2143,0.5},
+{-0.2143,-0.3572,0.2143, -0.0714,-0.2143,0.5},
+{-0.0614,-0.3572,0.3572, 0.0714,-0.2143,0.5},
+{-0.5,-0.2143,0.0714, -0.3572,-0.0714,0.5},
+{-0.3572,-0.2143,0.2143, -0.2143,-0.0714,0.5},
+{-0.2143,-0.2143,0.3572, -0.0714,-0.0714,0.5},
+{-0.5,-0.0714,0.2143, -0.3572,0.0714,0.5},
+{-0.3572,-0.0714,0.3572, -0.2143,0.0714,0.5},
+{-0.5,0.0714,0.3572, -0.3572,0.2143,0.5}}},
+	drawtype = "mesh",
+	mesh = "brush_3.obj"
 })
 
 minetest.register_node("stones:rubble_2", {
@@ -2951,7 +3037,7 @@ minetest.register_node("stones:asectr", {
 })
 
 minetest.register_node("stones:asect_2", {
-	description = "Apex Inset Nsecting LowHalf",
+	description = "*2 Apex Inset Nsecting LowHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2992,7 +3078,7 @@ minetest.register_node("stones:asect_2", {
 })
 
 minetest.register_node("stones:asectr_2", {
-	description = "Apex Inset Nsecting LowHalf Rubble",
+	description = "*2 Apex Inset Nsecting LowHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3034,11 +3120,11 @@ minetest.register_node("stones:asectr_2", {
 
 
 minetest.register_node("stones:asect_2u", {
-	description = "Apex Inset Nsecting HighHalf",
+	description = "*2 Apex Inset Nsecting HighHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.833, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.833, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:asect_2u",
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.5,0,0.5},
@@ -3077,7 +3163,7 @@ minetest.register_node("stones:asect_2u", {
 })
 
 minetest.register_node("stones:asectr_2u", {
-	description = "Apex Inset Nsecting HighHalf Rubble",
+	description = "*2 Apex Inset Nsecting HighHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

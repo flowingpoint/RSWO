@@ -136,6 +136,8 @@ s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
 r_2		        	Root 2 Slope Rush
 brush_2*             Root 2 Slope Brush
+r_3		        	Root 2 Slope Rush
+brush_3*             Root 2 Slope Brush
 rubble_2*            Root 2 Slope Rubble
 s_2					Root 2 Slope
 s_52				*4 R5/2 Slope LowHalf
@@ -206,10 +208,10 @@ s_62ur*				*2 R6/2 Slope HighHalf Right
 sb_62ur*			*2 R6/2 Slope HighHalf Right Rubble
 asect				Apex Inset Nsecting
 asectr*				Apex Inset Nsecting Rubble
-asect_2				Apex Inset Nsecting LowHalf
-asectr_2*				Apex Inset Nsecting LowHalf Rubble
-asect_2u			Apex Inset Nsecting HighHalf
-asectr_2u*			Apex Inset Nsecting HighHalf Rubble
+asect_2				*2 Apex Inset Nsecting LowHalf
+asectr_2*			*2 Apex Inset Nsecting LowHalf Rubble
+asect_2u*			*2 Apex Inset Nsecting HighHalf
+asectr_2u*			*2 Apex Inset Nsecting HighHalf Rubble
 vsect				Vertex Filled Nsecting
 vsectr*				Vertex Filled Nsecting Rubble
 vsect_2				Vertex Filled Nsecting LowHalf
@@ -222,10 +224,10 @@ sto3.lua
 stones: {
 aset				Apex Inset
 asetr*				Apex Inset Rubble
-aset_2				Apex Inset LowHalf
-asetr_2*				Apex Inset LowHalf Rubble
-aset_2u				Apex Inset HighHalf
-asetr_2u*				Apex Inset HighHalf Rubble
+aset_2				*2 Apex Inset LowHalf
+asetr_2*			*2 Apex Inset LowHalf Rubble
+aset_2u*			*2 Apex Inset HighHalf
+asetr_2u*			*2 Apex Inset HighHalf Rubble
 s_3					Root 3 Split
 sb_3*					Root 3 Split Rubble
 s_38                Truncated R2 3/8
@@ -437,7 +439,9 @@ diagsterps_52z*		*2 Steps R5/2 Z Rubble
 diagsteps_58z*		*2 Steps R5/2 5/8 Z
 diagsterps_58z*		*2 Steps R5/2 5/8 Z Rubble
 dias52r				R5/2 Diagstep Siding R
-diras52r*				R5/2 Diagstep Siding R Rubble
+diras52r*			R5/2 Diagstep Siding R Rubble
+dias52l				R5/2 Diagstep Siding R
+diras52l*			R5/2 Diagstep Siding R Rubble
 dias52d				R5/2 Diagstep Siding D
 diras52d*				R5/2 Diagstep Siding D Rubble
 dias52b				R5/2 Diagstep Siding B

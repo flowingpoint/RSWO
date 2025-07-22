@@ -235,6 +235,9 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:r_2"	then 
 		p2r2 = s.param2
 		minetest.env:set_node(p, {name="stones:brush_2", param2=p2r2}) end
+        if s.name == "stones:r_3"	then 
+		p2r2 = s.param2
+		minetest.env:set_node(p, {name="stones:brush_3", param2=p2r2}) end
         if s.name == "stones:rushrock_1"	then 
 		p2br1 = s.param2
 		minetest.env:set_node(p, {name="stones:brushrock_1", param2=p2br1}) end
@@ -1110,7 +1113,36 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:s_52vrk"	then 
 		p252vrb = s.param2
 		minetest.env:set_node(p, {name="stones:sb_52u", param2=p252vrb}) end
-
+        if s.name == "stones:s_52urk"	then 
+		p252uvr = s.param2
+		minetest.env:set_node(p, {name="stones:s_52vrk", param2=p252uvr}) end
+        if s.name == "stones:s_52vrk"	then 
+		p252vrb = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52u", param2=p252vrb}) end
+        if s.name == "stones:aset_2"	then 
+		p2as2u = s.param2
+		minetest.env:set_node(p, {name="stones:aset_2u", param2=p2as2u}) end
+        if s.name == "stones:aset_2u"	then 
+		p2asu2 = s.param2
+		minetest.env:set_node(p, {name="stones:aset_2", param2=p2asu2}) end
+        if s.name == "stones:asect_2"	then 
+		p2asc2u = s.param2
+		minetest.env:set_node(p, {name="stones:asect_2u", param2=p2asc2u}) end
+        if s.name == "stones:asect_2u"	then 
+		p2ascu2 = s.param2
+		minetest.env:set_node(p, {name="stones:asect_2", param2=p2ascu2}) end
+        if s.name == "stones:asetr_2"	then 
+		p2asr2u = s.param2
+		minetest.env:set_node(p, {name="stones:asetr_2u", param2=p2asr2u}) end
+        if s.name == "stones:asetr_2u"	then 
+		p2asru2 = s.param2
+		minetest.env:set_node(p, {name="stones:asetr_2", param2=p2asru2}) end
+        if s.name == "stones:asectr_2"	then 
+		p2ascr2u = s.param2
+		minetest.env:set_node(p, {name="stones:asectr_2u", param2=p2ascr2u}) end
+        if s.name == "stones:asectr_2u"	then 
+		p2ascru2 = s.param2
+		minetest.env:set_node(p, {name="stones:asectr_2", param2=p2ascru2}) end
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -1345,6 +1377,9 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:brush_2"	then 
 		p2br2 = s.param2
 		minetest.env:set_node(p, {name="stones:r_2", param2=p2br2}) end
+        if s.name == "stones:brush_3"	then 
+		p2br2 = s.param2
+		minetest.env:set_node(p, {name="stones:r_3", param2=p2br2}) end
         if s.name == "stones:brushrock_1"	then 
 		p2br1 = s.param2
 		minetest.env:set_node(p, {name="stones:rushrock_1", param2=p2br1}) end
@@ -2063,6 +2098,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:diras52r"	then 
 		p2d52rb = s.param2
 		minetest.env:set_node(p, {name="stones:dias52r", param2=p2d52rb}) end
+        if s.name == "stones:dias52l"	then 
+		p2d52la = s.param2
+		minetest.env:set_node(p, {name="stones:diras52l", param2=p2d52la}) end
+        if s.name == "stones:diras52l"	then 
+		p2d52lb = s.param2
+		minetest.env:set_node(p, {name="stones:dias52l", param2=p2d52lb}) end
         if s.name == "stones:estruk"	then 
 		p2etka = s.param2
 		minetest.env:set_node(p, {name="stones:estruble", param2=p2etka}) end

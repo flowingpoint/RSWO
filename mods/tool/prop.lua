@@ -1264,6 +1264,28 @@ minetest.register_abm({
 })
 
 minetest.register_abm({
+	nodenames = {"stones:brush_3"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:r_3", param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:r_3"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:brush_3", param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
 	nodenames = {"stones:isodark"},
 	neighbors = {"tool:prop","tool:prup"},
 	interval = 1.0, -- Run every 10 seconds

@@ -190,10 +190,12 @@ spike				Spike
 spruke*				Spike Rubble
 spikle				Spikle
 sprukle*				Spikle Rubble
-s_52u				R5/2 Slope HighHalf
-sb_52u*				R5/2 Slope HighHalf Rubble
+s_52u				*2 R5/2 Slope HighHalf
+sb_52u*				*2 R5/2 Slope HighHalf Rubble
+s_52uk*				*2 R5/2 Slope HighHalf -1/20 Siding
+s_52urk*			*2 R5/2 Slope HighHalf -1/20 Siding Rubble
 s_52hq				R5/2 Slope HighHalf to Quarter
-sb_52hq*				R5/2 Slope HighHalf to Quarter Rubble
+sb_52hq*			R5/2 Slope HighHalf to Quarter Rubble
 s_52ul				*2 R5/2 Slope HighHalf Left
 sb_52ul*			*2 R5/2 Slope HighHalf Left Rubble
 s_62ul*				*2 R5/2 Slope HighHalf Left

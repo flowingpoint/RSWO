@@ -1063,25 +1063,20 @@ minetest.register_entity("tool:pow", {
 		p2dr2 = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterp_2", param2=p2dr2}) end
         if s.name == "noter:book_open"	then 
-		p2dr2 = s.param2
-		minetest.env:set_node(p, {name="default:flo", param2=p2dr2}) 
         minetest.add_particlespawner({
-		amount = 1,
+		amount = 3,
 		time = 1,
 		glow = 14,
 		pos = minetest.env:get_node(self.object:getpos()),
 		pos = {x=pos.x, y=pos.y, z=pos.z},
-		minvel = {x=-0.2, y=0, z=-0.2},
-		maxvel = {x=0.2, y=0, z=0.2},
-		minacc = {x=0, y=0.2, z=0},
-		maxacc = {x=0, y=0.7, z=0},
+		minvel = {x=-0.2, y=-1, z=-0.2},
+		maxvel = {x=0.2, y=1, z=0.2},
+		minacc = {x=-1, y=0.2, z=-1},
+		maxacc = {x=1, y=0.7, z=1},
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
 		texpool = {{name = 'magicalities_note.png', blend='alpha', scale_tween={{x=(math.random(10,20)/5),y=(math.random(10,20)/5)},{x=(math.random(20,30)/5),y=(math.random(20,30)/5)}}}}})end
-        if s.name == "noter:book"	then 
-		p2dr2 = s.param2
-		minetest.env:set_node(p, {name="noter:book_open", param2=p2dr2}) end
         if s.name == "stones:rublish_11"	then 
 		p2rb1a = s.param2
 		minetest.env:set_node(p, {name="stones:rublish_11a", param2=p2rb1a}) end
@@ -1097,6 +1092,24 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:brushrock_11a"	then 
 		p2brbla = s.param2
 		minetest.env:set_node(p, {name="stones:blushrock_11a", param2=p2brbla}) end
+        if s.name == "stones:s_52u"	then 
+		p252uuk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52uk", param2=p252uuk}) end
+        if s.name == "stones:s_52uk"	then 
+		p252uvk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52vk", param2=p252uvk}) end
+        if s.name == "stones:s_52vk"	then 
+		p252vku = s.param2
+		minetest.env:set_node(p, {name="stones:s_52u", param2=p252vku}) end
+        if s.name == "stones:sb_52u"	then 
+		p252bur = s.param2
+		minetest.env:set_node(p, {name="stones:s_52urk", param2=p252bur}) end
+        if s.name == "stones:s_52urk"	then 
+		p252uvr = s.param2
+		minetest.env:set_node(p, {name="stones:s_52vrk", param2=p252uvr}) end
+        if s.name == "stones:s_52vrk"	then 
+		p252vrb = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52u", param2=p252vrb}) end
 
 minetest.add_particlespawner({
 		amount = 50,
@@ -2963,24 +2976,6 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:modk"	then 
 		p2dsb = s.param2
 		minetest.env:set_node(p, {name="stones:modk", param2=4*math.floor(p2dsb/4)+(p2dsb+2)%4}) end
-        if s.name == "noter:book_open"	then 
-		p2dsb = s.param2
-		minetest.env:set_node(p, {name="noter:book", param2=4*math.floor(p2dsb/4)+(p2dsb)%4}) 
-        minetest.add_particlespawner({
-		amount = 12,
-		time = 3,
-		glow = 10,
-		pos = minetest.env:get_node(self.object:getpos()),
-		pos = {x=pos.x, y=pos.y, z=pos.z},
-		minvel = {x=-0.2, y=0, z=-0.2},
-		maxvel = {x=0.2, y=0, z=0.2},
-		minacc = {x=0, y=0.2, z=0},
-		maxacc = {x=0, y=0.7, z=0},
-		exptime = {min=2, max=2},
-		collisiondetection = true,
-		collision_removal = false,
-texpool = {{name = 'rg1.png', blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg2.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg3.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg4.png', blend = 'alpha', scale_tween = {{x=0.125,y=0.125},{x=0.25,y=0.25}}}, {name = 'rg5.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg6.png', blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg7.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg8.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg9.png', blend = 'alpha', scale_tween = {{x=0.125,y=0.125},{x=0.25,y=0.25}}}, {name = 'rg10.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg11.png', blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg12.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg13.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg14.png', blend = 'alpha', scale_tween = {{x=0.125,y=0.125},{x=0.25,y=0.25}}}, {name = 'rg15.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg16.png', blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg17.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg18.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'rg19.png', blend = 'alpha', scale_tween = {{x=0.125,y=0.125},{x=0.25,y=0.25}}}, {name = 'rg20.png', blend = 'alpha', scale_tween = {{x=(math.random(10,20)/20),y=(math.random(10,20)/20)},{x=(math.random(20,30)/20),y=(math.random(20,30)/20)}}}, {name = 'alpha_a.png', blend='alpha', scale_tween={{x=(math.random(10,20)/10),y=(math.random(10,20)/10)},{x=(math.random(20,30)/10),y=(math.random(20,30)/10)}}}, {name = 'alpha_b.png', blend='alpha', scale_tween={{x=(math.random(10,20)/10),y=(math.random(10,20)/10)},{x=(math.random(20,30)/10),y=(math.random(20,30)/10)}}}, {name = 'alpha_c.png', blend='alpha', scale_tween={{x=(math.random(10,20)/10),y=(math.random(10,20)/10)},{x=(math.random(20,30)/10),y=(math.random(20,30)/10)}}}}
-		}) end
         if s.name == "stones:blushrock_11"	then 
 		p21a = s.param2
 		minetest.env:set_node(p, {name="stones:blushrock_11a", param2=p21a}) end
@@ -2996,6 +2991,18 @@ texpool = {{name = 'rg1.png', blend='alpha', scale_tween={{x=(math.random(10,20)
         if s.name == "stones:brushrock_11a"	then 
 		p2brra = s.param2
 		minetest.env:set_node(p, {name="stones:rushrock_11a", param2=p2brra}) end
+        if s.name == "stones:s_52uk"	then 
+		p252ukr = s.param2
+		minetest.env:set_node(p, {name="stones:s_52urk", param2=p252ukr}) end
+        if s.name == "stones:s_52urk"	then 
+		p252urk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52uk", param2=p252urk}) end
+        if s.name == "stones:s_52vk"	then 
+		p252vkr = s.param2
+		minetest.env:set_node(p, {name="stones:s_52vrk", param2=p252vkr}) end
+        if s.name == "stones:s_52vrk"	then 
+		p252vrk = s.param2
+		minetest.env:set_node(p, {name="stones:s_52vk", param2=p252vrk}) end
 	end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

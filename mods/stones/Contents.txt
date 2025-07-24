@@ -78,12 +78,14 @@ brushrock_11a*		Brush+Rock+Brush \\
 rushrock_11a*		Rush+Rock+Rush \\
 rublish_11a*		Rubble+Rock+Rubble \\
 blushrock_11a*		Lush Brush+Rock+Brush \\
-sku					*3 Diagonal SkewSlab
-skubl*				*3 Diagonal SkewSlab Rubble
-skuk*				*3 Diagonal SkewSlab
-sbukl*				*3 Diagonal SkewSlab Rubble
-skuz*				*3 Diagonal SkewSlab Dual Siding Z
-sukz*				*3 Diagonal SkewSlab Dual Siding Z Rubble
+sku					*4 Diagonal SkewSlab
+skubl*				*4 Diagonal SkewSlab Rubble
+skuk*				*4 Diagonal SkewSlab
+sbukl*				*4 Diagonal SkewSlab Rubble
+skukk*				*4 Diagonal SkewSlab
+skrukk*				*4 Diagonal SkewSlab Rubble
+skuz*				*4 Diagonal SkewSlab Dual Siding Z
+sukz*				*4 Diagonal SkewSlab Dual Siding Z Rubble
 sku2_r				*4 RightHalf SkewSlab
 skub2_r*			*4 RightHalf SkewSlab Rubble
 skus_l*			    *4 LeftHalf SkewSlab over Slab

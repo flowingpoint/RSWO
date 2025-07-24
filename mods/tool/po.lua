@@ -868,8 +868,11 @@ minetest.register_entity("tool:pow", {
 		p2ska = s.param2
 		minetest.env:set_node(p, {name="stones:skuk", param2=p2ska}) end
         if s.name == "stones:skuk"	then 
-		p2kzb= s.param2
-		minetest.env:set_node(p, {name="stones:skuz", param2=p2kzb}) end
+		p2kk= s.param2
+		minetest.env:set_node(p, {name="stones:skukk", param2=p2kk}) end
+        if s.name == "stones:skukk"	then 
+		p2kkz= s.param2
+		minetest.env:set_node(p, {name="stones:skuz", param2=p2kkz}) end
         if s.name == "stones:skuz"	then 
 		p2zsc= s.param2
 		minetest.env:set_node(p, {name="stones:sku", param2=p2zsc}) end
@@ -2477,6 +2480,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:sbukl"	then 
 		p2skb = s.param2
 		minetest.env:set_node(p, {name="stones:skuk", param2=p2skb}) end
+        if s.name == "stones:skukk"	then 
+		p2skkr = s.param2
+		minetest.env:set_node(p, {name="stones:skrukk", param2=p2skkr}) end
+        if s.name == "stones:skrukk"	then 
+		p2srkk = s.param2
+		minetest.env:set_node(p, {name="stones:skukk", param2=p2srkk}) end
         if s.name == "stones:skuz"	then 
 		p2sukz = s.param2
 		minetest.env:set_node(p, {name="stones:sukz", param2=p2sukz}) end

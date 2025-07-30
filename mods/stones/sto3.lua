@@ -2,7 +2,7 @@ stones={}
 
 
 minetest.register_node("stones:aset", {
-	description = "Apex Inset",
+	description = "*3 Apex Inset",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -45,7 +45,7 @@ minetest.register_node("stones:aset", {
 })
 
 minetest.register_node("stones:asetr", {
-	description = "Apex Inset Rubble",
+	description = "*3 Apex Inset Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -88,11 +88,11 @@ minetest.register_node("stones:asetr", {
 })
 
 minetest.register_node("stones:aset_2", {
-	description = "*2 Apex Inset LowHalf",
+	description = "*3 Apex Inset LowHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.083, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.083, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:aset_2",
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.2143, -0.3572,-0.4286,0.5},
@@ -131,7 +131,7 @@ minetest.register_node("stones:aset_2", {
 })
 
 minetest.register_node("stones:asetr_2", {
-	description = "*2 Apex Inset LowHalf Rubble",
+	description = "*3 Apex Inset LowHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -174,7 +174,7 @@ minetest.register_node("stones:asetr_2", {
 })
 
 minetest.register_node("stones:aset_2u", {
-	description = "*2 Apex Inset HighHalf",
+	description = "*3 Apex Inset HighHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -217,7 +217,7 @@ minetest.register_node("stones:aset_2u", {
 })
 
 minetest.register_node("stones:asetr_2u", {
-	description = "*2 Apex Inset HighHalf Rubble",
+	description = "*3 Apex Inset HighHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

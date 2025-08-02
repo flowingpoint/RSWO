@@ -180,14 +180,18 @@ s_21				R2 Slope 7/8
 sb_21*				R2 Slope 7/8 Rubble
 s_221				R2 Slab 7/8 
 sb_221*				R2 Slab 7/8 Rubble
-s_21u				*4 R2 Slope Upper 15/16
-sb_21u*				*4 R2 Slope Upper 15/16 Rubble
-diagsteps_83*        *4 R2 Slope Upper 11/16
-diagsterps_83*       *4 R2 Slope Upper 11/16 Rubble
-diagsteps_73*        *4 R2 Slope Upper 10/16
-diagsterps_73*       *4 R2 Slope Upper 10/16 Rubble
-diagsteps_43*        *4 R2 Slope Upper 7/16
-diagsterps_43*       *4 R2 Slope Upper 7/16 Rubble
+s_21u				*6 R2 Slope Upper 15/16
+sb_21u*				*6 R2 Slope Upper 15/16 Rubble
+diagsteps_83*        *6 R2 Slope Upper 11/16
+diagsterps_83*       *6 R2 Slope Upper 11/16 Rubble
+diagsteps_73*        *6 R2 Slope Upper 10/16
+diagsterps_73*       *6 R2 Slope Upper 10/16 Rubble
+diagsteps_43*        *6 R2 Slope Upper 7/16
+diagsterps_43*       *6 R2 Slope Upper 7/16 Rubble
+diagsteps_43l*        *6 R2 Slope Upper 9/32 Left
+diagsterps_43l*       *6 R2 Slope Upper 9/32 Left Rubble
+diagsteps_43r*        *6 R2 Slope Upper 9/32 Right
+diagsterps_43r*       *6 R2 Slope Upper 9/32 Right Rubble
 s_2216              R2/2 Slope Cornerfill 1/16
 s_22162*            *2 R2/2 Slope Cornerfill 2/16
 sb_22162*           *2 R2/2 Slope Cornerfill 2/16 Rubble
@@ -324,12 +328,16 @@ pyrue*				Square Based Pyramid Edged Rubble
 estamp				Star Pyramid
 sku_20				*3 Diagonal SkewSlab CornerVac
 skub_20*			*3 Diagonal SkewSlab CornerVac
-sku_207*				*3 Diagonal SkewSlab CornerVac
+sku_207*			*3 Diagonal SkewSlab CornerVac
 skub_207*			*3 Diagonal SkewSlab CornerVac Rubble
 sku_20k*			*3 Diagonal SkewSlab CornerVac Siding
 skub_20k*			*3 Diagonal SkewSlab CornerVac Siding Rubble
-sku_202			Diagonal SkewSlab CornerVac Half
-skub_202*			Diagonal SkewSlab CornerVac Half Rubble
+sku_202			    *3 Diagonal SkewSlab CornerVac Half
+skub_202*			*3 Diagonal SkewSlab CornerVac Half Rubble
+sku_207l*			*3 Diagonal SkewSlab CornerVac Half 7/32
+skub_207l*			*3 Diagonal SkewSlab CornerVac Half 7/32 Rubble
+sku_207r*			*3 Diagonal SkewSlab CornerVac Half 7/32
+skub_207r*			*3 Diagonal SkewSlab CornerVac Half 7/32 Rubble
 skud_202r			Diagonal SkewSlab CornerVac Right
 skrud_202r*			Diagonal SkewSlab CornerVac Right Rubble
 octa				Octahedron

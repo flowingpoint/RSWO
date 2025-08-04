@@ -1210,120 +1210,6 @@ function mob_class:do_env_damage()
 end
 
 
--- jump if facing a solid node (not fences or gates)
-function mob_class:do_jump()
-
-	if not self.jump
-	or self.jump_height == 0
-	or self.fly
-	or self.child
-	or self.order == "stand" then
-		return false
-	end
-
-	self.facing_fence = false
-
-	-- something stopping us while moving?
-	if self.state ~= "stand"
-	and self:get_velocity() > 0.5
-	and self.object:get_velocity().y ~= 0 then
-		return false
-	end
-
-	local pos = self.object:get_pos()
-	local yaw = self.object:get_yaw()
-
-	-- sanity check
-	if not yaw then return false end
-
-	-- we can only jump if standing on solid node
-	if minetest.registered_nodes[self.standing_on].walkable == false then
-		return false
-	end
-
-	-- where is front
-	local dir_x = -sin(yaw) * (self.collisionbox[4] + 0.5)
-	local dir_z = cos(yaw) * (self.collisionbox[4] + 0.5)
-
-	-- set y_pos to base of mob
-	pos.y = pos.y + self.collisionbox[2]
-
-	-- what is in front of mob?
-	local nod = node_ok({
-		x = pos.x + dir_x, y = pos.y + 0.5, z = pos.z + dir_z
-	})
-
-	-- what is above and in front?
-	local nodt = node_ok({
-		x = pos.x + dir_x, y = pos.y + 1.5, z = pos.z + dir_z
-	})
-
-	local blocked = minetest.registered_nodes[nodt.name].walkable
-
-	-- are we facing a fence or wall
-	if nod.name:find("fence") or nod.name:find("gate") or nod.name:find("wall") then
-		self.facing_fence = true
-	end
---[[
-print("on: " .. self.standing_on
-	.. ", front: " .. nod.name
-	.. ", front above: " .. nodt.name
-	.. ", blocked: " .. (blocked and "yes" or "no")
-	.. ", fence: " .. (self.facing_fence and "yes" or "no")
-)
-]]
-	-- jump if standing on solid node (not snow) and not blocked
-	if (self.walk_chance == 0 or minetest.registered_items[nod.name].walkable)
-	and not blocked and not self.facing_fence and nod.name ~= node_snow then
-
-		local v = self.object:get_velocity()
-
-		v.y = self.jump_height
-
-		self:set_animation("jump") -- only when defined
-
-		self.object:set_velocity(v)
-
-		-- when in air move forward
-		minetest.after(0.3, function(self, v)
-
-			if self.object:get_luaentity() then
-
-				self.object:set_acceleration({
-					x = v.x * 2,
-					y = 0,
-					z = v.z * 2
-				})
-			end
-		end, self, v)
-
-		if self:get_velocity() > 0 then
-			self:mob_sound(self.sounds.jump)
-		end
-
-		self.jump_count = 0
-
-		return true
-	end
-
-	-- if blocked for 3 counts then turn
-	if not self.following and (self.facing_fence or blocked) then
-
-		self.jump_count = (self.jump_count or 0) + 1
-
-		if self.jump_count > 2 then
-
-			local yaw = self.object:get_yaw() or 0
-			local turn = random(0, 2) + 1.35
-
-			yaw = self:set_yaw(yaw + turn, 12)
-
-			self.jump_count = 0
-		end
-	end
-
-	return false
-end
 
 
 -- blast damage to entities nearby (modified from TNT mod)
@@ -3517,7 +3403,6 @@ function mob_class:on_step(dtime, moveresult)
 
 	if self:do_states(dtime) then return end
 
-	self:do_jump()
 
 	self:do_runaway_from(self)
 

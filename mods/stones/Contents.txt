@@ -152,14 +152,18 @@ s_52dkl*			*4 R5/2 Slope LowHalf Siding Left
 sb_52dkl*			*4 R5/2 Slope LowHalf Siding Rubble Left
 s_52dkr*			*4 R5/2 Slope LowHalf Siding Right
 sb_52dkr*			*4 R5/2 Slope LowHalf Siding Rubble Right
-s_252l				R2, R5/2 Left
-sb_252l*				R2, R5/2 Left Rubble
-s_h52l*				High-half, R5/2 Left
-sb_h52l*				High-half, R5/2 Left Rubble
-s_252r				R2, R5/2 Right
-sb_252r*				R2, R5/2 Right Rubble
-s_h52r*				High-half, R5/2 Right
-sb_h52r*				High-half, R5/2 Right Rubble
+s_252l				*3 R2, R5/2 Left
+sb_252l*			*3 R2, R5/2 Left Rubble
+s_h52l*				*3 High-half, R5/2 Left
+sb_h52l*			*3 High-half, R5/2 Left Rubble
+s_h25l*				*3 High-half, R2 R5/2 Left
+sb_h25l*			*3 High-half, R2 R5/2 Left Rubble
+s_252r				*3 R2, R5/2 Right
+sb_252r*			*3 R2, R5/2 Right Rubble
+s_h52r*				*3 High-half, R5/2 Right
+sb_h52r*			*3 High-half, R5/2 Right Rubble
+s_h25r*				*3 High-half, R2 R5/2 Right
+sb_h25r*			*3 High-half, R2 R5/2 Right Rubble
 s_52pr				R5/2 Slope LowHalf Pyramid Right
 sb_52pr*				R5/2 Slope LowHalf Pyramid Right Rubble
 s_52pl				R5/2 Slope LowHalf Pyramid Left

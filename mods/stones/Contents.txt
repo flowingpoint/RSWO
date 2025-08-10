@@ -210,14 +210,18 @@ s_52uk*				*2 R5/2 Slope HighHalf -1/20 Siding
 s_52urk*			*2 R5/2 Slope HighHalf -1/20 Siding Rubble
 s_52hq				R5/2 Slope HighHalf to Quarter
 sb_52hq*			R5/2 Slope HighHalf to Quarter Rubble
-s_52ul				*2 R5/2 Slope HighHalf Left
-sb_52ul*			*2 R5/2 Slope HighHalf Left Rubble
-s_62ul*				*2 R5/2 Slope HighHalf Left
-sb_62ul*			*2 R5/2 Slope HighHalf Left Rubble
-s_52ur				*2 R5/2 Slope HighHalf Right
-sb_52ur*			*2 R5/2 Slope HighHalf Right Rubble
-s_62ur*				*2 R6/2 Slope HighHalf Right
-sb_62ur*			*2 R6/2 Slope HighHalf Right Rubble
+s_52ul				*3 R5/2 Slope HighHalf Left
+sb_52ul*			*3 R5/2 Slope HighHalf Left Rubble
+s_62ul*				*3 R5/2 Slope HighHalf Left
+sb_62ul*			*3 R5/2 Slope HighHalf Left Rubble
+s_3hjl*				*3 R3 HighHalf Joinder Left
+sb_3hjl*			*3 R3 HighHalf Joinder Left Rubble
+s_52ur				*3 R5/2 Slope HighHalf Right
+sb_52ur*			*3 R5/2 Slope HighHalf Right Rubble
+s_62ur*				*3 R6/2 Slope HighHalf Right
+sb_62ur*			*3 R6/2 Slope HighHalf Right Rubble
+s_3hjr*				*3 R3 HighHalf Joinder Right
+sb_3hjr*			*3 R3 HighHalf Joinder Right Rubble
 asect				*3 Apex Inset Nsecting
 asectr*				*3 Apex Inset Nsecting Rubble
 asect_2*				*3 Apex Inset Nsecting LowHalf

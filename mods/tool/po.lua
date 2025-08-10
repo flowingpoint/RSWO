@@ -859,26 +859,38 @@ minetest.register_entity("tool:pow", {
 		p256a = s.param2
 		minetest.env:set_node(p, {name="stones:s_62ur", param2=p256a}) end
         if s.name == "stones:s_62ur"	then 
-		p265a = s.param2
-		minetest.env:set_node(p, {name="stones:s_52ur", param2=p265a}) end
+		p26hja = s.param2
+		minetest.env:set_node(p, {name="stones:s_3hjr", param2=p2hja}) end
+        if s.name == "stones:s_3hjr"	then 
+		p2hj5a = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ur", param2=p2hj5a}) end
         if s.name == "stones:sb_52ur"	then 
 		p2r56b = s.param2
 		minetest.env:set_node(p, {name="stones:sb_62ur", param2=p2r56b}) end
         if s.name == "stones:sb_62ur"	then 
-		p2r65b = s.param2
-		minetest.env:set_node(p, {name="stones:sb_52ur", param2=p2r65b}) end
+		p2r6hjb = s.param2
+		minetest.env:set_node(p, {name="stones:sb_3hjr", param2=p2r6hjb}) end
+        if s.name == "stones:sb_3hjr"	then 
+		p2rhj5b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52ur", param2=p2rhj5b}) end
         if s.name == "stones:s_52ul"	then 
 		p256a = s.param2
 		minetest.env:set_node(p, {name="stones:s_62ul", param2=p256a}) end
         if s.name == "stones:s_62ul"	then 
-		p265a = s.param2
-		minetest.env:set_node(p, {name="stones:s_52ul", param2=p265a}) end
+		p26hja = s.param2
+		minetest.env:set_node(p, {name="stones:s_3hjl", param2= math.floor(p26hja/4)*4+(p26hja%4+1)%4}) end
+        if s.name == "stones:s_3hjl"	then 
+		p2hj5a = s.param2
+		minetest.env:set_node(p, {name="stones:s_52ul", param2= math.floor(p2hj5a/4)*4+(p2hj5a%4-1)%4}) end
         if s.name == "stones:sb_52ul"	then 
 		p2r56b = s.param2
 		minetest.env:set_node(p, {name="stones:sb_62ul", param2=p2r56b}) end
         if s.name == "stones:sb_62ul"	then 
-		p2r65b = s.param2
-		minetest.env:set_node(p, {name="stones:sb_52ul", param2=p2r65b}) end
+		p2r6hjb = s.param2
+		minetest.env:set_node(p, {name="stones:sb_3hjl", param2= math.floor(p2r6hjb/4)*4+(p2r6hjb%4+1)%4}) end
+        if s.name == "stones:sb_3hjl"	then 
+		p2rhj5b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_52ul", param2= math.floor(p2rhj5b/4)*4+(p2rhj5b%4-1)%4}) end
         if s.name == "stones:s_52"	then 
 		p2r52a = s.param2
 		minetest.env:set_node(p, {name="stones:s_52k", param2=p2r52a}) end
@@ -2983,13 +2995,25 @@ minetest.register_entity("tool:row", {
 		minetest.env:set_node(p, {name="stones:sb_62ur", param2=p262a}) end
         if s.name == "stones:sb_62ur"	then 
 		p262b = s.param2
-		minetest.env:set_node(p, {name="stones:s_52ur", param2=p262b}) end
+		minetest.env:set_node(p, {name="stones:s_62ur", param2=p262b}) end
         if s.name == "stones:s_62ul"	then 
 		p262c = s.param2
 		minetest.env:set_node(p, {name="stones:sb_62ul", param2=p262c}) end
         if s.name == "stones:sb_62ul"	then 
 		p262d = s.param2
 		minetest.env:set_node(p, {name="stones:s_52ul", param2=p262d}) end
+        if s.name == "stones:s_3hjr"	then 
+		p2hja = s.param2
+		minetest.env:set_node(p, {name="stones:sb_3hjr", param2=p2hja}) end
+        if s.name == "stones:sb_3hjr"	then 
+		p2hjb = s.param2
+		minetest.env:set_node(p, {name="stones:s_3hjr", param2=p2hjb}) end
+        if s.name == "stones:s_3hjl"	then 
+		p2rhja = s.param2
+		minetest.env:set_node(p, {name="stones:sb_3hjl", param2=p2rhja}) end
+        if s.name == "stones:sb_3hjl"	then 
+		p2rhjb = s.param2
+		minetest.env:set_node(p, {name="stones:s_3hjl", param2=p2rhjb}) end
         if s.name == "stones:spirstax_3r"	then 
 		p2x3ra = s.param2
 		minetest.env:set_node(p, {name="stones:spirblux_3r", param2=p2x3ra}) end

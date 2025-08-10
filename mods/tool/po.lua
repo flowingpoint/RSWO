@@ -860,7 +860,7 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="stones:s_62ur", param2=p256a}) end
         if s.name == "stones:s_62ur"	then 
 		p26hja = s.param2
-		minetest.env:set_node(p, {name="stones:s_3hjr", param2=p2hja}) end
+		minetest.env:set_node(p, {name="stones:s_3hjr", param2=p26hja}) end
         if s.name == "stones:s_3hjr"	then 
 		p2hj5a = s.param2
 		minetest.env:set_node(p, {name="stones:s_52ur", param2=p2hj5a}) end

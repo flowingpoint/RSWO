@@ -2038,7 +2038,7 @@ minetest.register_node("stones:diagsteps_2wr", {
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
 	groups = {vcol=0.625, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:diagsteps_52lh",
+	drop = "stones:diagsteps_2wr",
 	collision_box = {type="fixed",fixed={
 {-0.5,0,0, 0.375,0.0625,0.5},
 {-0.5,0.0625,0, 0.25,0.125,0.5},
@@ -2081,7 +2081,7 @@ minetest.register_node("stones:diagsterps_2wr", {
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
 	groups = {vcol=0.625, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:diagsteps_2wr",
+	drop = "stones:diagsterps_2wr",
 	collision_box = {type="fixed",fixed={
 {-0.5,0,0, 0.375,0.0625,0.5},
 {-0.5,0.0625,0, 0.25,0.125,0.5},

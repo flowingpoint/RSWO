@@ -1344,3 +1344,137 @@ minetest.register_node("tool:prup", {
 		})
 	end,
 })
+
+minetest.register_abm({
+	nodenames = {"stones:shub"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:shrub",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:shrub"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:shub",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:sub"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:shurb",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:shurb"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:sub",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:blus"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blis",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:blis"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blus",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:blis"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:bush",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:bush"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blis",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:blom"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:bloom",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:bloom"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:blom",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:su"},
+	neighbors = {"tool:prop"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:shub",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+minetest.register_abm({
+	nodenames = {"stones:shub"},
+	neighbors = {"tool:prup"},
+	interval = 1.0, -- Run every 10 seconds
+	chance = 5, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "stones:su",  param2 = math.floor((node.param2)/4)*4+(node.param2)%4})
+	end
+})
+
+

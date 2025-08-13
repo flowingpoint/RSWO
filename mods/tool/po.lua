@@ -1215,6 +1215,24 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:skub_207r"	then 
 		p2skb7r2 = s.param2
 		minetest.env:set_node(p, {name="stones:skub_202", param2=p2skb7r2}) end
+        if s.name == "stones:shub"	then 
+		p2shubr = s.param2
+		minetest.env:set_node(p, {name="stones:shrub", param2=p2shubr}) end
+        if s.name == "stones:sub"	then 
+		p2subhr = s.param2
+		minetest.env:set_node(p, {name="stones:shurb", param2=p2subhr}) end
+        if s.name == "stones:blus"	then 
+		p2bluis = s.param2
+		minetest.env:set_node(p, {name="stones:blis", param2=p2bluis}) end
+        if s.name == "stones:blis"	then 
+		p2bliush = s.param2
+		minetest.env:set_node(p, {name="stones:bush", param2=p2bliush}) end
+        if s.name == "stones:blom"	then 
+		p2bloum = s.param2
+		minetest.env:set_node(p, {name="stones:bloom", param2=p2bloum}) end
+        if s.name == "stones:su"	then 
+		p2sush = s.param2
+		minetest.env:set_node(p, {name="stones:shub", param2=p2sush}) end
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -3173,6 +3191,24 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:s_52vrk"	then 
 		p252vrk = s.param2
 		minetest.env:set_node(p, {name="stones:s_52vk", param2=p252vrk}) end
+        if s.name == "stones:shrub"	then 
+		p2shrubr = s.param2
+		minetest.env:set_node(p, {name="stones:shub", param2=p2shrubr}) end
+        if s.name == "stones:shurb"	then 
+		p2shurbub = s.param2
+		minetest.env:set_node(p, {name="stones:sub", param2=p2shurbub}) end
+        if s.name == "stones:blis"	then 
+		p2blius = s.param2
+		minetest.env:set_node(p, {name="stones:blus", param2=p2blius}) end
+        if s.name == "stones:bush"	then 
+		p2bushl = s.param2
+		minetest.env:set_node(p, {name="stones:blis", param2=p2bushl}) end
+        if s.name == "stones:bloom"	then 
+		p2bluom = s.param2
+		minetest.env:set_node(p, {name="stones:blom", param2=p2bluom}) end
+        if s.name == "stones:shub"	then 
+		p2shubu = s.param2
+		minetest.env:set_node(p, {name="stones:su", param2=p2shubu}) end
 	end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

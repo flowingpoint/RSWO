@@ -415,9 +415,18 @@ sto5.lua
 stones: {
 plot				Plot
 prob*				Plot Rubble
-shrub				Dry Shrub
-delum*               Dodeca-Lum
-denum*               Dodeca-Lum-Nil
+shrub			   	Dry Shrub
+shub*                Dry Shrub Sans Lum
+sub*                 Dry Shrub Sans Flors ExLum
+shurb*               Dry Shrub Just Flors
+blus*                Dry Bush Sans Flor Sans Flwrs
+blis*                Dry Bush Sans Flor
+bush*                Dry Bush
+blom*                Dry Bloom Sans Flwrs
+bloom*               Dry Bloom
+su*                  Dry Shrub Sans Lum Sans Flors
+delum*              Dodeca-Lum
+denum*              Dodeca-Lum-Nil
 isokar*				Icosahedron Flamed
 isodark				Icosahedron Dark
 isocol				Pentagonal Column
@@ -491,3 +500,7 @@ defr                Deputy Frog
 sus.lua
 stones:[
 flat_O               Flat 'O'
+srawb*               Lum Nininikus +4HP
+flor*                Lum Nininikus Flor +1HP
+flwr*                Lum Nininikus Flwr -2HP
+bulb*                Lum Nininikus Bulb -6HP

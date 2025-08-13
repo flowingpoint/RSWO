@@ -31,31 +31,415 @@ minetest.register_node("stones:prob", {
 
 minetest.register_node("stones:shrub", {
 	description = "Dry Shrub",
+	drop = "stones:srawb",
 	drawtype = "mesh",
 	waving = 1,
-	liquid_viscosity = 8,
-	liquidtype = "source",
-	liquid_alternative_flowing = "stones:shrub",
-	liquid_alternative_source = "stones:shrub",
-	liquid_renewable = false,
-	liquid_range = 0,
 	walkable = false,
 	tiles = {"bush_01.png"},
-	inventory_image = "twig.png",
-	wield_image = "twig.png",
+	inventory_image = "twig_01.png",
+	wield_image = "twig_01.png",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	place_param2 = math.random(0,3),
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups={snappy=1,flammable=1,attached_node=1},
-	damage_per_second = -2,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1},
+	damage_per_second = 1,
 	selection_box={type="fixed",fixed = 
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
+	node_dig_prediction = "stones:shub",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:shub"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+minetest.register_craftitem("stones:srawb", {
+    description = "Lum Nininikus +4HP",
+	use_texture_alpha = "clip",
+    inventory_image = "barred.png",
+    on_use = minetest.item_eat(7),  -- Heals 4 HP (2 hearts)
+    groups={not_in_creative_inventory=1}
+})
+
+minetest.register_craftitem("stones:flor", {
+    description = "Lum Nininikus Flor +1HP",
+	use_texture_alpha = "clip",
+    inventory_image = "barblue.png",
+    on_use = minetest.item_eat(1),  -- Heals 1 HP (1/2 heart)
+    on_place = function(itemstack, placer, pointed_thing)
+        	if pointed_thing.type == "node" then
+    		local pos = pointed_thing.above
+    		local oldnode = minetest.get_node(pos)
+	    	local stackname = itemstack:get_name()
+    		while oldnode.name == "air" and not itemstack:is_empty() do
+    			local newnode = {name = "stones:blus", param1 = 0}
+    			minetest.set_node(pos, newnode)
+	    		itemstack:take_item()
+	    		pos.y = pos.y - 1
+    			oldnode = minetest.get_node(pos)
+          		end
+         	end
+	    return itemstack
+    end,
+    groups={not_in_creative_inventory=1}
+})
+
+minetest.register_craftitem("stones:flwr", {
+    description = "Lum Nininikus Flwr -2HP",
+	use_texture_alpha = "clip",
+    inventory_image = "bargreen.png",
+    on_use = minetest.item_eat(-1),  -- Poisons 2 HP (1 heart)
+    on_place = function(itemstack, placer, pointed_thing)
+        	if pointed_thing.type == "node" then
+    		local pos = pointed_thing.above
+    		local oldnode = minetest.get_node(pos)
+	    	local stackname = itemstack:get_name()
+    		while oldnode.name == "air" and not itemstack:is_empty() do
+    			local newnode = {name = "stones:blom", param1 = 0}
+    			minetest.set_node(pos, newnode)
+	    		itemstack:take_item()
+	    		pos.y = pos.y - 1
+    			oldnode = minetest.get_node(pos)
+          		end
+         	end
+	    return itemstack
+    end,
+    groups={not_in_creative_inventory=1}
+})
+
+minetest.register_craftitem("stones:bulb", {
+    description = "Lum Nininikus Bulb -6HP",
+	use_texture_alpha = "clip",
+    inventory_image = "barbulb.png",
+    on_use = minetest.item_eat(-6),  -- Poisons 6 HP (3 heart)
+    on_place = function(itemstack, placer, pointed_thing)
+        	if pointed_thing.type == "node" then
+    		local pos = pointed_thing.above
+    		local oldnode = minetest.get_node(pos)
+	    	local stackname = itemstack:get_name()
+    		while oldnode.name == "air" and not itemstack:is_empty() do
+    			local newnode = {name = "stones:su", param1 = 0}
+    			minetest.set_node(pos, newnode)
+	    		itemstack:take_item()
+	    		pos.y = pos.y - 1
+    			oldnode = minetest.get_node(pos)
+          		end
+         	end
+	    return itemstack
+    end,
+    groups={not_in_creative_inventory=1}
+})
+
+minetest.register_node("stones:shub", {
+	description = "Dry Shrub Sans Lum",
+	drop = "stones:flor",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_02.png"},
+	inventory_image = "twig_02.png",
+	wield_image = "twig_02.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=1},
+	damage_per_second = 2,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:shrub"})
+		end
+	end,
+	after_place_node = after_place_leaves,
+	node_dig_prediction = "stones:sub",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:sub"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+stones.after_place_leaves = function(pos, placer, itemstack, pointed_thing)
+	if placer and placer:is_player() then
+		local node = minetest.get_node(pos)
+		node.param2 = 1
+		minetest.set_node(pos, node)
+	end
+end
+
+minetest.register_node("stones:sub", {
+	description = "Dry Bush Sans Flors",
+	drop = "stones:sub",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_03.png"},
+	inventory_image = "twig_03.png",
+	wield_image = "twig_03.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=1},
+	damage_per_second = 3,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:shurb"})
+		end
+	end,
+	after_place_node = after_place_leaves
+})
+
+minetest.register_node("stones:shurb", {
+	description = "Dry Shrub Just Flors",
+	drop = "stones:flor",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_05.png"},
+	inventory_image = "twig_04.png",
+	wield_image = "twig_04.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=1},
+	damage_per_second = 1,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	after_place_node = after_place_leaves,
+	node_dig_prediction = "stones:sub",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:sub"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+minetest.register_node("stones:blus", {
+	description = "Dry Bush Sans Flor Sans Flwrs",
+	drop = "stones:blus",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_03.png"},
+	inventory_image = "twig_03.png",
+	wield_image = "twig_03.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1,not_in_creative_inventory=1},
+	damage_per_second = 1,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:blis"})
+		end
+	end,
+})
+
+minetest.register_node("stones:blis", {
+	description = "Dry Bush Sans Flor With Flwrs",
+	drop = "stones:flwr",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_07.png"},
+	inventory_image = "twig_06.png",
+	wield_image = "twig_06.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1,not_in_creative_inventory=1},
+	damage_per_second = 0,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:bush"})
+		end
+	end,
+	node_dig_prediction = "stones:blus",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:blus"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+minetest.register_node("stones:bush", {
+	description = "Dry Bush",
+	drop = "stones:flor",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_04.png"},
+	inventory_image = "twig_07.png",
+	wield_image = "twig_07.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=1,flammable=1,leaves=1,attached_node=1,not_in_creative_inventory=1},
+	damage_per_second = 0,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	after_place_node = after_place_leaves,
+	node_dig_prediction = "stones:blis",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:blis"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+minetest.register_node("stones:blom", {
+	description = "Dry Bloom Sans Flwrs",
+	drop = "blom",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_03.png"},
+	inventory_image = "twig_03.png",
+	wield_image = "twig_03.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=1,flammable=1,leaves=1,attached_node=1,not_in_creative_inventory=1},
+	damage_per_second = 4,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:bloom"})
+		end
+	end,
+	after_place_node = after_place_leaves,
+})
+
+minetest.register_node("stones:bloom", {
+	description = "Dry Shrub Just Flwrs",
+	drop = "stones:flwr",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_06.png"},
+	inventory_image = "twig_05.png",
+	wield_image = "twig_05.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=1},
+	damage_per_second = -1,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	after_place_node = after_place_leaves,
+	node_dig_prediction = "stones:blom",
+	after_dig_node = function(pos, oldnode, oldmetadata, digger)
+		minetest.set_node(pos, {name = "stones:blom"})
+		minetest.get_node_timer(pos):start(math.random(300, 1500))
+	end,
+})
+
+minetest.register_node("stones:su", {
+	description = "Dry Shrub Sans Lum Sans Flwrs",
+	drop = "su",
+	drawtype = "mesh",
+	waving = 1,
+	walkable = false,
+	tiles = {"bush_03.png"},
+	inventory_image = "twig_03.png",
+	wield_image = "twig_03.png",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
+	sunlight_propagates = true,
+	walkable = false,
+	buildable_to = true,
+	groups={snappy=1,flammable=1,leaves=1,attached_node=1,not_in_creative_inventory=1},
+	damage_per_second = 4,
+	selection_box={type="fixed",fixed = 
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
+	on_timer = function(pos, elapsed)
+		if minetest.get_node_light(pos) < 11 then
+			minetest.get_node_timer(pos):start(200)
+		else
+			minetest.set_node(pos, {name = "stones:shub"})
+		end
+	end,
+	after_place_node = after_place_leaves,
+})
+
+minetest.register_craft({
+	output = "stones:bulb",
+	recipe = {
+		{"stones:flwr", "stones:flwr", "stones:flwr"},
+		{"stones:flwr", "", "stones:flwr"},
+		{"stones:flwr", "stones:flwr", "stones:flwr"},
+	}
 })
 
 minetest.register_node("stones:delum", {

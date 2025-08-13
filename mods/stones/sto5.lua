@@ -44,7 +44,7 @@ minetest.register_node("stones:shrub", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1},
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1, not_in_creative_inventory=1},
 	damage_per_second = 1,
 	selection_box={type="fixed",fixed = 
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
@@ -53,7 +53,7 @@ minetest.register_node("stones:shrub", {
 	mesh = "shrub.obj",
 	node_dig_prediction = "stones:shub",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:shub"})
+		minetest.set_node(pos, {name = "stones:shub",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -137,7 +137,7 @@ minetest.register_craftitem("stones:bulb", {
 
 minetest.register_node("stones:shub", {
 	description = "Dry Shrub Sans Lum",
-	drop = "stones:flor",
+	drop = "stones:flor 2",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,
@@ -157,17 +157,19 @@ minetest.register_node("stones:shub", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:shrub"})
+			minetest.set_node(pos, {name = "stones:shrub",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 	after_place_node = after_place_leaves,
 	node_dig_prediction = "stones:sub",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:sub"})
+		minetest.set_node(pos, {name = "stones:sub",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -175,7 +177,7 @@ minetest.register_node("stones:shub", {
 stones.after_place_leaves = function(pos, placer, itemstack, pointed_thing)
 	if placer and placer:is_player() then
 		local node = minetest.get_node(pos)
-		node.param2 = 1
+		node.param2 = math.floor((node.p2)/4)*4+(node.p2)%4
 		minetest.set_node(pos, node)
 	end
 end
@@ -203,10 +205,12 @@ minetest.register_node("stones:sub", {
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
 	on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:shurb"})
+			minetest.set_node(pos, {name = "stones:shurb",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 	after_place_node = after_place_leaves
@@ -214,7 +218,7 @@ minetest.register_node("stones:sub", {
 
 minetest.register_node("stones:shurb", {
 	description = "Dry Shrub Just Flors",
-	drop = "stones:flor",
+	drop = "stones:flor 3",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,
@@ -237,7 +241,7 @@ minetest.register_node("stones:shurb", {
 	after_place_node = after_place_leaves,
 	node_dig_prediction = "stones:sub",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:sub"})
+		minetest.set_node(pos, {name = "stones:sub",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -264,18 +268,20 @@ minetest.register_node("stones:blus", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:blis"})
+			minetest.set_node(pos, {name = "stones:blis",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 })
 
 minetest.register_node("stones:blis", {
 	description = "Dry Bush Sans Flor With Flwrs",
-	drop = "stones:flwr",
+	drop = "stones:flwr 2",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,
@@ -295,16 +301,18 @@ minetest.register_node("stones:blis", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:bush"})
+			minetest.set_node(pos, {name = "stones:bush",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 	node_dig_prediction = "stones:blus",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:blus"})
+		minetest.set_node(pos, {name = "stones:blus",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -324,7 +332,7 @@ minetest.register_node("stones:bush", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups={snappy=1,flammable=1,leaves=1,attached_node=1,not_in_creative_inventory=1},
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1,not_in_creative_inventory=1},
 	damage_per_second = 0,
 	selection_box={type="fixed",fixed = 
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
@@ -334,7 +342,7 @@ minetest.register_node("stones:bush", {
 	after_place_node = after_place_leaves,
 	node_dig_prediction = "stones:blis",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:blis"})
+		minetest.set_node(pos, {name = "stones:blis",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -354,18 +362,20 @@ minetest.register_node("stones:blom", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups={snappy=1,flammable=1,leaves=1,attached_node=1,not_in_creative_inventory=1},
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,attached_node=1,not_in_creative_inventory=1},
 	damage_per_second = 4,
 	selection_box={type="fixed",fixed = 
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:bloom"})
+			minetest.set_node(pos, {name = "stones:bloom",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 	after_place_node = after_place_leaves,
@@ -373,7 +383,7 @@ minetest.register_node("stones:blom", {
 
 minetest.register_node("stones:bloom", {
 	description = "Dry Shrub Just Flwrs",
-	drop = "stones:flwr",
+	drop = "stones:flwr 3",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,
@@ -386,7 +396,7 @@ minetest.register_node("stones:bloom", {
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
-	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=1},
+	groups={snappy=3,flammable=2,leaves=1,dig_immediate = 3,not_in_creative_inventory=0},
 	damage_per_second = -1,
 	selection_box={type="fixed",fixed = 
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
@@ -396,7 +406,7 @@ minetest.register_node("stones:bloom", {
 	after_place_node = after_place_leaves,
 	node_dig_prediction = "stones:blom",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
-		minetest.set_node(pos, {name = "stones:blom"})
+		minetest.set_node(pos, {name = "stones:blom",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
 })
@@ -423,11 +433,13 @@ minetest.register_node("stones:su", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+on_timer = function(pos, elapsed)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
 		if minetest.get_node_light(pos) < 11 then
 			minetest.get_node_timer(pos):start(200)
 		else
-			minetest.set_node(pos, {name = "stones:shub"})
+			minetest.set_node(pos, {name = "stones:shub",  param2 = math.floor((p2)/4)*4+(p2)%4})
 		end
 	end,
 	after_place_node = after_place_leaves,

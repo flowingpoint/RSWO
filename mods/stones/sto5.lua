@@ -31,7 +31,7 @@ minetest.register_node("stones:prob", {
 
 minetest.register_node("stones:shrub", {
 	description = "Dry Shrub",
-	drawtype = "plantlike",
+	drawtype = "mesh",
 	waving = 1,
 	liquid_viscosity = 8,
 	liquidtype = "source",
@@ -40,19 +40,22 @@ minetest.register_node("stones:shrub", {
 	liquid_renewable = false,
 	liquid_range = 0,
 	walkable = false,
-	tiles = {"high_shrub.png"},
-	inventory_image = "dry_shrub.png",
-	wield_image = "dry_shrub.png",
+	tiles = {"bush_01.png"},
+	inventory_image = "twig.png",
+	wield_image = "twig.png",
 	paramtype = "light",
-	paramtype2 = "meshoptions",
-	place_param2 = 4,
+	paramtype2 = "facedir",
+	place_param2 = math.random(0,3),
 	sunlight_propagates = true,
 	walkable = false,
 	buildable_to = true,
 	groups={snappy=1,flammable=1,attached_node=1},
-	damage_per_second = -1,
+	damage_per_second = -2,
 	selection_box={type="fixed",fixed = 
-{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
+	collision_box = {type="fixed",fixed={
+{-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
+	mesh = "shrub.obj",
 })
 
 minetest.register_node("stones:delum", {

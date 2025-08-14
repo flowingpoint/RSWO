@@ -136,7 +136,7 @@ minetest.register_node("runes:nbdx1c", {
 	paramtype2 = "facedir",
 tiles = {{name="nbdx1c_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", "rock.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
 	light_source = 5,
-	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=0},
+	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx1c",
 	node_box = {type = "fixed", fixed = {
 	{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}},

@@ -76,7 +76,7 @@ minetest.register_node("runes:lit_hui", {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-tiles = {{name="runestone_1x24.png", animation = {type = "vertical_frames", length=3.0}}, "runestone.png", "rock.png", "rock.png", "rock.png", "rock.png"},
+tiles = {{name="runestone_1x24.png", animation = {type = "vertical_frames", length=3.0}}, "rock.png", "rock.png", "rock.png", "rock.png", "rock.png"},
 	light_source = 5,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:hui",
@@ -129,6 +129,19 @@ tiles = {{name="nbdx1_1x11.png", animation = {type = "vertical_frames", length=3
 	{c(22),c(0),c(0), c(32),c(32),c(32)}}},
 })
 
+minetest.register_node("runes:nbdx1c", {
+	description = "Niu Bi Da Xue Yi Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="nbdx1c_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", "rock.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
+	light_source = 5,
+	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=0},
+	drop = "runes:nbdx1c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}},
+})
+
 minetest.register_node("runes:rbdx1", {
 	description = "Ru Bli Da Xue Yi",
 	drawtype = "nodebox",
@@ -136,7 +149,7 @@ minetest.register_node("runes:rbdx1", {
 	paramtype2 = "facedir",
 tiles = {{name="nbdx1_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", "rubble.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
 	light_source = 5,
-	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:rbdx1",
 	node_box = {type = "fixed", fixed = {
 	{c(0),c(0),c(0), c(1),c(32),c(10)},
@@ -157,6 +170,19 @@ tiles = {{name="nbdx1_1x11.png", animation = {type = "vertical_frames", length=3
 	{c(17),c(0),c(0), c(19),c(32),c(30)},
 	{c(19),c(0),c(0), c(22),c(32),c(31)},
 	{c(22),c(0),c(0), c(32),c(32),c(32)}}},
+})
+
+minetest.register_node("runes:rbdx1c", {
+	description = "Ru Bli Da Xue Yi Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="rbdx1c_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", "rubble.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
+	light_source = 5,
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:rbdx1c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
 })
 
 minetest.register_node("runes:nbdx2", {
@@ -189,6 +215,19 @@ tiles = {{name="nbdx2_1x13.png", animation = {type = "vertical_frames", length=3
 	{c(31),c(0),c(0), c(32),c(32),c(10)}}},
 })
 
+minetest.register_node("runes:nbdx2c", {
+	description = "Niu Bi Da Xue Er Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="nbdx2c_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
+	light_source = 5,
+	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx2c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+})
+
 minetest.register_node("runes:rbdx2", {
 	description = "Ru Bli Da Xue Er",
 	drawtype = "nodebox",
@@ -196,7 +235,7 @@ minetest.register_node("runes:rbdx2", {
 	paramtype2 = "facedir",
 tiles = {{name="nbdx2_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
 	light_source = 5,
-	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx2",
 	node_box = {type = "fixed", fixed = {
 	{c(0), c(0), c(0), c(10), c(32), c(32)},
@@ -217,6 +256,19 @@ tiles = {{name="nbdx2_1x13.png", animation = {type = "vertical_frames", length=3
 	{c(29),c(0),c(0), c(30),c(32),c(15)},	
 	{c(30),c(0),c(0), c(31),c(32),c(13)},
 	{c(31),c(0),c(0), c(32),c(32),c(10)}}},
+})
+
+minetest.register_node("runes:rbdx2c", {
+	description = "Ru Bli Da Xue Er Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="rbdx2c_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
+	light_source = 5,
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx2c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
 })
 
 minetest.register_node("runes:nbdx3", {
@@ -249,6 +301,19 @@ tiles = {{name="nbdx3_1x17.png", animation = {type = "vertical_frames", length=2
 	{c(31),c(0),c(22), c(32),c(32),c(32)}}},
 })
 
+minetest.register_node("runes:nbdx3c", {
+	description = "Niu Bi Da Xue San Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="nbdx3c_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
+	light_source = 5,
+	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx3c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+})
+
 minetest.register_node("runes:rbdx3", {
 	description = "Ru Bli Da Xue San",
 	drawtype = "nodebox",
@@ -256,7 +321,7 @@ minetest.register_node("runes:rbdx3", {
 	paramtype2 = "facedir",
 tiles = {{name="nbdx3_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
 	light_source = 5,
-	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx3",
 	node_box = {type = "fixed", fixed = {
 	{c(0),c(0),c(0), c(10),c(32),c(32)},
@@ -279,6 +344,19 @@ tiles = {{name="nbdx3_1x17.png", animation = {type = "vertical_frames", length=2
 	{c(31),c(0),c(22), c(32),c(32),c(32)}}},
 })
 
+minetest.register_node("runes:rbdx3c", {
+	description = "Ru Bli Da Xue San Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="rbdx3c_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
+	light_source = 5,
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx3c",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+})
+
 minetest.register_node("runes:nbdx4", {
 	description = "Niu Bi Da Xue Si",
 	drawtype = "nodebox",
@@ -286,7 +364,50 @@ minetest.register_node("runes:nbdx4", {
 	paramtype2 = "facedir",
 tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
 	light_source = 5,
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx4c",
+	node_box = {type = "fixed", fixed = {
+	{c(0),c(0),c(22), c(1),c(32),c(32)},
+	{c(1),c(0),c(19), c(2),c(32),c(32)},
+	{c(2),c(0),c(17), c(3),c(32),c(32)},
+	{c(3),c(0),c(15), c(4),c(32),c(32)},
+	{c(4),c(0),c(14), c(5),c(32),c(32)},
+	{c(5),c(0),c(13), c(6),c(32),c(32)},
+	{c(6),c(0),c(12), c(7),c(32),c(32)},
+	{c(7),c(0),c(10), c(8),c(32),c(32)},
+	{c(8),c(0),c(9), c(9),c(32),c(32)},
+	{c(9),c(0),c(8), c(10),c(32),c(32)},
+	{c(10),c(0),c(7), c(12),c(32),c(32)},
+	{c(12),c(0),c(6), c(13),c(32),c(32)},
+	{c(13),c(0),c(5), c(14),c(32),c(32)},
+	{c(14),c(0),c(4), c(15),c(32),c(32)},
+	{c(15),c(0),c(3), c(17),c(32),c(32)},
+	{c(17),c(0),c(2), c(19),c(32),c(32)},
+	{c(19),c(0),c(1), c(22),c(32),c(32)},
+	{c(22),c(0),c(0), c(32),c(32),c(32)}}},
+})
+
+minetest.register_node("runes:nbdx4c", {
+	description = "Niu Bi Da Xue Si Covol",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="nbdx4c_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
+	light_source = 5,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:nbdx4",
+	node_box = {type = "fixed", fixed = {
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+})
+
+minetest.register_node("runes:rbdx4", {
+	description = "Ru Bli Da Xue Si",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
+	light_source = 5,
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {
 	{c(0),c(0),c(22), c(1),c(32),c(32)},
@@ -309,34 +430,17 @@ tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2
 	{c(22),c(0),c(0), c(32),c(32),c(32)}}},
 })
 
-minetest.register_node("runes:rbdx4", {
-	description = "Ru Bli Da Xue Si",
+minetest.register_node("runes:rbdx4c", {
+	description = "Ru Bli Da Xue Si Covol",
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
+tiles = {{name="rbdx4c_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
 	light_source = 5,
-	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {
-	{c(0),c(0),c(22), c(1),c(32),c(32)},
-	{c(1),c(0),c(19), c(2),c(32),c(32)},
-	{c(2),c(0),c(17), c(3),c(32),c(32)},
-	{c(3),c(0),c(15), c(4),c(32),c(32)},
-	{c(4),c(0),c(14), c(5),c(32),c(32)},
-	{c(5),c(0),c(13), c(6),c(32),c(32)},
-	{c(6),c(0),c(12), c(7),c(32),c(32)},
-	{c(7),c(0),c(10), c(8),c(32),c(32)},
-	{c(8),c(0),c(9), c(9),c(32),c(32)},
-	{c(9),c(0),c(8), c(10),c(32),c(32)},
-	{c(10),c(0),c(7), c(12),c(32),c(32)},
-	{c(12),c(0),c(6), c(13),c(32),c(32)},
-	{c(13),c(0),c(5), c(14),c(32),c(32)},
-	{c(14),c(0),c(4), c(15),c(32),c(32)},
-	{c(15),c(0),c(3), c(17),c(32),c(32)},
-	{c(17),c(0),c(2), c(19),c(32),c(32)},
-	{c(19),c(0),c(1), c(22),c(32),c(32)},
-	{c(22),c(0),c(0), c(32),c(32),c(32)}}},
+	{-0.5,-0.5,-0.5,}}},
 })
 
 minetest.register_node("runes:0ur", {
@@ -930,3 +1034,5 @@ minetest.register_node("runes:sl4", {
 	drawtype = "mesh",
 	mesh = "sli.obj"
 })
+
+

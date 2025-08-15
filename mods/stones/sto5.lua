@@ -349,7 +349,7 @@ minetest.register_node("stones:bush", {
 
 minetest.register_node("stones:blom", {
 	description = "Dry Bloom Sans Flwrs",
-	drop = "blom",
+	drop = "stones:blom",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,

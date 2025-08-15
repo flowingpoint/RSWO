@@ -413,7 +413,7 @@ minetest.register_node("stones:bloom", {
 
 minetest.register_node("stones:su", {
 	description = "Dry Shrub Sans Lum Sans Flwrs",
-	drop = "su",
+	drop = "stones:su",
 	drawtype = "mesh",
 	waving = 1,
 	walkable = false,

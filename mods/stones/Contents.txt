@@ -416,15 +416,15 @@ stones: {
 plot				Plot
 prob*				Plot Rubble
 shrub			   	Dry Shrub
-shub*                Dry Shrub Sans Lum
-sub*                 Dry Shrub Sans Flors ExLum
+shub*                Dry Shrub Sans Lum ..[5/25->shrub]†
+sub*                 Dry Shrub Sans Flors ExLum ..[4/15->shurb]†
 shurb*               Dry Shrub Just Flors
-blus*                Dry Bush Sans Flor Sans Flwrs
-blis*                Dry Bush Sans Flor
+blus*                Dry Bush Sans Flor Sans Flwrs ..[5/20->blis]†
+blis*                Dry Bush Sans Flor ..[3/10->bush]†
 bush*                Dry Bush
-blom*                Dry Bloom Sans Flwrs
+blom*                Dry Bloom Sans Flwrs ..[4/25->bloom]†
 bloom*               Dry Bloom
-su*                  Dry Shrub Sans Lum Sans Flors
+su*                  Dry Shrub Sans Lum Sans Flors ..[7/20->shub]†
 delum*              Dodeca-Lum
 denum*              Dodeca-Lum-Nil
 isokar*				Icosahedron Flamed
@@ -498,6 +498,7 @@ defr                Deputy Frog
 --Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
 --Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 
 sus.lua
+--Those labelled with a pair of numbers followed by a dagger symbol ('..[a/b]†) give interval of abm step and chance of morphing per step for those nodes which morph to more advanced stages.
 stones:[
 flat_O               Flat 'O'
 srawb*               Lum Nininikus +4HP

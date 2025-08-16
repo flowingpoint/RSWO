@@ -157,21 +157,24 @@ minetest.register_node("stones:shub", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-on_timer = function(pos, elapsed)
-		s = minetest.env:get_node(pos)
-		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:shrub",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
 	after_place_node = after_place_leaves,
 	node_dig_prediction = "stones:sub",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "stones:sub",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
+})
+
+minetest.register_abm({
+    nodenames = {"stones:shub"},
+    interval = 5,
+    chance = 25,
+    action = function(pos, node)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:shrub", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 stones.after_place_leaves = function(pos, placer, itemstack, pointed_thing)
@@ -204,16 +207,19 @@ minetest.register_node("stones:sub", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-	on_timer = function(pos, elapsed)
+	after_place_node = after_place_leaves
+})
+
+minetest.register_abm({
+    nodenames = {"stones:sub"},
+    interval = 4,
+    chance = 15,
+    action = function(pos, node)
 		s = minetest.env:get_node(pos)
 		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:shurb",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
-	after_place_node = after_place_leaves
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:shurb", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 minetest.register_node("stones:shurb", {
@@ -267,16 +273,19 @@ minetest.register_node("stones:blus", {
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}},
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
-	mesh = "shrub.obj",
-on_timer = function(pos, elapsed)
+	mesh = "shrub.obj"
+})
+
+minetest.register_abm({
+    nodenames = {"stones:blus"},
+    interval = 5,
+    chance = 20,
+    action = function(pos, node)
 		s = minetest.env:get_node(pos)
 		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:blis",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:blis", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 minetest.register_node("stones:blis", {
@@ -301,20 +310,23 @@ minetest.register_node("stones:blis", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-on_timer = function(pos, elapsed)
-		s = minetest.env:get_node(pos)
-		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:bush",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
 	node_dig_prediction = "stones:blus",
 	after_dig_node = function(pos, oldnode, oldmetadata, digger)
 		minetest.set_node(pos, {name = "stones:blus",  param2 = math.floor((oldnode.param2)/4)*4+(oldnode.param2)%4})
 		minetest.get_node_timer(pos):start(math.random(300, 1500))
 	end,
+})
+
+minetest.register_abm({
+    nodenames = {"stones:blis"},
+    interval = 3,
+    chance = 10,
+    action = function(pos, node)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:bush", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 minetest.register_node("stones:bush", {
@@ -369,16 +381,19 @@ minetest.register_node("stones:blom", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-on_timer = function(pos, elapsed)
+	after_place_node = after_place_leaves,
+})
+
+minetest.register_abm({
+    nodenames = {"stones:blom"},
+    interval = 4,
+    chance = 25,
+    action = function(pos, node)
 		s = minetest.env:get_node(pos)
 		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:bloom",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
-	after_place_node = after_place_leaves,
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:bloom", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 minetest.register_node("stones:bloom", {
@@ -433,16 +448,19 @@ minetest.register_node("stones:su", {
 	collision_box = {type="fixed",fixed={
 {-1/16,-0.6,-1/16, 1/16,-3/16,1/16}}},
 	mesh = "shrub.obj",
-on_timer = function(pos, elapsed)
+	after_place_node = after_place_leaves,
+})
+
+minetest.register_abm({
+    nodenames = {"stones:su"},
+    interval = 7,
+    chance = 20,
+    action = function(pos, node)
 		s = minetest.env:get_node(pos)
 		p2 = s.param2
-		if minetest.get_node_light(pos) < 11 then
-			minetest.get_node_timer(pos):start(200)
-		else
-			minetest.set_node(pos, {name = "stones:shub",  param2 = math.floor((p2)/4)*4+(p2)%4})
-		end
-	end,
-	after_place_node = after_place_leaves,
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "stones:shub", param2 = math.floor((p2)/4)*4+(p2)%4})
+    end
 })
 
 minetest.register_craft({

@@ -54,10 +54,14 @@ brushrock_28*		Root 2 Brushrock
 rushrock_28		    Root 2 Rushrock
 rublish_28*		    Root 2 Rushrock Rubble
 blushrock_28*		Lush Root 2 Brushrock
-brushrock_2u*		Root 2 Brushrock Diagstep
-rushrock_2u		    Root 2 Rushrock Diagstep
-rublish_2u*		    Root 2 Rushrock Diagstep Rubble
-blushrock_2u*		Lush Root 2 Brushrock Diagstep
+brushrock_2u*		*2 Root 2 Brushrock Diagstep
+rushrock_2u		*2 Root 2 Rushrock Diagstep
+rublish_2u*		*2 Root 2 Rushrock Diagstep Rubble
+blushrock_2u*		*2 Lush Root 2 Brushrock 11/16 Diagstep
+brushrock_2v*		*2 Root 2 Brushrock 11/16 Diagstep
+rushrock_2v		*2 Root 2 Rushrock 11/16 Diagstep
+rublish_2v*		*2 Root 2 Rushrock 11/16 Diagstep Rubble
+blushrock_2v*		*2 Lush Root 2 Brushrock Diagstep
 brushrock_21*		*2 4Brush 3Rock /8
 rushrock_21		    *2 4Rush 3Rock /8
 rublish_21*		    *2 4Rush 3Rock /8 Rubble

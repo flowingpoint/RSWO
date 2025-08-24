@@ -105,7 +105,7 @@ minetest.register_node("runes:nbdx1", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx1_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", "rock.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx1",
 	node_box = {type = "fixed", fixed = {
@@ -135,7 +135,7 @@ minetest.register_node("runes:nbdx1c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx1c_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", "rock.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx1c",
 	node_box = {type = "fixed", fixed = {
@@ -148,7 +148,7 @@ minetest.register_node("runes:rbdx1", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx1_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", "rubble.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:rbdx1",
 	node_box = {type = "fixed", fixed = {
@@ -178,7 +178,7 @@ minetest.register_node("runes:rbdx1c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="rbdx1c_1x11.png", animation = {type = "vertical_frames", length=3.7}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx1br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", "rubble.png", {name="dx1bb16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:rbdx1c",
 	node_box = {type = "fixed", fixed = {
@@ -191,7 +191,7 @@ minetest.register_node("runes:nbdx2", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx2_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx2",
 	node_box = {type = "fixed", fixed = {
@@ -221,7 +221,7 @@ minetest.register_node("runes:nbdx2c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx2c_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx2c",
 	node_box = {type = "fixed", fixed = {
@@ -234,7 +234,7 @@ minetest.register_node("runes:rbdx2", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx2_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx2",
 	node_box = {type = "fixed", fixed = {
@@ -264,7 +264,7 @@ minetest.register_node("runes:rbdx2c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="rbdx2c_1x13.png", animation = {type = "vertical_frames", length=3.3}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2br16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx2rg16.png", animation = {type = "vertical_frames", length=3}}},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx2c",
 	node_box = {type = "fixed", fixed = {
@@ -277,7 +277,7 @@ minetest.register_node("runes:nbdx3", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx3_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx3",
 	node_box = {type = "fixed", fixed = {
@@ -307,7 +307,7 @@ minetest.register_node("runes:nbdx3c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx3c_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx3c",
 	node_box = {type = "fixed", fixed = {
@@ -320,7 +320,7 @@ minetest.register_node("runes:rbdx3", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx3_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx3",
 	node_box = {type = "fixed", fixed = {
@@ -350,7 +350,7 @@ minetest.register_node("runes:rbdx3c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="rbdx3c_1x17.png", animation = {type = "vertical_frames", length=2.5}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx3gb16.png", animation = {type = "vertical_frames", length=3}}, {name="dx3rg16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx3c",
 	node_box = {type = "fixed", fixed = {
@@ -363,7 +363,7 @@ minetest.register_node("runes:nbdx4", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4c",
 	node_box = {type = "fixed", fixed = {
@@ -393,7 +393,7 @@ minetest.register_node("runes:nbdx4c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx4c_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rock.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {
@@ -406,7 +406,7 @@ minetest.register_node("runes:rbdx4", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="nbdx4_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {
@@ -436,7 +436,7 @@ minetest.register_node("runes:rbdx4c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 tiles = {{name="rbdx4c_1x19.png", animation = {type = "vertical_frames", length=2.1}}, {name="rybble_x16.png", animation = {type = "vertical_frames", length=3}}, {name="dx4gb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png", {name="dx4bb16.png", animation = {type = "vertical_frames", length=3}}, "rubble.png"},
-	light_source = 5,
+	light_source = 0,
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {

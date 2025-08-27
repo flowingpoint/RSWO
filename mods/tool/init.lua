@@ -20,6 +20,8 @@ dofile(path .. "/car.lua")
 --dofile(path .. "/burst.lua")
 --dofile(path .. "/clean.lua")
 dofile(path .. "/prop.lua")
+dofile(path .. "/doors.lua")
+dofile(path .. "/windows.lua")
 
 ---
 --ref: https://github.com/davidm/lua-matrix

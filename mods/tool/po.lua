@@ -1296,6 +1296,96 @@ minetest.register_entity("tool:pow", {
         if s.name == "runes:rbdx4c"	then 
 		p2rcx4 = s.param2
 		minetest.env:set_node(p, {name="runes:rbdx4", param2=p2rcx4}) end
+        if s.name == "tool:door_closed"	then 
+		p2cl1 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_a", param2=p2cl1}) end
+        if s.name == "tool:door_closed_a"	then 
+		p2cl2 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_b", param2=p2cl2}) end
+        if s.name == "tool:door_closed_b"	then 
+		p2cl3 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_c", param2=p2cl3}) end
+        if s.name == "tool:door_closed_c"	then 
+		p2o4 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_d", param2=p2cl4}) end
+        if s.name == "tool:door_closed_d"	then 
+		p2cl5 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_e", param2=p2cl5}) end
+        if s.name == "tool:door_closed_e"	then 
+		p2cl6 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_f", param2=p2cl6}) end
+        if s.name == "tool:door_closed_f"	then 
+		p2cl0 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed", param2=p2cl0}) end
+        if s.name == "tool:door_open"	then 
+		p2op1 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_a", param2=p2op1}) end
+        if s.name == "tool:door_open_a"	then 
+		p2op2 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_b", param2=p2op2}) end
+        if s.name == "tool:door_open_b"	then 
+		p2op3 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_c", param2=p2op3}) end
+        if s.name == "tool:door_open_c"	then 
+		p2o4 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_d", param2=p2op4}) end
+        if s.name == "tool:door_open_d"	then 
+		p2op5 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_e", param2=p2op5}) end
+        if s.name == "tool:door_open_e"	then 
+		p2op6 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_f", param2=p2op6}) end
+        if s.name == "tool:door_open_f"	then 
+		p2op0 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open", param2=p2op0}) end
+        if s.name == "tool:bars_1a"	then 
+		p2bar2a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_2a", param2=p2bar2a}) end
+        if s.name == "tool:bars_1b"	then 
+		p2bar2b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_2b", param2=p2bar2b}) end
+        if s.name == "tool:bars_2a"	then 
+		p2bar3a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_3a", param2=p2bar3a}) end
+        if s.name == "tool:bars_2b"	then 
+		p2bar3b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_3b", param2=p2bar3b}) end
+        if s.name == "tool:bars_3a"	then 
+		p2bar1a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_1a", param2=p2bar1a}) end
+        if s.name == "tool:bars_3b"	then 
+		p2bar1b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_1b", param2=p2bar1b}) end
+        if s.name == "tool:window_closed"	then 
+		p2winca = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed_a", param2=p2winca}) end
+        if s.name == "tool:window_open"	then 
+		p2winoa = s.param2
+		minetest.env:set_node(p, {name="tool:window_open_a", param2=p2winoa}) end
+        if s.name == "tool:window_closed_a"	then 
+		p2wincb = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed_b", param2=p2wincb}) end
+        if s.name == "tool:window_open_a"	then 
+		p2winob = s.param2
+		minetest.env:set_node(p, {name="tool:window_open_b", param2=p2winob}) end
+        if s.name == "tool:window_closed_b"	then 
+		p2wincc = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed_c", param2=p2wincc}) end
+        if s.name == "tool:window_open_b"	then 
+		p2winoc = s.param2
+		minetest.env:set_node(p, {name="tool:window_open_c", param2=p2winoc}) end
+        if s.name == "tool:window_closed_c"	then 
+		p2wincd = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed_d", param2=p2wincd}) end
+        if s.name == "tool:window_open_c"	then 
+		p2winod = s.param2
+		minetest.env:set_node(p, {name="tool:window_open_d", param2=p2winod}) end
+        if s.name == "tool:window_closed_d"	then 
+		p2winc = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed", param2=p2winc}) end
+        if s.name == "tool:window_open_d"	then 
+		p2wino = s.param2
+		minetest.env:set_node(p, {name="tool:window_open", param2=p2wino}) end
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,

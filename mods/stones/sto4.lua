@@ -148,7 +148,7 @@ minetest.register_node("stones:pemra", {
 	paramtype2 = "facedir",
 	tiles = {"pock.png"},
     light_source = 9,
-	groups = {vcol=0.333, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.333, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:pyra",
 	collision_box = {type="fixed",fixed={
 {-0.4375,-0.5,-0.4375, 0.4375,-0.375,0.4375},

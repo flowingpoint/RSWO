@@ -333,6 +333,7 @@ rodhb*				*3 Dual Hexatess Lowhalf Blue
 rudhb*				*3 Dual Hexatess Lowhalf Blue Rubble
 pyra				Square Based Pyramid
 pyru*				Square Based Pyramid Rubble
+pemra*              Square Based Pyramid Emerald
 pyra_2				Square Based Pyramid HighHalf
 pyru_2*				Square Based Pyramid HighHalf Rubble
 pyre				Square Based Pyramid Edged

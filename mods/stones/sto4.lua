@@ -142,6 +142,35 @@ minetest.register_node("stones:pyru", {
 	mesh = "pyra.obj"
 })
 
+minetest.register_node("stones:pemra", {
+	description = "Square Based Pyramid Emerald",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"pock.png"},
+    light_source = 9,
+	groups = {vcol=0.333, cracky=1, oddly_breakable_by_hand=1},
+	drop = "stones:pyra",
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.4375, 0.4375,-0.375,0.4375},
+{-0.375,-0.375,-0.375, 0.375,-0.25,0.375},
+{-0.3125,-0.25,-0.3125, 0.3125,-0.125,0.3125},
+{-0.25,-0.125,-0.25, 0.25,0,0.25},
+{-0.1875,0,-0.1875, 0.1875,0.125,0.1875},
+{-0.125,0.125,-0.125, 0.125,0.25,0.125},
+{-0.0625,0.25,-0.0625, 0.0625,0.375,0.0625}}},
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.4375, 0.4375,-0.375,0.4375},
+{-0.375,-0.375,-0.375, 0.375,-0.25,0.375},
+{-0.3125,-0.25,-0.3125, 0.3125,-0.125,0.3125},
+{-0.25,-0.125,-0.25, 0.25,0,0.25},
+{-0.1875,0,-0.1875, 0.1875,0.125,0.1875},
+{-0.125,0.125,-0.125, 0.125,0.25,0.125},
+{-0.0625,0.25,-0.0625, 0.0625,0.375,0.0625}}},
+	drawtype = "mesh",
+	mesh = "pyra.obj"
+})
+
+
 minetest.register_node("stones:pyra_2", {
 	description = "Square Based Pyramid HighHalf",
 	paramtype = "light",

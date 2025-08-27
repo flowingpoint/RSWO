@@ -1386,6 +1386,9 @@ minetest.register_entity("tool:pow", {
         if s.name == "tool:window_open_d"	then 
 		p2wino = s.param2
 		minetest.env:set_node(p, {name="tool:window_open", param2=p2wino}) end
+        if s.name == "stones:pyra"	then 
+		p2yem = s.param2
+		minetest.env:set_node(p, {name="stones:pemra", param2=p2yem}) end
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -3407,6 +3410,9 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:blushrock_21"	then 
 		p2r21ubl = s.param2
 		minetest.env:set_node(p, {name="stones:blushrock_21u", param2=p2r21ubl}) end
+        if s.name == "stones:pemra"	then 
+		p2emy = s.param2
+		minetest.env:set_node(p, {name="stones:pyra", param2=p2emy}) end
 end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

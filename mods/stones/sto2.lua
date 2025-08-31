@@ -3094,7 +3094,7 @@ minetest.register_node("stones:s_62ul", {
 {0.375,0.25,0.1875, 0.5,0.3125,0.25},
 {0.375,0.3125,0.3125, 0.5,0.375,0.375}}},
 	drawtype = "mesh",
-	mesh = "s_62ul.obj"
+	mesh = "s_52hul.obj"
 })
 
 minetest.register_node("stones:sb_62ul", {
@@ -3179,7 +3179,7 @@ minetest.register_node("stones:sb_62ul", {
 {0.375,0.25,0.1875, 0.5,0.3125,0.25},
 {0.375,0.3125,0.3125, 0.5,0.375,0.375}}},
 	drawtype = "mesh",
-	mesh = "s_62ul.obj"
+	mesh = "s_52hul.obj"
 })
 
 minetest.register_node("stones:s_3hjl", {
@@ -3600,7 +3600,7 @@ minetest.register_node("stones:s_62ur", {
 {-0.5,0.25,0.1875, -0.375,0.3125,0.25},
 {-0.5,0.3125,0.3125, -0.375,0.375,0.375}}},
 	drawtype = "mesh",
-	mesh = "s_62ur.obj"
+	mesh = "s_52hur.obj"
 })
 
 minetest.register_node("stones:sb_62ur", {
@@ -3685,7 +3685,7 @@ minetest.register_node("stones:sb_62ur", {
 {-0.5,0.25,0.1875, -0.375,0.3125,0.25},
 {-0.5,0.3125,0.3125, -0.375,0.375,0.375}}},
 	drawtype = "mesh",
-	mesh = "s_62ur.obj"
+	mesh = "s_52hur.obj"
 })
 
 minetest.register_node("stones:s_3hjr", {

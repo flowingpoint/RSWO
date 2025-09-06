@@ -119,7 +119,7 @@ minetest.register_entity("tool:pow", {
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
-		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
+		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
         end
         if s.name == "stones:isodark"	then 
 		minetest.sound_play({name="whoosh", gain=0.05}, {pos=selfpos}, true)
@@ -1389,6 +1389,18 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:pyra"	then 
 		p2yem = s.param2
 		minetest.env:set_node(p, {name="stones:pemra", param2=p2yem}) end
+		if s.name == "stones:s_221"	then 
+		p211 = s.param2
+		minetest.env:set_node(p, {name="stones:s_211", param2=p211}) end
+		if s.name == "stones:s_211"	then 
+		p221 = s.param2
+		minetest.env:set_node(p, {name="stones:s_221", param2=p221}) end
+		if s.name == "stones:sb_221"	then 
+		p211 = s.param2
+		minetest.env:set_node(p, {name="stones:sb_211", param2=p211}) end
+		if s.name == "stones:sb_211"	then 
+		p221 = s.param2
+		minetest.env:set_node(p, {name="stones:sb_221", param2=p221}) end
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -3413,6 +3425,12 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:pemra"	then 
 		p2emy = s.param2
 		minetest.env:set_node(p, {name="stones:pyra", param2=p2emy}) end
+		if s.name == "stones:s_211"	then 
+		p2b1 = s.param2
+		minetest.env:set_node(p, {name="stones:sb_211", param2=p2b1}) end
+		if s.name == "stones:sb_211"	then 
+		p2xb1 = s.param2
+		minetest.env:set_node(p, {name="stones:s_211", param2=p2xb1}) end
 end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

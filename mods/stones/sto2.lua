@@ -1734,7 +1734,7 @@ minetest.register_node("stones:sb_21", {
 })
 
 minetest.register_node("stones:s_221", {
-	description = "R2 Slab 7/8",
+	description = "*2 R2 Slab 7/8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_stone_64.png"},
@@ -1776,7 +1776,7 @@ minetest.register_node("stones:s_221", {
 })
 
 minetest.register_node("stones:sb_221", {
-	description = "R2 Slab 7/8 Rubble",
+	description = "*2 R2 Slab 7/8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_rubble_64.png"},
@@ -1818,7 +1818,7 @@ minetest.register_node("stones:sb_221", {
 })
 
 minetest.register_node("stones:s_211", {
-	description = "R2 'V' Slab 6/8",
+	description = "*2 R2 'V' Slab 6/8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_stone_64.png"},
@@ -1862,7 +1862,7 @@ minetest.register_node("stones:s_211", {
 })
 
 minetest.register_node("stones:sb_211", {
-	description = "R2 'V' Slab 6/8 Rubble",
+	description = "*2 R2 'V' Slab 6/8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_rubble_64.png"},

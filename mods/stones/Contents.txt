@@ -186,10 +186,10 @@ s_22g*				*2 R2/2 Slope Edgefill Gotdots
 sb_22g				*2 R2/2 Slope Edgefill Gotdots Rubble
 s_21				R2 Slope 7/8
 sb_21*				R2 Slope 7/8 Rubble
-s_221				R2 Slab 7/8 
-sb_221*				R2 Slab 7/8 Rubble
-s_211				R2 'V' Slab 6/8 
-sb_211*				R2 'V' Slab 6/8 Rubble
+s_221				*2 R2 Slab 7/8 
+sb_221*				*2 R2 Slab 7/8 Rubble
+s_211				*2 R2 'V' Slab 6/8 
+sb_211*				*2 R2 'V' Slab 6/8 Rubble
 s_21u				*6 R2 Slope Upper 15/16
 sb_21u*				*6 R2 Slope Upper 15/16 Rubble
 diagsteps_83*        *6 R2 Slope Upper 11/16

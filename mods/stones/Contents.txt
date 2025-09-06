@@ -188,6 +188,8 @@ s_21				R2 Slope 7/8
 sb_21*				R2 Slope 7/8 Rubble
 s_221				R2 Slab 7/8 
 sb_221*				R2 Slab 7/8 Rubble
+s_211				R2 'V' Slab 6/8 
+sb_211*				R2 'V' Slab 6/8 Rubble
 s_21u				*6 R2 Slope Upper 15/16
 sb_21u*				*6 R2 Slope Upper 15/16 Rubble
 diagsteps_83*        *6 R2 Slope Upper 11/16
@@ -509,7 +511,7 @@ sus.lua
 --Those labelled with a pair of numbers followed by a dagger symbol ('..[a/b]†) give interval of abm step and chance of morphing per step for those nodes which morph to more advanced stages.
 stones:[
 flat_O               Flat 'O'
-srawb*               Lum Nininikus +4HP
+srawb*               Lum Nininikus +6HP
 flor*                Lum Nininikus Flor +1HP
 flwr*                Lum Nininikus Flwr -2HP
 bulb*                Lum Nininikus Bulb -6HP

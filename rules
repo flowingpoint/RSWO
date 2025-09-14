@@ -15,8 +15,8 @@ Drop (Q) Dice to get 'Magical Point Teleporter' and Flo to get 'Noter'.
 Pg 9: Classic Spinning Coin
 The 'O' coin on the menu dispenses single coin amounts, which act to increment any values on coins already in the world, ranging from 1 to 7. It turns a 7-coin into a stack of 8, labelled 'N'. The coin will always appear ON TOP of the place it strikes when thrown, and it removes any other node that's there, so be careful where you throw it!
 
-Pg 6: Dry Shrub
-This replenishes health when stood in, and only grows on soil.
+Pg 6: Shrub
+There are three main fruits to replenish health. They look like bars, and you pick them as flowers. You start with the all-green flowered shrub, which replenishes health slowly (1hp/s) when up close. The fruit takes health away (-1hp), but with the green bars extracted from those shrubs, you can create a bulb on the crafting menu by forming a square with 8 of them, to get a bulb. The bulb drastically impairs health if eaten (-6hp), but it can be planted in soil which will grow it into the shrub that grows blue flowers and finally a red one in the middle. Harvesting the red fruit gives the MAXIMUM of health (6hp), and it will grow back again, but if you continue to harvest blue fruit from it the bush will ONLY grow blue flowers thereafter. The blue fruit gives a little health (1hp) and can be replanted to grow a shrub which grows green flowers, then a single blue flower in the middle, similar to the red fruited shrub, except that when in full bloom, it doesn't effect health by standing up close, while the red flowered shrub damages health that way (-1hp/s) (and any flowerless variety). Also the blue flower in the middle grows back even if that shrub is totally depleted. Green flowers can be harvested and replanted to get the starter shrub. You'll find all varieties wildly growing in 'Order' world. If they don't grow flowers, use the popper staff on them and they will grow.
 
 Pg 1: 'B Zooms'
 This scope is obsoleted, because pressing 'Z' Zooms, but if you drop (Q) it becomes the 'Tape Measure'. Dropping again turns it back to the scope.

@@ -1866,7 +1866,7 @@ minetest.register_node("stones:sb_211", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_rubble_64.png"},
-	groups = {vcol=0.375, cracky=3, soil=1},
+	groups = {vcol=0.375, cracky=3, soil=1, not_in_creative_inventory=1},
 	light_source = 0,
 	drop = "stones:sb_211",
 	collision_box = {type="fixed",fixed={

@@ -46,7 +46,7 @@ local function dust_on_use(item, player)
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
-		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=1,y=1}}}}})
+		texpool = {{name = "wdust.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=1,y=1}}}}})
 end
 
 --local function etch_on_place(item, player) end

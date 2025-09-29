@@ -1,3 +1,4 @@
+sprites = {}
 local S = mobs.intllib
 
 --Guy from Vampire story who's girlfriend gets stolen by the vampire in the hotel.
@@ -140,7 +141,7 @@ mobs:register_mob("mobs:etoll", {
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
-	textures = {{"etoll_f.png","etoll_r.png"}},
+	textures = {{"laotzu_f.png","laotzu_r.png"}},
 	walk_velocity =0,
 	run_velocity = 5,
 	follow = {"mobs:etoll"},
@@ -382,11 +383,12 @@ mobs:register_mob("mobs:reo", {
 	jump_height = 5,
 	view_range = 50,
 	light_damage = -1,
-	on_rightclick = function(self, clicker)
-		if mobs:feed_tame(self, clicker, 8, true, true) then return end
-		if mobs:protect(self, clicker) then return end
-		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
-	end,
+	on_rightclick = sprites.reosays
 })
 
 mobs:register_egg("mobs:reo", "Reo", "reo_r.png")
+
+function sprites.reosays(pos)
+	local meta = minetest.get_meta(pos)
+	meta:set_string("infotext", S("Crakakakak."))
+end

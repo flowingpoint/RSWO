@@ -34,7 +34,7 @@ minetest.register_node("tool:bars_1b", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,-0.125, -0.25, -0.4375,0},
-{-0.375,0.375,-0.125, -0.25, 0.5,0},
+{-0.375,0.4375,-0.125, -0.25, 0.5,0},
 {-0.0625,-0.5,-0.125, 0.0625,-0.375,0},
 {-0.0625,0.4375,-0.125, 0.0625,0.5,0},
 {0.25,-0.5,-0.125, 0.375,-0.4375,0},
@@ -58,7 +58,7 @@ minetest.register_node("tool:bars_1c", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,-0.125, -0.25, -0.375,0},
-{-0.0625,-0.5,-0.125, 0.0625,-0.375,0},
+{-0.0625,-0.5,-0.125, 0.0625,-0.4375,0},
 {0.25,-0.5,-0.125, 0.375,-0.4375,0}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_1d", param2 = node.param2})
@@ -120,7 +120,7 @@ minetest.register_node("tool:bars_2b", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,0.25, -0.25, -0.4375,0.375},
-{-0.375,0.375,0.25, -0.25, 0.5,0.375},
+{-0.375,0.4375,0.25, -0.25, 0.5,0.375},
 {-0.0625,-0.5,0.4375, 0.0625,-0.375,0.5625},
 {-0.0625,0.4375,0.4375, 0.0625,0.5,0.5625},
 {0.25,-0.5,0.625, 0.375,-0.4375,0.75},
@@ -144,7 +144,7 @@ minetest.register_node("tool:bars_2c", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,0.25, -0.25, -0.4375,0.375},
-{-0.0625,-0.5,0.4375, 0.0625,-0.375,0.5625},
+{-0.0625,-0.5,0.4375, 0.0625,-0.4375,0.5625},
 {0.25,-0.5,0.625, 0.375,-0.4375,0.75}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_2d", param2 = node.param2})
@@ -206,7 +206,7 @@ minetest.register_node("tool:bars_3b", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,0.125, -0.25, -0.4375,0.25},
-{-0.375,0.375,0.125, -0.25, 0.5,0.25},
+{-0.375,0.4375,0.125, -0.25, 0.5,0.25},
 {-0.0625,-0.5,-0.0625, 0.0625,-0.375,0.0625},
 {-0.0625,0.4375,-0.0625, 0.0625,0.5,0.0625},
 {0.25,-0.5,-0.25, 0.375,-0.4375,-0.125},
@@ -230,7 +230,7 @@ minetest.register_node("tool:bars_3c", {
 	climbable = true,
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,0.125, -0.25, -0.4375,0.25},
-{-0.0625,-0.5,-0.0625, 0.0625,-0.375,0.0625},
+{-0.0625,-0.5,-0.0625, 0.0625,-0.4375,0.0625},
 {0.25,-0.5,-0.25, 0.375,-0.4375,-0.125}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_3d", param2 = node.param2})

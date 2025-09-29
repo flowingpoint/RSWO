@@ -209,8 +209,8 @@ minetest.register_node("tool:bars_3b", {
 {-0.375,0.375,0.125, -0.25, 0.5,0.25},
 {-0.0625,-0.5,-0.0625, 0.0625,-0.375,0.0625},
 {-0.0625,0.4375,-0.0625, 0.0625,0.5,0.0625},
-{0.25,-0.5,0.125, 0.375,-0.4375,0.25},
-{0.25,0.375,0.125, 0.375,0.5,0.25}}},
+{0.25,-0.5,-0.25, 0.375,-0.4375,-0.125},
+{0.25,0.375,-0.25, 0.375,0.5,-0.125}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_3c", param2 = node.param2})
 	end,
@@ -231,7 +231,7 @@ minetest.register_node("tool:bars_3c", {
 	node_box = {type="fixed",fixed={
 {-0.375,-0.5,0.125, -0.25, -0.4375,0.25},
 {-0.0625,-0.5,-0.0625, 0.0625,-0.375,0.0625},
-{0.25,-0.5,0.125, 0.375,-0.4375,0.25}}},
+{0.25,-0.5,-0.25, 0.375,-0.4375,-0.125}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_3d", param2 = node.param2})
 	end,
@@ -252,9 +252,96 @@ minetest.register_node("tool:bars_3d", {
 	node_box = {type="fixed",fixed={
 {-0.375,0.375,0.125, -0.25, 0.5,0.25},
 {-0.0625,0.4375,-0.0625, 0.0625,0.5,0.0625},
-{0.25,0.375,0.125, 0.375,0.5,0.25}}},
+{0.25,0.375,-0.25, 0.375,0.5,-0.125}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_3a", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_4a", {
+	description = "Bars 4",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png",
+	wield_image = "bars.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_4a",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.0625,-0.5,-0.5, 0.0625,0.5,-0.4375},
+{0.1875,-0.5,-0.3125, 0.3125,0.5,-0.1875},
+{0.4375,-0.5,-0.0625, 0.5,0.5,0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_4b", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_4b", {
+	description = "Bars 4b broke",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png",
+	wield_image = "bars.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_4b",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.0625,-0.5,-0.5, 0.0625,-0.4375,-0.4375},
+{0.1875,-0.5,-0.3125, 0.3125,-0.4375,-0.1875},
+{0.4375,-0.5,-0.0625, 0.5,-0.375,0.0625},
+{-0.0625,0.375,-0.5, 0.0625,0.5,-0.4375},
+{0.1875,0.4375,-0.3125, 0.3125,0.5,-0.1875},
+{0.4375,0.4375,-0.0625, 0.5,0.5,0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_4c", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_4c", {
+	description = "Bars 4b broke one way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png",
+	wield_image = "bars.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_4c",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.0625,-0.5,-0.5, 0.0625,-0.4375,-0.4375},
+{0.1875,-0.5,-0.3125, 0.3125,-0.4375,-0.1875},
+{0.4375,-0.5,-0.0625, 0.5,-0.375,0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_4d", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_4d", {
+	description = "Bars 4b broke other way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png",
+	wield_image = "bars.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_4d",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.0625,0.375,-0.5, 0.0625,0.5,-0.4375},
+{0.1875,0.4375,-0.3125, 0.3125,0.5,-0.1875},
+{0.4375,0.4375,-0.0625, 0.5,0.5,0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_4a", param2 = node.param2})
 	end,
 	})
 

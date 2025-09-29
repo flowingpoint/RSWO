@@ -1351,9 +1351,15 @@ minetest.register_entity("tool:pow", {
 		p2bar3b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_3b", param2=p2bar3b}) end
         if s.name == "tool:bars_3a"	then 
+		p2bar4a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_4a", param2=p2bar4a}) end
+        if s.name == "tool:bars_3b"	then 
+		p2bar4b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_4b", param2=p2bar4b}) end
+        if s.name == "tool:bars_4a"	then 
 		p2bar1a = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1a", param2=p2bar1a}) end
-        if s.name == "tool:bars_3b"	then 
+        if s.name == "tool:bars_4b"	then 
 		p2bar1b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1b", param2=p2bar1b}) end
         if s.name == "tool:window_closed"	then 

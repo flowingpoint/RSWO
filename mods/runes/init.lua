@@ -80,7 +80,39 @@ tiles = {{name="runestone_1x24.png", animation = {type = "vertical_frames", leng
 	light_source = 5,
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:hui",
-	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local wpos = {x=pos.x,y=pos.y,z=pos.z}
+		minetest.env:remove_node(wpos)
+		minetest.set_node(wpos, {name="runes:hui"})
+		local tpos = {x=pos.x,y=pos.y+1,z=pos.z}
+		minetest.set_node(tpos, {name="tool:prup"})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+	end
 })
 
 minetest.register_node("runes:hui", {

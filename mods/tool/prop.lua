@@ -1609,4 +1609,57 @@ minetest.register_abm({
 	end
 })
 
+minetest.register_abm({
+	nodenames = {"runes:hui"},
+	neighbors = {"tool:prop"},
+	interval = 1, -- Run every 10 seconds
+	chance = 1, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+	minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "runes:lit_hui"})
+	minetest.env:remove_node({x = pos.x, y = pos.y+1, z = pos.z})
+	end
+})
 
+minetest.register_abm({
+	nodenames = {"tool:prop","tool:prup"},
+	neighbors = {"runes:lit_hui"},
+	interval = 2,
+	chance = 1,
+	action = function(pos, node, active_object_count, active_object_count_wider)
+        minetest.env:remove_node(pos)
+		minetest.set_node({x = pos.x, y = pos.y, z = pos.z}, {name = "air"})
+		local wpos = {x=pos.x,y=pos.y,z=pos.z}
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y+0.5, z=wpos.z}, "tool:pow")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y+0.5, z=wpos.z}, "tool:pow")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y+0.5, z=wpos.z}, "tool:pow")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+	end
+})
+
+
+minetest.register_abm({
+	nodenames = {"runes:hui"},
+	neighbors = {"tool:prup"},
+	interval = 1, -- Run every 10 seconds
+	chance = 1, -- Select every 1 in 50 nodes
+	action = function(pos, node, active_object_count, active_object_count_wider)
+		local wpos = {x=pos.x,y=pos.y,z=pos.z}
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+	end
+})

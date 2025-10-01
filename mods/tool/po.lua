@@ -22,12 +22,12 @@ minetest.register_entity("tool:pow", {
 		for dz=-0,0 do
 		local p = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 		s = minetest.env:get_node(self.object:getpos())
-		if s.name == "runes:hui"	then 
-		p2h = s.param2
-		minetest.env:set_node(p, {name="runes:lit_hui", param2=p2h}) end
-		if s.name == "runes:lit_hui"	then 
-		p2lh = s.param2
-		minetest.env:set_node(p, {name="runes:hui", param2=p2lh}) end
+--		if s.name == "runes:hui"	then 
+--		p2h = s.param2
+--		minetest.env:set_node(p, {name="runes:lit_hui", param2=p2h}) end
+--		if s.name == "runes:lit_hui"	then 
+--		p2lh = s.param2
+--		minetest.env:set_node(p, {name="runes:hui", param2=p2lh}) end
 		if s.name == "runes:bu"	then 
 		p2b = s.param2
 		minetest.env:set_node(p, {name="runes:lit_bu", param2=p2b}) end
@@ -1426,7 +1426,7 @@ end end
 end end
 })
 
-minetest.register_entity("tool:pew", {
+minetest.register_entity("tool:bew", {
 	visual = "sprite",
 	visual_size = {x=0.25, y=0.25},
 	textures = {"star.png"},
@@ -1446,7 +1446,52 @@ minetest.register_entity("tool:pew", {
 				return				
 			end
 		 end,
+	hit_node = function(self, pos, node)
+		for dx=-0,0 do
+		for dy=-0,0 do
+		for dz=-0,0 do
+		local p = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
+minetest.add_particlespawner({
+		amount = 10+math.random(1,10),
+		time = 5+math.random(1,10),
+		glow = 14,
+		pos = minetest.env:get_node(self.object:getpos()),
+		pos = {min={x=pos.x-0.5, y=pos.y+0.5, z=pos.z-0.5}, max={x=pos.x+0.5, y=pos.y+0.5, z=pos.z+0.5}, bias=math.random(0,1)},
+		minvel = {x=0.2+math.sin(pos.x), y=0.2+math.sin(pos.x), z=0.2+math.cos(pos.x)},
+		maxvel = {x=2+math.sin(pos.x), y=1+math.sin(pos.x), z=2+math.cos(pos.x)},
+		minacc = {x=-0.2+math.sin(pos.x), y=-0.8+math.sin(pos.x), z=-0.2+math.cos(pos.x)},
+		maxacc = {x=0.8+math.cos(pos.x), y=0.2+math.sin(pos.x), z=0.8-math.sin(pos.x)},
+		exptime = {min=3, max=7},
+		collisiondetection = true,
+		bounce = {min = 0.4, max = 0.7, bias = 0},
+		collision_removal = false,
+		texpool = {
+			{name = "glyph20.png", animation = {type = "vertical_frames", aspect_w = 6, aspect_h = 6, length = 2}, blend='alpha', scale_tween={{x=(math.random(10,20)/20),y=(math.random(10,20)/20)}}}}
+		})
+end end
+end end
+})
 
+minetest.register_entity("tool:bew", {
+	visual = "sprite",
+	visual_size = {x=0.25, y=0.25},
+	textures = {"bstar.png"},
+---	spritediv = {x = 4, y = 5},
+	velocity = 7,
+	time = 2,
+	exptime = {min=0.5, max=1.5},
+	light_source = 12,
+	selection_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
+	collision_box = { type = "fixed", fixed = {{-0.2,-0.2,-0.2, 0.2,0.2,0.2}}},
+	on_step = function(self, dtime)
+			
+			local pos = self.object:getpos()
+			if minetest.env:get_node(self.object:getpos()).name ~= "air" then
+				self.hit_node(self, pos, node)
+				self.object:remove()
+				return				
+			end
+		 end,
 	hit_node = function(self, pos, node)
 		for dx=-0,0 do
 		for dy=-0,0 do
@@ -1552,12 +1597,12 @@ minetest.register_entity("tool:row", {
 		local p = {x=pos.x+dx, y=pos.y+dy, z=pos.z+dz}
 		local q = {x=pos.x+0.5*math.random(-1,1), y=pos.y+0.1, z=pos.z+0.5*math.random(-1,1)}
 		s = minetest.env:get_node(self.object:getpos())
-		if s.name == "runes:hui"	then 
-		p2h = s.param2
-		minetest.env:set_node(p, {name="runes:lit_hui", param2=p2h}) end
-		if s.name == "runes:lit_hui"	then 
-		p2lh = s.param2
-		minetest.env:set_node(p, {name="runes:hui", param2=p2lh}) end
+--		if s.name == "runes:hui"	then 
+--		p2h = s.param2
+--		minetest.env:set_node(p, {name="runes:lit_hui", param2=p2h}) end
+--		if s.name == "runes:lit_hui"	then 
+--		p2lh = s.param2
+--		minetest.env:set_node(p, {name="runes:hui", param2=p2lh}) end
 		if s.name == "runes:bu"	then 
 		p2b = s.param2
 		minetest.env:set_node(p, {name="runes:lit_bu", param2=p2b}) end
@@ -2596,7 +2641,7 @@ minetest.register_entity("tool:row", {
 		minetest.env:set_node(p, {name="stones:rublish_c", param2=p2rrca}) end
         if s.name == "stones:rublish_c"	then 
 		p2rrcb = s.param2
-		minetest.env:set_node(p, {name="stones:rushrock_c", param2=p2rr8b}) end
+		minetest.env:set_node(p, {name="stones:rushrock_c", param2=p2rrcb}) end
         if s.name == "stones:s_21"	then 
 		p2sb21a = s.param2
 		minetest.env:set_node(p, {name="stones:sb_21", param2=p2sb21a}) end

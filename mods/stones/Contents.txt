@@ -1,5 +1,5 @@
-Stones
-sto1.lua
+Stones #{}597
+sto1.lua #{}133
 stones: {
 rock				Rock
 rubble*				Rubble
@@ -136,7 +136,7 @@ arci				Inner Arc
 aruci*				Inner Arc Rubble
 }
 
-sto2.lua
+sto2.lua #{}102
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
@@ -242,7 +242,7 @@ vsect_2u			Vertex Filled Nsecting HighHalf
 vsectr_2u*			Vertex Filled Nsecting HighHalf Rubble
 }
 
-sto3.lua
+sto3.lua #{}79
 stones: {
 aset				*3 Apex Inset
 asetr*				*3 Apex Inset Rubble
@@ -325,7 +325,7 @@ stair_2of3_inner		Inner 2/3 Step
 strubl_2of3_inner*		Inner 2/3 Step Rubble
 }
 
-sto4.lua
+sto4.lua #{}89
 stones: {
 roch				*3 Lowhalf
 ruvl*				*3 Lowhalf Rubble
@@ -418,7 +418,7 @@ spirjoin_2r			Spiral Column Wall Joinder Right Lowhalf
 spijrubl_2r*			Spiral Column Wall Joinder Right Lowhalf Rubble
 }
 
-sto5.lua
+sto5.lua #{}66
 stones: {
 plot				Plot
 prob*				Plot Rubble
@@ -489,7 +489,7 @@ vsudl*				Part Lowhalf Vsect A Rubble
 
 }
 
-sto6.lua, sto7.lua				
+sto6.lua, sto7.lua #{}67,61		
 stones:{				
 c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume 16) {1346acf}:(+Tops 14)
 ![h] is a hex from 1 to f

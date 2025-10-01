@@ -83,35 +83,367 @@ tiles = {{name="runestone_1x24.png", animation = {type = "vertical_frames", leng
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
 	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
 		local wpos = {x=pos.x,y=pos.y,z=pos.z}
+		s = minetest.env:get_node(pos)
 		minetest.env:remove_node(wpos)
-		minetest.set_node(wpos, {name="runes:hui"})
+		minetest.set_node(wpos, {name="runes:hui", param2 = s.param2})
 		local tpos = {x=pos.x,y=pos.y+1,z=pos.z}
-		minetest.set_node(tpos, {name="tool:prup"})
+		local hpos = {x=pos.x,y=pos.y,z=pos.z+1}
+		local fpos = {x=pos.x,y=pos.y,z=pos.z-1}
+		local rpos = {x=pos.x+1,y=pos.y,z=pos.z}
+		local lpos = {x=pos.x-1,y=pos.y,z=pos.z}
+		local bpos = {x=pos.x,y=pos.y-1,z=pos.z}
+		if math.floor(s.param2/4) == 0 then
+			minetest.set_node(tpos, {name="tool:prup", param2 = 0})
 		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
 		local acc_a = {x=0,y=-2,z=0}
-		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
 		obj_a:setvelocity(vel_a)
 		obj_a:setacceleration(acc_a)
 		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
 		local acc_b = {x=0,y=-2,z=0}
-		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
 		obj_b:setvelocity(vel_b)
 		obj_b:setacceleration(acc_b)
 		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
 		local acc_c = {x=0,y=-2,z=0}
-		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
 		obj_c:setvelocity(vel_c)
 		obj_c:setacceleration(acc_c)
 		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
 		local acc_d = {x=0,y=-2,z=0}
-		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
 		obj_d:setvelocity(vel_d)
 		obj_d:setacceleration(acc_d)
 		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
 		local acc_e = {x=0,y=-2,z=0}
-		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:pew")
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
 		obj_e:setvelocity(vel_e)
 		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 1 then 
+			minetest.set_node(hpos, {name="tool:prup", param2 = 4})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 2 then
+			minetest.set_node(fpos, {name="tool:prup", param2 = 8})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 3 then
+			minetest.set_node(rpos, {name="tool:prup", param2 = 12})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 4 then
+			minetest.set_node(lpos, {name="tool:prup", param2 = 16})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 5 then
+			minetest.set_node(bpos, {name="tool:prup", param2 = 20})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		end 
+
+	end
+})
+
+minetest.register_node("runes:lit_hui_tempo", {
+	description = "Hui = Return",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+tiles = {{name="runestone_1x24.png", animation = {type = "vertical_frames", length=3.0}}, "rock.png", "rock.png", "rock.png", "rock.png", "rock.png"},
+	light_source = 5,
+	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
+	drop = "runes:hui",
+	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+	on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+		local wpos = {x=pos.x,y=pos.y,z=pos.z}
+		s = minetest.env:get_node(pos)
+		minetest.env:remove_node(wpos)
+		minetest.set_node(wpos, {name="runes:hui", param2 = s.param2})
+		local tpos = {x=pos.x,y=pos.y+1,z=pos.z}
+		local hpos = {x=pos.x,y=pos.y,z=pos.z+1}
+		local fpos = {x=pos.x,y=pos.y,z=pos.z-1}
+		local rpos = {x=pos.x+1,y=pos.y,z=pos.z}
+		local lpos = {x=pos.x-1,y=pos.y,z=pos.z}
+		local bpos = {x=pos.x,y=pos.y-1,z=pos.z}
+		if math.floor(s.param2/4) == 0 then
+			minetest.set_node(tpos, {name="tool:prup", param2 = 0})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y+1.5, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 1 then 
+			minetest.set_node(hpos, {name="tool:prup", param2 = 4})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z+1.5}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 2 then
+			minetest.set_node(fpos, {name="tool:prup", param2 = 8})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y, z=wpos.z-1.5}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 3 then
+			minetest.set_node(rpos, {name="tool:prup", param2 = 12})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x+1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 4 then
+			minetest.set_node(lpos, {name="tool:prup", param2 = 16})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x-1.5, y=wpos.y, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		elseif math.floor(s.param2/4) == 5 then
+			minetest.set_node(bpos, {name="tool:prup", param2 = 20})
+		local vel_a = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_a = {x=0,y=-2,z=0}
+		local obj_a = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_a:setvelocity(vel_a)
+		obj_a:setacceleration(acc_a)
+		local vel_b = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_b = {x=0,y=-2,z=0}
+		local obj_b = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_b:setvelocity(vel_b)
+		obj_b:setacceleration(acc_b)
+		local vel_c = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_c = {x=0,y=-2,z=0}
+		local obj_c = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_c:setvelocity(vel_c)
+		obj_c:setacceleration(acc_c)
+		local vel_d = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_d = {x=0,y=-2,z=0}
+		local obj_d = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_d:setvelocity(vel_d)
+		obj_d:setacceleration(acc_d)
+		local vel_e = {x=math.random(-1,1)*math.sin(wpos.x), y=2+math.cos(2*wpos.y),z=math.random(-1,1)*math.sin(wpos.z)}
+		local acc_e = {x=0,y=-2,z=0}
+		local obj_e = minetest.env:add_entity({x=wpos.x, y=wpos.y-1.5, z=wpos.z}, "tool:bew")
+		obj_e:setvelocity(vel_e)
+		obj_e:setacceleration(acc_e)
+		end 
+
 	end
 })
 
@@ -125,6 +457,56 @@ minetest.register_node("runes:hui", {
 	groups = {cracky=3},
 	drop = 'runes:hui',
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+})
+
+minetest.register_abm({
+    nodenames = {"runes:hui"},
+    interval = 3,
+    chance = 75,
+    action = function(pos, node)
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "runes:lit_hui_tempo", param2 = node.param2})
+	minetest.add_particlespawner({
+		amount = math.random(1,2),
+		time = math.random(1,2),
+		glow = 14,
+		pos = {min={x=pos.x-0.5, y=pos.y+0.5, z=pos.z-0.5}, max={x=pos.x+0.5, y=pos.y+0.5, z=pos.z+0.5}, bias=math.random(0,1)},
+		minvel = {x=-0.1+math.sin(pos.x), y=-0.1+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxvel = {x=0.1+math.sin(pos.x), y=0.4+math.sin(pos.x), z=0.1+math.cos(pos.x)},
+		minacc = {x=-0.1+math.sin(pos.x), y=-0.4+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxacc = {x=0.1+math.cos(pos.x), y=0.1+math.sin(pos.x), z=0.1-math.sin(pos.x)},
+		exptime = {min=2, max=5},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {
+			{name = "glypy20.png", animation = {type = "vertical_frames", aspect_w = 6, aspect_h = 6, length = 2}, blend='alpha', scale_tween={{x=(math.random(10,20)/40),y=(math.random(10,20)/40)}}}}
+		})
+    end
+})
+
+minetest.register_abm({
+    nodenames = {"runes:lit_hui_tempo"},
+    interval = 2,
+    chance = 2,
+    action = function(pos, node)
+        minetest.env:remove_node(pos)
+        minetest.set_node(pos, {name = "runes:hui", param2 = node.param2})
+	minetest.add_particlespawner({
+		amount = math.random(1,2),
+		time = math.random(1,2),
+		glow = 14,
+		pos = {min={x=pos.x-0.5, y=pos.y+0.5, z=pos.z-0.5}, max={x=pos.x+0.5, y=pos.y+0.5, z=pos.z+0.5}, bias=math.random(0,1)},
+		minvel = {x=-0.1+math.sin(pos.x), y=-0.1+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxvel = {x=0.1+math.sin(pos.x), y=0.4+math.sin(pos.x), z=0.1+math.cos(pos.x)},
+		minacc = {x=-0.1+math.sin(pos.x), y=-0.4+math.sin(pos.x), z=-0.1+math.cos(pos.x)},
+		maxacc = {x=0.1+math.cos(pos.x), y=0.1+math.sin(pos.x), z=0.1-math.sin(pos.x)},
+		exptime = {min=2, max=5},
+		collisiondetection = true,
+		collision_removal = false,
+		texpool = {
+			{name = "glypy20.png", animation = {type = "vertical_frames", aspect_w = 6, aspect_h = 6, length = 2}, blend='alpha', scale_tween={{x=(math.random(10,20)/40),y=(math.random(10,20)/40)}}}}
+		})
+    end
 })
 
 function c(n)

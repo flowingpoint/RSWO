@@ -1,0 +1,48 @@
+flowingpoint5@hotmail.com Invite me for a cup of tea in your world.
+
+Crafting recipies don't exist yet for the stones and runes of my minimal, they are a challenge if you like. Add them to your world by adding the folders 'stones' and  'runes' to your mod folder. 
+
+The designing is best tested in the game's 'minimal' setting, another option on the main menu, it's the xyz icon at the bottom left. Play in singlenode - that's a seed option- , unless you know what you're doing.
+
+There's another set of minetest game folders aside from the .minetest path and it's likely in /usr/share/games/minetest/games/ and when you find the 'minimal' folder, rename it and add this minimal in its place. (I recommend this because while tinkering I deliberately removed everything typical such as water sources and growing plants, mobs and furniture, etc. Just to focus.) There are 10 folders in this minimal and it is particularly the 'stones' folder that's world worthy, so check that out! 
+
+You'll find it MUCH EASIER to build detailed or irregular structures with it, but it's far from perfect: I gave the game a month of steady questioning and found myself cutting a dodecahedron, a star shaped pin, and a special wall slab with indentations either side that produce a 5 pointed regular star in the negative space between them when a wall is made with them, a set of only three blocks which work together very nicely to make a spiral stone staircase such as you might see in an old castle, stone/grass divides for a municipal garden theme (Tired of right-angle-roads and square grass ditches, this was the first thing I thought should feature), and a few cuts that help the rocks of the world to sit well together. 
+
+Feel free to change the names, add them to your mod, whatever.
+Find me in the Czech server known as 'Tunneller's Abyss' where there's a bookshop called 'Jangle Books', where I 'rest my hat' from time to time and make potato chips.
+
+-S
+
+ 27/Jan/2024
+
+
+Rules
+Press 'E' for the creative menu. Most contents are stone shapes, including some 'Rushrocks'.
+
+A note on special items:
+Pg 9: Ratchet
+Use this to rotate the stones between any of the 24 orientations characterised by the ley lines of the world. Right click 6-cycles the base of the figure, defining which way the axis points, and a further left click 4-cycles around that axis. Drop (Q) and it becomes the 'Rhotator', which rotates stones about the axis normal to the face pointed at. It also has a memory function, to copy orientations for multiple placement on a per-block basis. Drop (Q) again to return it to the Ratchet.
+
+Pg 9: Popper
+Use this on rush (Pg5) to grow brush, and on brush to grow blush, by Left-clicking a bubble projectile into contact with the block containing soil. You can 'cut' blush to get brush again with the same action. Also it can be used to access alternative shapes for some of the items on the menu. Those with a '*' and then a number (the cycle-number) before the item description as you hover the cursor over the item will cycle through those alternative shapes when acted on using a Popperstaff in the world. It will add/remove the ladder's lid, turn on/off glow on runes, center/uncenter the inner-planet rings, and ignite/extinguish the dodecahedral burner. Drop (Q) to flip it around and it becomes the Rublerstaff, which changes any stones to rubble (except the runes and blushrocks). If you're not happy with the rublification you can strike a second time. Note that one of the rushrocks (Pg5#12: '*2 4Rush 3Rock /8') must be rublified to reach its alt. The Rublerstaff does damage if a player is hit by its projectile.
+
+Pg 9: Dice/Portal Out, and Pg 1: Flo/Portal In
+If you are planning a trip and want to save a place to return to if things get messy, place the Dice at the checkpoint. It will display a random number of green orbs ranging from 0 to 15, (reset each log). The particular type of stone you place it on is important: the input portal Flo must be placed on top of THE SAME type, so make a note of which type it is at the checkpoint. After travelling, when you have chosen to return to your particular checkpoint and place the input portal, it immediately begins to absorb dark energy from the space around it and will only exist for a matter of seconds before itself vanishing, so act fast.
+Drop (Q) Dice to get 'Magical Point Teleporter' and Flo to get 'Noter'.
+
+Pg 9: Classic Spinning Coin
+The 'O' coin on the menu dispenses single coin amounts, which act to increment any values on coins already in the world, ranging from 1 to 7. It turns a 7-coin into a stack of 8, labelled 'N'. The coin will always appear ON TOP of the place it strikes when thrown, and it removes any other node that's there, so be careful where you throw it!
+
+Pg 6: Shrub
+There are three main fruits to replenish health. They look like bars, and you pick them as flowers. You start with the all-green flowered shrub, which replenishes health slowly (1hp/s) when up close. The fruit takes health away (-1hp), but with the green bars extracted from those shrubs, you can create a bulb on the crafting menu by forming a square with 8 of them, to get a bulb. The bulb drastically impairs health if eaten (-6hp), but it can be planted in soil which will grow it into the shrub that grows blue flowers and finally a red one in the middle. Harvesting the red fruit gives the MAXIMUM of health (6hp), and it will grow back again, but if you continue to harvest blue fruit from it the bush will ONLY grow blue flowers thereafter. The blue fruit gives a little health (1hp) and can be replanted to grow a shrub which grows green flowers, then a single blue flower in the middle, similar to the red fruited shrub, except that when in full bloom, it doesn't effect health by standing up close, while the red flowered shrub damages health that way (-1hp/s) (and any flowerless variety). Also the blue flower in the middle grows back even if that shrub is totally depleted. Green flowers can be harvested and replanted to get the starter shrub. You'll find all varieties wildly growing in 'Order' world. If they don't grow flowers, use the popper staff on them and they will grow.
+
+Pg 1: 'B Zooms'
+This scope is obsoleted, because pressing 'Z' Zooms, but if you drop (Q) it becomes the 'Tape Measure'. Dropping again turns it back to the scope.
+
+Pg 1: Gyroid Translational Units
+These can be fitted together to make an official GYROID. A Gyroid is a triply periodic minimal surface curve.
+
+Pg 1: O {blue,black,green,red}
+These fit together to make the inner solar system model, which centers over a true node (between 8 conventional nodes).
+
+The 回 rune stores the popper staff (place one near it when it's unlit), and an unlit one will sometimes light up briefly, enabling retrieval of a rubler staff (r.click before it goes out again).

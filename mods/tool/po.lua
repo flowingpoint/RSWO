@@ -1306,7 +1306,7 @@ minetest.register_entity("tool:pow", {
 		p2cl3 = s.param2
 		minetest.env:set_node(p, {name="tool:door_closed_c", param2=p2cl3}) end
         if s.name == "tool:door_closed_c"	then 
-		p2o4 = s.param2
+		p2cl4 = s.param2
 		minetest.env:set_node(p, {name="tool:door_closed_d", param2=p2cl4}) end
         if s.name == "tool:door_closed_d"	then 
 		p2cl5 = s.param2
@@ -1315,6 +1315,9 @@ minetest.register_entity("tool:pow", {
 		p2cl6 = s.param2
 		minetest.env:set_node(p, {name="tool:door_closed_f", param2=p2cl6}) end
         if s.name == "tool:door_closed_f"	then 
+		p2cl7 = s.param2
+		minetest.env:set_node(p, {name="tool:door_r52", param2=p2cl7}) end
+        if s.name == "tool:door_r52"	then 
 		p2cl0 = s.param2
 		minetest.env:set_node(p, {name="tool:door_closed", param2=p2cl0}) end
         if s.name == "tool:door_open"	then 
@@ -1336,6 +1339,9 @@ minetest.register_entity("tool:pow", {
 		p2op6 = s.param2
 		minetest.env:set_node(p, {name="tool:door_open_f", param2=p2op6}) end
         if s.name == "tool:door_open_f"	then 
+		p2op7 = s.param2
+		minetest.env:set_node(p, {name="tool:door_r52o", param2=p2op7}) end
+        if s.name == "tool:door_r52o"	then 
 		p2op0 = s.param2
 		minetest.env:set_node(p, {name="tool:door_open", param2=p2op0}) end
         if s.name == "tool:bars_1a"	then 

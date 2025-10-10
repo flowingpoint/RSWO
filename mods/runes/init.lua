@@ -1450,7 +1450,7 @@ minetest.register_node("runes:sl4", {
 })
 
 minetest.register_node("runes:zendi_frame", {
-	description = "Zen Di Crystal frame",
+	description = "Zen Di Crystal frame inner",
 	paramtype = "light",
 	light_source = 3,
 	paramtype2 = "facedir",
@@ -1460,15 +1460,15 @@ minetest.register_node("runes:zendi_frame", {
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
 	drop = "runes:zendi_frame",
 	selection_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
 	collision_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
+{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
 	drawtype = "mesh",
 	mesh = "zendi_frame.obj"
 })
 
 minetest.register_node("runes:zendi_frame2", {
-	description = "Zen Di Crystal frame 2",
+	description = "Zen Di Crystal frame outer",
 	paramtype = "light",
 	light_source = 3,
 	paramtype2 = "facedir",

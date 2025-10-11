@@ -22,9 +22,6 @@ sl1*             Lit Bit 1
 sl2*             Lit Bit 2
 sl3*             Lit Bit 3
 sl4*             Lit Bit 4
-zendi_frame	Zen Di Crystal frame inner
-zendi_frame2	Zen Di Crystal frame outer
-zendi_runes	Zen Di Crystal runes
-zbasi		Zen Di Crystal base
+zendor*		ZenDor Crystal
 
 '*' indicates absence from menu

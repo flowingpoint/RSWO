@@ -1449,75 +1449,21 @@ minetest.register_node("runes:sl4", {
 	mesh = "sli.obj"
 })
 
-minetest.register_node("runes:zendi_frame", {
-	description = "Zen Di Crystal frame inner",
+minetest.register_node("runes:zendor", {
+	description = "Zendor Crystal",
 	paramtype = "light",
-	light_source = 3,
+	light_source = 5,
 	paramtype2 = "facedir",
-	tiles = {"greystrip.png"},
-	inventory_image = {"window1.png"},
---[[{{name="endix.png", animation = {type = "vertical_frames", length=8.0}}},]]
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
-	drop = "runes:zendi_frame",
-	selection_box = {type="fixed",fixed={
-{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
-	collision_box = {type="fixed",fixed={
-{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
-	drawtype = "mesh",
-	mesh = "zendi_frame.obj"
-})
-
-minetest.register_node("runes:zendi_frame2", {
-	description = "Zen Di Crystal frame outer",
-	paramtype = "light",
-	light_source = 3,
-	paramtype2 = "facedir",
-	tiles = {"greystrip.png"},
-	inventory_image = {"window1.png^dice_2.png"},
---[[{{name="endix.png", animation = {type = "vertical_frames", length=8.0}}},]]
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
-	drop = "runes:zendi_frame2",
-	selection_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
-	collision_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
-	drawtype = "mesh",
-	mesh = "zendi_frame2.obj"
-})
-
-minetest.register_node("runes:zendi_runes", {
-	description = "Zen Di Crystal runes",
-	paramtype = "light",
-	light_source = 6,
-	paramtype2 = "facedir",
-	tiles = {"zdcru.png"},
-	inventory_image = "zdcrunes.png",
---[[{{name="endix.png", animation = {type = "vertical_frames", length=8.0}}},]]
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
-	drop = "runes:zendi_runes",
-	selection_box = {type="fixed",fixed={
-{-0.15625,-0.15625,-0.15625, 0.15625,0.15625,0.15625}}},
-	collision_box = {type="fixed",fixed={
-{-0.15625,-0.15625,-0.15625, 0.15625,0.15625,0.15625}}},
-	drawtype = "mesh",
-	mesh = "zendi_runes.obj"
-})
-
-minetest.register_node("runes:zbasi", {
-	description = "Zen Di Crystal base",
-	paramtype = "light",
-	light_source = 0,
-	paramtype2 = "facedir",
-	tiles = {"black_corner.png"},
-	inventory_image = "zbasi.png",
---[[{{name="endix.png", animation = {type = "vertical_frames", length=8.0}}},]]
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
-	drop = "runes:zbasi",
+	tiles = {{name="zend64.png", animation = {type = "vertical_frames", length=1.0}}},
+	inventory_image = {"zdcrunes.png"},
+	use_texture_alpha = "clip",
+	groups = {cracky=3, oddly_breakable_by_hand=0,not_in_creative_inventory=1},
+	drop = "runes:zendor",
 	selection_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.5,-0.25,0.5}}},
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.5,-0.25,0.5}}},
 	drawtype = "mesh",
-	mesh = "zbasi.obj"
+	mesh = "zendor.obj"
 })
 

@@ -1455,9 +1455,9 @@ minetest.register_node("runes:zendor", {
 	light_source = 5,
 	paramtype2 = "facedir",
 	tiles = {{name="zend64.png", animation = {type = "vertical_frames", length=1.0}}},
-	inventory_image = {"zdcrunes.png"},
+	inventory_image = "zdcrunes.png",
 	use_texture_alpha = "clip",
-	groups = {cracky=3, oddly_breakable_by_hand=0,not_in_creative_inventory=1},
+	groups = {cracky=1, oddly_breakable_by_hand=0,not_in_creative_inventory=1},
 	drop = "runes:zendor",
 	selection_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.5,-0.25,0.5}}},
@@ -1467,3 +1467,20 @@ minetest.register_node("runes:zendor", {
 	mesh = "zendor.obj"
 })
 
+minetest.register_node("runes:boxbe", {
+	description = "Box Be",
+	paramtype = "light",
+	light_source = 5,
+	paramtype2 = "facedir",
+	tiles = {{name="box8x480.png", animation = {type = "vertical_frames", length=6.0}}},
+	inventory_image = "bluo8x8.png",
+	use_texture_alpha = "clip",
+	groups = {cracky=3, oddly_breakable_by_hand=0,not_in_creative_inventory=1},
+	drop = "runes:boxbe",
+	selection_box = {type="fixed",fixed={
+{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
+	collision_box = {type="fixed",fixed={
+{-0.4142,-0.4142,-0.4142, 0.4142,0.4142,0.4142}}},
+	drawtype = "mesh",
+	mesh = "boxbe.obj"
+})

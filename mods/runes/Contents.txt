@@ -23,5 +23,6 @@ sl2*             Lit Bit 2
 sl3*             Lit Bit 3
 sl4*             Lit Bit 4
 zendor*		ZenDor Crystal
+boxbe*		Box Be
 
 '*' indicates absence from menu

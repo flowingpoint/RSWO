@@ -1,0 +1,112 @@
+doors:
+tool:{
+door_closed		Door
+door_open*		Door
+door_closed_a*		Door a
+door_open_a*		Door a		
+door_closed_b*		Door b
+door_open_b*		Door b
+door_closed_c*		Door c
+door_open_c*		Door c
+door_closed_d*		Door d
+door_open_d*		Door d		
+door_closed_e*		Door e
+door_open_e*		Door e
+door_closed_f*		Door f
+door_open_f*		Door f
+door_r52*		Door R R5/2
+door_r52o*		Door R R5/2 
+door_l52*		Door L R5/2
+door_l52o*		Door L R5/2 
+door_r52a*		Door R R5/2 a
+door_r52ao*		Door R R5/2 a
+door_l52a*		Door L R5/2 a
+door_l52ao*		Door L R5/2 a
+
+po:
+tool:{
+pok			Popper
+rok*			Rubler			
+
+windows:
+tool:{
+bars_1a			Bars
+bars_1b*		Bar #1 broke
+bars_1c*		Bar #1 broke one-way
+bars_1d*		Bar #1 broke other-way
+bars_2a*		Bars 2
+bars_2b*		Bar #2 broke
+bars_2c*		Bar #2 broke one-way
+bars_2d*		Bar #2 broke other-way
+bars_3a*		Bars 3
+bars_3b*		Bar #3 broke
+bars_3c*		Bar #3 broke
+bars_3d*		Bar #3 broke other-way
+bars_4a*		Bars 4
+bars_4b*		Bar #4 broke
+bars_4c*		Bar #4 broke
+bars_4d*		Bar #4 broke other-way
+window_closed		Window
+window_open*		Window
+window_closed_a*	Window a
+window_open_a*		Window a
+window_closed_b*	Window b
+window_open_b*		Window b
+window_closed_c*	Window c
+window_open_c*		Window c
+window_closed_d*	Window d
+window_open_d*		Window d
+
+wrench:
+tool:{
+wrench			Ratchet
+
+scope:
+:default:{
+scope			"B" Zooms
+
+lid:
+tool:{
+lid*			Lid
+
+ladder:
+tool:{
+ladder			Ladder
+lid_open*		Lid
+lid_closed*		Lid
+
+koin:
+tool:{
+coin			Classic Spinning Koin
+koin_{1->7}*		'' {1->7}
+koins*			'' Stack
+tess*			Classic Tesseract
+
+flo:
+:default:{
+flo			Flo / Portal In
+
+dice:
+tool:{
+dice			Dice / Portal Out
+
+car:
+tool:{
+car*			Car
+cardiag*		Car diag
+car_1*			Car 1
+car_2*			Car 2
+
+Use the Popper Staff to toggle between them.
+
+
+
+
+
+
+
+
+
+
+
+

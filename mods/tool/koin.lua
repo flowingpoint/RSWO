@@ -16,7 +16,7 @@ minetest.register_tool("tool:coin", {
 })
 
 minetest.register_node("tool:koin_1", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 1",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -39,7 +39,7 @@ minetest.register_node("tool:koin_1", {
 })
 
 minetest.register_node("tool:koin_2", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 2",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip2_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -62,7 +62,7 @@ minetest.register_node("tool:koin_2", {
 })
 
 minetest.register_node("tool:koin_3", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 3",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip3_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -85,7 +85,7 @@ minetest.register_node("tool:koin_3", {
 })
 
 minetest.register_node("tool:koin_4", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 4",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip4_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -108,7 +108,7 @@ minetest.register_node("tool:koin_4", {
 })
 
 minetest.register_node("tool:koin_5", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 5",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip5_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -131,7 +131,7 @@ minetest.register_node("tool:koin_5", {
 })
 
 minetest.register_node("tool:koin_6", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 6",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip6_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},
@@ -154,7 +154,7 @@ minetest.register_node("tool:koin_6", {
 })
 
 minetest.register_node("tool:koin_7", {
-	description = "Classic Spinning Coin",
+	description = "Classic Spinning Coin 7",
 	paramtype = "light",
 	paramtype2 = "facedir",
     tiles = {{name = "coinstrip7_64x1536.png", animation = {type = "vertical_frames", length = 0.88}}},

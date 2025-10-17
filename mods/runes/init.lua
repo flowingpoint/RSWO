@@ -1446,7 +1446,10 @@ minetest.register_node("runes:sl4", {
 {-0.5,-0.1875,0.375, 0,-0.125,0.5},
 {-0.5,-0.125,0.4375, 0,-0.0625,0.5}}},
 	drawtype = "mesh",
-	mesh = "sli.obj"
+	mesh = "sli.obj",
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:board_2216", param2 = (node.param2-11)%24})
+	end
 })
 
 minetest.register_node("runes:zendor", {

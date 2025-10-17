@@ -140,6 +140,8 @@ sto2.lua #{}102
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
+diagstep_2s			*2 Diagonal Step 1/8+1/2
+diagsterp_2s			*2 Diagonal Step 1/8+1/2 Rubble
 r_2		        	Root 2 Slope Rush
 brush_2*             Root 2 Slope Brush
 r_3		        	Root 2 Slope Rush
@@ -503,7 +505,6 @@ modk                Monkey Don
 defr                Deputy Frog
 
 pemra               Square Based Pyramid Emerald
-dmap                Inter-Dimensional Mapping
 
 --Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
 --Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 

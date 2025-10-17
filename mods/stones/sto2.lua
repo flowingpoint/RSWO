@@ -171,7 +171,7 @@ minetest.register_node("stones:brush_2", {
 	description = "Root 2 Slope Brush",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"brush_2.png"},
+	tiles = {"blush_2.png"},
 	groups = {cracky=1, soil=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:r_2",
 	collision_box = {type="fixed",fixed={
@@ -1866,7 +1866,7 @@ minetest.register_node("stones:sb_211", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_rubble_64.png"},
-	groups = {vcol=0.375, cracky=3, soil=1},
+	groups = {vcol=0.375, cracky=3, soil=1,not_in_creative_inventory=1},
 	light_source = 0,
 	drop = "stones:sb_211",
 	collision_box = {type="fixed",fixed={
@@ -2571,7 +2571,7 @@ minetest.register_node("stones:s_2216", {
 {-0.5,-0.1875,0.375, 0,-0.125,0.5},
 {-0.5,-0.125,0.4375, 0,-0.0625,0.5}}},
 	drawtype = "mesh",
-	mesh = "s_2216.obj"
+	mesh = "s_2216.obj",
 })
 
 minetest.register_node("stones:s_22162", {

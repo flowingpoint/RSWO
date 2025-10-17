@@ -56,6 +56,7 @@ window_closed_c*	Window c
 window_open_c*		Window c
 window_closed_d*	Window d
 window_open_d*		Window d
+board_2216*		Board on Slope Cornerfill
 
 wrench:
 tool:{

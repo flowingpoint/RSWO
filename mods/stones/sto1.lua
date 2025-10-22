@@ -48,6 +48,33 @@ minetest.register_node("stones:rush", {
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
 })
 
+minetest.register_node("stones:up", {
+	description = "Upright Pillar",
+	drawtype = "nodebox",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles ={{name = "rock0.png",
+		tileable_vertical = true}},
+	groups = {cvol=0.25, cracky=3},
+	drop = 'stones:up',
+	light_source = 0,
+	node_box = {type = "fixed", fixed = {-0.25, -0.5, -0.25, 0.25, 0.5, 0.25}}
+})
+
+minetest.register_abm({
+    nodenames = {"stones:up"},
+    interval = 5,
+    chance = 5,
+    action = function(pos, node)
+		s = minetest.env:get_node(pos)
+		p2 = s.param2
+        minetest.env:remove_node({x = pos.x, y = pos.y+1, z = pos.z})
+	if math.floor(s.param2/4) == 0 or math.floor(s.param2/4) == 4 then
+        minetest.set_node({x = pos.x, y = pos.y+1, z = pos.z}, {name = "tool:wlan", param2 == 1})
+	end
+    end
+})
+
 minetest.register_node("stones:brush", {
 	description = "Brush",
 	drawtype = "nodebox",

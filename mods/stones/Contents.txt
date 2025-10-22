@@ -4,6 +4,7 @@ stones: {
 rock				Rock
 rubble*				Rubble
 rush				Rush
+up				Upright Pillar
 brush				Brush
 blush*				Lush Brush
 brushrock_0*		Brush | Rock

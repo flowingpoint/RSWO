@@ -68,9 +68,11 @@ minetest.register_abm({
     action = function(pos, node)
 		s = minetest.env:get_node(pos)
 		p2 = s.param2
-        minetest.env:remove_node({x = pos.x, y = pos.y+1, z = pos.z})
-	if math.floor(s.param2/4) == 0 or math.floor(s.param2/4) == 4 then
-        minetest.set_node({x = pos.x, y = pos.y+1, z = pos.z}, {name = "tool:wlan", param2 == 1})
+	if minetest.env:get_node({x=pos.x, y=pos.y+1, z=pos.z}) ~= "stones:up" then
+		minetest.env:remove_node({x = pos.x, y = pos.y+1, z = pos.z})
+		if math.floor(s.param2/4) == 0 or math.floor(s.param2/4) == 4 then
+			minetest.set_node({x = pos.x, y = pos.y+1, z = pos.z}, {name = "tool:wlan", param2 == 1})
+		end
 	end
     end
 })

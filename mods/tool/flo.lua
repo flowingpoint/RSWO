@@ -83,7 +83,7 @@ minetest.register_node("tool:wlan",{
 	groups = {cracky=3},
 	light_source = 14, 
 	selection_box = {type = "wallmounted"},
-	groups = {book=1,choppy=2, dig_immediate=3, attached_node=1, picture=1},
+	groups = {book=1,choppy=2, dig_immediate=3, attached_node=1, picture=1, not_in_creative_inventory=1},
 	legacy_wallmounted = true,
 	collision_box = {type = "fixed", fixed = {
 	{-0.25,-0.5,-0.25, 0.25,0.25,0.25}}},

@@ -69,3 +69,25 @@ minetest.register_abm({
     end,
 })
 		
+minetest.register_node("tool:wlan",{	
+	description = "Wuzzy's Lantern",
+	inventory_image = "lanr.png",
+	drawtype = "plantlike",
+	visual_scale = 1,
+	tiles = {"lanr.png"},
+	paramtype = "light",
+	paramtype2 = "wallmounted",
+	sunlight_propagates = true,
+	drop = '',
+	walkable = false,
+	groups = {cracky=3},
+	light_source = 14, 
+	selection_box = {type = "wallmounted"},
+	groups = {book=1,choppy=2, dig_immediate=3, attached_node=1, picture=1},
+	legacy_wallmounted = true,
+	collision_box = {type = "fixed", fixed = {
+	{-0.25,-0.5,-0.25, 0.25,0.25,0.25}}},
+	selection_box = {type = "fixed", fixed = {
+	{-0.25,-0.5,-0.25, 0.25,0.25,0.25}}},
+	
+})

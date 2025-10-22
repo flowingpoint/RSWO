@@ -139,6 +139,12 @@ minetest.register_entity("tool:pow", {
 		collisiondetection = true,
 		collision_removal = false,
 		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=20,y=20}}}}}) end
+        if s.name == "stones:up"	then 
+		p2pl = s.param2
+		minetest.env:set_node(p, {name="stones:panel", param2=p2pl}) end
+        if s.name == "stones:panel"	then 
+		p2pl = s.param2
+		minetest.env:set_node(p, {name="stones:up", param2=p2pl}) end
         if s.name == "stones:brush"	then 
 		p2brush = math.floor((s.param2)/4)*s.param2+(s.param2+math.random(1,4))%4
 		minetest.env:set_node(p, {name="stones:blush", param2=p2brush}) end
@@ -1684,7 +1690,7 @@ minetest.register_entity("tool:row", {
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
-		texpool = {{name = "mcl_particles_smoke_anim.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=10,y=10}}}}})
+		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=14,y=14}}}}})
         end
         if s.name == "stones:isodark"	then 
 		minetest.sound_play({name="whoosh", gain=0.05}, {pos=selfpos}, true)
@@ -1703,7 +1709,7 @@ minetest.register_entity("tool:row", {
 		exptime = {min=2, max=2},
 		collisiondetection = true,
 		collision_removal = false,
-		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=20,y=20}}}}}) end
+		texpool = {{name = "burst16x16x10.png", animation = {type = "vertical_frames", aspect_w = 16, aspect_h = 16, length = 2.1}, blend='alpha', scale_tween={{x=17,y=17}}}}}) end
         if s.name == "stones:brush"	then 
 		p2br = s.param2
 		minetest.env:set_node(p, {name="stones:rush", param2=p2br}) end

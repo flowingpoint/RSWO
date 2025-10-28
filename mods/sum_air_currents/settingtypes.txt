@@ -1,0 +1,33 @@
+
+#    Wind will not naturally go higher than this.
+wind_max_speed (Max wind speed) float 10.0
+
+#    The maximum amount of velocity per second to give the player.
+wind_max_player_push (Max wind effect on players) float 30.0
+
+#    Wind will always take longer than this to change direction / speed.
+wind_change_time_min (Minimum wind change time) float 120.0
+
+#    Wind will always take less time than this to change direction / speed.
+wind_change_time_max (Maximum wind change time) float 300.0
+
+#    If true, particles will spawn to show wind direction.
+wind_player_particles (Wind particles) bool true
+
+#    If true, players will be pushed by wind.
+wind_push_players (Wind pushes players) bool false
+
+#    If true, other will be allowed to be pushed by wind.
+#    Only things that implement sum_air_currents.get_wind(position) will
+#    be affected by wind.
+wind_push_entities (Wind pushes entities) bool true
+
+#    If true, the wind will follow a somewhat predictable pattern, making it
+#    easier to navigate. Only affects wind direction and speed, not timing.
+wind_predictable (Wind is predictable) bool true
+
+#    How loud the wind sounds are.
+wind_volume (Wind sound volume) float 1.0
+
+#    The chance out of 1 to have no wind at all.
+wind_stillness_chance (Chance of no wind) float 0.5

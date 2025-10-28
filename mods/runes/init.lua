@@ -854,7 +854,7 @@ tiles = {{name="rbdx4c_1x19.png", animation = {type = "vertical_frames", length=
 	groups = {cracky=3, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:nbdx4",
 	node_box = {type = "fixed", fixed = {
-	{-0.5,-0.5,-0.5,}}},
+	{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
 })
 
 minetest.register_node("runes:0ur", {
@@ -1448,9 +1448,16 @@ minetest.register_node("runes:sl4", {
 	drawtype = "mesh",
 	mesh = "sli.obj",
 	on_rightclick = function(pos, node, clicker, pointed_thing)
-		minetest.set_node(pos, {name = "tool:board_2216", param2 = (node.param2-11)%24})
+	local paramap01 = {
+	[0]=13, [1]=10, [2]=19, [3]=4, [4]=14, [5]=2, [6]=18, [7]=22, [8]=12,
+	[9]=20, [10]=16, [11]=0, [12]=21, [13]=11, [14]=3, [15]=7, [16]=1, 
+	[17]=9, [18]=23, [19]=5, [20]=17, [21]=8, [22]=15, [23]=6
+	}
+	minetest.set_node(pos, {name = "tool:board_2216", param2 = paramap01[node.param2]})
 	end
 })
+
+
 
 minetest.register_node("runes:zendor", {
 	description = "Zendor Crystal",

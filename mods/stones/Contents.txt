@@ -1,4 +1,4 @@
-Stones #{}597
+Stones #{}601
 sto1.lua #{}133
 stones: {
 rock				Rock
@@ -137,7 +137,7 @@ arci				Inner Arc
 aruci*				Inner Arc Rubble
 }
 
-sto2.lua #{}102
+sto2.lua #{}106
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
@@ -219,18 +219,22 @@ s_52uk*				*2 R5/2 Slope HighHalf -1/20 Siding
 s_52urk*			*2 R5/2 Slope HighHalf -1/20 Siding Rubble
 s_52hq				R5/2 Slope HighHalf to Quarter
 sb_52hq*			R5/2 Slope HighHalf to Quarter Rubble
-s_52ul				*3 R5/2 Slope HighHalf Left
-sb_52ul*			*3 R5/2 Slope HighHalf Left Rubble
-s_62ul*				*3 R5/2 Slope HighHalf Left
-sb_62ul*			*3 R5/2 Slope HighHalf Left Rubble
-s_3hjl*				*3 R3 HighHalf Joinder Left
-sb_3hjl*			*3 R3 HighHalf Joinder Left Rubble
-s_52ur				*3 R5/2 Slope HighHalf Right
-sb_52ur*			*3 R5/2 Slope HighHalf Right Rubble
-s_62ur*				*3 R6/2 Slope HighHalf Right
-sb_62ur*			*3 R6/2 Slope HighHalf Right Rubble
-s_3hjr*				*3 R3 HighHalf Joinder Right
-sb_3hjr*			*3 R3 HighHalf Joinder Right Rubble
+s_52ul				*4 R5/2 Slope HighHalf Left
+sb_52ul*			*4 R5/2 Slope HighHalf Left Rubble
+s_62ul*				*4 R5/2 Slope HighHalf Left
+sb_62ul*			*4 R5/2 Slope HighHalf Left Rubble
+s_62l*				*4 R5/2 Slope LowHalf Left
+sb_62l*				*4 R5/2 Slope LowHalf Left Rubble
+s_3hjl*				*4 R3 HighHalf Joinder Left
+sb_3hjl*			*4 R3 HighHalf Joinder Left Rubble
+s_52ur				*4 R5/2 Slope HighHalf Right
+sb_52ur*			*4 R5/2 Slope HighHalf Right Rubble
+s_62ur*				*4 R6/2 Slope HighHalf Right
+sb_62ur*			*4 R6/2 Slope HighHalf Right Rubble
+s_3hjr*				*4 R3 HighHalf Joinder Right
+sb_3hjr*			*4 R3 HighHalf Joinder Right Rubble
+s_62r*				*4 R6/2 Slope LowHalf Right
+sb_62r*				*4 R6/2 Slope LowHalf Right Rubble
 asect				*3 Apex Inset Nsecting
 asectr*				*3 Apex Inset Nsecting Rubble
 asect_2*				*3 Apex Inset Nsecting LowHalf

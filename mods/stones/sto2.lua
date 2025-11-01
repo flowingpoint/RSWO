@@ -1822,7 +1822,7 @@ minetest.register_node("stones:s_211", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"default_stone_64.png"},
-	groups = {vcol=0.375, cracky=1, soil=1},
+	groups = {vcol=0.375, cracky=1, soil=1, not_in_creative_inventory=1},
 	light_source = 0,
 	drop = "stones:s_211",
 	collision_box = {type="fixed",fixed={
@@ -4583,7 +4583,7 @@ minetest.register_node("stones:asectr_2u", {
 })
 
 minetest.register_node("stones:vsect", {
-	description = "Vertex Filled Nsecting",
+	description = "*3 Vertex Filled Nsecting",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -4626,7 +4626,7 @@ minetest.register_node("stones:vsect", {
 })
 
 minetest.register_node("stones:vsectr", {
-	description = "Vertex Filled Nsecting Rubble",
+	description = "*3 Vertex Filled Nsecting Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -4669,11 +4669,11 @@ minetest.register_node("stones:vsectr", {
 })
 
 minetest.register_node("stones:vsect_2", {
-	description = "Vertex Filled Nsecting LowHalf",
+	description = "*3 Vertex Filled Nsecting LowHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.167, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.167, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:vsect_2",
 	collision_box = {type="fixed",fixed={
 {-0.5, -0.5, -0.375,  0.375, -0.4375, 0.5},
@@ -4696,7 +4696,7 @@ minetest.register_node("stones:vsect_2", {
 })
 
 minetest.register_node("stones:vsectr_2", {
-	description = "Vertex Filled Nsecting LowHalf Rubble",
+	description = "*3 Vertex Filled Nsecting LowHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -4723,11 +4723,11 @@ minetest.register_node("stones:vsectr_2", {
 })
 
 minetest.register_node("stones:vsect_2u", {
-	description = "Vertex Filled Nsecting HighHalf",
+	description = "*3 Vertex Filled Nsecting HighHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.667, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.667, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:vsect_2u",
 	collision_box = {type="fixed",fixed={
 {-0.5, -0.5, -0.5, 0.5, 0, 0.5},

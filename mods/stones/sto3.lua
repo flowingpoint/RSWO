@@ -592,12 +592,12 @@ minetest.register_node("stones:s_38", {
 {-0.5,-0.5,0, 0.5,0,0.5},
 {-0.5,-0.5,-0.125, 0.5,-0.125,0},
 {-0.5,-0.5,-0.25, 0.5,-0.25,-0.125},
-{-0.5,-0.5,-0.375, 0.5,-0.275,-0.25}}},
+{-0.5,-0.5,-0.375, 0.5,-0.375,-0.25}}},
 		selection_box = {type="fixed",fixed={
 {-0.5,-0.5,0, 0.5,0,0.5},
 {-0.5,-0.5,-0.125, 0.5,-0.125,0},
 {-0.5,-0.5,-0.25, 0.5,-0.25,-0.125},
-{-0.5,-0.5,-0.375, 0.5,-0.275,-0.25}}},
+{-0.5,-0.5,-0.375, 0.5,-0.375,-0.25}}},
 	drawtype = "mesh",
 	mesh = "s_38.obj"
 })
@@ -613,12 +613,12 @@ minetest.register_node("stones:sb_38", {
 {-0.5,-0.5,0, 0.5,0,0.5},
 {-0.5,-0.5,-0.125, 0.5,-0.125,0},
 {-0.5,-0.5,-0.25, 0.5,-0.25,-0.125},
-{-0.5,-0.5,-0.375, 0.5,-0.275,-0.25}}},
+{-0.5,-0.5,-0.375, 0.5,-0.375,-0.25}}},
 		selection_box = {type="fixed",fixed={
 {-0.5,-0.5,0, 0.5,0,0.5},
 {-0.5,-0.5,-0.125, 0.5,-0.125,0},
 {-0.5,-0.5,-0.25, 0.5,-0.25,-0.125},
-{-0.5,-0.5,-0.375, 0.5,-0.275,-0.25}}},
+{-0.5,-0.5,-0.375, 0.5,-0.375,-0.25}}},
 	drawtype = "mesh",
 	mesh = "s_38.obj"
 })
@@ -666,7 +666,7 @@ minetest.register_node("stones:sb_58", {
 })
 
 minetest.register_node("stones:vr", {
-	description = "Vertex Removed",
+	description = "*3 Vertex Removed",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -805,7 +805,7 @@ drawtype = "mesh",
 })
 
 minetest.register_node("stones:vrbl", {
-	description = "Vertex Removed Rubble",
+	description = "*3 Vertex Removed Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -944,11 +944,11 @@ drawtype = "mesh",
 })
 
 minetest.register_node("stones:vr_2", {
-	description = "Vertex Removed LowHalf",
+	description = "*3 Vertex Removed LowHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.417, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.417, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:vr_2",
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.4,-0.45,0.5},
@@ -1083,7 +1083,7 @@ minetest.register_node("stones:vr_2", {
 })
 
 minetest.register_node("stones:vrbl_2", {
-	description = "Vertex Removed LowHalf Rubble",
+	description = "*3 Vertex Removed LowHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1223,11 +1223,11 @@ minetest.register_node("stones:vrbl_2", {
 
 
 minetest.register_node("stones:vr_2u", {
-	description = "Vertex Removed HighHalf",
+	description = "*3 Vertex Removed HighHalf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {vcol=0.917, cracky=1, oddly_breakable_by_hand=1},
+	groups = {vcol=0.917, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = "stones:vr_2u",
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,-0.5, 0.5,0,0.5},
@@ -1355,7 +1355,7 @@ minetest.register_node("stones:vr_2u", {
 })
 
 minetest.register_node("stones:vrbl_2u", {
-	description = "Vertex Removed HighHalf Rubble",
+	description = "*3 Vertex Removed HighHalf Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

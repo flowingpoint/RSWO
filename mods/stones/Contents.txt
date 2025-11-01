@@ -191,7 +191,7 @@ s_21				R2 Slope 7/8
 sb_21*				R2 Slope 7/8 Rubble
 s_221				*2 R2 Slab 7/8 
 sb_221*				*2 R2 Slab 7/8 Rubble
-s_211				*2 R2 'V' Slab 6/8 
+s_211*				*2 R2 'V' Slab 6/8 
 sb_211*				*2 R2 'V' Slab 6/8 Rubble
 s_21u				*6 R2 Slope Upper 15/16
 sb_21u*				*6 R2 Slope Upper 15/16 Rubble
@@ -241,12 +241,12 @@ asect_2*				*3 Apex Inset Nsecting LowHalf
 asectr_2*			*3 Apex Inset Nsecting LowHalf Rubble
 asect_2u*			*3 Apex Inset Nsecting HighHalf
 asectr_2u*			*3 Apex Inset Nsecting HighHalf Rubble
-vsect				Vertex Filled Nsecting
-vsectr*				Vertex Filled Nsecting Rubble
-vsect_2				Vertex Filled Nsecting LowHalf
-vsectr_2*				Vertex Filled Nsecting LowHalf Rubble
-vsect_2u			Vertex Filled Nsecting HighHalf
-vsectr_2u*			Vertex Filled Nsecting HighHalf Rubble
+vsect				*3 Vertex Filled Nsecting
+vsectr*				*3 Vertex Filled Nsecting Rubble
+vsect_2*			*3 Vertex Filled Nsecting LowHalf
+vsectr_2*			*3 Vertex Filled Nsecting LowHalf Rubble
+vsect_2u*			*3 Vertex Filled Nsecting HighHalf
+vsectr_2u*			*3 Vertex Filled Nsecting HighHalf Rubble
 }
 
 sto3.lua #{}79

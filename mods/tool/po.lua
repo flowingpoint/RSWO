@@ -1212,6 +1212,43 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:asect_2u"	then 
 		p2ascu = s.param2
 		minetest.env:set_node(p, {name="stones:asect", param2=p2ascu}) end
+
+        if s.name == "stones:vr"	then 
+		p2v2 = s.param2
+		minetest.env:set_node(p, {name="stones:vr_2", param2=p2v2}) end
+        if s.name == "stones:vr_2"	then 
+		p22u = s.param2
+		minetest.env:set_node(p, {name="stones:vr_2u", param2=p22u}) end
+        if s.name == "stones:vr_2u"	then 
+		p22v = s.param2
+		minetest.env:set_node(p, {name="stones:vr", param2=p22v}) end
+        if s.name == "stones:vrbl"	then 
+		p2rbv2 = s.param2
+		minetest.env:set_node(p, {name="stones:vrbl_2", param2=p2rbv2}) end
+        if s.name == "stones:vrbl_2"	then 
+		p2rb2u = s.param2
+		minetest.env:set_node(p, {name="stones:vrbl_2u", param2=p2rb2u}) end
+        if s.name == "stones:vrbl_2u"	then 
+		p2rb2v = s.param2
+		minetest.env:set_node(p, {name="stones:vrbl", param2=p2rb2v}) end
+        if s.name == "stones:vsect"	then 
+		p2v2 = s.param2
+		minetest.env:set_node(p, {name="stones:vsect_2", param2=p2v2}) end
+        if s.name == "stones:vsect_2"	then 
+		p22u = s.param2
+		minetest.env:set_node(p, {name="stones:vsect_2u", param2=p22u}) end
+        if s.name == "stones:vsect_2u"	then 
+		p22v = s.param2
+		minetest.env:set_node(p, {name="stones:vsect", param2=p22v}) end
+        if s.name == "stones:vsectr"	then 
+		p2rv2 = s.param2
+		minetest.env:set_node(p, {name="stones:vsectr_2", param2=p2rv2}) end
+        if s.name == "stones:vsectr_2"	then 
+		p2r2u = s.param2
+		minetest.env:set_node(p, {name="stones:vsectr_2u", param2=p2r2u}) end
+        if s.name == "stones:vsectr_2u"	then 
+		p2r2v = s.param2
+		minetest.env:set_node(p, {name="stones:vsectr", param2=p2r2v}) end
         if s.name == "stones:asetr"	then 
 		p2asr2 = s.param2
 		minetest.env:set_node(p, {name="stones:asetr_2", param2=p2asr2}) end
@@ -1357,7 +1394,7 @@ minetest.register_entity("tool:pow", {
 		p2op3 = s.param2
 		minetest.env:set_node(p, {name="tool:door_open_c", param2=p2op3}) end
         if s.name == "tool:door_open_c"	then 
-		p2o4 = s.param2
+		p2op4 = s.param2
 		minetest.env:set_node(p, {name="tool:door_open_d", param2=p2op4}) end
         if s.name == "tool:door_open_d"	then 
 		p2op5 = s.param2

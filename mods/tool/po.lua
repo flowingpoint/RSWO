@@ -1751,8 +1751,11 @@ minetest.register_entity("tool:row", {
 		p2lk = s.param2
 		minetest.env:set_node(p, {name="runes:ke", param2=p2lk}) end
         if s.name == "stones:s_22162"	then 
-		p2s0 = s.param2
-		minetest.env:set_node(p, {name="runes:sl4", param2=p2s0}) end
+		p216b = s.param2
+		minetest.env:set_node(p, {name="stones:sb_22162", param2=p216b}) end
+        if s.name == "stones:sb_22162"	then 
+		p216 = s.param2
+		minetest.env:set_node(p, {name="stones:s_22162", param2=p216}) end
         if s.name == "runes:sl4"	then 
 		p2s4 = s.param2
 		minetest.env:set_node(p, {name="runes:sl3", param2=p2s4}) end
@@ -1764,10 +1767,13 @@ minetest.register_entity("tool:row", {
 		minetest.env:set_node(p, {name="runes:sl1", param2=p2s2}) end
         if s.name == "runes:sl1"	then 
 		p2s1 = s.param2
-		minetest.env:set_node(p, {name="stones:s_2216", param2=p2s1}) end
-        if s.name == "runes:s_2216"	then 
+		minetest.env:set_node(p, {name="runes:sl4", param2=p2s1}) end
+        if s.name == "stones:s_2216"	then 
 		p2s5 = s.param2
-		minetest.env:set_node(p, {name="stones:s_22162", param2=p2s5}) end
+		minetest.env:set_node(p, {name="stones:sb_2216", param2=p2s5}) end
+        if s.name == "stones:sb_2216"	then 
+		p2s6 = s.param2
+		minetest.env:set_node(p, {name="stones:s_2216", param2=p2s6}) end
         if s.name == "tool:ladder"	then 
 		p2la = s.param2
 		minetest.env:set_node(p, {name="tool:lid_open", param2=p2la}) end
@@ -3497,12 +3503,6 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:flart_c"	then 
 		p2fc2 = s.param2
 		minetest.env:set_node(p, {name="stones:flat_c", param2=p2fc2}) end
-        if s.name == "stones:s_2216"	then 
-		p22216a = s.param2
-		minetest.env:set_node(p, {name="stones:s_22162", param2=p22216a}) end
-        if s.name == "stones:s_22162"	then 
-		p22216b = s.param2
-		minetest.env:set_node(p, {name="stones:s_2216", param2=p22216b}) end
         if s.name == "stones:diagsteps_83"	then 
 		p2r83k = s.param2
 		minetest.env:set_node(p, {name="stones:diagsterps_83", param2=p2r83k}) end

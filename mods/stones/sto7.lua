@@ -2273,17 +2273,4 @@ minetest.register_node("stones:b8rfC", {
 	mesh = "c8rfC.obj"
 })
 
-minetest.register_node("stones:dmap", {
-	description = "Inter-Dimensional Mapping",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"pock.png"},
-	groups = {cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:dmap",
-	collision_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
-	selection_box = {type="fixed",fixed={
-{-0.5,-0.5,-0.5, 0.5,0.5,0.5}}},
-	drawtype = "mesh",
-	mesh = "dmap.obj"
-})
+

@@ -1,5 +1,5 @@
-Stones #{}601
-sto1.lua #{}133
+Stones #{}611
+sto1.lua #{}136
 stones: {
 rock				Rock
 rubble*				Rubble
@@ -139,7 +139,7 @@ arci				Inner Arc
 aruci*				Inner Arc Rubble
 }
 
-sto2.lua #{}106
+sto2.lua #{}112
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
@@ -207,9 +207,10 @@ diagsteps_43l*        *6 R2 Slope Upper 9/32 Left
 diagsterps_43l*       *6 R2 Slope Upper 9/32 Left Rubble
 diagsteps_43r*        *6 R2 Slope Upper 9/32 Right
 diagsterps_43r*       *6 R2 Slope Upper 9/32 Right Rubble
-s_2216              R2/2 Slope Cornerfill 1/16
-s_22162*            *2 R2/2 Slope Cornerfill 2/16
-sb_22162*           *2 R2/2 Slope Cornerfill 2/16 Rubble
+s_2216              *2(+4) R2/2 Slope Cornerfill 1/16
+sb_2216*              *2(+4) R2/2 Slope Cornerfill 1/16
+s_22162*            *2(+4) R2/2 Slope Cornerfill 2/16
+sb_22162*           *2(+4) R2/2 Slope Cornerfill 2/16 Rubble
 s_22l				R2/2 Slope Cornerfill
 spike				Spike
 spruke*				Spike Rubble
@@ -499,7 +500,6 @@ vsedr				Part Lowhalf Vsect D
 vsrud*				Part Lowhalf Vsect D Rubble
 vsedl				Part Lowhalf Vsect A
 vsudl*				Part Lowhalf Vsect A Rubble
-
 }
 
 sto6.lua, sto7.lua #{}67,61		
@@ -527,3 +527,4 @@ srawb*               Lum Nininikus +6HP
 flor*                Lum Nininikus Flor +1HP
 flwr*                Lum Nininikus Flwr -2HP
 bulb*                Lum Nininikus Bulb -6HP
+--Those whose cycle numbers are followed by bracketed numbers [ie: '*2(+4)'] indicate further elements obtainable by usual toggle but not listed in the stones' contents.txt.

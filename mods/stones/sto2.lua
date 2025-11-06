@@ -1542,7 +1542,7 @@ minetest.register_node("stones:sb_52kr", {
 })
 
 minetest.register_node("stones:s_22", {
-	description = "R2/2 Slope Edgefill",
+	description = "*2 R2/2 Slope Edgefill",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1569,7 +1569,7 @@ minetest.register_node("stones:s_22", {
 })
 
 minetest.register_node("stones:sb_22", {
-	description = "R2/2 Slope Edgefill Rubble",
+	description = "*2 R2/2 Slope Edgefill Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1596,7 +1596,7 @@ minetest.register_node("stones:sb_22", {
 })
 
 minetest.register_node("stones:s_22g", {
-	description = "R2/2 Slope Edgefill Gotdots",
+	description = "*2 R2/2 Slope Edgefill Gotdots",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png^gotdot.png"},
@@ -1623,7 +1623,7 @@ minetest.register_node("stones:s_22g", {
 })
 
 minetest.register_node("stones:sb_22g", {
-	description = "R2/2 Slope Edgefill Rubble",
+	description = "*2 R2/2 Slope Edgefill Gotdots Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png^gotdot.png"},
@@ -2548,7 +2548,7 @@ minetest.register_node("stones:diagsterps_43r", {
 })
 
 minetest.register_node("stones:s_2216", {
-	description = "R2/2 Slope Cornerfill 1/16",
+	description = "*(+4) R2/2 Slope Cornerfill 1/16",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"roch.png"},
@@ -2575,8 +2575,36 @@ minetest.register_node("stones:s_2216", {
 	mesh = "s_2216.obj",
 })
 
+minetest.register_node("stones:sb_2216", {
+	description = "*2(+4) R2/2 Slope Cornerfill 1/16 Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	climbable = false,
+	groups = {vcol=0.063, cracky=3, oddly_breakable_by_hand=1},
+	drop = "stones:sb_2216",
+	collision_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0,-0.0625,0.5}}},
+	selection_box = {type="fixed",fixed={
+{-0.5,-0.5,0.0625,  0,-0.4375,0.5},
+{-0.5,-0.4375,0.125, 0,-0.375,0.5},
+{-0.5,-0.375,0.1875, 0,-0.3125,0.5},
+{-0.5,-0.3125,0.25, 0,-0.25,0.5},
+{-0.5,-0.25,0.3125, 0,-0.1875,0.5},
+{-0.5,-0.1875,0.375, 0,-0.125,0.5},
+{-0.5,-0.125,0.4375, 0,-0.0625,0.5}}},
+	drawtype = "mesh",
+	mesh = "s_2216.obj",
+})
+
 minetest.register_node("stones:s_22162", {
-	description = "*2 R2/2 Slope Cornerfill 2/16 Double",
+	description = "*2(+4) R2/2 Slope Cornerfill 2/16 Double",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2617,7 +2645,7 @@ minetest.register_node("stones:s_22162", {
 })
 
 minetest.register_node("stones:sb_22162", {
-	description = "R2/2 Slope Cornerfill 2/16 Double Rubble",
+	description = "*2(+4) R2/2 Slope Cornerfill 2/16 Double Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

@@ -6,22 +6,34 @@ lit_ke*          Ke = May
 ke              Ke = May
 lit_hui*         Hui = Return
 hui             Hui = Return
-nbdx1*           Niu Bi Da Xue Yi
-rbdx1*           Ru Bli Da Xue Yi
-nbdx2*           Niu Bi Da Xue Er
-rbdx2*           Ru Bli Da Xue Er
-nbdx3*           Niu Bi Da Xue San
-rbdx3*           Ru Bli Da Xue San
-nbdx4*           Niu Bi Da Xue Si
-rbdx4*           Ru Bli Da Xue Si
-0ur             0◣ red
-0br             0◤ blue
-0bl             ◥0 green
-0ul             ◢0 black
-sl1*             Lit Bit 1
-sl2*             Lit Bit 2
-sl3*             Lit Bit 3
-sl4*             Lit Bit 4
+nbdx1*           *2 Niu Bi Da Xue Yi
+rbdx1*           *2 Ru Bli Da Xue Yi
+nbdx2*           *2 Niu Bi Da Xue Er
+rbdx2*           *2 Ru Bli Da Xue Er
+nbdx3*           *2 Niu Bi Da Xue San
+rbdx3*           *2 Ru Bli Da Xue San
+nbdx4*           *2 Niu Bi Da Xue Si
+rbdx4*           *2 Ru Bli Da Xue Si
+nbdx1c*           *2 Niu Bi Da Xue Yi
+rbdx1c*           *2 Ru Bli Da Xue Yi
+nbdx2c*           *2 Niu Bi Da Xue Er
+rbdx2c*           *2 Ru Bli Da Xue Er
+nbdx3c*           *2 Niu Bi Da Xue San
+rbdx3c*           *2 Ru Bli Da Xue San
+nbdx4c*           *2 Niu Bi Da Xue Si
+rbdx4c*           *2 Ru Bli Da Xue Si
+0rd             *2 red
+0be            *2 blue
+0gn             *2 green
+0bk            *2 black
+0ur*             *2 0◣ red
+0br*            *2  0◤ blue
+0bl*            *2 ◥0 green
+0ul*             *2 ◢0 black
+sl1*             *4(+2) Lit Bit 1
+sl2*             *4(+2) Lit Bit 2
+sl3*             *4(+2) Lit Bit 3
+sl4*             *4(+2) Lit Bit 4
 zendor*		ZenDor Crystal
 boxbe*		Box Be
 

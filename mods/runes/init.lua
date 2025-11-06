@@ -1338,7 +1338,7 @@ minetest.register_node("runes:0bk", {
 })
 
 minetest.register_node("runes:sl1", {
-	description = "Lit Bit 1",
+	description = "*4(+2) Lit Bit 1",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1366,7 +1366,7 @@ minetest.register_node("runes:sl1", {
 })
 
 minetest.register_node("runes:sl2", {
-	description = "Lit Bit 2",
+	description = "*4(+2) Lit Bit 2",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1394,7 +1394,7 @@ minetest.register_node("runes:sl2", {
 })
 
 minetest.register_node("runes:sl3", {
-	description = "Lit Bit 3",
+	description = "*4(+2) Lit Bit 3",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1422,7 +1422,7 @@ minetest.register_node("runes:sl3", {
 })
 
 minetest.register_node("runes:sl4", {
-	description = "Lit Bit 4",
+	description = "*4(+2) Lit Bit 4",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",

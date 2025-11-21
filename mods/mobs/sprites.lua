@@ -5,8 +5,8 @@ local S = mobs.intllib
 
 mobs:register_mob("mobs:swinepine", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -22,7 +22,31 @@ mobs:register_mob("mobs:swinepine", {
 		if mobs:feed_tame(self, clicker, 8, true, true) then return end
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
-	end
+	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:swinepine", "Swinepine", "swinepine_f.png")
@@ -31,8 +55,8 @@ mobs:register_egg("mobs:swinepine", "Swinepine", "swinepine_f.png")
 
 mobs:register_mob("mobs:inokuin", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -49,6 +73,30 @@ mobs:register_mob("mobs:inokuin", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:inokuin", "Inokuin", "inokuin_f_0.png")
@@ -57,8 +105,8 @@ mobs:register_egg("mobs:inokuin", "Inokuin", "inokuin_f_0.png")
 
 mobs:register_mob("mobs:beka", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -75,6 +123,30 @@ mobs:register_mob("mobs:beka", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:beka", "Beka", "beka_f_0.png")
@@ -83,8 +155,8 @@ mobs:register_egg("mobs:beka", "Beka", "beka_f_0.png")
 
 mobs:register_mob("mobs:cedry", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -102,6 +174,30 @@ mobs:register_mob("mobs:cedry", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:cedry", "Cedry", "cedry_f.png")
@@ -110,8 +206,8 @@ mobs:register_egg("mobs:cedry", "Cedry", "cedry_f.png")
 
 mobs:register_mob("mobs:demopay", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -128,6 +224,30 @@ mobs:register_mob("mobs:demopay", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:demopay", "Demopay", "demopay_f.png")
@@ -136,8 +256,8 @@ mobs:register_egg("mobs:demopay", "Demopay", "demopay_f.png")
 
 mobs:register_mob("mobs:etoll", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -154,6 +274,30 @@ mobs:register_mob("mobs:etoll", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:etoll", "Etoll", "etoll_f.png")
@@ -162,8 +306,8 @@ mobs:register_egg("mobs:etoll", "Etoll", "etoll_f.png")
 
 mobs:register_mob("mobs:feylo", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -180,6 +324,30 @@ mobs:register_mob("mobs:feylo", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:feylo", "Feylo", "feylo_f.png")
@@ -188,8 +356,8 @@ mobs:register_egg("mobs:feylo", "Feylo", "feylo_f.png")
 
 mobs:register_mob("mobs:graz", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -206,6 +374,30 @@ mobs:register_mob("mobs:graz", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:graz", "Graz", "graz_f.png")
@@ -214,8 +406,8 @@ mobs:register_egg("mobs:graz", "Graz", "graz_f.png")
 
 mobs:register_mob("mobs:hazma", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -232,6 +424,30 @@ mobs:register_mob("mobs:hazma", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:hazma", "Hazma", "hazma_f.png")
@@ -240,8 +456,8 @@ mobs:register_egg("mobs:hazma", "Hazma", "hazma_f.png")
 
 mobs:register_mob("mobs:isoma", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -258,6 +474,30 @@ mobs:register_mob("mobs:isoma", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:isoma", "Isoma", "isoma_f_0.png")
@@ -266,8 +506,8 @@ mobs:register_egg("mobs:isoma", "Isoma", "isoma_f_0.png")
 
 mobs:register_mob("mobs:oreon", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -284,6 +524,30 @@ mobs:register_mob("mobs:oreon", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:oreon", "Oreon", "oreon_f.png")
@@ -292,8 +556,8 @@ mobs:register_egg("mobs:oreon", "Oreon", "oreon_f.png")
 
 mobs:register_mob("mobs:penta", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -310,6 +574,30 @@ mobs:register_mob("mobs:penta", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:penta", "Penta", "penta_f.png")
@@ -318,8 +606,8 @@ mobs:register_egg("mobs:penta", "Penta", "penta_f.png")
 
 mobs:register_mob("mobs:veiko", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
@@ -336,6 +624,30 @@ mobs:register_mob("mobs:veiko", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:veiko", "Veiko", "veiko_f.png")
@@ -344,8 +656,8 @@ mobs:register_egg("mobs:veiko", "Veiko", "veiko_f.png")
 
 mobs:register_mob("mobs:jel", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -0.5, -0.1, 0.1, 0.45, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=1},
@@ -362,6 +674,30 @@ mobs:register_mob("mobs:jel", {
 		if mobs:protect(self, clicker) then return end
 		if mobs:capture_mob(self, clicker, 0, 5, 50, false, nil) then return end
 	end,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:jel", "Jel", "jel_f.png")
@@ -370,8 +706,8 @@ mobs:register_egg("mobs:jel", "Jel", "jel_f.png")
 
 mobs:register_mob("mobs:reo", {
 	type = "npc",
-	hp_min = 33,
-	hp_max = 50,
+	hp_min = 1,
+	hp_max = 1,
 	collisionbox = {-0.1, -0.5, -0.1, 0.1, 0.45, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=1},
@@ -383,7 +719,31 @@ mobs:register_mob("mobs:reo", {
 	jump_height = 5,
 	view_range = 50,
 	light_damage = -1,
-	on_rightclick = sprites.reosays
+	on_rightclick = sprites.reosays,
+	on_die = function(self, pos)
+		minetest.add_particlespawner({
+			amount = 15,
+			time = 0.25,
+			minpos = pos,
+			maxpos = pos,
+			minvel = {x = -1, y = -1, z = -1},
+			maxvel = {x = 1, y = 1, z = 1},
+			minacc = {x = 0, y = 0.2, z = 0},
+			maxacc = {x = 0, y = 0.2, z = 0},
+			minexptime = 1,
+			maxexptime = 1,
+			minsize = 1,
+			maxsize = 5,
+			texture = "fire_basic_flame_animated.png",
+			glow = 15,
+			animation = {
+				type = "vertical_frames",
+				aspect_w = 16,
+				aspect_h = 16,
+				length = 1.0,
+			},
+		})
+	end,
 })
 
 mobs:register_egg("mobs:reo", "Reo", "reo_r.png")

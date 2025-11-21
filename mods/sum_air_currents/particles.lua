@@ -70,6 +70,8 @@ local do_player_particles = function(dtime)
 		local wind = ac.get_wind_expensive(p, "This function call is laggy.")
 		local v = wind.vector
 
+    -- NOTE: This block of code is responsible for the wind effect on the player.
+    -- It has been disabled as per user request.
     if wind.strength > 0.1
 		and ac.do_push_players == true and not is_sneaking then
       local vel = {
@@ -77,7 +79,7 @@ local do_player_particles = function(dtime)
         y = clamp(wind.vector.y, -ac.max_player_push, ac.max_player_push),
         z = clamp(wind.vector.z, -ac.max_player_push, ac.max_player_push),
       }
-      player:add_velocity(vector.multiply(vel, 0.05))
+      -- player:add_velocity(vector.multiply(vel, 0.05))
     end
 
     if ac.wind_speed > 0 and light > 0 and ac.do_player_particles and get_overall_velocity(v) > ac.player_particles_threshold

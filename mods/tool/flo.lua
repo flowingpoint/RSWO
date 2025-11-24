@@ -1,3 +1,4 @@
+local S = core.get_translator("__builtin")
 --Blackpool now called flo, after 'floo powder' in HP.
 local t = tool
 
@@ -68,6 +69,83 @@ minetest.register_abm({
         minetest.env:remove_node(pos)
     end,
 })
+
+-- Teleports player <name> to <p> if possible
+local function teleport_to_pos(name, p)
+	local lm = 31007 -- equals MAX_MAP_GENERATION_LIMIT in C++
+	if p.x < -lm or p.x > lm or p.y < -lm or p.y > lm
+			or p.z < -lm or p.z > lm then
+		return false, S("Cannot teleport out of map bounds!")
+	end
+	local teleportee = core.get_player_by_name(name)
+	if not teleportee then
+		return false, S("Cannot get player with name @1.", name)
+	end
+	if teleportee:get_attach() then
+		return false, S("Cannot teleport, @1 " ..
+			"is attached to an object!", name)
+	end
+	teleportee:set_pos(p)
+	return true, S("Teleporting @1 to @2.", name, core.pos_to_string(p, 1))
+end
+
+core.register_chatcommand("telp", {
+	params = S("<a> <b> <c>"),
+	description = S("Teleport relatively to your current position"),
+	privs = {teleport=true},
+	func = function(name, param)
+		local player = core.get_player_by_name(name)
+		if not player then
+			return false, S("Cannot get player with name @1.", name)
+		end
+
+		local rel_x, rel_y, rel_z = param:match(
+			"^([0-9%-%.]+) +([0-9%-%.]+) +([0-9%-%.]+)$")
+
+		if not (rel_x and rel_y and rel_z) then
+			return false, S("Invalid parameters. Expected three numbers a b c.")
+		end
+
+		rel_x = tonumber(rel_x)
+		rel_y = tonumber(rel_y)
+		rel_z = tonumber(rel_z)
+
+		local current_pos = player:get_pos()
+		local new_pos = {
+			x = current_pos.x + rel_x,
+			y = current_pos.y + rel_y,
+			z = current_pos.z + rel_z
+		}
+
+		return teleport_to_pos(name, new_pos)
+	end,
+})
+
+core.register_chatcommand("dow", {
+	params = S("<d>"),
+	description = S("Teleport forward by a distance <d>"),
+	privs = {teleport=true},
+	func = function(name, param)
+		local player = core.get_player_by_name(name)
+		if not player then
+			return false, S("Cannot get player with name @1.", name)
+		end
+
+		local distance = tonumber(param)
+		if not distance then
+			return false, S("Invalid parameter. Expected a number for distance.")
+		end
+
+		local current_pos = player:get_pos()
+		local look_dir = player:get_look_dir()
+
+		local offset = vector.multiply(look_dir, distance)
+		local new_pos = vector.add(current_pos, offset)
+
+		return teleport_to_pos(name, new_pos)
+	end,
+})
+
 		
 minetest.register_node("tool:wlan",{	
 	description = "Wuzzy's Lantern",

@@ -43,6 +43,8 @@ minetest.register_node("runes:bu", {
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
 })
 
+echo = {}
+
 minetest.register_node("runes:lit_ke", {
 	description = "Ke = May",
 	drawtype = "nodebox",
@@ -52,8 +54,197 @@ minetest.register_node("runes:lit_ke", {
 	light_source = 5,
 	groups = {cracky=1, not_in_creative_inventory=1},
 	drop = "runes:ke",
-	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "cryptic_wisdom", pos)
+        return itemstack
+    end,
 })
+
+echo = {}
+-- Dialogue data
+echo.dialogue = {cryptic_wisdom = {start = {
+            text = "The shadows lengthen, but the path remains. What do you seek?",
+            options = {{text = "I seek knowledge.", to = "knowledge"},
+                {text = "I seek nothing.", to = "nothing"},
+                {text = "Who are you?", to = "who_are_you"}}},
+        knowledge = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.",
+            options = {{text = "I will be careful.", to = "end_careful"}}},
+        nothing = {text = "To seek nothing is to find everything, and yet, you have found me. A paradox.",
+            options = {{text = "Indeed.", to = "end_paradox"}}},
+        who_are_you = {text = "I am the echo of the stone, the whisper of the world. I am what you make of me.",
+            options = {{text = "A strange answer.", to = "end_strange"}}},
+        end_careful = {text = "Caution is the shield of the wise. Go now.",
+            is_end = true},
+        end_paradox = {text = "The world is full of such beautiful contradictions. Farewell.",
+            is_end = true},
+        end_strange = {text = "The truest answers often are. Until we speak again.",
+            is_end = true,
+        },
+    }
+}
+
+-- Player conversation state
+local pconv = {}
+
+-- Function to remove a player's current conversation HUD elements
+local function xhud(player)
+    local player_name = player:get_player_name()
+    local conv_state = pconv[player_name]
+    if conv_state and conv_state.hud_ids then
+        for _, hid in pairs(conv_state.hud_ids) do
+            player:hud_remove(hid)
+        end
+        conv_state.hud_ids = {}
+    end
+end
+
+-- Function to display a dialogue step for a player
+local function display_dialogue(player, dialogue_id, step_key)
+    local player_name = player:get_player_name()
+    local dialogue_data = echo.dialogue[dialogue_id]
+    if not dialogue_data then
+        minetest.chat_send_player(player_name, "Error: Dialogue not found!")
+        return
+    end
+
+    local step = dialogue_data[step_key]
+    if not step then
+        minetest.chat_send_player(player_name, "Error: Dialogue step not found!")
+        return
+    end
+
+    -- Clean up previous HUD elements
+    xhud(player)
+    local hud_ids = {}
+    local y_offset = -150 -- Starting Y offset for dialogue text
+    -- Display dialogue text
+    local text_hud_id = player:hud_add({
+        hud_elem_type = "text",
+        position = {x = 0.5, y = 1},
+        offset = {x = 0, y = y_offset},
+        text = step.text,
+        number = 0xFFFFFF, -- White
+        alignment = {x = 0, y = 0},
+        scale = {x = 100, y = 100},
+    })
+    table.insert(hud_ids, text_hud_id)
+    y_offset = y_offset - 30 -- Move down for options
+    -- Display options if any
+    if step.options then
+        for i, option in ipairs(step.options) do
+            local option_text = "[" .. i .. "] " .. option.text
+            local option_hud_id = player:hud_add({
+                hud_elem_type = "text",
+                position = {x = 0.5, y = 1},
+                offset = {x = 0, y = y_offset - (i * 20)}, -- Adjust Y for each option
+                text = option_text,
+                number = 0xAAAAAA, -- Gray
+                alignment = {x = 0, y = 0},
+                scale = {x = 80, y = 80},
+            })
+            table.insert(hud_ids, option_hud_id)
+        end
+    end
+
+    pconv[player_name] = pconv[player_name] or {}
+    pconv[player_name].hud_ids = hud_ids
+    pconv[player_name].current_dialogue_id = dialogue_id
+    pconv[player_name].current_step_key = step_key
+
+    if step.is_end then
+        minetest.after(3, function()
+            xhud(player)
+            pconv[player_name] = nil
+            --minetest.chat_send_player(player_name, "Conversation ended.")
+        end)
+    end
+end
+
+-- Global function to start a conversation
+function echo.start(player, dialogue_id, pos)
+    local player_name = player:get_player_name()
+    if pconv[player_name] then
+        minetest.chat_send_player(player_name, "You are already in a conversation!")
+        return
+    end
+    pconv[player_name] = {pos = pos, hud_visible = true}
+    display_dialogue(player, dialogue_id, "start")
+end
+
+-- Chat command to select dialogue options
+minetest.register_chatcommand("a", {
+    params = "<choice_number>",
+    description = "Select a dialogue option.",
+    func = function(player_name, param)
+        local conv_state = pconv[player_name]
+        if not conv_state or not conv_state.current_dialogue_id then
+            minetest.chat_send_player(player_name, "You are not in a conversation.")
+            return false
+        end
+
+        local choice_number = tonumber(param)
+        if not choice_number then
+            minetest.chat_send_player(player_name, "Please enter a number for your choice.")
+            return false
+        end
+
+        local dialogue_data = echo.dialogue[conv_state.current_dialogue_id]
+        local current_step = dialogue_data[conv_state.current_step_key]
+        if current_step.options and choice_number >= 1 and choice_number <= #current_step.options then
+            local selected_option = current_step.options[choice_number]
+            local player = minetest.get_player_by_name(player_name)
+            if player then
+                display_dialogue(player, conv_state.current_dialogue_id, selected_option.to)
+            end
+        else
+            minetest.chat_send_player(player_name, "Invalid choice.")
+        end
+        return true
+    end
+})
+
+-- Clean up on player leave
+minetest.register_on_leaveplayer(function(player)
+    xhud(player)
+    pconv[player:get_player_name()] = nil
+end)
+
+-- Global step for distance check
+minetest.register_globalstep(function(dtime)
+    for player_name, conv_state in pairs(pconv) do
+        if conv_state.pos then
+            local player = minetest.get_player_by_name(player_name)
+            if player then
+                local distance = vector.distance(player:get_pos(), conv_state.pos)
+                if distance > 3 and conv_state.hud_visible then
+                    xhud(player)
+                    conv_state.hud_visible = false
+                   -- minetest.chat_send_player(player_name, "You have moved too far away.")
+                elseif distance <= 3 and not conv_state.hud_visible then
+                    display_dialogue(player, conv_state.current_dialogue_id, conv_state.current_step_key)
+                    conv_state.hud_visible = true
+                    --minetest.chat_send_player(player_name, "You have returned.")
+                end
+            end
+        end
+    end
+end)
+
+--print("[echo] Conversation engine loaded.")
+
+local hud_id
+
+minetest.register_on_joinplayer(function(player)
+    local player_name = player:get_player_name()
+    if not player_name then return end
+end)
+
+minetest.register_on_leaveplayer(function(player)
+    if hud_id then
+        player:hud_remove(hud_id)
+    end
+end)
 
 minetest.register_node("runes:ke", {
 	description = "Ke = May",
@@ -1338,7 +1529,7 @@ minetest.register_node("runes:0bk", {
 })
 
 minetest.register_node("runes:sl1", {
-	description = "*4(+2) Lit Bit 1",
+	description = "Lit Bit 1",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1366,7 +1557,7 @@ minetest.register_node("runes:sl1", {
 })
 
 minetest.register_node("runes:sl2", {
-	description = "*4(+2) Lit Bit 2",
+	description = "Lit Bit 2",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1394,7 +1585,7 @@ minetest.register_node("runes:sl2", {
 })
 
 minetest.register_node("runes:sl3", {
-	description = "*4(+2) Lit Bit 3",
+	description = "Lit Bit 3",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",
@@ -1422,7 +1613,7 @@ minetest.register_node("runes:sl3", {
 })
 
 minetest.register_node("runes:sl4", {
-	description = "*4(+2) Lit Bit 4",
+	description = "Lit Bit 4",
 	paramtype = "light",
 	light_source = 0.9,
 	paramtype2 = "facedir",

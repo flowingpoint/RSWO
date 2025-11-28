@@ -173,7 +173,7 @@ function echo.start(player, dialogue_id, pos)
 end
 
 -- Chat command to select dialogue options
-minetest.register_chatcommand("a", {
+minetest.register_chatcommand("c", {
     params = "<choice_number>",
     description = "Select a dialogue option.",
     func = function(player_name, param)

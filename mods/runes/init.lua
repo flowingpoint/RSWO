@@ -63,26 +63,51 @@ minetest.register_node("runes:lit_ke", {
 
 echo = {}
 -- Dialogue data
-echo.dialogue = {cryptic_wisdom = {start = {
+echo.dialogue = {
+    cryptic_wisdom = {
+        start = {
             text = "The shadows lengthen, but the path remains. What do you seek?",
-            options = {{text = "I seek knowledge.", to = "knowledge"},
-                {text = "I seek nothing.", to = "nothing"},
-                {text = "Who are you?", to = "who_are_you"}}},
-        knowledge = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.",
-            options = {{text = "I will be careful.", to = "end_careful"}}},
-        nothing = {text = "To seek nothing is to find everything, and yet, you have found me. A paradox.",
-            options = {{text = "Indeed.", to = "end_paradox"}}},
-        who_are_you = {text = "I am the echo of the stone, the whisper of the world. I am what you make of me.",
-            options = {{text = "A strange answer.", to = "end_strange"}}},
-        end_careful = {text = "Caution is the shield of the wise. Go now.",
-            is_end = true},
-        end_paradox = {text = "The world is full of such beautiful contradictions. Farewell.",
-            is_end = true},
-        end_strange = {text = "The truest answers often are. Until we speak again.",
-            is_end = true,
+            options = {
+                {text = "I seek knowledge.", to = "a"},
+                {text = "I seek nothing.", to = "b"},
+                {text = "Who are you?", to = "c"}
+            }
+        },
+        a = {
+            text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.",
+            options = {{text = "I will be careful.", to = "a1a"}}
+        },
+        b = {
+            rancho = {
+                {
+                    text = "To seek nothing is to find everything, and yet, you have found me. A paradox.",
+                    options = {{text = "Indeed.", to = "b1a"}}
+                },
+                {
+                    text = "Then click no further, little goblin, you're home and dry!",
+                    is_end = true
+                }
+            }
+        },
+        c = {
+            text = "I am the echo of the stone, the whisper of the world. I am what you make of me.",
+            options = {{text = "A strange answer.", to = "c1a"}}
+        },
+        a1a = {
+            text = "Caution is the shield of the wise. Go now.",
+            is_end = true
+        },
+        b1a = {
+            text = "The world is full of such beautiful contradictions. Farewell.",
+            is_end = true
+        },
+        c1a = {
+            text = "The truest answers often are. Until we speak again.",
+            is_end = true
         },
     }
 }
+
 
 -- Player conversation state
 local pconv = {}
@@ -114,6 +139,12 @@ local function display_dialogue(player, dialogue_id, step_key)
         return
     end
 
+    local current_display_step = step
+    if step.rancho then
+        local rand_idx = math.random(1, #step.rancho)
+        current_display_step = step.rancho[rand_idx]
+    end
+
     -- Clean up previous HUD elements
     xhud(player)
     local hud_ids = {}
@@ -123,7 +154,7 @@ local function display_dialogue(player, dialogue_id, step_key)
         hud_elem_type = "text",
         position = {x = 0.5, y = 1},
         offset = {x = 0, y = y_offset},
-        text = step.text,
+        text = current_display_step.text,
         number = 0xFFFFFF, -- White
         alignment = {x = 0, y = 0},
         scale = {x = 100, y = 100},
@@ -131,8 +162,8 @@ local function display_dialogue(player, dialogue_id, step_key)
     table.insert(hud_ids, text_hud_id)
     y_offset = y_offset - 30 -- Move down for options
     -- Display options if any
-    if step.options then
-        for i, option in ipairs(step.options) do
+    if current_display_step.options then
+        for i, option in ipairs(current_display_step.options) do
             local option_text = "[" .. i .. "] " .. option.text
             local option_hud_id = player:hud_add({
                 hud_elem_type = "text",
@@ -151,8 +182,9 @@ local function display_dialogue(player, dialogue_id, step_key)
     pconv[player_name].hud_ids = hud_ids
     pconv[player_name].current_dialogue_id = dialogue_id
     pconv[player_name].current_step_key = step_key
+    pconv[player_name].active_options = current_display_step.options
 
-    if step.is_end then
+    if current_display_step.is_end then
         minetest.after(3, function()
             xhud(player)
             pconv[player_name] = nil
@@ -173,7 +205,7 @@ function echo.start(player, dialogue_id, pos)
 end
 
 -- Chat command to select dialogue options
-minetest.register_chatcommand("c", {
+minetest.register_chatcommand("say", {
     params = "<choice_number>",
     description = "Select a dialogue option.",
     func = function(player_name, param)
@@ -190,9 +222,8 @@ minetest.register_chatcommand("c", {
         end
 
         local dialogue_data = echo.dialogue[conv_state.current_dialogue_id]
-        local current_step = dialogue_data[conv_state.current_step_key]
-        if current_step.options and choice_number >= 1 and choice_number <= #current_step.options then
-            local selected_option = current_step.options[choice_number]
+        if conv_state.active_options and choice_number >= 1 and choice_number <= #conv_state.active_options then
+            local selected_option = conv_state.active_options[choice_number]
             local player = minetest.get_player_by_name(player_name)
             if player then
                 display_dialogue(player, conv_state.current_dialogue_id, selected_option.to)
@@ -245,6 +276,8 @@ minetest.register_on_leaveplayer(function(player)
         player:hud_remove(hud_id)
     end
 end)
+
+
 
 minetest.register_node("runes:ke", {
 	description = "Ke = May",

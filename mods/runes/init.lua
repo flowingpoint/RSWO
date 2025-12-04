@@ -65,48 +65,17 @@ echo = {}
 -- Dialogue data
 echo.dialogue = {
     cryptic_wisdom = {
-        start = {
-            text = "The shadows lengthen, but the path remains. What do you seek?",
-            options = {
-                {text = "I seek knowledge.", to = "a"},
-                {text = "I seek nothing.", to = "b"},
-                {text = "Who are you?", to = "c"}
-            }
-        },
-        a = {
-            text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.",
-            options = {{text = "I will be careful.", to = "a1a"}}
-        },
-        b = {
-            rancho = {
-                {
-                    text = "To seek nothing is to find everything, and yet, you have found me. A paradox.",
-                    options = {{text = "Indeed.", to = "b1a"}}
-                },
-                {
-                    text = "Then click no further, little goblin, you're home and dry!",
-                    is_end = true
-                }
-            }
-        },
-        c = {
-            text = "I am the echo of the stone, the whisper of the world. I am what you make of me.",
-            options = {{text = "A strange answer.", to = "c1a"}}
-        },
-        a1a = {
-            text = "Caution is the shield of the wise. Go now.",
-            is_end = true
-        },
-        b1a = {
-            text = "The world is full of such beautiful contradictions. Farewell.",
-            is_end = true
-        },
-        c1a = {
-            text = "The truest answers often are. Until we speak again.",
-            is_end = true
-        },
-    }
-}
+        start = {text = "The shadows lengthen, but the path remains. What do you seek?",
+            options = {{text = "I seek knowledge.", to = "a"}, {text = "I seek nothing.", to = "b"}, {text = "Who are you?", to = "c"}}},
+        a = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1a"}}},
+	a1a = {text = "Caution is the shield of the wise. Go now.", is_end = true},
+        b = {rancho = {{text = "To seek nothing is to find everything, and yet, you have found me. A paradox.", options = {text = "Indeed.", to = "b1a"}}, {text = "Then click no further, little goblin, you're home and dry!", is_end = true}}},
+	b1a = {text = "The world is full of such beautiful contradictions. Farewell.", is_end = true},
+        c = {text = "Who are you?", options = {{text = "I asked you first.", to = "c4"}}},
+	c4 = {rancho = {{text = "Captain Jarligg'n. Once removed...", is_end = true}, {text = "The maybe thing.", is_end = true}},
+	c1 = {text = "A strange answer.", options = {{text = "The truest answers often are. Until we speak again.", to = "c1a"}, {text = "Is that so?", to = "c1b"}}},
+	c1a = {text = "The truest answers often are. Until we speak again.", is_end = true},
+	c1b = {text = "Is that so?", is_end = true}}}}
 
 
 -- Player conversation state

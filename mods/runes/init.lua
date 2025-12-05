@@ -66,22 +66,112 @@ echo = {}
 echo.dialogue = {
     cryptic_wisdom = {
         start = {text = "The shadows lengthen, but the path remains. What do you seek?",
-            options = {{text = "I seek knowledge.", to = "a"}, {text = "I seek nothing.", to = "b"}, {text = "Who are you?", to = "c"}, {text = "I seek absolution", to = "d"}}},
-        a = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1a"}}},
-	a1a = {text = "Caution is the shield of the wise. Go now.", is_end = true},
-        b = {rancho = {{text = "To seek nothing is to find everything, and yet, you have found me. A paradox.", options = {{text = "Indeed.", to = "b1a"}}}, {text = "Then click no further, little goblin, you're home and dry!", is_end = true}}},
-	b1a = {text = "The world is full of such beautiful contradictions. Farewell.", is_end = true},
+            options = {
+                {text = "I seek knowledge.", to = "a"},
+                {text = "I seek nothing.", to = "b"},
+                {text = "Who are you?", to = "c"},
+                {text = "I seek absolution", to = "d"},
+                {text = "What path?", to = "e"}
+            }
+        },
+        a = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1"}}},
+        a1 = {text = "Caution is the shield of the wise. Go now.", is_end = true},
+        b = {rancho = {
+            {text = "To seek nothing is to find everything, and yet, you have found me. A paradox.", options = {{text = "Indeed.", to = "b1a"}}},
+            {text = "Then click no further, little goblin, you're home and dry!", is_end = true}
+        }},
+        b1a = {text = "The world is full of such beautiful contradictions. Farewell.", is_end = true},
         c = {text = "I am the echo of the stone, the whisper of the world. I am what you make of me.", options = {{text = "A strange answer.", to = "c1a"}, {text = "Is that so?", to = "c1b"}}},
         c1a = {text = "The truest answers often are. Until we speak again.", is_end = true},
-        c1b = {rancho = {{text = "So it is, m'lad.", options = {{text = "And are we speaking again now?", to = "c1b1a"}, {text = "Is it really?", to = "c1b1b"}}}, {text = "Aye aye cap'n.", is_end = true}}},
-	c1b1a = {rancho = {{text = "Maybe we're speaking, maybe we're typing, but words are going which way, and I'm poofed!", is_end = true}, {text = "I wanna say no.", is_end = true}, {text = "We've a long way to go before you call that 'speaking'", is_end = true}}},
-	d = {rancho = {{text = "I seek absolution too! How about you tell me what you're doing so I can do it too!", is_end = true}, {text = "Many's a fool goin down that road, partner, if'n they isn't got none to boot.", options = {{text = "You should have led me the other way then, halfwit!", to = "d2a"}, {text = "I go it alone, buddy", to = "d2b"}, {text = "There's no easy way, is there?", to = "d2c"}}}, {text = "Who are you?", is_end = true}}},
-	d2a = {text = "Should we split?", is_end = true},
-	d2b = {rancho = {{text ="Fool! Tracks lie cold in the rush of weaker ditherers, you must quickly read them and avoid the same end!", is_end = true}, {text = "Then you're half as wise as I, who saw no rush for absolution!", is_end = true}, {text = "That puts me on the road to obsoletion, hahaha. So what did you do to get here?", options = {{text = "A promise was broken, and I was the one to break it.", to = "d2b3a"}, {text = "Is it one great misstep that brings a person here, or a thousand smaller ones?", to = "d2b3b"}, {text = "I told a dwarf his beard was splotchy and reccommended he give it a trim. It... escalated.", to = "d2b3c"}}}}},
-	d2b3a = {text = "Either it wasn't set in stone, or you have a forked tongue.", is_end = true},
-	d2b3b = {rancho = {{text = "Perhaps a single, profound error that echoed through time.", is_end = true}, {text = "A cumulative weight, a slow erosion of intent.", is_end = true}, {text = "It began with a tiny whisper of doubt, and here I am.", is_end = true}}},
-	d2b3c = {rancho = {{text = "You did not! You should offer something useful if giving a dwarf advice, like a razor, shampoo, or a mirror.", is_end = true}, {text = "That is a very personal thing to comment on in the dwarving community! You must have had a falling out after that!", is_end = true}, {text = "A deliberate insult from a goblin, who of course does not grow beards unless in dwarven captivity, well I suppose you skipped town after that?", is_end = true}}}
-}}
+        c1b = {rancho = {
+            {text = "So it is, m'lad.", options = {{text = "And are we speaking again now?", to = "c1b1a"}, {text = "Is it really?", to = "c1b1b"}}},
+            {text = "Aye aye cap'n.", is_end = true}
+        }},
+        c1b1a = {rancho = {
+            {text = "Maybe we're speaking, maybe we're typing, but words are going which way, and I'm poofed!", is_end = true},
+            {text = "I wanna say no.", is_end = true},
+            {text = "We've a long way to go before you call that 'speaking'", is_end = true}
+        }},
+        c1b1b = {text = "Yes.", is_end = true},
+        d = {rancho = {
+            {text = "I seek absolution too! How about you tell me what you're doing so I can do it too!", is_end = true},
+            {text = "Many's a fool goin down that road, partner, if'n they isn't got none to boot.", options = {{text = "You should have led me the other way then, halfwit!", to = "d2a"}, {text = "I go it alone, buddy", to = "d2b"}, {text = "There's no easy way, is there?", to = "d2c"}}},
+            {text = "Who are you?", is_end = true}
+        }},
+        d2a = {text = "Should we split?", is_end = true},
+        d2b = {rancho = {
+            {text = "Fool! Tracks lie cold in the rush of weaker ditherers, you must quickly read them and avoid the same end!", is_end = true},
+            {text = "Then you're half as wise as I, who saw no rush for absolution!", is_end = true},
+            {text = "That puts me on the road to obsoletion, hahaha. So what did you do to get here?", options = {{text = "A promise was broken, and I was the one to break it.", to = "d2b3a"}, {text = "Is it one great misstep that brings a person here, or a thousand smaller ones?", to = "d2b3b"}, {text = "I told a dwarf his beard was splotchy and reccommended he give it a trim. It... escalated.", to = "d2b3c"}}}
+        }},
+        d2b3a = {text = "Either it wasn't set in stone, or you have a forked tongue.", is_end = true},
+        d2b3b = {rancho = {
+            {text = "Perhaps a single, profound error that echoed through time.", is_end = true},
+            {text = "A cumulative weight, a slow erosion of intent.", is_end = true},
+            {text = "It began with a tiny whisper of doubt, and here I am.", is_end = true}
+        }},
+        d2b3c = {rancho = {
+            {text = "You did not! You should offer something useful if giving a dwarf advice, like a razor, shampoo, or a mirror.", is_end = true},
+            {text = "That is a very personal thing to comment on in the dwarving community! You must have had a falling out after that!", is_end = true},
+            {text = "A deliberate insult from a goblin, who of course does not grow beards unless in dwarven captivity, well I suppose you skipped town after that?", options = {{text = "I was locked in Master goblin Stax's toolshed and had to read books until them dwarves were able to forgive me.", to = "d2b3c3a"}, {text = "I became known as 'the barber', and not in a good way. It was difficult to find a boat with that reputation.", to = "d2b3c3b"}, {text = "No sooner had I spoken was I then taken to the dungeon. Hence this beard. It was easy to sneak out then.", to = "d2b3c3c"}}}
+        }},
+        d2b3c3a = {text = "So the beard is a mark of your residual dwarven penance-magic. Are you going to keep it?", is_end = true},
+        d2b3c3b = {text = "How did you cover up the green skin?", is_end = true},
+        d2b3c3c = {text = "Did you learn anything in the dwarven dungeons?", options = {{text = "I got the whole layout in here *taps wrinkly forehead*", to = "d2b3c3c3a"}, {text = "I learned not to comment on a dwarf's beard, the hard way. It happened a few more times, and I was sent deeper and deeper...", to = "d2b3c3c3b"}, {text = "I overheard a guard saying Dwarf Dottimuck is plotting an uprising.", to = "d2b3c3c3c"}}},
+        d2b3c3c3a = {text = "Is that the dwarf who famously defended the goblins when they rebelled against Dwarf Spottysoot?", is_end = true},
+        d2b3c3c3b = {text = "Should you be concerned at all about what the guard said? It could have been a double ditch booby bounty just to fool you.", options = {{text = "There was only solemnity in his tone. War is coming for sure!", to = "d2b3c3c3c2a"}, {text = "I gave them nothing! Besides, Dottimuck is nowhere to be seen around here, why should I worry, even if it is true?", to = "d2b3c3c3c2b"}, {text = "I gave them very little. As far as I'm concerned, Dwarf Dotti is as finished as the Laws of Ley!", to = "d2b3c3c3c2c"}, {text = "I tried to ask around, but, you know, the beards... distracted me.", to = "d2b3c3c3c2d"}}},
+        d2b3c3c3c = {text = "No, I mean did you learn any mathematics?", is_end = true},
+        d2b3c3c3c2a = {text = "War is coming for sure!", is_end = true},
+        d2b3c3c3c2b = {text = "Dottimuck is nowhere to be seen around here, why should I worry, even if it is true?", is_end = true},
+        d2b3c3c3c2c = {text = "Dwarf Dotti is as finished as the Laws of Ley!", is_end = true},
+        d2b3c3c3c2d = {text = "The beards... distracted me.", is_end = true},
+        d2c = {text = "There's no easy way, is there?", is_end = true},
+        e = {rancho = {
+            {text = "That path you take your time on, of course.", is_end = true},
+            {text = "The one you waste the whole day working on just to wind up where you started. Or am I wrong?", options = {{text = "If I wind up at the start again it will not have been in vain.", to = "e2a"}, {text = "It's no race to me, but it could be less work.", to = "e2b"}, {text = "Then I had better get back before darkness falls!", to = "e2c"}}},
+            {text = "The path that will soon be submerged in darkness, my friend.", is_end = true}
+        }},
+        e2a = {text = "If I wind up at the start again it will not have been in vain.", is_end = true},
+        e2b = {rancho = {
+            {text = "It's no work at all if you know the return!", is_end = true},
+            {text = "Is it too much for you? Would you like some pointers?", is_end = true},
+            {text = "What are you building?", options = {{text = "A dialog path! This is [e2b3a] on the path!", to = "e2b3a"}, {text = "A little walkway around Stax's house.", to = "e2b3b"}, {text = "A school", to = "e2b3c"}}}
+        }},
+        e2b3a = {rancho = {
+            {text = "Indeed. A path of words can be a powerful thing. Where does it lead?", options = {{text = "Perhaps to a deeper understanding of the self, or the intricate dance of thought.", to = "e2b3a1a"}, {text = "It leads to new connections, new stories, and unforeseen destinations.", to = "e2b3a1b"}, {text = "To the heart of the labyrinth, where all paths eventually converge.", to = "e2b3a1c"}}},
+            {text = "Fascinating. Is this path visible to others, or only to the mind's eye?", options = {{text = "It exists only within the architecture of thought, a private gallery.", to = "e2b3a2a"}, {text = "It is a blueprint, waiting to be shared and built upon by others.", to = "e2b3a2b"}, {text = "Its visibility depends on the clarity of the observer's own vision.", to = "e2b3a2c"}}},
+            {text = "And what revelations do you hope to uncover on this dialog path?", is_end = true}
+        }},
+        e2b3a1a = {text = "Perhaps to a deeper understanding of the self, or the intricate dance of thought.", is_end = true},
+        e2b3a1b = {text = "It leads to new connections, new stories, and unforeseen destinations.", is_end = true},
+        e2b3a1c = {text = "To the heart of the labyrinth, where all paths eventually converge.", is_end = true},
+        e2b3a2a = {text = "It exists only within the architecture of thought, a private gallery.", is_end = true},
+        e2b3a2b = {text = "It is a blueprint, waiting to be shared and built upon by others.", is_end = true},
+        e2b3a2c = {text = "Its visibility depends on the clarity of the observer's own vision.", options = {{text = "Then clarity is the key. How does one sharpen their vision?", to = "e2b3a2c1"}, {text = "A profound statement. So, the path reveals itself to the worthy.", to = "e2b3a2c2"}, {text = "And what if the observer is blind to their own potential?", to = "e2b3a2c3"}}},
+        e2b3a2c1 = {rancho = {
+            {text = "By possessing choice, then moving with intention in a continuous way.", is_end = true},
+            {text = "By knowing how a completed mission should feel", is_end = true},
+            {text = "By eliminating the unneccessary, until the essential reveals itself (quote from Bruce Lee)", is_end = true}
+        }},
+        e2b3a2c2 = {rancho = {
+            {text = "A worthy path should reveal itself to all who step onto it", is_end = true},
+            {text = "The worthy path might also be a 'wordy' path, no?", is_end = true},
+            {text = "Worthy of knowledge, or worthy of passage? There's a difference. You can know but not go, you can go but not know...", is_end = true}
+        }},
+        e2b3a2c3 = {rancho = {
+            {text = "The observer can promise to return", is_end = true},
+            {text = "If the path itself has potential to challenge the observer... I can build it with my own potential, for it would make me worthy of the build", is_end = true},
+            {text = "The observer is not blind to everything. The path is a free choice, and if not taken at all, there are others unseen", is_end = true}
+        }},
+        e2b3b = {rancho = {
+            {text = "It's a matter of serving yourself with choices at the end of the day!", is_end = true},
+            {text = "It's a question of subtlety and speed, which will win?", is_end = true},
+            {text = "A fine operation, for a goblin's servant, flowingpoint!", is_end = true}
+        }},
+        e2b3c = {text = "A school", is_end = true},
+        e2c = {text = "Then I had better get back before darkness falls!", is_end = true}
+    }
+}
 
 
 -- Player conversation state

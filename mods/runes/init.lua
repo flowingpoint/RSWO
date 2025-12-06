@@ -65,44 +65,48 @@ echo = {}
 -- Dialogue data
 echo.dialogue = {
     cryptic_wisdom = {
-        start = {text = "The shadows lengthen, but the path remains. What do you seek?",
+        start = {text = "The shadows lengthen, but the \n path remains. What do you seek?",
             options = {
                 {text = "I seek knowledge.", to = "a"},
                 {text = "I seek nothing.", to = "b"},
                 {text = "Who are you?", to = "c"},
-                {text = "I seek absolution", to = "d"},
+                {text = "I seek absolution!", to = "d"},
                 {text = "What path?", to = "e"}
             }
         },
-        a = {text = "Knowledge is a river. Some drink from it, others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1"}}},
+        a = {text = "Knowledge is a river. Some drink from it,\n others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1"}}},
         a1 = {text = "Caution is the shield of the wise. Go now.", is_end = true},
         b = {rancho = {
-            {text = "To seek nothing is to find everything, and yet, you have found me. A paradox.", options = {{text = "Indeed.", to = "b1a"}}},
+            {text = "To seek nothing is to find everything,\n and yet, you have found me. A paradox.", options = {{text = "Indeed.", to = "b1a"}}},
             {text = "Then click no further, little goblin, you're home and dry!", is_end = true}
         }},
         b1a = {text = "The world is full of such beautiful contradictions. Farewell.", is_end = true},
-        c = {text = "I am the echo of the stone, the whisper of the world. I am what you make of me.", options = {{text = "A strange answer.", to = "c1a"}, {text = "Is that so?", to = "c1b"}}},
-        c1a = {text = "The truest answers often are. Until we speak again.", is_end = true},
+        c = {text = "I am the echo of the stone, the whisper of the world.\n I am what you make of me.", options = {{text = "A strange answer.", to = "c1a"}, {text = "Is that so?", to = "c1b"}}},
+        c1a = {rancho = {
+	    {text = "The truest answers often are. Until we speak again.", is_end = true},
+	    {text = "Can you imagine a stranger one?", is_end = true},
+	    {text = "Yeah, I was just a water rune, but was \n crafted into this by use of a gem.", is_end = true}
+	}},
         c1b = {rancho = {
             {text = "So it is, m'lad.", options = {{text = "And are we speaking again now?", to = "c1b1a"}, {text = "Is it really?", to = "c1b1b"}}},
             {text = "Aye aye cap'n.", is_end = true}
         }},
         c1b1a = {rancho = {
-            {text = "Maybe we're speaking, maybe we're typing, but words are going which way, and I'm poofed!", is_end = true},
+            {text = "Maybe we're speaking, maybe we're typing,\n but words are going which way, and I'm poofed!", is_end = true},
             {text = "I wanna say no.", is_end = true},
-            {text = "We've a long way to go before you call that 'speaking'", is_end = true}
+            {text = "We've a long way to go before you call that 'speaking'.", is_end = true}
         }},
         c1b1b = {text = "Yes.", is_end = true},
         d = {rancho = {
-            {text = "I seek absolution too! How about you tell me what you're doing so I can do it too!", is_end = true},
-            {text = "Many's a fool goin down that road, partner, if'n they isn't got none to boot.", options = {{text = "You should have led me the other way then, halfwit!", to = "d2a"}, {text = "I go it alone, buddy", to = "d2b"}, {text = "There's no easy way, is there?", to = "d2c"}}},
+            {text = "I seek absolution too! How about you tell me \n what you're doing so I can do it too!", is_end = true},
+            {text = "Many's a fool goin down that road, partner,\n if'n they isn't got none to boot.", options = {{text = "You should have led me the other way then, halfwit!", to = "d2a"}, {text = "I go it alone, buddy", to = "d2b"}, {text = "There's no easy way, is there?", to = "d2c"}}},
             {text = "Who are you?", is_end = true}
         }},
         d2a = {text = "Should we split?", is_end = true},
         d2b = {rancho = {
-            {text = "Fool! Tracks lie cold in the rush of weaker ditherers, you must quickly read them and avoid the same end!", is_end = true},
-            {text = "Then you're half as wise as I, who saw no rush for absolution!", is_end = true},
-            {text = "That puts me on the road to obsoletion, hahaha. So what did you do to get here?", options = {{text = "A promise was broken, and I was the one to break it.", to = "d2b3a"}, {text = "Is it one great misstep that brings a person here, or a thousand smaller ones?", to = "d2b3b"}, {text = "I told a dwarf his beard was splotchy and reccommended he give it a trim. It... escalated.", to = "d2b3c"}}}
+            {text = "Fool! Tracks lie cold in the rush of weaker ditherers,\n you must quickly read them and avoid the same end!", is_end = true},
+            {text = "Then you're half as wise as I,\n who saw no rush for absolution!", is_end = true},
+            {text = "That puts me on the road to obsoletion, hahaha.\n So what did you do to get here?", options = {{text = "A promise was broken, and I was the one to break it.", to = "d2b3a"}, {text = "Is it one great misstep that brings a person here,\n or a thousand smaller ones?", to = "d2b3b"}, {text = "I told a dwarf his beard was splotchy \n and reccommended he give it a trim. It... escalated.", to = "d2b3c"}}}
         }},
         d2b3a = {text = "Either it wasn't set in stone, or you have a forked tongue.", is_end = true},
         d2b3b = {rancho = {
@@ -111,32 +115,39 @@ echo.dialogue = {
             {text = "It began with a tiny whisper of doubt, and here I am.", is_end = true}
         }},
         d2b3c = {rancho = {
-            {text = "You did not! You should offer something useful if giving a dwarf advice, like a razor, shampoo, or a mirror.", is_end = true},
-            {text = "That is a very personal thing to comment on in the dwarving community! You must have had a falling out after that!", is_end = true},
-            {text = "A deliberate insult from a goblin, who of course does not grow beards unless in dwarven captivity, well I suppose you skipped town after that?", options = {{text = "I was locked in Master goblin Stax's toolshed and had to read books until them dwarves were able to forgive me.", to = "d2b3c3a"}, {text = "I became known as 'the barber', and not in a good way. It was difficult to find a boat with that reputation.", to = "d2b3c3b"}, {text = "No sooner had I spoken was I then taken to the dungeon. Hence this beard. It was easy to sneak out then.", to = "d2b3c3c"}}}
+            {text = "You did not! You should offer something useful if giving a dwarf advice,\n like a razor, shampoo, or a mirror.", is_end = true},
+            {text = "That is a very personal thing to comment on in the dwarving community!\n You must have had a falling out after that!", is_end = true},
+            {text = "A deliberate insult from a goblin, who of course does not grow beards \n unless in dwarven captivity, well I suppose you skipped town after that?", options = {{text = "I was locked in Master goblin Stax's toolshed and had to read \n books until them dwarves were able to forgive me.", to = "d2b3c3a"}, {text = "I became known as 'the barber', and not in a good way.\n It was difficult to find a boat with that reputation.", to = "d2b3c3b"}, {text = "No sooner had I spoken was I then taken to the dungeon.\n Hence this beard. It was easy to sneak out then.", to = "d2b3c3c"}}}
         }},
-        d2b3c3a = {text = "So the beard is a mark of your residual dwarven penance-magic. Are you going to keep it?", is_end = true},
+        d2b3c3a = {text = "So the beard is a mark of your residual \n dwarven penance-magic. Are you going to keep it?", is_end = true},
         d2b3c3b = {text = "How did you cover up the green skin?", is_end = true},
-        d2b3c3c = {text = "Did you learn anything in the dwarven dungeons?", options = {{text = "I got the whole layout in here *taps wrinkly forehead*", to = "d2b3c3c3a"}, {text = "I learned not to comment on a dwarf's beard, the hard way. It happened a few more times, and I was sent deeper and deeper...", to = "d2b3c3c3b"}, {text = "I overheard a guard saying Dwarf Dottimuck is plotting an uprising.", to = "d2b3c3c3c"}}},
-        d2b3c3c3a = {text = "Is that the dwarf who famously defended the goblins when they rebelled against Dwarf Spottysoot?", is_end = true},
-        d2b3c3c3b = {text = "Should you be concerned at all about what the guard said? It could have been a double ditch booby bounty just to fool you.", options = {{text = "There was only solemnity in his tone. War is coming for sure!", to = "d2b3c3c3c2a"}, {text = "I gave them nothing! Besides, Dottimuck is nowhere to be seen around here, why should I worry, even if it is true?", to = "d2b3c3c3c2b"}, {text = "I gave them very little. As far as I'm concerned, Dwarf Dotti is as finished as the Laws of Ley!", to = "d2b3c3c3c2c"}, {text = "I tried to ask around, but, you know, the beards... distracted me.", to = "d2b3c3c3c2d"}}},
+        d2b3c3c = {text = "Did you learn anything in the dwarven dungeons?", options = {{text = "I got the whole layout in here *taps wrinkly forehead*.", to = "d2b3c3c3a"}, {text = "I learned not to comment on a dwarf's beard, the hard way.\n It happened a few more times, and I was sent deeper and deeper...", to = "d2b3c3c3b"}, {text = "I overheard a guard saying Dwarf Dottimuck is plotting an uprising.", to = "d2b3c3c3c"}}},
+        d2b3c3c3a = {text = "Is that the dwarf who famously defended the goblins \n when they rebelled against Dwarf Spottysoot?", is_end = true},
+        d2b3c3c3b = {text = "Should you be concerned at all about what the guard said?\n It could have been a double ditch booby bounty just to fool you.", options = {{text = "There was only solemnity in his tone. War is coming for sure!", to = "d2b3c3c3c2a"}, {text = "I gave them nothing! Besides, Dottimuck is nowhere to \n be seen around here, why should I worry, even if it is true?", to = "d2b3c3c3c2b"}, {text = "I gave them very little. As far as I'm \n concerned, Dwarf Dotti is as finished as the Laws of Ley!", to = "d2b3c3c3c2c"}, {text = "I tried to ask around, but,\n you know, the beards... distracted me.", to = "d2b3c3c3c2d"}}},
         d2b3c3c3c = {text = "No, I mean did you learn any mathematics?", is_end = true},
         d2b3c3c3c2a = {text = "War is coming for sure!", is_end = true},
-        d2b3c3c3c2b = {text = "Dottimuck is nowhere to be seen around here, why should I worry, even if it is true?", is_end = true},
+        d2b3c3c3c2b = {text = "Dottimuck is nowhere to be seen around here,\n why should I worry, even if it is true?", is_end = true},
         d2b3c3c3c2c = {text = "Dwarf Dotti is as finished as the Laws of Ley!", is_end = true},
         d2b3c3c3c2d = {text = "The beards... distracted me.", is_end = true},
         d2c = {text = "There's no easy way, is there?", is_end = true},
         e = {rancho = {
             {text = "That path you take your time on, of course.", is_end = true},
-            {text = "The one you waste the whole day working on just to wind up where you started. Or am I wrong?", options = {{text = "If I wind up at the start again it will not have been in vain.", to = "e2a"}, {text = "It's no race to me, but it could be less work.", to = "e2b"}, {text = "Then I had better get back before darkness falls!", to = "e2c"}}},
+            {text = "The one you waste the whole day working on just to wind up where you started.\n Or am I wrong?", options = {{text = "If I wind up at the start again it will not have been in vain.", to = "e2a"}, {text = "It's no race to me, but it could be less work.", to = "e2b"}, {text = "Then I had better get back before darkness falls!", to = "e2c"}}},
             {text = "The path that will soon be submerged in darkness, my friend.", is_end = true}
         }},
         e2a = {text = "If I wind up at the start again it will not have been in vain.", is_end = true},
         e2b = {rancho = {
             {text = "It's no work at all if you know the return!", is_end = true},
-            {text = "Is it too much for you? Would you like some pointers?", is_end = true},
+            {text = "Is it too much for you? Would you like some pointers?", options = {{text = "For this game?", to = "e2b2a"}, {text = "For node construction?", to = "e2b2b"}, {text = "It's meant to be hard, but not impossible. Less is more.", to = "e2b2c"}}},
             {text = "What are you building?", options = {{text = "A dialog path! This is [e2b3a] on the path!", to = "e2b3a"}, {text = "A little walkway around Stax's house.", to = "e2b3b"}, {text = "A school", to = "e2b3c"}}}
         }},
+	e2b2a = {text = "Yes, for this game we call tuk. It is a game of building, of weaving words into worlds.", is_end = true},
+	e2b2b = {text = "There are many steps. Would you like a quick walkthrough?", options = {{text = "Yes.", to = "e2b2b1a"}, {text = "No.", to = "e2b2b1b"}}},
+	e2b2b1a = {text = "Basically draw it, label the vertices and faces, make a uv \n texture to map to, create an object file with a notepad that \n lists coordinates of vertices (right handed coord system) uv mappings, \n face normals and face definitions, and register the node in a \n lua file in some mod folder. A spreadsheet can help with animations.", options = {{text = "OK", to = "e2b2b1a1a"}}},
+	e2b2b1a1a = {text = "See [https://github.com/flowingpoint/Notes/blob/main/flowingpoints_koin_notes.pdf] \n for the journal I made while creating my very first dynamic placeable node.", options = {{text = "OK", to = "e2b2b1a1a1a"}}},
+	e2b2b1a1a1a = {text = "...", is_end = true},
+	e2b2b1b = {text = "Dig it and dump it, order it in, smash it and crash it, throw in the bin.", is_end = true},
+	e2b2c = {text = "It's meant to be hard, but not impossible. Less is more.", is_end = true},
         e2b3a = {rancho = {
             {text = "Indeed. A path of words can be a powerful thing. Where does it lead?", options = {{text = "Perhaps to a deeper understanding of the self, or the intricate dance of thought.", to = "e2b3a1a"}, {text = "It leads to new connections, new stories, and unforeseen destinations.", to = "e2b3a1b"}, {text = "To the heart of the labyrinth, where all paths eventually converge.", to = "e2b3a1c"}}},
             {text = "Fascinating. Is this path visible to others, or only to the mind's eye?", options = {{text = "It exists only within the architecture of thought, a private gallery.", to = "e2b3a2a"}, {text = "It is a blueprint, waiting to be shared and built upon by others.", to = "e2b3a2b"}, {text = "Its visibility depends on the clarity of the observer's own vision.", to = "e2b3a2c"}}},
@@ -150,25 +161,25 @@ echo.dialogue = {
         e2b3a2c = {text = "Its visibility depends on the clarity of the observer's own vision.", options = {{text = "Then clarity is the key. How does one sharpen their vision?", to = "e2b3a2c1"}, {text = "A profound statement. So, the path reveals itself to the worthy.", to = "e2b3a2c2"}, {text = "And what if the observer is blind to their own potential?", to = "e2b3a2c3"}}},
         e2b3a2c1 = {rancho = {
             {text = "By possessing choice, then moving with intention in a continuous way.", is_end = true},
-            {text = "By knowing how a completed mission should feel", is_end = true},
-            {text = "By eliminating the unneccessary, until the essential reveals itself (quote from Bruce Lee)", is_end = true}
+            {text = "By knowing how a completed mission should feel.", is_end = true},
+            {text = "By eliminating the unneccessary, until the essential reveals itself. (quote from Bruce Lee)", is_end = true}
         }},
         e2b3a2c2 = {rancho = {
-            {text = "A worthy path should reveal itself to all who step onto it", is_end = true},
+            {text = "A worthy path should reveal itself to all who step onto it.", is_end = true},
             {text = "The worthy path might also be a 'wordy' path, no?", is_end = true},
-            {text = "Worthy of knowledge, or worthy of passage? There's a difference. You can know but not go, you can go but not know...", is_end = true}
+            {text = "Worthy of knowledge, or worthy of passage? There's a difference.\n You can know but not go, you can go but not know...", is_end = true}
         }},
         e2b3a2c3 = {rancho = {
-            {text = "The observer can promise to return", is_end = true},
-            {text = "If the path itself has potential to challenge the observer... I can build it with my own potential, for it would make me worthy of the build", is_end = true},
-            {text = "The observer is not blind to everything. The path is a free choice, and if not taken at all, there are others unseen", is_end = true}
+            {text = "The observer can promise to return.", is_end = true},
+            {text = "If the path itself has potential to challenge the observer...\n I can build it with my own potential, for it would make me worthy of the build.", is_end = true},
+            {text = "The observer is not blind to everything. The path is a free choice,\n and if not taken at all, there are others unseen.", is_end = true}
         }},
         e2b3b = {rancho = {
-            {text = "It's a matter of serving yourself with choices at the end of the day!", is_end = true},
+            {text = "It's a matter of serving yourself \n with choices at the end of the day!", is_end = true},
             {text = "It's a question of subtlety and speed, which will win?", is_end = true},
             {text = "A fine operation, for a goblin's servant, flowingpoint!", is_end = true}
         }},
-        e2b3c = {text = "A school", is_end = true},
+        e2b3c = {text = "A school?", is_end = true},
         e2c = {text = "Then I had better get back before darkness falls!", is_end = true}
     }
 }
@@ -270,17 +281,41 @@ function echo.start(player, dialogue_id, pos)
 end
 
 -- Chat command to select dialogue options
-minetest.register_chatcommand("say", {
+minetest.register_chatcommand("c", {
     params = "<choice_number>",
     description = "Select a dialogue option.",
     func = function(player_name, param)
+        local build_command = nil
+        local regular_param = param
+        local build_mode_activated = false
+
+        -- Check for and extract the build command
+        local start_pos, end_pos = string.find(param, "%[%[.*%]%]")
+        if start_pos then
+            build_command = string.sub(param, start_pos + 2, end_pos - 2)
+            regular_param = string.sub(param, end_pos + 1)
+            regular_param = string.gsub(regular_param, "^%s*(.-)%s*$", "%1") -- Trim whitespace
+
+            -- Activate build mode and process the command
+            echo.build_and_append(build_command, player_name)
+            build_mode_activated = true
+        end
+
+        -- If the only thing was a build command, we are done.
+        if build_mode_activated and regular_param == "" then
+            return true
+        end
+
         local conv_state = pconv[player_name]
         if not conv_state or not conv_state.current_dialogue_id then
-            minetest.chat_send_player(player_name, "You are not in a conversation.")
+            -- If the user was just building, don't show an error.
+            if not build_mode_activated then
+                 minetest.chat_send_player(player_name, "You are not in a conversation.")
+            end
             return false
         end
 
-        local choice_number = tonumber(param)
+        local choice_number = tonumber(regular_param)
         if not choice_number then
             minetest.chat_send_player(player_name, "Please enter a number for your choice.")
             return false
@@ -299,6 +334,103 @@ minetest.register_chatcommand("say", {
         return true
     end
 })
+
+-- Function to handle in-game conversation building
+function echo.build_and_append(instruction, player_name)
+    -- V3: Parse, append, update live state, and respond.
+
+    -- 1. Parse the instruction
+    local base_node = instruction:match("%[([%w%d]+)%?%]")
+    local choices_str = instruction:match("%[%[(.+)%]%]")
+    local selection_num_str = instruction:match("%]%s*(%d+)%s*$")
+
+    if not base_node or not choices_str or not selection_num_str then
+        minetest.chat_send_player(player_name, "Error: Invalid build syntax for player choice creation.")
+        return
+    end
+
+    local selection_num = tonumber(selection_num_str)
+    if not selection_num then
+        minetest.chat_send_player(player_name, "Error: Invalid selection number.")
+        return
+    end
+
+    -- 2. Extract choices
+    local choices = {}
+    for choice in choices_str:gmatch("%[([^%[%]]+)%]") do
+        table.insert(choices, choice)
+    end
+
+    if #choices == 0 then
+        minetest.chat_send_player(player_name, "Error: No choices found in build syntax.")
+        return
+    end
+
+    if selection_num < 1 or selection_num > #choices then
+        minetest.chat_send_player(player_name, "Error: Selection number is out of bounds.")
+        return
+    end
+
+    -- 3. Open file for appending
+    local file, err = io.open("convers.txt", "a")
+    if not file then
+        minetest.chat_send_player(player_name, "Error: Could not open convers.txt for writing.")
+        return
+    end
+
+    -- 4. Prepare and write new player choices
+    local new_nodes_for_memory = {}
+    local new_options_for_base = {}
+
+    for i, choice_text in ipairs(choices) do
+        local new_node_id = base_node .. i
+        local formatted_text = string.gsub(choice_text, "\"", "\\\"")
+        local line = string.format("[%s]\"%s\"\n", new_node_id, formatted_text)
+        file:write(line)
+
+        -- Prepare data for in-memory update
+        table.insert(new_nodes_for_memory, {id = new_node_id, text = choice_text})
+        table.insert(new_options_for_base, {text = choice_text, to = new_node_id})
+    end
+
+    -- 5. Generate and write echostone's response
+    local selected_player_node_id = base_node .. selection_num
+    local echostone_response_text = "A thoughtful choice. That path opens new questions..."
+    local echostone_response_id = selected_player_node_id .. "1"
+
+    local formatted_echo_text = string.gsub(echostone_response_text, "\"", "\\\"")
+    local echo_line = string.format("[%s]\"%s\"\n", echostone_response_id, formatted_echo_text)
+    file:write(echo_line)
+    file:close()
+
+    -- 6. Update in-memory dialogue table
+    if not echo.dialogue.cryptic_wisdom[base_node] then
+        minetest.chat_send_player(player_name, "Error: Base node " .. base_node .. " not found in memory.")
+        return
+    end
+    
+    -- Add options to the node the player was on
+    echo.dialogue.cryptic_wisdom[base_node].options = new_options_for_base
+    -- The base node is no longer an end point
+    echo.dialogue.cryptic_wisdom[base_node].is_end = nil 
+
+    -- Add the new player choice nodes themselves
+    for _, node_data in ipairs(new_nodes_for_memory) do
+        echo.dialogue.cryptic_wisdom[node_data.id] = {text = node_data.text}
+    end
+
+    -- Add the new echostone response node that follows the player's choice
+    echo.dialogue.cryptic_wisdom[echostone_response_id] = {text = echostone_response_text, is_end = true}
+
+    -- 7. Display the new state to the player
+    local player = minetest.get_player_by_name(player_name)
+    if player then
+        -- We transition to the new echostone response we just created, as if the player had selected it.
+        display_dialogue(player, "cryptic_wisdom", echostone_response_id)
+    end
+    
+    minetest.chat_send_player(player_name, "Appended " .. #choices .. " choices and 1 response. Conversation advanced.")
+end
 
 -- Clean up on player leave
 minetest.register_on_leaveplayer(function(player)

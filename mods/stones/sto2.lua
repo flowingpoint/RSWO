@@ -1333,7 +1333,7 @@ minetest.register_node("stones:sb_52pl", {
 })
 
 minetest.register_node("stones:s_52l", {
-	description = "*2 R5/2 Slope LowHalf Left",
+	description = "*3 R5/2 Slope LowHalf Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1360,7 +1360,7 @@ minetest.register_node("stones:s_52l", {
 })
 
 minetest.register_node("stones:sb_52l", {
-	description = "*2 R5/2 Slope LowHalf Left Rubble",
+	description = "*3 R5/2 Slope LowHalf Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1387,7 +1387,7 @@ minetest.register_node("stones:sb_52l", {
 })
 
 minetest.register_node("stones:s_52kl", {
-	description = "*2 R5/2 Slope LowHalf Siding Left",
+	description = "*3 R5/2 Slope LowHalf Siding Left",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1412,7 +1412,7 @@ minetest.register_node("stones:s_52kl", {
 })
 
 minetest.register_node("stones:sb_52kl", {
-	description = "*2 R5/2 Slope LowHalf Siding Left Rubble",
+	description = "*3 R5/2 Slope LowHalf Siding Left Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1436,9 +1436,62 @@ minetest.register_node("stones:sb_52kl", {
 	mesh = "s_52kl.obj"
 })
 
+minetest.register_node("stones:sku52_r", {
+	description = "*3 R5/2 Slope Skew LowHalf Right",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.125, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:sku52_r",
+	collision_box = {type="fixed",fixed={
+{0,-0.5,0.375, 0.4375,-0.0625,0.5},
+{-0.0625,-0.5,0.25, 0.375,-0.125,0.375},
+{-0.125,-0.5,0.125, 0.3125,-0.1875,0.25},
+{-0.1875,-0.5,0, 0.25,-0.25,0.125},
+{-0.25,-0.5,-0.125, 0.1875,-0.3125,0},
+{-0.3125,-0.5,-0.25, 0.125,-0.375,-0.125},
+{-0.375,-0.5,-0.375, 0.0625,-0.4375,-0.25}}},
+	selection_box = {type="fixed",fixed={
+{0,-0.5,0.375, 0.4375,-0.0625,0.5},
+{-0.0625,-0.5,0.25, 0.375,-0.125,0.375},
+{-0.125,-0.5,0.125, 0.3125,-0.1875,0.25},
+{-0.1875,-0.5,0, 0.25,-0.25,0.125},
+{-0.25,-0.5,-0.125, 0.1875,-0.3125,0},
+{-0.3125,-0.5,-0.25, 0.125,-0.375,-0.125},
+{-0.375,-0.5,-0.375, 0.0625,-0.4375,-0.25}}},
+	drawtype = "mesh",
+	mesh = "sku52_r.obj"
+})
+
+minetest.register_node("stones:skub52_r", {
+	description = "*3 R5/2 Slope Skew LowHalf Right Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.125, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:skub52_r",
+	collision_box = {type="fixed",fixed={
+{0,-0.5,0.375, 0.4375,-0.0625,0.5},
+{-0.0625,-0.5,0.25, 0.375,-0.125,0.375},
+{-0.125,-0.5,0.125, 0.3125,-0.1875,0.25},
+{-0.1875,-0.5,0, 0.25,-0.25,0.125},
+{-0.25,-0.5,-0.125, 0.1875,-0.3125,0},
+{-0.3125,-0.5,-0.25, 0.125,-0.375,-0.125},
+{-0.375,-0.5,-0.375, 0.0625,-0.4375,-0.25}}},
+	selection_box = {type="fixed",fixed={
+{0,-0.5,0.375, 0.4375,-0.0625,0.5},
+{-0.0625,-0.5,0.25, 0.375,-0.125,0.375},
+{-0.125,-0.5,0.125, 0.3125,-0.1875,0.25},
+{-0.1875,-0.5,0, 0.25,-0.25,0.125},
+{-0.25,-0.5,-0.125, 0.1875,-0.3125,0},
+{-0.3125,-0.5,-0.25, 0.125,-0.375,-0.125},
+{-0.375,-0.5,-0.375, 0.0625,-0.4375,-0.25}}},
+	drawtype = "mesh",
+	mesh = "sku52_r.obj"
+})
 
 minetest.register_node("stones:s_52r", {
-	description = "R5/2 Slope LowHalf Right",
+	description = "*3 R5/2 Slope LowHalf Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1465,7 +1518,7 @@ minetest.register_node("stones:s_52r", {
 })
 
 minetest.register_node("stones:sb_52r", {
-	description = "R5/2 Slope LowHalf Right Rubble",
+	description = "*3 R5/2 Slope LowHalf Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1492,7 +1545,7 @@ minetest.register_node("stones:sb_52r", {
 })
 
 minetest.register_node("stones:s_52kr", {
-	description = "R5/2 Slope LowHalf Siding Right",
+	description = "*3 R5/2 Slope LowHalf Siding Right",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1517,7 +1570,7 @@ minetest.register_node("stones:s_52kr", {
 })
 
 minetest.register_node("stones:sb_52kr", {
-	description = "R5/2 Slope LowHalf Siding Right Rubble",
+	description = "*3 R5/2 Slope LowHalf Siding Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1539,6 +1592,60 @@ minetest.register_node("stones:sb_52kr", {
 {0,-0.1875,0.25, 0.5,-0.125,0.3125}}},
 	drawtype = "mesh",
 	mesh = "s_52kr.obj"
+})
+
+minetest.register_node("stones:sku52_l", {
+	description = "*3 R5/2 Slope Skew LowHalf Left",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {vcol=0.125, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:sku52_l",
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.375, 0,-0.0625,0.5},
+{-0.375,-0.5,0.25, 0.0625,-0.125,0.375},
+{-0.3125,-0.5,0.125, 0.125,-0.1875,0.25},
+{-0.25,-0.5,0, 0.1875,-0.25,0.125},
+{-0.1875,-0.5,-0.125, 0.25,-0.3125,0},
+{-0.125,-0.5,-0.25, 0.3125,-0.375,-0.125},
+{-0.0625,-0.5,-0.375, 0.375,-0.4375,-0.25}}},
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.375, 0,-0.0625,0.5},
+{-0.375,-0.5,0.25, 0.0625,-0.125,0.375},
+{-0.3125,-0.5,0.125, 0.125,-0.1875,0.25},
+{-0.25,-0.5,0, 0.1875,-0.25,0.125},
+{-0.1875,-0.5,-0.125, 0.25,-0.3125,0},
+{-0.125,-0.5,-0.25, 0.3125,-0.375,-0.125},
+{-0.0625,-0.5,-0.375, 0.375,-0.4375,-0.25}}},
+	drawtype = "mesh",
+	mesh = "sku52_l.obj"
+})
+
+minetest.register_node("stones:skub52_l", {
+	description = "*3 R5/2 Slope Skew LowHalf Left Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {vcol=0.125, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:skub52_l",
+	selection_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.375, 0,-0.0625,0.5},
+{-0.375,-0.5,0.25, 0.0625,-0.125,0.375},
+{-0.3125,-0.5,0.125, 0.125,-0.1875,0.25},
+{-0.25,-0.5,0, 0.1875,-0.25,0.125},
+{-0.1875,-0.5,-0.125, 0.25,-0.3125,0},
+{-0.125,-0.5,-0.25, 0.3125,-0.375,-0.125},
+{-0.0625,-0.5,-0.375, 0.375,-0.4375,-0.25}}},
+	collision_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.375, 0,-0.0625,0.5},
+{-0.375,-0.5,0.25, 0.0625,-0.125,0.375},
+{-0.3125,-0.5,0.125, 0.125,-0.1875,0.25},
+{-0.25,-0.5,0, 0.1875,-0.25,0.125},
+{-0.1875,-0.5,-0.125, 0.25,-0.3125,0},
+{-0.125,-0.5,-0.25, 0.3125,-0.375,-0.125},
+{-0.0625,-0.5,-0.375, 0.375,-0.4375,-0.25}}},
+	drawtype = "mesh",
+	mesh = "sku52_l.obj"
 })
 
 minetest.register_node("stones:s_22", {
@@ -2548,7 +2655,7 @@ minetest.register_node("stones:diagsterps_43r", {
 })
 
 minetest.register_node("stones:s_2216", {
-	description = "*(+4) R2/2 Slope Cornerfill 1/16",
+	description = "*2(+4) R2/2 Slope Cornerfill 1/16",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"roch.png"},
@@ -2581,7 +2688,7 @@ minetest.register_node("stones:sb_2216", {
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
 	climbable = false,
-	groups = {vcol=0.063, cracky=3, oddly_breakable_by_hand=1},
+	groups = {vcol=0.063, cracky=3, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "stones:sb_2216",
 	collision_box = {type="fixed",fixed={
 {-0.5,-0.5,0.0625,  0,-0.4375,0.5},

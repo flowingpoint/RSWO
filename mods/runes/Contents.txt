@@ -2,7 +2,7 @@ Runes
 runes: {
 lit_bu*          Bu = Not
 bu              Bu = Not
-lit_ke*          Ke = May
+lit_ke*          Ke = May (echo-cryptic_wisdom)
 ke              Ke = May
 lit_hui*         Hui = Return
 hui             Hui = Return
@@ -36,5 +36,8 @@ sl3*             *4(+2) Lit Bit 3
 sl4*             *4(+2) Lit Bit 4
 zendor*		ZenDor Crystal
 boxbe*		Box Be
+defr*                Deputy Frog (echo-j001_green)
+hudi*                Mister Hudi (echo-j001_blue)
+wiz*                 Poleman Wizero (echo-j001_red)
 
 '*' indicates absence from menu

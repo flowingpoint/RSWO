@@ -511,13 +511,10 @@ stones:{
 c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume 16) {1346acf}:(+Tops 14)
 ![h] is a hex from 1 to f
 !![s] is 'l' or 'r'
-dragon              Classic Spyro Dragon Statue
-kow                 Cow Gate Statue
-bear                Bear of the Brush
-hudi                Mister Hudi
-wiz                 Poleman Wizero
-modk                Monkey Don
-defr                Deputy Frog
+dragon*              Classic Spyro Dragon Statue
+kow*                 Cow Gate Statue
+bear*                Bear of the Brush
+modk*                Monkey Don
 
 pemra               Square Based Pyramid Emerald
 

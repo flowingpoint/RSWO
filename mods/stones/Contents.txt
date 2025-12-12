@@ -1,5 +1,5 @@
-Stones #{}611
-sto1.lua #{}136
+Stones #{}614
+sto1.lua #{}139
 stones: {
 rock				Rock
 rubble*				Rubble
@@ -86,6 +86,9 @@ blushrock_11a*		Lush Brush+Rock+Brush \\
 sku				*5 Diagonal SkewSlab
 skubl*				*5 Diagonal SkewSlab Rubble
 skuk*				*5 Diagonal SkewSlab
+sek1*				(+)*5 Sekürit
+sek2*				(+)*5 Kartün
+sek3*				(+)*5 Tylyvyz
 sbukl*				*5 Diagonal SkewSlab Rubble
 skukk*				*5 Diagonal SkewSlab
 skrukk*				*5 Diagonal SkewSlab Rubble
@@ -139,7 +142,7 @@ arci				Inner Arc
 aruci*				Inner Arc Rubble
 }
 
-sto2.lua #{}112
+sto2.lua #{}117
 stones: {
 s_222				R2 Diagsteps 1/8 1/2
 sb_222*				R2 Diagsteps 1/8 1/2 Rubble
@@ -506,7 +509,7 @@ vsedl				Part Lowhalf Vsect A
 vsudl*				Part Lowhalf Vsect A Rubble
 }
 
-sto6.lua, sto7.lua #{}67,61		
+sto6.lua, sto7.lua #{}64,60		
 stones:{				
 c8[s][h](+*)				8-Cycle R5/2 Diagstep {L/R}{123456789abcdef}:(+Rubble) {2468abdf}:(+Covolume 16) {1346acf}:(+Tops 14)
 ![h] is a hex from 1 to f
@@ -516,12 +519,11 @@ kow*                 Cow Gate Statue
 bear*                Bear of the Brush
 modk*                Monkey Don
 
-pemra               Square Based Pyramid Emerald
-
---Those labelled '*' after nodename are not in the creative 8-page menu ie:'isokar*'
---Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: *2 R5/2 Slope HighHalf Left Rubble. 
+--Those labelled '*' after nodename are not in the creative 9-page menu ie:'isokar*'
+--Those which shape-shift with popper/rubler staff have * followed by cycle order at beginning of hovertext descriptions ie: '*2 R5/2 Slope HighHalf Left Rubble'. 
 sus.lua
 --Those labelled with a pair of numbers followed by a dagger symbol ('..[a/b]†) give interval of abm step and chance of morphing per step for those nodes which morph to more advanced stages.
+--Those with '(+)' prefix have off-cycle toggles.
 stones:[
 flat_O               Flat 'O'
 srawb*               Lum Nininikus +6HP

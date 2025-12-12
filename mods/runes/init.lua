@@ -135,7 +135,7 @@ echo.dialogue = {
             {text = "The one you waste the whole day working on just to wind up where you started.\n Or am I wrong?", options = {{text = "If I wind up at the start again it will not have been in vain.", to = "e2a"}, {text = "It's no race to me, but it could be less work.", to = "e2b"}, {text = "Then I had better get back before darkness falls!", to = "e2c"}}},
             {text = "The path that will soon be submerged in darkness, my friend.", is_end = true}
         }},
-        e2a = {text = "If I wind up at the start again it will not have been in vain.", is_end = true},
+        e2a = {text = "Reload and relate.", is_end = true},
         e2b = {rancho = {
             {text = "It's no work at all if you know the return!", is_end = true},
             {text = "Is it too much for you? Would you like some pointers?", options = {{text = "For this game?", to = "e2b2a"}, {text = "For node construction?", to = "e2b2b"}, {text = "It's meant to be hard, but not impossible. Less is more.", to = "e2b2c"}}},
@@ -181,7 +181,50 @@ echo.dialogue = {
         }},
         e2b3c = {text = "A school?", is_end = true},
         e2c = {text = "Then I had better get back before darkness falls!", is_end = true}
-    }
+    },
+    j001_green = {
+	start = {rancho = {
+	    {text = "Hi Stax, you're looking very green today, what's eating you?", is_end = true},
+	    {text = "Stax, what have you been up to?", options = {{text = "Ambitions run high.", to = "a"}, {text = "The Abyss", to = "b"}}}
+	}},
+	a = {text = "And so should you. Go and hike!", is_end = true},
+	b = {text = "It calls sometimes.", is_end = true}
+    },
+    j001_blue = {
+	start = {rancho = {
+	    {text = "Good news and bad news, Stax... which do you want first?", options = {{text = "The good news.", to = "a"}, {text = "The bad news.", to = "b"}, {text = "I know already.", to = "c"}}},
+	    {text = "Quiet today, isn't it, Stax?", is_end = true}
+	}},
+	a = {text = "The good guys managed to escape!", options = {{text = "And the bad news?", to = "a1a"}, {text = "Then our plan worked.", to = "a1b"}}},
+	b = {text = "Jin Tang is no more.", options = {{text = "And the good news?", to = "b1a"}, {text = "Then their plan worked.", to = "b1b"}}},
+	a1a = {text = "They're not here!", is_end = true},
+	a1b = {text = "They have gone home.", is_end = true},
+	b1a = {text = "The prisoners reformed.", is_end = true},
+	b1b = {text = "And so should we.", is_end = true},
+	c = {text = "...", is_end = true}
+    },
+    j001_red = {
+	start = {rancho = {
+	    {text = "Stax, why are we here?", options = {{text = "To mind the pock.", to = "aa"}, {text = "To find the Roc.", to = "ab"}, {text = "To pock the mons.", to = "ac"}, {text = "I don't know.", to = "ad"}}},
+	    {text = "How do you do, Stax?", is_end = true},
+	    {text = "Hmmph! My clock has stopped again!", is_end = true},
+	    {text = "Time is short... like you, Stax, my little goblin friend.", options = {{text = "Let's go soon then.", to = "da"}, {text = "Not this time.", to = "db"}, {text = "Stax has time.", to = "dc"}, {text = "And the world is vast and indifferent... like your wit!", to = "dd"}}}
+	}},
+	aa = {text = "Then that is what I'll do!", is_end = true},
+	ab = {text = "Well I hope it's safe!", is_end = true},
+	ac = {text = "Leave some for me!", is_end = true},
+	ad = {text = "You should think about it.", options = {{text = "I have...", to = "ada"}, {text = "I do...", to = "adb"}, {text = "I will...", to = "adc"}}},
+	ada = {text = "...", is_end = true},
+	adb = {text = "...", is_end = true},
+	adc = {text = "...", is_end = true},
+	da = {text = "...", is_end = true},
+	db = {text = "I don't see how you do it. Good luck!", is_end = true},
+	dc = {text = "Don't waste it talking to me! Write a poem or something.", options = {{text = "I'll think about it.", to = "dca"}, {text = "Don't worry, I won't.", to = "dcb"}, {text = "I have.", to = "dcc"}}},
+	dd = {text = "...", is_end = true},
+	dca = {text = "...", is_end = true},
+	dcb = {text = "...", is_end = true},
+	dcc = {text = "...", is_end = true}
+    }	  
 }
 
 
@@ -1915,3 +1958,91 @@ minetest.register_node("runes:boxbe", {
 	drawtype = "mesh",
 	mesh = "boxbe.obj"
 })
+
+minetest.register_node("runes:defr",{
+	description = "Deputy Frog",
+	inventory_image = "defr.png",
+	drawtype = "mesh",
+    mesh = "defr.obj",
+	visual_scale = 0.5,
+	tiles = {"rock.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky=1, not_in_creative_inventory=1},
+	drop = 'runes:rubble 2',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {
+{-0.25, -0.5, -0.15, 0.25, 1.1, 0.22}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.25, -0.5, -0.15, 0.25, 1.1, 0.22}}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "j001_green", pos)
+        return itemstack
+    end
+})
+
+minetest.register_node("runes:hudi",{
+	description = "Mister Hudi",
+	inventory_image = "hudi.png",
+	drawtype = "mesh",
+    mesh = "hudi.obj",
+	visual_scale = 0.5,
+	tiles = {"rock.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky=1, not_in_creative_inventory=1},
+	drop = 'runes:hudi',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {{-0.3, -0.5, -0.13, 0.3, -0.24, 0.15}, 
+{-0.12,-0.24,-0.13, 0.1,0.16,0}}},
+    collision_box = {type = "fixed", fixed = {{-0.3, -0.5, -0.13, 0.3, -0.24, 0.15}, 
+{-0.1,-0.24,-0.13, 0.1,0.16,0}}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "j001_blue", pos)
+        return itemstack
+    end
+})
+
+minetest.register_node("runes:wiz",{
+	description = "Poleman Wizero",
+	inventory_image = "wiz.png",
+	drawtype = "mesh",
+	mesh = "wiz.obj",
+	visual_scale = 0.5,
+	tiles = {"rock.png"},
+	paramtype = "light",
+	paramtype2 = "facedir",
+	groups = {cracky=1, not_in_creative_inventory=1},
+	drop = 'runes:wiz',
+	light_source = 0.5,
+	use_texture_alpha = "clip",
+	selection_box = {type = "fixed", fixed = {
+{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36},
+{-0.15,-0.37,-0.15, 0.15,1.15,0.15},
+{-0.1,1.15,-0.12, 0.1,1.41,0.08},
+{-0.18,1.41,-0.22, 0.18,1.44,0.12},
+{-0.03,1.44,-0.09, 0.03,1.7,-0.01},
+{-0.03,-0.37,-0.33, 0.03,1.07,-0.28},
+{-0.04,1.07,-0.34, 0.04,1.13,-0.27}}},
+    collision_box = {type = "fixed", fixed = {
+{-0.36, -0.5, -0.4, 0.4, -0.37, 0.36},
+{-0.15,-0.37,-0.15, 0.15,1.15,0.15},
+{-0.1,1.15,-0.12, 0.1,1.41,0.08},
+{-0.18,1.41,-0.22, 0.18,1.44,0.12},
+{-0.03,1.44,-0.09, 0.03,1.7,-0.01},
+{-0.03,-0.37,-0.33, 0.03,1.07,-0.28},
+{-0.04,1.07,-0.34, 0.04,1.13,-0.27}}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "j001_red", pos)
+        return itemstack
+    end
+})
+
+
+
+
+
+
+

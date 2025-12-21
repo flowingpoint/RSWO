@@ -1,5 +1,5 @@
-Stones #{}614
-sto1.lua #{}139
+Stones #{}618
+sto1.lua #{}143
 stones: {
 rock				Rock
 rubble*				Rubble
@@ -96,22 +96,26 @@ skuz*				*5 Diagonal SkewSlab Dual Siding Z
 sukz*				*5 Diagonal SkewSlab Dual Siding Z Rubble
 sku20c*				*5 Skewslab Cornered
 sk0bl2c*			*5 Skewslab Cornered Rubble
-sku2_r				*4 RightHalf SkewSlab
-skub2_r*			*4 RightHalf SkewSlab Rubble
-skus_l*			    *4 LeftHalf SkewSlab over Slab
-skubs_l*			*4 LeftHalf SkewSlab over Slab Rubble
-sku2_rc*			*4 RightHalf SkewSlab Cornered
-skub2_r*			*4 RightHalf SkewSlab Cornered Rubble
-sku2_rk*			*4 RightHalf SkewSlab
-skub2_rk*			*4 RightHalf SkewSlab Rubble
-sku2_l				*4 LeftHalf SkewSlab
-skub2_l*			*4 LeftHalf SkewSlab Rubble
-skus_r*			    *4 RightHalf SkewSlab over Slab
-skubs_r*			*4 RightHalf SkewSlab over Slab Rubble
-sku2_lc*			*4 LeftHalf SkewSlab Cornered
-skub2_lc*			*4 LeftHalf SkewSlab Cornered Rubble
-sku2_lk*			*4 LeftHalf SkewSlab Siding
-skub2_lk*			*4 LeftHalf SkewSlab Siding Rubble
+sku2_r				*5 RightHalf SkewSlab
+skub2_r*			*5 RightHalf SkewSlab Rubble
+skus_l*				*5 LeftHalf SkewSlab over Slab
+skubs_l*			*5 LeftHalf SkewSlab over Slab Rubble
+sku2_rc*			*5 RightHalf SkewSlab Cornered
+skub2_rc*			*5 RightHalf SkewSlab Cornered Rubble
+skus_lc*			*5 LeftHalf SkewSlab Cornered over Slab
+skubs_lc*			*5 LeftHalf SkewSlab Cornered over Slab Rubble
+sku2_rk*			*5 RightHalf SkewSlab
+skub2_rk*			*5 RightHalf SkewSlab Rubble
+sku2_l				*5 LeftHalf SkewSlab
+skub2_l*			*5 LeftHalf SkewSlab Rubble
+skus_r*				*5 RightHalf SkewSlab over Slab
+skubs_r*			*5 RightHalf SkewSlab over Slab Rubble
+sku2_lc*			*5 LeftHalf SkewSlab Cornered
+skub2_lc*			*5 LeftHalf SkewSlab Cornered Rubble
+sku2_lk*			*5 LeftHalf SkewSlab Siding
+skub2_lk*			*5 LeftHalf SkewSlab Siding Rubble
+skus_rc*			*5 LeftHalf SkewSlab Cornered over Slab
+skubs_rc*			*5 LeftHalf SkewSlab Cornered over Slab
 sku3_l				R3 SkewSlab
 skub3_l*			R3 SkewSlab Rubble
 sku3_r				R3 SkewSlab Alt

@@ -2519,7 +2519,7 @@ minetest.register_node("stones:sk0bl2c", {
 
 
 minetest.register_node("stones:sku2_r", {
-	description = "*4 RightHalf SkewSlab",
+	description = "*5 RightHalf SkewSlab",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2562,7 +2562,7 @@ minetest.register_node("stones:sku2_r", {
 })
 
 minetest.register_node("stones:skub2_r", {
-	description = "*4 RightHalf SkewSlab Rubble",
+	description = "*5 RightHalf SkewSlab Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2605,7 +2605,7 @@ minetest.register_node("stones:skub2_r", {
 })
 
 minetest.register_node("stones:skus_l", {
-	description = "*4 LeftHalf SkewSlab over Slab",
+	description = "*5 LeftHalf SkewSlab over Slab",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2650,7 +2650,7 @@ minetest.register_node("stones:skus_l", {
 })
 
 minetest.register_node("stones:skubs_l", {
-	description = "*4 LeftHalf SkewSlab over Slab Rubble",
+	description = "*5 LeftHalf SkewSlab over Slab Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2695,7 +2695,7 @@ minetest.register_node("stones:skubs_l", {
 })
 
 minetest.register_node("stones:sku2_rc", {
-	description = "*4 LeftHalf SkewSlab Cornered",
+	description = "*5 LeftHalf SkewSlab Cornered",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2732,7 +2732,7 @@ minetest.register_node("stones:sku2_rc", {
 })
 
 minetest.register_node("stones:skub2_rc", {
-	description = "*4 LeftHalf SkewSlab Cornered Rubble",
+	description = "*5 LeftHalf SkewSlab Cornered Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2768,8 +2768,86 @@ minetest.register_node("stones:skub2_rc", {
 	is_ground_content = true
 })
 
+minetest.register_node("stones:skus_lc", {
+	description = "*5 LeftHalf SkewSlab Cornered over Slab",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cvol=0.781, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=0},
+	drop = 'stones:skus_lc',
+	collision_box= { type= "fixed", fixed= {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{-0.4375,0,-0.5, -0.375,0.5,-0.375},
+{-0.375,0,-0.5, -0.3125,0.5,-0.25},
+{-0.3125,0,-0.5, -0.25,0.5,-0.125},
+{-0.25,0,-0.5, -0.1875,0.5,0},
+{-0.1875,0,-0.5, -0.125,0.5,0.125},
+{-0.125,0,-0.5, -0.0625,0.5,0.25},
+{-0.0625,0,-0.5, 0,0.5,0.375},
+{0,0,-0.375, 0.0625,0.5,0.5},
+{0.0625,0,-0.25, 0.125,0.5,0.5},
+{0.125,0,-0.125, 0.1875,0.5,0.5},
+{0.1875,0,0, 0.5,0.5,0.5}}},
+	selection_box= { type = "fixed", fixed = {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{-0.4375,0,-0.5, -0.375,0.5,-0.375},
+{-0.375,0,-0.5, -0.3125,0.5,-0.25},
+{-0.3125,0,-0.5, -0.25,0.5,-0.125},
+{-0.25,0,-0.5, -0.1875,0.5,0},
+{-0.1875,0,-0.5, -0.125,0.5,0.125},
+{-0.125,0,-0.5, -0.0625,0.5,0.25},
+{-0.0625,0,-0.5, 0,0.5,0.375},
+{0,0,-0.375, 0.0625,0.5,0.5},
+{0.0625,0,-0.25, 0.125,0.5,0.5},
+{0.125,0,-0.125, 0.1875,0.5,0.5},
+{0.1875,0,0, 0.5,0.5,0.5}}},
+	drawtype = "mesh",
+	mesh = "skus_lc.obj",
+	light_source = 0.005,
+	is_ground_content = true
+})
+
+minetest.register_node("stones:skubs_lc", {
+	description = "*5 LeftHalf SkewSlab Cornered over Slab Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cvol=0.781, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = 'stones:skubs_lc',
+	collision_box= { type= "fixed", fixed= {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{-0.4375,0,-0.5, -0.375,0.5,-0.375},
+{-0.375,0,-0.5, -0.3125,0.5,-0.25},
+{-0.3125,0,-0.5, -0.25,0.5,-0.125},
+{-0.25,0,-0.5, -0.1875,0.5,0},
+{-0.1875,0,-0.5, -0.125,0.5,0.125},
+{-0.125,0,-0.5, -0.0625,0.5,0.25},
+{-0.0625,0,-0.5, 0,0.5,0.375},
+{0,0,-0.375, 0.0625,0.5,0.5},
+{0.0625,0,-0.25, 0.125,0.5,0.5},
+{0.125,0,-0.125, 0.1875,0.5,0.5},
+{0.1875,0,0, 0.5,0.5,0.5}}},
+	selection_box= { type = "fixed", fixed = {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{-0.4375,0,-0.5, -0.375,0.5,-0.375},
+{-0.375,0,-0.5, -0.3125,0.5,-0.25},
+{-0.3125,0,-0.5, -0.25,0.5,-0.125},
+{-0.25,0,-0.5, -0.1875,0.5,0},
+{-0.1875,0,-0.5, -0.125,0.5,0.125},
+{-0.125,0,-0.5, -0.0625,0.5,0.25},
+{-0.0625,0,-0.5, 0,0.5,0.375},
+{0,0,-0.375, 0.0625,0.5,0.5},
+{0.0625,0,-0.25, 0.125,0.5,0.5},
+{0.125,0,-0.125, 0.1875,0.5,0.5},
+{0.1875,0,0, 0.5,0.5,0.5}}},
+	drawtype = "mesh",
+	mesh = "skus_lc.obj",
+	light_source = 0.005,
+	is_ground_content = true
+})
+
 minetest.register_node("stones:sku2_rk", {
-	description = "*4 RightHalf SkewSlab Siding",
+	description = "*5 RightHalf SkewSlab Siding",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2810,7 +2888,7 @@ minetest.register_node("stones:sku2_rk", {
 })
 
 minetest.register_node("stones:skub2_rk", {
-	description = "*4 RightHalf SkewSlab Siding Rubble",
+	description = "*5 RightHalf SkewSlab Siding Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2851,7 +2929,7 @@ minetest.register_node("stones:skub2_rk", {
 })
 
 minetest.register_node("stones:sku2_l", {
-	description = "*4 LeftHalf SkewSlab",
+	description = "*5 LeftHalf SkewSlab",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2894,7 +2972,7 @@ minetest.register_node("stones:sku2_l", {
 })
 
 minetest.register_node("stones:skub2_l", {
-	description = "*4 LeftHalf SkewSlab Rubble",
+	description = "*5 LeftHalf SkewSlab Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2937,7 +3015,7 @@ minetest.register_node("stones:skub2_l", {
 })
 
 minetest.register_node("stones:sku2_lc", {
-	description = "*4 LeftHalf SkewSlab Cornered",
+	description = "*5 LeftHalf SkewSlab Cornered",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -2974,7 +3052,7 @@ minetest.register_node("stones:sku2_lc", {
 })
 
 minetest.register_node("stones:skub2_lc", {
-	description = "*4 LeftHalf SkewSlab Cornered Rubble",
+	description = "*5 LeftHalf SkewSlab Cornered Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3010,8 +3088,86 @@ minetest.register_node("stones:skub2_lc", {
 	is_ground_content = true
 })
 
+minetest.register_node("stones:skus_rc", {
+	description = "*5 LeftHalf SkewSlab Cornered over Slab",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	groups = {cvol=0.781, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = 'stones:skus_rc',
+	collision_box= { type= "fixed", fixed= {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{0.375,0,-0.5, 0.4375,0.5,-0.375},
+{0.3125,0,-0.5, 0.375,0.5,-0.25},
+{0.25,0,-0.5, 0.3125,0.5,-0.125},
+{0.1875,0,-0.5, 0.25,0.5,0},
+{0.125,0,-0.5, 0.1875,0.5,0.125},
+{0.0625,0,-0.5, 0.125,0.5,0.25},
+{0,0,-0.5, 0.0625,0.5,0.375},
+{-0.0625,0,-0.375, 0,0.5,0.5},
+{-0.125,0,-0.25, -0.0625,0.5,0.5},
+{-0.1875,0,-0.125, -0.125,0.5,0.5},
+{-0.5,0,0, -0.1875,0.5,0.5}}},
+	selection_box= { type = "fixed", fixed = {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{0.375,0,-0.5, 0.4375,0.5,-0.375},
+{0.3125,0,-0.5, 0.375,0.5,-0.25},
+{0.25,0,-0.5, 0.3125,0.5,-0.125},
+{0.1875,0,-0.5, 0.25,0.5,0},
+{0.125,0,-0.5, 0.1875,0.5,0.125},
+{0.0625,0,-0.5, 0.125,0.5,0.25},
+{0,0,-0.5, 0.0625,0.5,0.375},
+{-0.0625,0,-0.375, 0,0.5,0.5},
+{-0.125,0,-0.25, -0.0625,0.5,0.5},
+{-0.1875,0,-0.125, -0.125,0.5,0.5},
+{-0.5,0,0, -0.1875,0.5,0.5}}},
+	drawtype = "mesh",
+	mesh = "skus_rc.obj",
+	light_source = 0.005,
+	is_ground_content = true
+})
+
+minetest.register_node("stones:skubs_rc", {
+	description = "*5 LeftHalf SkewSlab Cornered over Slab Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	groups = {cvol=0.781, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = 'stones:skubs_rc',
+	collision_box= { type= "fixed", fixed= {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{0.375,0,-0.5, 0.4375,0.5,-0.375},
+{0.3125,0,-0.5, 0.375,0.5,-0.25},
+{0.25,0,-0.5, 0.3125,0.5,-0.125},
+{0.1875,0,-0.5, 0.25,0.5,0},
+{0.125,0,-0.5, 0.1875,0.5,0.125},
+{0.0625,0,-0.5, 0.125,0.5,0.25},
+{0,0,-0.5, 0.0625,0.5,0.375},
+{-0.0625,0,-0.375, 0,0.5,0.5},
+{-0.125,0,-0.25, -0.0625,0.5,0.5},
+{-0.1875,0,-0.125, -0.125,0.5,0.5},
+{-0.5,0,0, -0.1875,0.5,0.5}}},
+	selection_box= { type = "fixed", fixed = {
+{-0.5,-0.5,-0.5, 0.5,0,0.5},
+{0.375,0,-0.5, 0.4375,0.5,-0.375},
+{0.3125,0,-0.5, 0.375,0.5,-0.25},
+{0.25,0,-0.5, 0.3125,0.5,-0.125},
+{0.1875,0,-0.5, 0.25,0.5,0},
+{0.125,0,-0.5, 0.1875,0.5,0.125},
+{0.0625,0,-0.5, 0.125,0.5,0.25},
+{0,0,-0.5, 0.0625,0.5,0.375},
+{-0.0625,0,-0.375, 0,0.5,0.5},
+{-0.125,0,-0.25, -0.0625,0.5,0.5},
+{-0.1875,0,-0.125, -0.125,0.5,0.5},
+{-0.5,0,0, -0.1875,0.5,0.5}}},
+	drawtype = "mesh",
+	mesh = "skus_rc.obj",
+	light_source = 0.005,
+	is_ground_content = true
+})
+
 minetest.register_node("stones:skus_r", {
-	description = "*4 RightHalf SkewSlab over Slab",
+	description = "*5 RightHalf SkewSlab over Slab",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -3056,7 +3212,7 @@ minetest.register_node("stones:skus_r", {
 })
 
 minetest.register_node("stones:skubs_r", {
-	description = "*4 RightHalf SkewSlab over Slab",
+	description = "*5 RightHalf SkewSlab over Slab",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -3101,7 +3257,7 @@ minetest.register_node("stones:skubs_r", {
 })
 
 minetest.register_node("stones:sku2_lk", {
-	description = "*4 LeftHalf SkewSlab Siding",
+	description = "*5 LeftHalf SkewSlab Siding",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -3142,7 +3298,7 @@ minetest.register_node("stones:sku2_lk", {
 })
 
 minetest.register_node("stones:skub2_lk", {
-	description = "*4 LeftHalf SkewSlab Siding Rubble",
+	description = "*5 LeftHalf SkewSlab Siding Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},

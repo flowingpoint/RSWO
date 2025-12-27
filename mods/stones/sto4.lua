@@ -37,7 +37,7 @@ minetest.register_node("stones:rodhr", {
 	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "rodhr.obj",
-	light_source = 1.5
+	light_source = 0
 })
 
 minetest.register_node("stones:rudhr", {
@@ -53,7 +53,7 @@ minetest.register_node("stones:rudhr", {
 	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "rodhr.obj",
-	light_source = 1.5
+	light_source = 0
 })
 
 minetest.register_node("stones:rodhb", {
@@ -69,7 +69,7 @@ minetest.register_node("stones:rodhb", {
 	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "rodhb.obj",
-	light_source = 1.5
+	light_source = 0
 })
 
 minetest.register_node("stones:rudhb", {
@@ -85,7 +85,7 @@ minetest.register_node("stones:rudhb", {
 	{-0.5,-0.5,-0.5,0.5,0,0.5}}},
 	drawtype = "mesh",
 	mesh = "rodhb.obj",
-	light_source = 1.5
+	light_source = 0
 })
 
 minetest.register_node("stones:pyra", {

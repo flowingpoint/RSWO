@@ -1,4 +1,4 @@
-Stones #{}618
+Stones #{}622
 sto1.lua #{}143
 stones: {
 rock				Rock
@@ -350,7 +350,7 @@ stair_2of3_inner		Inner 2/3 Step
 strubl_2of3_inner*		Inner 2/3 Step Rubble
 }
 
-sto4.lua #{}89
+sto4.lua #{}93
 stones: {
 roch				*3 Lowhalf
 ruvl*				*3 Lowhalf Rubble
@@ -439,8 +439,12 @@ spirjoin2			Spiral Column Wall Joinder Lowhalf
 spijrubl2*			Spiral Column Wall Joinder Lowhalf Rubble
 spirjoin_2l			Spiral Column Wall Joinder Left Lowhalf
 spijrubl_2l*			Spiral Column Wall Joinder Left Lowhalf Rubble
+spirjoin_1l			Spiral Column Wall Joinder Left Lowhalf Little
+spijrubl_1l			Spiral Column Wall Joinder Left Lowhalf Little Rubble
 spirjoin_2r			Spiral Column Wall Joinder Right Lowhalf
 spijrubl_2r*			Spiral Column Wall Joinder Right Lowhalf Rubble
+spirjoin_1r			Spiral Column Wall Joinder Right Lowhalf Little
+spijrubl_1r			Spiral Column Wall Joinder Right Lowhalf Little Rubble
 }
 
 sto5.lua #{}66

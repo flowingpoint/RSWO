@@ -1155,7 +1155,7 @@ minetest.register_node("stones:diagsterp_2", {
 })
 
 minetest.register_node("stones:diagstep_7", {
-	description = "*3 Diagonal Step 7/8",
+	description = "*4 Diagonal Step 7/8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1200,7 +1200,7 @@ minetest.register_node("stones:diagstep_7", {
 })
 
 minetest.register_node("stones:diagsterp_7", {
-	description = "*3 Diagonal Step 7/8 Rubble",
+	description = "*4 Diagonal Step 7/8 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1245,7 +1245,7 @@ minetest.register_node("stones:diagsterp_7", {
 })
 
 minetest.register_node("stones:diagstep_6", {
-	description = "*3 Diagonal Step 3/4",
+	description = "*4 Diagonal Step 3/4",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1288,7 +1288,7 @@ minetest.register_node("stones:diagstep_6", {
 })
 
 minetest.register_node("stones:diagsterp_6", {
-	description = "*3 Diagonal Step 3/4 Rubble",
+	description = "*4 Diagonal Step 3/4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1331,7 +1331,7 @@ minetest.register_node("stones:diagsterp_6", {
 })
 
 minetest.register_node("stones:diagstep_3", {
-	description = "*3 Diagonal Step 3/8",
+	description = "*4 Diagonal Step 3/8",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1374,7 +1374,7 @@ minetest.register_node("stones:diagstep_3", {
 })
 
 minetest.register_node("stones:diagsterp_3", {
-	description = "*3 Diagonal Step 3/4 Rubble",
+	description = "*4 Diagonal Step 3/4 Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -1417,7 +1417,7 @@ minetest.register_node("stones:diagsterp_3", {
 })
 
 minetest.register_node("stones:s_52d", {
-	description = "*2 R5/2 Slope LowHalf Double",
+	description = "*4 R5/2 Slope LowHalf Double",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
@@ -1458,7 +1458,7 @@ minetest.register_node("stones:s_52d", {
 })
 
 minetest.register_node("stones:sb_52d", {
-	description = "*2 R5/2 Slope LowHalf Double Rubble",
+	description = "*4 R5/2 Slope LowHalf Double Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rubble.png"},
@@ -2578,7 +2578,7 @@ minetest.register_node("stones:spirstax_hr", {
 	tiles = {"rock.png"},
 	light_source = 0.1,
 	groups = {vcol=0.536, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:spirstax_r",
+	drop = "stones:spirstax_hr",
 	collision_box={type="fixed",fixed={
 {-0.5,-0.5,0,0.5,0.5,0.5},
 {0.5,-0.5,0.0312,0.55,0.5,0.45},
@@ -2600,7 +2600,7 @@ minetest.register_node("stones:spirblux_hr", {
 	tiles = {"rubble.png"},
 	light_source = 0.1,
 	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:spirblux_r",
+	drop = "stones:spirblux_hr",
 	collision_box={type="fixed",fixed={
 {-0.5,-0.5,0,0.5,0.5,0.5},
 {0.5,-0.5,0.0312,0.55,0.5,0.45},
@@ -2808,7 +2808,7 @@ minetest.register_node("stones:spirblux_hl", {
 	tiles = {"rubble.png"},
 	light_source = 0.1,
 	groups = {vcol=0.536, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
-	drop = "stones:spirblux_l",
+	drop = "stones:spirblux_hl",
 	collision_box={type="fixed",fixed={
 {-0.5,-0.5,-0.5,0,0.5,0.5},
 {-0.45,-0.5,-0.55, -0.0312,0.5,-0.5},
@@ -3311,6 +3311,74 @@ minetest.register_node("stones:spijrubl_2l", {
 	mesh = "spirjoin_2l.obj"
 })
 
+minetest.register_node("stones:spirjoin_1l", {
+	description = "Spiral Column Wall Joinder Left Lowhalf Little",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.268, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spirjoin_1l",
+	collision_box={type="fixed",fixed={
+{0.5,-0.5,0.0312, 0.55,0,0.45},
+{0.55,-0.5,0.125, 0.6,0,0.4},
+{0.6,-0.5,0.24, 0.6464,0,0.3536},
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125}}},
+	selection_box={type="fixed",fixed={
+{0.5,-0.5,0.0312, 0.55,0,0.45},
+{0.55,-0.5,0.125, 0.6,0,0.4},
+{0.6,-0.5,0.24, 0.6464,0,0.3536},
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125}}},
+	drawtype="mesh",
+	mesh = "spirjoin_1l.obj"
+})
+
+minetest.register_node("stones:spijrubl_1l", {
+	description = "Spiral Column Wall Joinder Left Lowhalf Little Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.268, cracky=3, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
+	drop = "stones:spijrubl_1l",
+	collision_box={type="fixed",fixed={
+{0.5,-0.5,0.0312, 0.55,0,0.45},
+{0.55,-0.5,0.125, 0.6,0,0.4},
+{0.6,-0.5,0.24, 0.6464,0,0.3536},
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125}}},
+	selection_box={type="fixed",fixed={
+{0.5,-0.5,0.0312, 0.55,0,0.45},
+{0.55,-0.5,0.125, 0.6,0,0.4},
+{0.6,-0.5,0.24, 0.6464,0,0.3536},
+{-0.375,-0.5,0.4375, 0.5,0,0.5},
+{-0.25,-0.5,0.375, 0.5,0,0.4375},
+{-0.125,-0.5,0.3125, 0.5,0,0.375},
+{0,-0.5,0.25, 0.5,0,0.3125},
+{0.125,-0.5,0.1875, 0.5,0,0.25},
+{0.25,-0.5,0.125, 0.5,0,0.1875},
+{0.375,-0.5,0.0625, 0.5,0,0.125}}},
+	drawtype="mesh",
+	mesh = "spirjoin_1l.obj"
+})
+
 minetest.register_node("stones:spirjoin_2r", {
 	description = "Spiral Column Wall Joinder Right Lowhalf",
 	paramtype = "light",
@@ -3381,4 +3449,72 @@ minetest.register_node("stones:spijrubl_2r", {
 {0.375,-0.5,-0.4375, 0.5,0,-0.375}}},
 	drawtype="mesh",
 	mesh = "spirjoin_2r.obj"
+})
+
+minetest.register_node("stones:spirjoin_1r", {
+	description = "Spiral Column Wall Joinder Right Lowhalf Little",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rock.png"},
+	light_source = 0.1,
+	groups = {vcol=0.268, cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:spirjoin_1r",
+	collision_box={type="fixed",fixed={
+{-0.55,-0.5,0.0312, -0.5,0,0.45},
+{-0.6,-0.5,0.125, -0.55,0,0.4},
+{-0.6464,-0.5,0.24, -0.6,0,0.3536},
+{-0.5,-0.5,0.4375, 0.375,0,0.5},
+{-0.5,-0.5,0.375, 0.25,0,0.4375},
+{-0.5,-0.5,0.3125, 0.125,0,0.375},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	selection_box={type="fixed",fixed={
+{-0.55,-0.5,0.0312, -0.5,0,0.45},
+{-0.6,-0.5,0.125, -0.55,0,0.4},
+{-0.6464,-0.5,0.24, -0.6,0,0.3536},
+{-0.5,-0.5,0.4375, 0.375,0,0.5},
+{-0.5,-0.5,0.375, 0.25,0,0.4375},
+{-0.5,-0.5,0.3125, 0.125,0,0.375},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	drawtype="mesh",
+	mesh = "spirjoin_1r.obj"
+})
+
+minetest.register_node("stones:spijrubl_1r", {
+	description = "Spiral Column Wall Joinder Right Lowhalf Little Rubble",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"rubble.png"},
+	light_source = 0.1,
+	groups = {vcol=0.268, cracky=3, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "stones:spijrubl_1r",
+	collision_box={type="fixed",fixed={
+{-0.55,-0.5,0.0312, -0.5,0,0.45},
+{-0.6,-0.5,0.125, -0.55,0,0.4},
+{-0.6464,-0.5,0.24, -0.6,0,0.3536},
+{-0.5,-0.5,0.4375, 0.375,0,0.5},
+{-0.5,-0.5,0.375, 0.25,0,0.4375},
+{-0.5,-0.5,0.3125, 0.125,0,0.375},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	selection_box={type="fixed",fixed={
+{-0.55,-0.5,0.0312, -0.5,0,0.45},
+{-0.6,-0.5,0.125, -0.55,0,0.4},
+{-0.6464,-0.5,0.24, -0.6,0,0.3536},
+{-0.5,-0.5,0.4375, 0.375,0,0.5},
+{-0.5,-0.5,0.375, 0.25,0,0.4375},
+{-0.5,-0.5,0.3125, 0.125,0,0.375},
+{-0.5,-0.5,0.25, 0,0,0.3125},
+{-0.5,-0.5,0.1875, -0.125,0,0.25},
+{-0.5,-0.5,0.125, -0.25,0,0.1875},
+{-0.5,-0.5,0.0625, -0.375,0,0.125}}},
+	drawtype="mesh",
+	mesh = "spirjoin_1r.obj"
 })

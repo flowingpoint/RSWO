@@ -1053,6 +1053,30 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:spirblux_ql"	then 
 		p2xqlb = s.param2
 		minetest.env:set_node(p, {name="stones:spirblux_l", param2=p2xqlb}) end
+        if s.name == "stones:spirjoin_2r"	then 
+		p2j21 = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_1r", param2=p2j21}) end
+        if s.name == "stones:spirjoin_1r"	then 
+		p2j12 = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_2r", param2=p2j12}) end
+        if s.name == "stones:spijrubl_2r"	then 
+		p2jb21 = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_1r", param2=p2jb21}) end
+        if s.name == "stones:spijrubl_1r"	then 
+		p2jb12 = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_2r", param2=p2jb12}) end
+        if s.name == "stones:spirjoin_2l"	then 
+		p2j21a = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_1l", param2=p2j21a}) end
+        if s.name == "stones:spirjoin_1l"	then 
+		p2j12a = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_2l", param2=p2j12a}) end
+        if s.name == "stones:spijrubl_2l"	then 
+		p2jb21a = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_1l", param2=p2jb21a}) end
+        if s.name == "stones:spijrubl_1l"	then 
+		p2jb12a = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_2l", param2=p2jb12a}) end
         if s.name == "stones:rushrock_21u"	then 
 		p2r21ua = s.param2
 		minetest.env:set_node(p, {name="stones:brushrock_21u", param2=p2r21ua}) end
@@ -1212,21 +1236,6 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:pyru_2"	then 
 		p2y2u = s.param2
 		minetest.env:set_node(p, {name="stones:pyru", param2=p2y2u}) end
-        if s.name == "noter:book_open"	then 
-        minetest.add_particlespawner({
-		amount = 3,
-		time = 1,
-		glow = 14,
-		pos = minetest.env:get_node(self.object:getpos()),
-		pos = {x=pos.x, y=pos.y, z=pos.z},
-		minvel = {x=-0.2, y=-1, z=-0.2},
-		maxvel = {x=0.2, y=1, z=0.2},
-		minacc = {x=-1, y=0.2, z=-1},
-		maxacc = {x=1, y=0.7, z=1},
-		exptime = {min=2, max=2},
-		collisiondetection = true,
-		collision_removal = false,
-		texpool = {{name = 'magicalities_note.png', blend='alpha', scale_tween={{x=(math.random(10,20)/5),y=(math.random(10,20)/5)},{x=(math.random(20,30)/5),y=(math.random(20,30)/5)}}}}})end
         if s.name == "stones:rublish_11"	then 
 		p2rb1a = s.param2
 		minetest.env:set_node(p, {name="stones:rublish_11a", param2=p2rb1a}) end
@@ -1507,9 +1516,21 @@ minetest.register_entity("tool:pow", {
 		p2bar4b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_4b", param2=p2bar4b}) end
         if s.name == "tool:bars_4a"	then 
+		p2bar5a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_5a", param2=p2bar5a}) end
+        if s.name == "tool:bars_4b"	then 
+		p2bar5b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_5b", param2=p2bar5b}) end
+        if s.name == "tool:bars_5a"	then 
+		p2bar6a = s.param2
+		minetest.env:set_node(p, {name="tool:bars_6a", param2=p2bar6a}) end
+        if s.name == "tool:bars_5b"	then 
+		p2bar6b = s.param2
+		minetest.env:set_node(p, {name="tool:bars_6b", param2=p2bar6b}) end
+        if s.name == "tool:bars_6a"	then 
 		p2bar1a = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1a", param2=p2bar1a}) end
-        if s.name == "tool:bars_4b"	then 
+        if s.name == "tool:bars_6b"	then 
 		p2bar1b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1b", param2=p2bar1b}) end
         if s.name == "tool:window_closed"	then 
@@ -1631,7 +1652,7 @@ end end
 end end
 })
 
-minetest.register_entity("tool:bew", {
+minetest.register_entity("tool:pew", {
 	visual = "sprite",
 	visual_size = {x=0.25, y=0.25},
 	textures = {"bstar.png"},
@@ -3173,6 +3194,18 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:spijrubl_2r"	then 
 		p2sp8b = s.param2
 		minetest.env:set_node(p, {name="stones:spirjoin_2r", param2=p2sp8b}) end
+        if s.name == "stones:spirjoin_1l"	then 
+		p2sp7c = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_1l", param2=p2sp7c}) end
+        if s.name == "stones:spijrubl_1l"	then 
+		p2sp7d = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_1l", param2=p2sp7d}) end
+        if s.name == "stones:spirjoin_1r"	then 
+		p2sp8c = s.param2
+		minetest.env:set_node(p, {name="stones:spijrubl_1r", param2=p2sp8c}) end
+        if s.name == "stones:spijrubl_1r"	then 
+		p2sp8d = s.param2
+		minetest.env:set_node(p, {name="stones:spirjoin_1r", param2=p2sp8d}) end
         if s.name == "stones:spirout_l"	then 
 		p2sp9a = s.param2
 		minetest.env:set_node(p, {name="stones:spirbut_l", param2=p2sp9a}) end

@@ -91,8 +91,8 @@ minetest.register_node("tool:bars_2a", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_1.png",
+	wield_image = "bars.png^dice_1.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_2a",
 	drawtype = "nodebox",
@@ -111,8 +111,8 @@ minetest.register_node("tool:bars_2b", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_1.png",
+	wield_image = "bars.png^dice_1.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_2b",
 	drawtype = "nodebox",
@@ -135,8 +135,8 @@ minetest.register_node("tool:bars_2c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_1.png",
+	wield_image = "bars.png^dice_1.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_2c",
 	drawtype = "nodebox",
@@ -156,8 +156,8 @@ minetest.register_node("tool:bars_2d", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_1.png",
+	wield_image = "bars.png^dice_1.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_2d",
 	drawtype = "nodebox",
@@ -177,8 +177,8 @@ minetest.register_node("tool:bars_3a", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_2.png",
+	wield_image = "bars.png^dice_2.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_3a",
 	drawtype = "nodebox",
@@ -197,8 +197,8 @@ minetest.register_node("tool:bars_3b", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_2.png",
+	wield_image = "bars.png^dice_2.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_3b",
 	drawtype = "nodebox",
@@ -221,8 +221,8 @@ minetest.register_node("tool:bars_3c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_2.png",
+	wield_image = "bars.png^dice_2.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_3c",
 	drawtype = "nodebox",
@@ -242,8 +242,8 @@ minetest.register_node("tool:bars_3d", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_2.png",
+	wield_image = "bars.png^dice_2.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_3d",
 	drawtype = "nodebox",
@@ -263,8 +263,8 @@ minetest.register_node("tool:bars_4a", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_3.png",
+	wield_image = "bars.png^dice_3.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_4a",
 	drawtype = "nodebox",
@@ -284,8 +284,8 @@ minetest.register_node("tool:bars_4b", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_3.png",
+	wield_image = "bars.png^dice_3.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_4b",
 	drawtype = "nodebox",
@@ -308,8 +308,8 @@ minetest.register_node("tool:bars_4c", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_3.png",
+	wield_image = "bars.png^dice_3.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_4c",
 	drawtype = "nodebox",
@@ -329,8 +329,8 @@ minetest.register_node("tool:bars_4d", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "bars.png",
-	wield_image = "bars.png",
+	inventory_image = "bars.png^dice_3.png",
+	wield_image = "bars.png^dice_3.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bars_4d",
 	drawtype = "nodebox",
@@ -342,6 +342,170 @@ minetest.register_node("tool:bars_4d", {
 {0.4375,0.4375,-0.0625, 0.5,0.5,0.0625}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
 		minetest.set_node(pos, {name = "tool:bars_4a", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_5a", {
+	description = "Bars 5",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_8.png",
+	wield_image = "bars.png^dice_8.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_5a",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.1875,-0.5,-0.4375, -0.0625,0.5,-0.3125},
+{0.0625,-0.5,-0.1875, 0.1875,0.5,-0.0625},
+{0.3125,-0.5,0.0625, 0.4375,0.5,0.1875}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_5b", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_5b", {
+	description = "Bars 5b broke",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_8.png",
+	wield_image = "bars.png^dice_8.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_5b",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.1875,-0.5,-0.4375, -0.0625,-0.4375,-0.3125},
+{0.0625,-0.5,-0.1875, 0.1875,-0.4375,-0.0625},
+{0.3125,-0.5,0.0625, 0.4375,-0.375,-0.0625},
+{-0.1875,0.375,-0.4375, -0.0625,0.5,-0.3125},
+{0.0625,0.4375,-0.1875, 0.1875,0.5,-0.0625},
+{0.3125,0.4375,0.0625, 0.4375,0.5,-0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_5c", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_5c", {
+	description = "Bars 5b broke one way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_8.png",
+	wield_image = "bars.png^dice_8.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_5c",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.1875,-0.5,-0.4375, -0.0625,-0.4375,-0.3125},
+{0.0625,-0.5,-0.1875, 0.1875,-0.4375,-0.0625},
+{0.3125,-0.5,0.0625, 0.4375,-0.375,-0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_5d", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_5d", {
+	description = "Bars 5b broke other way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_8.png",
+	wield_image = "bars.png^dice_8.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_5d",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.1875,0.375,-0.4375, -0.0625,0.5,-0.3125},
+{0.0625,0.4375,-0.1875, 0.1875,0.5,-0.0625},
+{0.3125,0.4375,0.0625, 0.4375,0.5,-0.0625}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_5a", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_6a", {
+	description = "Bars 6",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_9.png",
+	wield_image = "bars.png^dice_9.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_6a",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.3125, -0.3125,0.5,0.4375}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_6b", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_6b", {
+	description = "Bars 6b broke",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_9.png",
+	wield_image = "bars.png^dice_9.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_6b",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.3125, -0.3125,-0.4375,0.4375},
+{-0.4375,0.375,0.3125, -0.3125,0.5,0.4375}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_6c", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_6c", {
+	description = "Bars 6b broke one way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_9.png",
+	wield_image = "bars.png^dice_9.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_6c",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.5,0.3125, -0.3125,-0.4375,0.4375}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_6d", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:bars_6d", {
+	description = "Bars 6b broke other way",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "bars.png^dice_9.png",
+	wield_image = "bars.png^dice_9.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:bars_6d",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375,0.375,0.3125, -0.3125,0.5,0.4375}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:bars_6a", param2 = node.param2})
 	end,
 	})
 

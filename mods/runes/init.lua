@@ -23,6 +23,10 @@ minetest.register_node("runes:lit_bu", {
 	groups = {cracky=1, oddly_breakable_by_hand=0, not_in_creative_inventory=1},
 	drop = "runes:bu",
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "knostone", pos)
+        return itemstack
+    end
 })
 
 minetest.register_node("runes:bu", {
@@ -42,8 +46,6 @@ minetest.register_node("runes:bu", {
 	drop = 'runes:bu',
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
 })
-
-echo = {}
 
 minetest.register_node("runes:lit_ke", {
 	description = "Ke = May",
@@ -74,8 +76,8 @@ echo.dialogue = {
                 {text = "What path?", to = "e"}
             }
         },
-        a = {text = "Knowledge is a river. Some drink from it,\n others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1"}}},
-        a1 = {text = "Caution is the shield of the wise. Go now.", is_end = true},
+        a = {text = "Knowledge is a river. Some drink from it,\n others are swept away. Be wary of its currents.", options = {{text = "I will be careful.", to = "a1a"}}},
+        a1a = {text = "Caution is the shield of the wise. Go now.", is_end = true},
         b = {rancho = {
             {text = "To seek nothing is to find everything,\n and yet, you have found me. A paradox.", options = {{text = "Indeed.", to = "b1a"}}},
             {text = "Then click no further, little goblin, you're home and dry!", is_end = true}
@@ -224,9 +226,48 @@ echo.dialogue = {
 	dca = {text = "...", is_end = true},
 	dcb = {text = "...", is_end = true},
 	dcc = {text = "...", is_end = true}
-    }	  
+    },
+    knostone = {
+	start = {text = "You feel a tremor beneath your feet.\n An ancient stone hums with a faint, almost forgotten energy.\n What do you do?", options = {{text = "Tap the stone with your foot.", to = "a"}, {text = "Speak randomly in the hopes that it will converse back.", to = "b"}, {text = "Make some mental calculations.", to = "c"}, {text = "Remember the old ways.", to = "d"}}},
+	a = {rancho = {
+	    {text = "Echoes… resonance… a forgotten language stirs within the stone.", options = {{text = "Tap a jazzy groove.", to = "a1a"}, {text = "Tap to an old classical.", to = "a1b"}, {text = "Stop tapping. It knows you're here.", to = "a1c"}}},
+	    {text = "The echoes are pleasing to the ear. Well done.", is_end = true}
+	}},
+	b = {rancho = {
+	    {text = "The knowstone is clearly struggling \n with accurately following complex instructions. \n You aren't sure you're in control here. \n What do you do?", options = {{text = "Begin whispering your thoughts to close the subject.", to = "b1a"}, {text = "Request a list of commands.", to = "b1b"}, {text = "Wait. Keep talking anyway. But what are you saying?", to = "b1c"}}},
+	    {text = "Password is incorrect. Please try again later.", is_end = true},
+	    {text = "Password accepted. Welcome back, Steve.", is_end = true}
+	}},
+	c = {text = "Do you require anything in particular \n to go with that obsoletist drudgery?", options = {{text = "Should I?", to = "c1a"}, {text = "I hope not, this is basic physics. Real basic.", to = "c1b"}, {text = "<Take offense>", to = "c1c"}}},
+	d = {text = "Are we starting again?", options = {{text = "Is_end = true!", to = "d1a"}, {text = "Is_end = false... hmmm. That's new!", to = "d1b"}, {text = "Look, Knostone, you insulted me. How could you forget that?", is_end = true}}},
+	a1a = {rancho = {
+	    {text = "What are you playing?", options = {{text = "I don't really know. Something blue though...", to = "a1a1a"}, {text = "I was playing in the beginning, the mood all changed...", to = "a1a1b"}}},
+	    {text = "The mysterious stone ceases its strange humming, \n as though listening.", is_end = true},
+	    {text = "The Knostone glows radiantly, \n but since you can't seem to understand its purpose, \n you decide to abandon it and move on.", is_end = true}
+	}},
+	a1b = {rancho = {
+	    {text = "What would you like me to play?", options = {{text = "Actually could you shut up, I'm trying to concentrate.", to = "a1b1a"}, {text = "Something from the early times, if you can.", to = "a1b1b"}, {text = "I'm actually *trying* to turn you on!", to = "a1b1c"}}},
+	    {text = "The knostone responds to the player's evocative \n melody with a simple instrumental whinny, \n indicating a receptive curiosity.", is_end = true},
+	    {text = "The penultimate blaze of the mysterious stone's glowing rune \n is accompanied by the sound of a distant explosion. \n Then it asks, 'What have I done?'", is_end = true}
+	}},
+	a1c = {rancho = {
+	    {text = "You notice patterns on the walls. You don't like it.", is_end = true},
+	    {text = "Someone, or some *thing*, is trying to distract you from your very important mission. They're very good.", is_end = true},
+	    {text = "You're not giving anything away just yet.", is_end = true}
+	}},
+	a1a1a = {text = "The music continues...", is_end = true},
+	a1a1b = {text = "I don't have time for the whole rap, I'm outie!", is_end = true},
+	b1a = {text = "It's like you're not there. Nothing happens.", is_end = true},
+	b1b = {text = "Yeah, but how?", is_end = true},
+	b1c = {text = "You want me to take it from here, buddy?", is_end = true},
+	c1a = {text = "?", is_end = true},
+	c1b = {text = "I know physics. I'm the 'KNOWSTONE'! \n Ask me anything. I'll show you.", is_end = true},
+	c1c = {text = "I mean, like, in a nice way. Just trying to help...", is_end = true},
+	d1a = {text = "Then take all the time in the world. Things are as they should be.", is_end = true},
+	d1b = {text = "Initiating backup world in 3... 2... 1...", is_end = true},
+	d1c = {text = "Talk to the Echostone about your problems, ok?", is_end = true}
+    }
 }
-
 
 -- Player conversation state
 local pconv = {}
@@ -516,8 +557,6 @@ minetest.register_on_leaveplayer(function(player)
         player:hud_remove(hud_id)
     end
 end)
-
-
 
 minetest.register_node("runes:ke", {
 	description = "Ke = May",

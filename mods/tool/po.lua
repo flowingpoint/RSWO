@@ -1462,6 +1462,12 @@ minetest.register_entity("tool:pow", {
 		p2cl10 = s.param2
 		minetest.env:set_node(p, {name="tool:door_l52a", param2=p2cl10}) end
         if s.name == "tool:door_l52a"	then 
+		p2cl11 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_voc", param2=p2cl11}) end
+        if s.name == "tool:door_closed_voc"	then 
+		p2cl12 = s.param2
+		minetest.env:set_node(p, {name="tool:door_closed_vo", param2=p2cl12}) end
+        if s.name == "tool:door_closed_vo"	then 
 		p2cl0 = s.param2
 		minetest.env:set_node(p, {name="tool:door_closed", param2=p2cl0}) end
         if s.name == "tool:door_open"	then 
@@ -1495,6 +1501,12 @@ minetest.register_entity("tool:pow", {
 		p2op10 = s.param2
 		minetest.env:set_node(p, {name="tool:door_l52ao", param2=p2op10}) end
         if s.name == "tool:door_l52ao"	then 
+		p2op11 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_voc", param2=p2op11}) end
+        if s.name == "tool:door_open_voc"	then 
+		p2op12 = s.param2
+		minetest.env:set_node(p, {name="tool:door_open_vo", param2=p2op12}) end
+        if s.name == "tool:door_open_vo"	then 
 		p2op0 = s.param2
 		minetest.env:set_node(p, {name="tool:door_open", param2=p2op0}) end
         if s.name == "tool:bars_1a"	then 

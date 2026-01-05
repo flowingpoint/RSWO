@@ -239,7 +239,7 @@ echo.dialogue = {
 	    {text = "Password accepted. Welcome back, Steve.", is_end = true}
 	}},
 	c = {text = "Do you require anything in particular \n to go with that obsoletist drudgery?", options = {{text = "Should I?", to = "c1a"}, {text = "I hope not, this is basic physics. Real basic.", to = "c1b"}, {text = "<Take offense>", to = "c1c"}}},
-	d = {text = "Are we starting again?", options = {{text = "Is_end = true!", to = "d1a"}, {text = "Is_end = false... hmmm. That's new!", to = "d1b"}, {text = "Look, Knostone, you insulted me. How could you forget that?", is_end = true}}},
+	d = {text = "Are we starting again?", options = {{text = "Is_end = true!", to = "d1a"}, {text = "Is_end = false... hmmm. That's new!", to = "d1b"}, {text = "Look, Knostone, you insulted me. How could you forget that?", to = "d1c"}}},
 	a1a = {rancho = {
 	    {text = "What are you playing?", options = {{text = "I don't really know. Something blue though...", to = "a1a1a"}, {text = "I was playing in the beginning, the mood all changed...", to = "a1a1b"}}},
 	    {text = "The mysterious stone ceases its strange humming, \n as though listening.", is_end = true},
@@ -266,6 +266,39 @@ echo.dialogue = {
 	d1a = {text = "Then take all the time in the world. Things are as they should be.", is_end = true},
 	d1b = {text = "Initiating backup world in 3... 2... 1...", is_end = true},
 	d1c = {text = "Talk to the Echostone about your problems, ok?", is_end = true}
+    },
+    story = {
+	start = {text = "Play Rindpebble Adventure?", options = {{text = "Ok.", to = "a"}, {text = "No.", to = "b"}, {text = "Insert notes.", to = "c"}}},
+	a = {rancho = {
+	{text = "Welcome to my Rindpebble Market Welcome Post, \n please choose a rent option.", options = {{text = "A week in the Reveller's Casket Inn, \n includes hedge clone work. \n ", to = "f"}, {text = "Five days in the Baroness's cellar, \n sharing with her soldier son. \n \n \n ", to = "f"}, {text = "One night in Mage Xao's attic  \n with book and potion priviledges. \n \n \n \n \n ", to = "f"}}},
+	{text = "Produce now your documents.", options = {{text = "You offer a worn badge with a handwoven moniker.", to = "f"}, {text = "You extract a prison release letter and signed plans from an inner pocket.", to = "f"}, {text = "'I have only my word, and it is founded in honour and respect. \n I assure you I am of good will and being new \n to this small place you call Rindpebble I place this gold in trust \n that a man might pass nameless this night.' \n \n \n ", to = "f"}}},
+	{text = "You are leaving the stalls and weedy hags whistle \n for you to behold their mangley lichens and veggy rot. \n 'Grab yourself a free bag of Junglebog Musk, \n or an Eggly Packratsnot', you are beckoned. \n As you inch away politely, a thin athlete somersaults toward you, \n wearing a mechanical device which would reduce his perception  \n of you, who stand most unfortunately in his path.", options = {{text = "You rush back towards the wenches' stall. \n \n \n ", to = "f"}, {text = "You brace for impact with the moving  \n cacophony of twirls and swirls. \n \n \n \n", to = "f"}, {text = "You holler and gesticulate expressively. \n \n \n \n \n ", to = "f"}}},
+	{text = "Suddenly it is dark and your bed is made, \n you are tired from the day's events, \n but able for one more activity before you sleep.", options = {{text = "You prepare a pen and paper \n to write on if you are inspired by a dream. \n ", to = "f"}, {text = "You light a small fire of the scrap papers \n you collected and make a small prayer. \n \n \n ", to = "f"}, {text = "You fish out the keys you were given at the stall \n and make detailed and perceptive analysis, \n until you fall asleep with them in your hands. \n \n \n \n \n \n ", to = "f"}}},
+	{text = "Your breakfast ticket is wrapped, with hundreds of other kinds of ticket, \n in a thick roll with an elastic band, and as you search you remember \n what your granny told you about greedy fingers making needy tinkers. \n Withdrawing only one, you store the rest away in your hammock-satchel \n and waltz over to the wall post to notch your departure. \n A black cat approaches and coughs dramatically at your feet. \n Being trained, you hum gently an ancient healing tune and the cough subsides.", options = {{text = "You gain a little experience, a lot of energy, but no health. \n \n \n ", to = "f"}, {text = "You gain a little energy, a lot of health, but no experience. \n \n \n ", to = "f"}, {text = "You gain a little health, a lot of experience, but no energy. \n \n \n ", to = "f"}}},
+	{text = "You are pushed by a disgruntled employee of the empire \n who in haste has also knocked a woman forward into her cart of veggies and sweet-picks, \n revealing on her ankle a tattoo that is the mark of an evil-smelling potion sect \n known to be underground of this very village.", options = {{text = "You can't remember who gave you these clues and check your journal.", to = "f"}, {text = "You decide to track her and wait for her to right herself.", to = "f"}, {text = "'Hey, is that the mark of that potion sect?'", to = "f"}}},
+	{text = "Another night in the village has you running low on vitamins \n and you stumble into the inn, there meeting a dogman and his walking kettle. \n He sings like a lark of woe and dead pirates. \n You are surprised when his dogwoman wife ambles out of the complex of trapdoors \n and shunts a stool beside him, knocking the kettle off into a hasty triple time dandy-dance. \n You ask may you burn rotten dragon tongue \n in his kettle for nutrients, and they chime a curse.", options = {{text = "'A tongue for thee, will cost you three: \n a farting beam, a splitting seam, and a squinting dream, \n but calum, kinestide, and welfog will provide.' \n \n \n \n \n ", to = "f"}, {text = "'To burn this bottle, will loosen your grip, \n to leave it idle, will cause it to drip.' \n \n \n \n \n \n \n \n ", to = "f"}, {text = "'The pressure within may seal the bin \n but the gaseous snout gives the fumes of doubt. \n Sip carefully, for this is a magic kettle.' \n \n \n \n \n \n \n \n \n \n \n ", to = "f"}}},
+	{text = "Well fed and clothed in fabric suited to your mission, \n you part from the wandering nomad group and hurry towards the town wall, \n where a carousing priest is giving out leaflets. He catches your eye and soon \n is explaining with loving detail the squiggles and graphics most splendid on his sheets. \n It sounds like you would have a really good time if you \n followed him and wiggled your tongue while looking at the wordy papers, \n one of which he hands you, so you try voice an honest attempt at comprehension.", options = {{text = "A glitter of dancing nymphs swirl towards you from the direction of the sun. \n \n \n ", to = "f"}, {text = "You feel lightheaded and ask to be left alone. \n You remember your 5th birthday present, a grey flag and stickle for warding thieves. \n \n \n \n ", to = "f"}, {text = "Nothing happens. \n \n \n \n \n ", to = "f"}}},
+	{text = "The road becomes thick with mud and your feet are being watched \n by hungry landbaers from under the broadleafs of the roadside ditches. \n You want to release the brushfaced camel here, before the wild creatures ahead \n enchant it and turn its hump to chocolate, as you were warned by a nobody somewhere. \n It pains you to let ol' Fussywug go, so you pause and dip into your sack.", options = {{text = "You find a map route which avoids \n the wild danger but involves lots of swimming and nymphs. \n \n ", to = "f"}, {text = "You enjoy a hearty meal of dried shrinkworts and hunglersots \n washed down with yuggus. The camel refuses \n to eat any of it, but takes water. \n \n \n \n \n ", to = "f"}, {text = "You redeem yourself of this side mission and dejectedly bear up \n to a long journey back, so that the camel may live. \n \n \n \n \n \n \n \n ", to = "f"}}},
+	{text = "The wrestling triplets are hunting acties, which are little blobs of floating goo \n that reproduce around Gugg's farm with such speed that he must play \n immaculate fair tunes from his walkbot sidearm manager to stun them \n and protect his crop, but the triplets are leading \n by diving and grabbing them with special net-gloves. \n In reading mode, your parody-pet mainframe wristwatch has no functionality, \n but you can see that it has low battery.", options = {{text = "You enter the farm and draw power from the central supply unit. \n \n \n ", to = "f"}, {text = "You observe them until you feel a yawn coming and keep going. \n \n \n ", to = "f"}, {text = "You remove the watch and sack and join them, until all acties are got. \n \n \n ", to = "f"}}},
+	{text = "Counting markers makes you brave for the Great Ba's Challenge, \n but you have lost much fog-tags and need rest more than anything. \n In ear you bring vectors and stolen hush. When you see the queen ahead \n you make no motion for she is waiting for the camel and speaks directly to it, \n letting you pass without incident or cautions.", options = {{text = "You move a little faster, with much improved storage capacity, but unchanged comfort. \n ", to = "f"}, {text = "You move with a little improved storage capacity, much more comfort, but unchanged speed. \n ", to = "f"}, {text = "You move with a little more comfort, much improved speed, but unchanged storage capacity. \n ", to = "f"}}},
+	{text = "You do not know how the sky has stained, while your eyes remain darkened \n by the cursing fogs that issue like ugly florid gestures from your left and right.", options = {{text = "'I suppose that's worth a fortune back home, that stuff.'", to = "g"}, {text = "'I hope the others have survived this torrid \n discoloration of an otherwise standard landscape.' \n ", to = "g"}, {text = "'I am getting itchy, and it has something to do \n with the sky being that color.' \n \n \n ", to = "g"}}},
+	{text = "After walking over a moorish battement where none other than Halkfrost \n himself gathered straw to beat the wolves from his garden,\n your vision coheres upon an old oaf with brazen blue hair. \n He shuggles his foresteps and frostcads a can of rootmeal to you. \n Instead of greeting him, what do you do?", options = {{text = "Accent your voice to sound like a robber \n that was on the newspaper as a hero of a fire incident. \n \n ", to = "f"}, {text = "Propose he attend a weekly gathering of aidsmen of the flowershows and rodgassings. \n \n \n", to = "f"}, {text = "Juxtapose yourself in time with his huffing and hawings \n for the sense of rythym but restrain yourself \n from giggling when a bunch of sheep join in. \n \n \n \n \n ", to = "f"}}},
+	{text = "Into the woods now you find your legs have been aching without you noticing, \n so you sit back on a log and empty your satchel of its contents, \n so that they spread and gleam in the beam of light that cuts through the canopy. \n You have a rod, a gutter section, a fancy hammer with gold and jewel embossment, \n three loaves of elfen bread, a crusty scab from a rockjockey clouber- \n those deadly beasts which trip you up and gobble you, \n a yellow flag with green spots, miniature diggers- \n 5 of them, and 5 trained mice wearing little protective jackets. \n You also have sudocream, vaseline, aloe vera, soft glue, and a few letters \n and rare items crucial to your mission in an added compartment \n in your rucksack, which you do not remove. \n \n \n \n ", options = {{text = "You eat and set off with all your things towards the next village. \n \n \n \n \n \n \n \n \n \n \n ", to = "f"}, {text = "You nap, eat, and set off with only food and essentials \n toward the Mad Torquin's Shack, which is very far away. \n \n \n \n \n \n \n \n \n \n \n \n ", to = "f"}, {text = "You set up a small reality show \n and make the mice do flips until it is dark, \n then flee a strange and enchanting nymph, \n who takes the elfen bread, mice, and the stuff you don't \n really need for your story. \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n \n ", to = "f"}}}
+	}},
+	f = {text = "Note removed. *kachick!*", options = {{text = "Start", to = "start"}}},
+	g = {text = "You arrive finally at a broad deserted landscape with some odd skeletons randomly dispersed in it.", options = {{text = "Ok.", to = "f"}}},
+	b = {text = "Want to play 'carrot'?", options = {{text = "Ok", to = "d"}, {text = "No.", to = "e"}}},
+	c = {text = "You drop an envelope containing a script into the can. \n It is absorbed into the stone's inner matrix structure \n in a show of fibres and beams. This should be more interesting.", options = {{text = "Start", to = "start"}}},
+	d = {text = "Entrance of a dirty nightclub.", options = {{text = "Head to the dance floor.", to = "d1a"}, {text = "Get a drink at the bar.", to = "d1b"}, {text = "Find a table to sit at.", to = "d1c"}}},
+	d1a = {text = "There are too many people here.", options = {{text = "Try to dance.", to = "d1a1a"}, {text = "Go back.", to = "d"}}},
+	d1b = {text = "You spend all your money on drink.", options = {{text = "Leave bar tipsy.", to = "d1b1a"}}},
+	d1a1a = {text = "You dance until you are tired.", options = {{text = "Get a drink at the bar.", to = "d1b"}, {text = "Leave.", to = "d1a1a1b"}}},
+	d1a1a1b = {text = "You walk home.", is_end = true},
+	d1b1a = {text = "You get a taxi home.", is_end = true},
+	d1c = {text = "Your workmates are there.", options = {{text = "Sit with them.", to = "d1c1a"}, {text = "Go back.", to = "d"}}},
+	d1c1a = {text = "You get some overtime done.", options = {{text = "Leave bar.", to = "d1c1a1a"}}},
+	d1c1a1a = {text = "You get a lift home. You made it.", is_end = true},
+	e = {text = "Game Over.", is_end = true}
     }
 }
 
@@ -345,7 +378,7 @@ local function display_dialogue(player, dialogue_id, step_key)
     pconv[player_name].active_options = current_display_step.options
 
     if current_display_step.is_end then
-        minetest.after(3, function()
+        minetest.after(5, function()
             xhud(player)
             pconv[player_name] = nil
             --minetest.chat_send_player(player_name, "Conversation ended.")
@@ -418,103 +451,6 @@ minetest.register_chatcommand("c", {
         return true
     end
 })
-
--- Function to handle in-game conversation building
-function echo.build_and_append(instruction, player_name)
-    -- V3: Parse, append, update live state, and respond.
-
-    -- 1. Parse the instruction
-    local base_node = instruction:match("%[([%w%d]+)%?%]")
-    local choices_str = instruction:match("%[%[(.+)%]%]")
-    local selection_num_str = instruction:match("%]%s*(%d+)%s*$")
-
-    if not base_node or not choices_str or not selection_num_str then
-        minetest.chat_send_player(player_name, "Error: Invalid build syntax for player choice creation.")
-        return
-    end
-
-    local selection_num = tonumber(selection_num_str)
-    if not selection_num then
-        minetest.chat_send_player(player_name, "Error: Invalid selection number.")
-        return
-    end
-
-    -- 2. Extract choices
-    local choices = {}
-    for choice in choices_str:gmatch("%[([^%[%]]+)%]") do
-        table.insert(choices, choice)
-    end
-
-    if #choices == 0 then
-        minetest.chat_send_player(player_name, "Error: No choices found in build syntax.")
-        return
-    end
-
-    if selection_num < 1 or selection_num > #choices then
-        minetest.chat_send_player(player_name, "Error: Selection number is out of bounds.")
-        return
-    end
-
-    -- 3. Open file for appending
-    local file, err = io.open("convers.txt", "a")
-    if not file then
-        minetest.chat_send_player(player_name, "Error: Could not open convers.txt for writing.")
-        return
-    end
-
-    -- 4. Prepare and write new player choices
-    local new_nodes_for_memory = {}
-    local new_options_for_base = {}
-
-    for i, choice_text in ipairs(choices) do
-        local new_node_id = base_node .. i
-        local formatted_text = string.gsub(choice_text, "\"", "\\\"")
-        local line = string.format("[%s]\"%s\"\n", new_node_id, formatted_text)
-        file:write(line)
-
-        -- Prepare data for in-memory update
-        table.insert(new_nodes_for_memory, {id = new_node_id, text = choice_text})
-        table.insert(new_options_for_base, {text = choice_text, to = new_node_id})
-    end
-
-    -- 5. Generate and write echostone's response
-    local selected_player_node_id = base_node .. selection_num
-    local echostone_response_text = "A thoughtful choice. That path opens new questions..."
-    local echostone_response_id = selected_player_node_id .. "1"
-
-    local formatted_echo_text = string.gsub(echostone_response_text, "\"", "\\\"")
-    local echo_line = string.format("[%s]\"%s\"\n", echostone_response_id, formatted_echo_text)
-    file:write(echo_line)
-    file:close()
-
-    -- 6. Update in-memory dialogue table
-    if not echo.dialogue.cryptic_wisdom[base_node] then
-        minetest.chat_send_player(player_name, "Error: Base node " .. base_node .. " not found in memory.")
-        return
-    end
-    
-    -- Add options to the node the player was on
-    echo.dialogue.cryptic_wisdom[base_node].options = new_options_for_base
-    -- The base node is no longer an end point
-    echo.dialogue.cryptic_wisdom[base_node].is_end = nil 
-
-    -- Add the new player choice nodes themselves
-    for _, node_data in ipairs(new_nodes_for_memory) do
-        echo.dialogue.cryptic_wisdom[node_data.id] = {text = node_data.text}
-    end
-
-    -- Add the new echostone response node that follows the player's choice
-    echo.dialogue.cryptic_wisdom[echostone_response_id] = {text = echostone_response_text, is_end = true}
-
-    -- 7. Display the new state to the player
-    local player = minetest.get_player_by_name(player_name)
-    if player then
-        -- We transition to the new echostone response we just created, as if the player had selected it.
-        display_dialogue(player, "cryptic_wisdom", echostone_response_id)
-    end
-    
-    minetest.chat_send_player(player_name, "Appended " .. #choices .. " choices and 1 response. Conversation advanced.")
-end
 
 -- Clean up on player leave
 minetest.register_on_leaveplayer(function(player)
@@ -959,7 +895,11 @@ minetest.register_node("runes:hui", {
 	light_source = 0,
 	groups = {cracky=3},
 	drop = 'runes:hui',
-	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
+	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}},
+    on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+        echo.start(clicker, "story", pos)
+        return itemstack
+    end
 })
 
 minetest.register_abm({

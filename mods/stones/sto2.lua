@@ -2608,7 +2608,7 @@ minetest.register_node("stones:diagsterps_43r", {
 	description = "*6 R2 Slope Upper 9/32 Right Rubble",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles = {"rock.png"},
+	tiles = {"rubble.png"},
 	groups = {vcol=0.281, cracky=3, soil=1, not_in_creative_inventory=1},
 	light_source = 0,
 	drop = "stones:diagsterps_43r",

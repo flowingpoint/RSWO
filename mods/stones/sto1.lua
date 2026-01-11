@@ -53,7 +53,7 @@ minetest.register_node("stones:up", {
 	drawtype = "nodebox",
 	paramtype = "light",
 	paramtype2 = "facedir",
-	tiles ={{name = "rock0.png",
+	tiles ={{name = "brick.png",
 		tileable_vertical = true}},
 	groups = {cvol=0.25, cracky=3},
 	drop = 'stones:up',

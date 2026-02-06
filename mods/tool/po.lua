@@ -58,15 +58,33 @@ minetest.register_entity("tool:pow", {
         if s.name == "stones:s_22162"	then 
 		p2s5 = s.param2
 		minetest.env:set_node(p, {name="stones:s_2216", param2=p2s5}) end
-        if s.name == "tool:ladder"	then 
+        if s.name == "tool:ladd"	then 
 		p2la = s.param2
-		minetest.env:set_node(p, {name="tool:lid_open", param2=p2la}) end
-        if s.name == "tool:lid_open"	then 
+		minetest.env:set_node(p, {name="tool:lolo", param2=p2la}) end
+        if s.name == "tool:lolo"	then 
 		p2lb = s.param2
-		minetest.env:set_node(p, {name="tool:ladder", param2=p2lb}) end
-        if s.name == "tool:lid_closed"	then 
-		p2lc = s.param2
-		minetest.env:set_node(p, {name="tool:ladder", param2=p2lc}) end
+		minetest.env:set_node(p, {name="tool:lilo", param2=p2lb}) end
+        if s.name == "tool:lilo"	then 
+		p2la = s.param2
+		minetest.env:set_node(p, {name="tool:lidoo", param2=p2la}) end
+        if s.name == "tool:lidoo"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:lidio", param2=p2lb}) end
+        if s.name == "tool:lidio"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:ladd", param2=p2lb}) end
+        if s.name == "tool:lolc"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:lilc", param2=p2lb}) end
+        if s.name == "tool:lilc"	then 
+		p2la = s.param2
+		minetest.env:set_node(p, {name="tool:lidoc", param2=p2la}) end
+        if s.name == "tool:lidoc"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:lidic", param2=p2lb}) end
+        if s.name == "tool:lidic"	then 
+		p2lb = s.param2
+		minetest.env:set_node(p, {name="tool:ladd", param2=p2lb}) end
         if s.name == "stones:s_21u"	then 
 		p2su8 = s.param2
 		minetest.env:set_node(p, {name="stones:diagsteps_83", param2=p2su8}) end

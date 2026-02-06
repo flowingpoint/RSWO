@@ -1,14 +1,16 @@
 local t = tool
-
-minetest.register_node("tool:ladder", {
-	description = "Ladder",
+core.register_alias("tool:ladder", "tool:ladd")
+core.register_alias("tool:lid_closed", "tool:lolc")
+core.register_alias("tool:lid_open", "tool:lolo")
+minetest.register_node("tool:ladd", {
+	description = "Ladder Unhinged",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
 	inventory_image = "rungs.png",
 	wield_image = "rungs.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=0},
-	drop = "tool:ladder",
+	drop = "tool:ladd",
 	drawtype = "nodebox",
 	sunlight_propagates = true,
 	climbable = true,
@@ -31,7 +33,7 @@ minetest.register_node("tool:ladder", {
 {-6/16,4/16,9/16, -3/16,5/16,11/16},
 {-6/16,6/16,9/16, -3/16,7/16,11/16},
 {2/16,-9/16,9/16, 3/16,7/16,11/16},
-{3/16,-8/16,9/16, 6/16,-7/16,11/16},
+{3/16,-81/160,9/16, 6/16,-7/16,11/16},
 {3/16,-6/16,9/16, 6/16,-5/16,11/16},
 {3/16,-4/16,9/16, 6/16,-3/16,11/16},
 {3/16,-2/16,9/16, 6/16,-1/16,11/16},
@@ -41,15 +43,15 @@ minetest.register_node("tool:ladder", {
 {3/16,6/16,9/16, 6/16,7/16,11/16}}}
 	})
 
-minetest.register_node("tool:lid_open", {
-	description = "Lid",
+minetest.register_node("tool:lolo", {
+	description = "Ladder n Outward Lid Open",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "rungs.png",
+	inventory_image = "rungs.png^dice_1.png",
 	wield_image = "rungs.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "tool:lid",
+	drop = "tool:lolo",
 	drawtype = "nodebox",
 	sunlight_propagates = true,
 	climbable = true,
@@ -59,8 +61,8 @@ minetest.register_node("tool:lid_open", {
 {-0.4375,-0.125,-0.4687, 0.4375, 0,-0.4061},
 {-0.4375,0.0625,-0.4687, 0.4375, 0.1875,-0.4061},
 {-0.4375,0.25,-0.4687, 0.4375, 0.375,-0.4061},
-{-0.5,-0.5,-0.499, -0.4375,0.5,-0.375},
-{0.4375,-0.5,-0.499, 0.5,0.5,-0.375},
+{-0.51,-0.5,-0.499, -0.4375,0.5,-0.375},
+{0.4375,-0.5,-0.499, 0.51,0.5,-0.375},
 {-7/16,-5/16,6/16, 7/16,-3/16,7/16},
 {-7/16,-5/16,7/16, -6/16,-3/16,9/16},
 {6/16,-5/16,7/16, 7/16,-3/16,9/16},
@@ -88,19 +90,19 @@ minetest.register_node("tool:lid_open", {
 {3/16,4/16,9/16, 6/16,5/16,11/16},
 {3/16,6/16,9/16, 6/16,7/16,11/16}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
-		minetest.set_node(pos, {name = "tool:lid_closed", param2 = node.param2})
+		minetest.set_node(pos, {name = "tool:lolc", param2 = node.param2})
 	end,
 	})
 
-minetest.register_node("tool:lid_closed", {
-	description = "Lid",
+minetest.register_node("tool:lolc", {
+	description = "Ladder n Outward Lid Closed",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"kopper.png"},
-	inventory_image = "rungs.png",
+	inventory_image = "rungs.png^dice_0.png",
 	wield_image = "rungs.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "tool:lid",
+	drop = "tool:lolc",
 	drawtype = "nodebox",
 	sunlight_propagates = true,
 	climbable = true,
@@ -110,8 +112,8 @@ minetest.register_node("tool:lid_closed", {
 {-0.4375, -0.5313, -0.125, 0.4375, -0.4687, 0},
 {-0.4375, -0.5313, 0.0625, 0.4375, -0.4687, 0.1875},
 {-0.4375, -0.5313, 0.25, 0.4375, -0.4687, 0.375},
-{-0.5,-0.5625,-0.51, -0.4375,-0.4375,0.5},
-{0.4375,-0.5625,-0.51, 0.5,-0.4375,0.5},
+{-0.51,-0.5625,-0.51, -0.4375,-0.4375,0.5},
+{0.4375,-0.5625,-0.51, 0.51,-0.4375,0.5},
 {-7/16,-5/16,6/16, 7/16,-3/16,7/16},
 {-7/16,-5/16,7/16, -6/16,-3/16,9/16},
 {6/16,-5/16,7/16, 7/16,-3/16,9/16},
@@ -139,7 +141,205 @@ minetest.register_node("tool:lid_closed", {
 {3/16,4/16,9/16, 6/16,5/16,11/16},
 {3/16,6/16,9/16, 6/16,7/16,11/16}}},
 	on_rightclick = function(pos, node, clicker, pointed_thing)
-		minetest.set_node(pos, {name = "tool:lid_open", param2 = node.param2})
+		minetest.set_node(pos, {name = "tool:lolo", param2 = node.param2})
 	end,
 	})
 	
+minetest.register_node("tool:lilo", {
+	description = "Ladder n Inward Lid Open",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_2.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lilo",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.4375,0.4063, 0.4375,-0.3125,0.4689},
+{-0.4375,-0.1875,0.4063, 0.4375,-0.0625,0.4689},
+{-0.4375,0.0625,0.4063, 0.4375,0.1875,0.4689},
+{-0.4375,0.3125,0.4063, 0.4375,0.4375,0.4689},
+{-0.5,-0.5,0.376, -0.4375,0.5,0.5},
+{0.4375,-0.5,0.376, 0.5,0.5,0.5},
+{-7/16,-5/16,6/16, 7/16,-3/16,7/16},
+{-7/16,-5/16,7/16, -6/16,-3/16,9/16},
+{6/16,-5/16,7/16, 7/16,-3/16,9/16},
+{-7/16,-9/16,9/16, -6/16,7/16,11/16},
+{6/16,-9/16,9/16, 7/16,7/16,11/16},
+{-7/16,3/16,6/16, 7/16,5/16,7/16},
+{-7/16,3/16,7/16, -6/16,5/16,9/16},
+{6/16,3/16,7/16, 7/16,5/16,9/16},
+{-3/16,-9/16,9/16, -2/16,7/16,11/16},
+{-6/16,-81/160,9/16, -3/16,-7/16,11/16},
+{-6/16,-6/16,9/16, -3/16,-5/16,11/16},
+{-6/16,-4/16,9/16, -3/16,-3/16,11/16},
+{-6/16,-2/16,9/16, -3/16,-1/16,11/16},
+{-6/16,0/16,9/16, -3/16,1/16,11/16},
+{-6/16,2/16,9/16, -3/16,3/16,11/16},
+{-6/16,4/16,9/16, -3/16,5/16,11/16},
+{-6/16,6/16,9/16, -3/16,7/16,11/16},
+{2/16,-9/16,9/16, 3/16,7/16,11/16},
+{3/16,-81/160,9/16, 6/16,-7/16,11/16},
+{3/16,-6/16,9/16, 6/16,-5/16,11/16},
+{3/16,-4/16,9/16, 6/16,-3/16,11/16},
+{3/16,-2/16,9/16, 6/16,-1/16,11/16},
+{3/16,0/16,9/16, 6/16,1/16,11/16},
+{3/16,2/16,9/16, 6/16,3/16,11/16},
+{3/16,4/16,9/16, 6/16,5/16,11/16},
+{3/16,6/16,9/16, 6/16,7/16,11/16}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lilc", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:lilc", {
+	description = "Ladder n Inward Lid Closed",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_4.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lilc",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = true,
+	node_box = {type="fixed",fixed={
+{-0.4375, -0.5313, -0.4375, 0.4375, -0.4687, -0.3125},
+{-0.4375, -0.5313, -0.1875, 0.4375, -0.4687, -0.0625},
+{-0.4375, -0.5313, 0.0625, 0.4375, -0.4687, 0.1875},
+{-0.4375, -0.5313, 0.3125, 0.4375, -0.4687, 0.4375},
+{-0.5,-0.5625,-0.5, -0.4375,-0.4375,0.5},
+{0.4375,-0.5625,-0.5, 0.5,-0.4375,0.5},
+{-7/16,-5/16,6/16, 7/16,-3/16,7/16},
+{-7/16,-5/16,7/16, -6/16,-3/16,9/16},
+{6/16,-5/16,7/16, 7/16,-3/16,9/16},
+{-7/16,-9/16,9/16, -6/16,7/16,11/16},
+{6/16,-9/16,9/16, 7/16,7/16,11/16},
+{-7/16,3/16,6/16, 7/16,5/16,7/16},
+{-7/16,3/16,7/16, -6/16,5/16,9/16},
+{6/16,3/16,7/16, 7/16,5/16,9/16},
+{-3/16,-9/16,9/16, -2/16,7/16,11/16},
+{-6/16,-81/160,9/16, -3/16,-7/16,11/16},
+{-6/16,-6/16,9/16, -3/16,-5/16,11/16},
+{-6/16,-4/16,9/16, -3/16,-3/16,11/16},
+{-6/16,-2/16,9/16, -3/16,-1/16,11/16},
+{-6/16,0/16,9/16, -3/16,1/16,11/16},
+{-6/16,2/16,9/16, -3/16,3/16,11/16},
+{-6/16,4/16,9/16, -3/16,5/16,11/16},
+{-6/16,6/16,9/16, -3/16,7/16,11/16},
+{2/16,-9/16,9/16, 3/16,7/16,11/16},
+{3/16,-81/160,9/16, 6/16,-7/16,11/16},
+{3/16,-6/16,9/16, 6/16,-5/16,11/16},
+{3/16,-4/16,9/16, 6/16,-3/16,11/16},
+{3/16,-2/16,9/16, 6/16,-1/16,11/16},
+{3/16,0/16,9/16, 6/16,1/16,11/16},
+{3/16,2/16,9/16, 6/16,3/16,11/16},
+{3/16,4/16,9/16, 6/16,5/16,11/16},
+{3/16,6/16,9/16, 6/16,7/16,11/16}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lilo", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:lidoc", {
+	description = "Lid Outward Closed",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_5.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lidoc",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = false,
+	node_box = {type="fixed",fixed={
+{-0.4375, -0.5313, -0.51, 0.4375, -0.4687, -0.375},
+{-0.4375, -0.5313, -0.3125, 0.4375, -0.4687, -0.1875},
+{-0.4375, -0.5313, -0.125, 0.4375, -0.4687, 0},
+{-0.4375, -0.5313, 0.0625, 0.4375, -0.4687, 0.1875},
+{-0.4375, -0.5313, 0.25, 0.4375, -0.4687, 0.375},
+{-0.5,-0.5625,-0.51, -0.4375,-0.4375,0.5},
+{0.4375,-0.5625,-0.51, 0.5,-0.4375,0.5}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lidoo", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:lidoo", {
+	description = "Lid Outward Open",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_5.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lidoo",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = false,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.5,-0.4687, 0.4375, -0.375,-0.4061},
+{-0.4375,-0.3125,-0.4687, 0.4375, -0.1875,-0.4061},
+{-0.4375,-0.125,-0.4687, 0.4375, 0,-0.4061},
+{-0.4375,0.0625,-0.4687, 0.4375, 0.1875,-0.4061},
+{-0.4375,0.25,-0.4687, 0.4375, 0.375,-0.4061},
+{-0.5,-0.5,-0.499, -0.4375,0.5,-0.375},
+{0.4375,-0.5,-0.499, 0.5,0.5,-0.375}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lidoc", param2 = node.param2})
+	end,
+	})
+
+
+minetest.register_node("tool:lidic", {
+	description = "Lid Inward Closed",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_5.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lidic",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = false,
+	node_box = {type="fixed",fixed={
+{-0.4375, -0.5313, -0.4475, 0.4375, -0.4687, -0.3125},
+{-0.4375, -0.5313, -0.1875, 0.4375, -0.4687, -0.0625},
+{-0.4375, -0.5313, 0.0625, 0.4375, -0.4687, 0.1875},
+{-0.4375, -0.5313, 0.3125, 0.4375, -0.4687, 0.4375},
+{-0.5,-0.5625,-0.51, -0.4375,-0.4375,0.5},
+{0.4375,-0.5625,-0.51, 0.5,-0.4375,0.5}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lidio", param2 = node.param2})
+	end,
+	})
+
+minetest.register_node("tool:lidio", {
+	description = "Lid Inward Open",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"kopper.png"},
+	inventory_image = "rungs.png^dice_5.png",
+	wield_image = "rungs.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "tool:lidio",
+	drawtype = "nodebox",
+	sunlight_propagates = true,
+	climbable = false,
+	node_box = {type="fixed",fixed={
+{-0.4375,-0.4375,0.4063, 0.4375,-0.3125,0.4689},
+{-0.4375,-0.1875,0.4063, 0.4375,-0.0625,0.4689},
+{-0.4375,0.0625,0.4063, 0.4375,0.1875,0.4689},
+{-0.4375,0.3125,0.4063, 0.4375,0.4375,0.4689},
+{-0.5,-0.5,0.376, -0.4375,0.5,0.5},
+{0.4375,-0.5,0.376, 0.5,0.5,0.5}}},
+	on_rightclick = function(pos, node, clicker, pointed_thing)
+		minetest.set_node(pos, {name = "tool:lidic", param2 = node.param2})
+	end,
+	})

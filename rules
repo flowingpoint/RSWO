@@ -26,6 +26,9 @@ Use this to rotate the stones between any of the 24 orientations characterised b
 Pg 9: Popper
 Use this on rush (Pg5) to grow brush, and on brush to grow blush, by Left-clicking a bubble projectile into contact with the block containing soil. You can 'cut' blush to get brush again with the same action. Also it can be used to access alternative shapes for some of the items on the menu. Those with a '*' and then a number (the cycle-number) before the item description as you hover the cursor over the item will cycle through those alternative shapes when acted on using a Popperstaff in the world. It will add/remove the ladder's lid, turn on/off glow on runes, center/uncenter the inner-planet rings, and ignite/extinguish the dodecahedral burner. Drop (Q) to flip it around and it becomes the Rublerstaff, which changes any stones to rubble (except the runes and blushrocks). If you're not happy with the rublification you can strike a second time. Note that one of the rushrocks (Pg5#12: '*2 4Rush 3Rock /8') must be rublified to reach its alt. The Rublerstaff does damage if a player is hit by its projectile.
 
+Prop:
+Prop up the staff so that it stands up by itself (r.click the ground with it active in inventory) and watch the neighbouring flourish of blush. But it will revert of its own accord, taking blushrock through its stages of degeneration back to rublish, so keep a watchful eye on it if you are using it to lushify an area (r.click the staff to toggle states while it is propped).
+
 Pg 9: Dice/Portal Out, and Pg 1: Flo/Portal In
 If you are planning a trip and want to save a place to return to if things get messy, place the Dice at the checkpoint. It will display a random number of green orbs ranging from 0 to 15, (reset each log). The particular type of stone you place it on is important: the input portal Flo must be placed on top of THE SAME type, so make a note of which type it is at the checkpoint. After travelling, when you have chosen to return to your particular checkpoint and place the input portal, it immediately begins to absorb dark energy from the space around it and will only exist for a matter of seconds before itself vanishing, so act fast.
 Drop (Q) Dice to get 'Magical Point Teleporter' and Flo to get 'Noter'.
@@ -45,4 +48,9 @@ These can be fitted together to make an official GYROID. A Gyroid is a triply pe
 Pg 1: O {blue,black,green,red}
 These fit together to make the inner solar system model, which centers over a true node (between 8 conventional nodes).
 
-The 回 rune stores the popper staff (place one near it when it's unlit), and an unlit one will sometimes light up briefly, enabling retrieval of a rubler staff (r.click before it goes out again).
+The 回 rune stores the popper staff (place one near it when it's unlit), and an unlit one will sometimes light up briefly, enabling retrieval of a rubler staff (r.click before it goes out again). It has dialogue when unlit.
+
+The 可,不 runes (r.click when lit) and some statues also offer a short dialogue. Once chat has begun, numbered buttons appear which correspond to choices you can make in response, (alternatively in the chat/command terminal (press '/') type 'c <i>', with 'i' a number, to select your path in the conversation tree). 
+
+
+

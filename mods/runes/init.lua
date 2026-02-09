@@ -317,6 +317,45 @@ local function xhud(player)
     end
 end
 
+-- Function to show conversation formspec with clickable options
+local function show_conversation_formspec(player, conv_state)
+    local player_name = player:get_player_name()
+    if not conv_state or not conv_state.active_options then
+        return
+    end
+    
+    -- Calculate number of options
+    local num_options = math.min(#conv_state.active_options, 5)
+    
+    -- Compact horizontal formspec positioned above hotbar
+    -- Each button is 1x1 (same as inventory slot), with small gaps
+    local width = num_options * 1.1 -- + 1.2  (-- buttons + close button + spacing)
+    local formspec = string.format("size[%f,1]", width)
+    formspec = formspec .. "bgcolor[#00000000;falsee]"  -- Transparent background
+    formspec = formspec .. "button_exit[0,0;0,0;invisible;]"  -- Invisible anchor to prevent auto-close
+    
+    -- Add numbered choice buttons horizontally (inventory slot size: 1x1)
+    local x_pos = 0.1
+    for i = 1, num_options do
+        formspec = formspec .. string.format(
+            "button[%f,0.1;1,1;choice_%d;%d]",
+            x_pos,
+            i,
+            i
+        )
+        x_pos = x_pos + 1.1  -- Move to next position (button width + small gap)
+    end
+    
+    -- Close button at the end, slightly different color (darker/red tint)
+    formspec = formspec .. string.format(
+        "button_exit[%f,0.5;1,1;close;X]",
+        x_pos
+    )
+    
+    -- Position the formspec above the hotbar (anchored to bottom center)
+    minetest.show_formspec(player_name, "echo:conversation", formspec)
+end
+
 -- Function to display a dialogue step for a player
 local function display_dialogue(player, dialogue_id, step_key)
     local player_name = player:get_player_name()
@@ -350,7 +389,7 @@ local function display_dialogue(player, dialogue_id, step_key)
         text = current_display_step.text,
         number = 0xFFFFFF, -- White
         alignment = {x = 0, y = 0},
-        scale = {x = 100, y = 100},
+        scale = {x = 10, y = 10},
     })
     table.insert(hud_ids, text_hud_id)
     y_offset = y_offset - 30 -- Move down for options
@@ -363,7 +402,7 @@ local function display_dialogue(player, dialogue_id, step_key)
                 position = {x = 0.5, y = 1},
                 offset = {x = 0, y = y_offset - (i * 20)}, -- Adjust Y for each option
                 text = option_text,
-                number = 0xAAAAAA, -- Gray
+                number = 0x99bb55, -- goblin green
                 alignment = {x = 0, y = 0},
                 scale = {x = 80, y = 80},
             })
@@ -377,7 +416,15 @@ local function display_dialogue(player, dialogue_id, step_key)
     pconv[player_name].current_step_key = step_key
     pconv[player_name].active_options = current_display_step.options
 
+    -- Show formspec with clickable buttons if there are options
+    if current_display_step.options then
+        show_conversation_formspec(player, pconv[player_name])
+    end
+
     if current_display_step.is_end then
+        -- Close the formspec immediately
+        minetest.close_formspec(player_name, "echo:conversation")
+        
         minetest.after(5, function()
             xhud(player)
             pconv[player_name] = nil
@@ -452,6 +499,41 @@ minetest.register_chatcommand("c", {
     end
 })
 
+-- Handle formspec button clicks and number key presses
+minetest.register_on_player_receive_fields(function(player, formname, fields)
+    if formname ~= "echo:conversation" then
+        return false
+    end
+    
+    local player_name = player:get_player_name()
+    local conv_state = pconv[player_name]
+    
+    if not conv_state or not conv_state.active_options then
+        return false
+    end
+    
+    -- Check for number key presses (1-5) or button clicks
+    for i = 1, 5 do
+        if fields["choice_" .. i] or fields["key_enter_field"] == tostring(i) or fields[tostring(i)] then
+            if conv_state.active_options[i] then
+                display_dialogue(player, conv_state.current_dialogue_id, conv_state.active_options[i].to)
+                -- Show new formspec with updated options if conversation continues
+                if pconv[player_name] and pconv[player_name].active_options then
+                    show_conversation_formspec(player, pconv[player_name])
+                end
+                return true
+            end
+        end
+    end
+    
+    -- Close button or ESC
+    if fields.close or fields.quit then
+        return true
+    end
+    
+    return false
+end)
+
 -- Clean up on player leave
 minetest.register_on_leaveplayer(function(player)
     xhud(player)
@@ -509,7 +591,6 @@ minetest.register_node("runes:ke", {
 	drop = 'runes:ke',
 	node_box = {type = "fixed", fixed = {-0.5, -0.5, -0.5, 0.5, 0.5, 0.5}}
 })
-
 minetest.register_node("runes:lit_hui", {
 	description = "Hui = Return",
 	drawtype = "nodebox",

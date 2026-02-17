@@ -22,30 +22,53 @@ door_r52a*		Door R R5/2 a
 door_r52ao*		Door R R5/2 a
 door_l52a*		Door L R5/2 a
 door_l52ao*		Door L R5/2 a
+door_closed_voc*	Door f Closed Vert Offset Centred
+door_open_voc*		Door f Open Vert Offset Centred
+}
 
 po:
 tool:{
 pok			Popper
 rok*			Rubler			
+}
 
 windows:
 tool:{
-bars_1a			Bars
-bars_1b*		Bar #1 broke
-bars_1c*		Bar #1 broke one-way
-bars_1d*		Bar #1 broke other-way
-bars_2a*		Bars 2
-bars_2b*		Bar #2 broke
-bars_2c*		Bar #2 broke one-way
-bars_2d*		Bar #2 broke other-way
-bars_3a*		Bars 3
-bars_3b*		Bar #3 broke
-bars_3c*		Bar #3 broke
-bars_3d*		Bar #3 broke other-way
-bars_4a*		Bars 4
-bars_4b*		Bar #4 broke
-bars_4c*		Bar #4 broke
-bars_4d*		Bar #4 broke other-way
+bars_a*		Bars #0
+bars_b*		Bars #0 broke
+bars_c*		Bars #0 broke one-way
+bars_d*		Bars #0 broke other-way
+bars_e*		Bars #0 double
+bars_1a		Bars 
+bars_1b*		Bars #1 broke
+bars_1c*		Bars #1 broke one-way
+bars_1d*		Bars #1 broke other-way
+bars_1e*		Bars #1 double
+bars_2a*		Bars #2
+bars_2b*		Bars #2 broke
+bars_2c*		Bars #2 broke one-way
+bars_2d*		Bars #2 broke other-way
+bars_2e*		Bars #2 double
+bars_3a*		Bars #3
+bars_3b*		Bars #3 broke
+bars_3c*		Bars #3 broke
+bars_3d*		Bars #3 broke other-way
+bars_3e*		Bars #3 double
+bars_4a*		Bars #4
+bars_4b*		Bars #4 broke
+bars_4c*		Bars #4 broke
+bars_4d*		Bars #4 broke other-way
+bars_4e*		Bars #4 double
+bars_5a*		Bars #5
+bars_5b*		Bars #5 broke
+bars_5c*		Bars #5 broke
+bars_5d*		Bars #5 broke other-way
+bars_5e*		Bars #5 double
+bars_6a*		Bars #6
+bars_6b*		Bars #6 broke
+bars_6c*		Bars #6 broke
+bars_6d*		Bars #6 broke other-way
+bars_6e*		Bars #6 double
 window_closed		Window
 window_open*		Window
 window_closed_a*	Window a
@@ -56,25 +79,35 @@ window_closed_c*	Window c
 window_open_c*		Window c
 window_closed_d*	Window d
 window_open_d*		Window d
+window_closed_e*	Window e
+window_open_e*		Window e
+window_closed_f*	Window f
+window_open_f*		Window f
 board_2216*		Board on Slope Cornerfill
+}
 
 wrench:
 tool:{
 wrench			Ratchet
+}
 
 scope:
 :default:{
 scope			"B" Zooms
-
-lid:
-tool:{
-lid*			Lid
+}
 
 ladder:
 tool:{
-ladder			Ladder
-lid_open*		Lid
-lid_closed*		Lid
+ladd			Ladder Unhinged
+lolo*			Ladder n Outward Lid Open
+lolc*			Ladder n Outward Lid Closed
+lilo*			Ladder n Inward Lid Open
+lilc*			Ladder n Inward Lid Closed
+lidoc*			Lid Outward Closed
+lidoo*			Lid Outward Open
+lidic*			Lid Inward Closed
+lidio*			Lid Inward Open
+}
 
 koin:
 tool:{
@@ -82,14 +115,17 @@ coin			Classic Spinning Koin
 koin_{1->7}*		'' {1->7}
 koins*			'' Stack
 tess*			Classic Tesseract
+}
 
 flo:
 :default:{
 flo			Flo / Portal In
+}
 
 dice:
 tool:{
 dice			Dice / Portal Out
+}
 
 car:
 tool:{
@@ -97,6 +133,17 @@ car*			Car
 cardiag*		Car diag
 car_1*			Car 1
 car_2*			Car 2
+}
+
+desk:
+tool:{
+desk			*2 Desk
+bedf*			*2 Wooden Bed Frame	
+blkt*			*4 Bed Blanket Cover
+blkt_fl0*		*4 Blanket Flat
+blkt_fl1*		*4 Blanket Folded
+blkt_fl2		*4 Blanket Folded Twice
+
 
 Use the Popper Staff to toggle between them.
 

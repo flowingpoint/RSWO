@@ -1558,9 +1558,15 @@ minetest.register_entity("tool:pow", {
 		p2bar6b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_6b", param2=p2bar6b}) end
         if s.name == "tool:bars_6a"	then 
+		p2bara = s.param2
+		minetest.env:set_node(p, {name="tool:bars_a", param2=p2bara}) end
+        if s.name == "tool:bars_6b"	then 
+		p2barb = s.param2
+		minetest.env:set_node(p, {name="tool:bars_b", param2=p2barb}) end
+	if s.name == "tool:bars_a"	then 
 		p2bar1a = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1a", param2=p2bar1a}) end
-        if s.name == "tool:bars_6b"	then 
+        if s.name == "tool:bars_b"	then 
 		p2bar1b = s.param2
 		minetest.env:set_node(p, {name="tool:bars_1b", param2=p2bar1b}) end
         if s.name == "tool:window_closed"	then 
@@ -1594,9 +1600,15 @@ minetest.register_entity("tool:pow", {
 		p2winoe = s.param2
 		minetest.env:set_node(p, {name="tool:window_open_e", param2=p2winoe}) end
         if s.name == "tool:window_closed_e"	then 
+		p2wincf = s.param2
+		minetest.env:set_node(p, {name="tool:window_closed_f", param2=p2wincf}) end
+        if s.name == "tool:window_open_e"	then 
+		p2winof = s.param2
+		minetest.env:set_node(p, {name="tool:window_open_f", param2=p2winof}) end
+        if s.name == "tool:window_closed_f"	then 
 		p2winc = s.param2
 		minetest.env:set_node(p, {name="tool:window_closed", param2=p2winc}) end
-        if s.name == "tool:window_open_e"	then 
+        if s.name == "tool:window_open_f"	then 
 		p2wino = s.param2
 		minetest.env:set_node(p, {name="tool:window_open", param2=p2wino}) end
         if s.name == "stones:pyra_2"	then 
@@ -1617,6 +1629,16 @@ minetest.register_entity("tool:pow", {
 	if s.name == "stones:sb_211"	then 
 		p221 = s.param2
 		minetest.env:set_node(p, {name="stones:sb_221", param2=p221}) end
+	if s.name == "tool:blkt_fl2"	then 
+		p2fl1 = s.param2
+		minetest.env:set_node(p, {name="tool:blkt_fl1", param2=p2fl1}) end
+	if s.name == "tool:blkt_fl0"	then 
+		p2fl2 = s.param2
+		minetest.env:set_node(p, {name="tool:blkt_fl2", param2=p2fl2}) end
+	if s.name == "tool:blkt_fl1"	then 
+		p2fl0 = s.param2
+		minetest.env:set_node(p, {name="tool:blkt_fl0", param2=p2fl0}) end
+	
 minetest.add_particlespawner({
 		amount = 50,
 		time = 30,
@@ -3770,12 +3792,30 @@ minetest.register_entity("tool:row", {
         if s.name == "stones:pemra"	then 
 		p2emy = s.param2
 		minetest.env:set_node(p, {name="stones:pyra", param2=p2emy}) end
-		if s.name == "stones:s_211"	then 
+	if s.name == "stones:s_211"	then 
 		p2b1 = s.param2
 		minetest.env:set_node(p, {name="stones:sb_211", param2=p2b1}) end
-		if s.name == "stones:sb_211"	then 
+	if s.name == "stones:sb_211"	then 
 		p2xb1 = s.param2
 		minetest.env:set_node(p, {name="stones:s_211", param2=p2xb1}) end
+	if s.name == "tool:blkt_fl0"	then 
+		p2blkt = s.param2
+		minetest.env:set_node(p, {name="tool:blkt", param2=p2blkt}) end
+	if s.name == "tool:blkt_fl1"	then 
+		p2blkt = s.param2
+		minetest.env:set_node(p, {name="tool:blkt", param2=p2blkt}) end
+	if s.name == "tool:blkt_fl2"	then 
+		p2blkt = s.param2
+		minetest.env:set_node(p, {name="tool:blkt", param2=p2blkt}) end
+	if s.name == "tool:blkt"	then 
+		p2fl2 = s.param2
+		minetest.env:set_node(p, {name="tool:blkt_fl2", param2=p2blkt}) end
+	if s.name == "tool:desk"	then 
+		p2bedf = s.param2
+		minetest.env:set_node(p, {name="tool:bedf", param2=p2bedf}) end
+	if s.name == "tool:bedf"	then 
+		p2desk = s.param2
+		minetest.env:set_node(p, {name="tool:desk", param2=p2desk}) end
 end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),
@@ -3855,7 +3895,7 @@ minetest.register_tool("tool:rok", {
 		itemstack:take_item()
 		return itemstack
 	end,
-    on_place = function(itemstack, placer, pointed_thing)
+	on_place = function(itemstack, placer, pointed_thing)
         if pointed_thing.type == "node" then
     	local pos = pointed_thing.above
    		local oldnode = minetest.get_node(pos)
@@ -3868,8 +3908,8 @@ minetest.register_tool("tool:rok", {
     		oldnode = minetest.get_node(pos)
             return itemstack
           	end
-        end
-    end,
+            end
+        end,
 	light_source = 9,
     groups = {not_in_creative_inventory=1}
 })

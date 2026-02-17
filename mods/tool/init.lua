@@ -22,7 +22,7 @@ dofile(path .. "/car.lua")
 dofile(path .. "/prop.lua")
 dofile(path .. "/doors.lua")
 dofile(path .. "/windows.lua")
-
+dofile(path .. "/desk.lua")
 ---
 --ref: https://github.com/davidm/lua-matrix
 --https://github.com/alex-mashin/complex.lua

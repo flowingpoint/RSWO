@@ -461,7 +461,7 @@ mobs:register_mob("mobs:isoma", {
 	collisionbox = {-0.1, -1, -0.1, 0.1, 0.95, 0.1},
 	visual = "upright_sprite",
 	visual_size = {x=1,y=2},
-	textures = {{"isoma_f_"..math.random(0,3)..".png","isoma_r.png"}},
+	textures = {{"isoma_f_"..math.random(0,2)..".png","isoma_r.png"}},
 	walk_velocity = 0,
 	run_velocity = 5,
 	follow = {"mobs:isoma"},

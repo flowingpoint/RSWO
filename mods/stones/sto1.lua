@@ -2773,7 +2773,7 @@ minetest.register_node("stones:skus_lc", {
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"rock.png"},
-	groups = {cvol=0.781, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=0},
+	groups = {cvol=0.781, cracky=1, oddly_breakable_by_hand=1, not_in_creative_inventory=1},
 	drop = 'stones:skus_lc',
 	collision_box= { type= "fixed", fixed= {
 {-0.5,-0.5,-0.5, 0.5,0,0.5},

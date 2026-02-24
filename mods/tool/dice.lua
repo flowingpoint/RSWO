@@ -20,7 +20,7 @@ minetest.register_node("tool:dice", {
 	drawtype = "plantlike",
 	waving = 1,
 	visual_scale = 1,
-	tiles = {"dice_"..math.random(0,15)..".png"},
+	tiles = {"dice_"..math.random(1,16)..".png"},
 	-- Use texture out of a group of 16 that doesn't increase the nodes in the menu
 	inventory_image = "dice.png",
 	wield_image = "dice_0.png",
@@ -44,6 +44,23 @@ minetest.register_node("tool:dice", {
 		return itemstack
 	end
 })
+
+--[[minetest.register_node("tool:dicebox", {
+	description = "Dice in box",
+	drawtype = "nodebox",
+	visual_scale = 1,
+	tiles = {"dic.png^bl.png"},
+	inventory_image = "dic.png",
+	wield_image = "dic.png",
+	paramtype = "light",
+	use_texture_alpha = "clip",
+	light_source = 1,
+	sunlight_propagates = false,
+	walkable = false,
+	groups={snappy=3,attached_node=0,flammable=1},
+	node_box={type="fixed",fixed=
+	{-0.3125,-0.5,-0.1875, 0.375,-0.25,0.125}}
+})]]
 
 --This produces a number between 0 and 15 but only one per log, so even taking it and placing it again, isn't a roll. Just the first place per log is a roll. If it's already placed it'll be different. math.random was set in the img description bracket so that's sort of why but the way it works better with general grass assuming a state out of 5 makes me want to find some reset mechanic method by checking the grass file in ... default/nodes.lua but the math.random there is for selection out of a group of different nodes, not textures, so to use that would be to make another mess of duplicates the way I filled the menu with 25 pockmons...
 

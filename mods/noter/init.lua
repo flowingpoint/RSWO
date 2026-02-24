@@ -1,7 +1,7 @@
 local S = minetest.get_translator("noter")
-
-
-
+local path = minetest.get_modpath("noter")
+dofile(path .. "/bs.lua")
+--dofile(path .. "/noter.lua")
 
 local BOOK_FORMNAME = "noter:book_form"
 
@@ -45,7 +45,7 @@ minetest.register_node("noter:book", {
 		type = "fixed",
 		fixed = {
 			{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
-	groups = { dig_immediate=1, oddly_breakable_by_hand=3, book=1, not_in_creative_inventory=1},
+	groups = { dig_immediate=0, oddly_breakable_by_hand=3, book=1, not_in_creative_inventory=1},
 	walkable = false,
     paramtype = "light",
     sunlight_propagates = true,
@@ -133,11 +133,11 @@ minetest.register_node("noter:book_open", {
 			local formspec
 			if owner == "" or owner == player_name then
 				formspec = "size[8,8]"..
-					"field[0.5,1;7.5,0;title;Book title :;"..
+					"field[0.5,1;7.5,0;title;Subject :;"..
 						minetest.formspec_escape(title).."]"..
-					"textarea[0.5,1.5;7.5,7;text;Book content :;"..
+					"textarea[0.5,1.5;7.5,7;text;Details :;"..
 						minetest.formspec_escape(text).."]"..
-					"button_exit[2.5,7.5;3,1;save;Save]"
+					"button_exit[2.5,7.5;3,1;save;Write]"
 			else
 				formspec = "size[8,8]"..
 				"button_exit[7,0.25;1,0.5;close;X]"..

@@ -144,6 +144,25 @@ blkt_fl0*		*4 Blanket Flat
 blkt_fl1*		*4 Blanket Folded
 blkt_fl2		*4 Blanket Folded Twice
 
+dice16:
+tool:{
+dice_box_covered	The Impossible Dice Box
+dice_box*		The Impossible Dice Box
+
+stellator:
+tool:{
+peeler*			Polytope Layer Peeler
+stellator*			Polytope Midpoint Calculator
+
+quatmulti:
+tool:{
+quat_calc*			Quaternion Multiplier
+
+
+matmulti:
+tool:{
+matmulti*			Matrix Multiplier Desk
+
 
 Use the Popper Staff to toggle between them.
 

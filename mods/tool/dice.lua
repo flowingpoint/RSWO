@@ -23,7 +23,7 @@ minetest.register_node("tool:dice", {
 	tiles = {"dice_"..math.random(1,16)..".png"},
 	-- Use texture out of a group of 16 that doesn't increase the nodes in the menu
 	inventory_image = "dice.png",
-	wield_image = "dice_0.png",
+	wield_image = "dice_16.png",
 	paramtype = "light",
 	light_source = 14,
 	sunlight_propagates = true,

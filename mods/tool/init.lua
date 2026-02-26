@@ -26,8 +26,9 @@ dofile(path .. "/desk.lua")
 dofile(path .. "/matmulti.lua")
 dofile(path .. "/quatmulti.lua")
 dofile(path .. "/stellator.lua")
---dofile(path .. "/noter.lua")
+--dofile(path .. "/d16.lua")
 dofile(path .. "/dice16.lua")
+dofile(path .. "/noter.lua")
 ---
 --ref: https://github.com/davidm/lua-matrix
 --https://github.com/alex-mashin/complex.lua

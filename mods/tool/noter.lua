@@ -1,5 +1,5 @@
-tool={}
-minetest.register_node("tool:page", {
+noter={}
+minetest.register_node("tool:noter", {
     description = "A Scrap of Paper",
     drawtype = "nodebox",
     node_box = {
@@ -11,7 +11,7 @@ minetest.register_node("tool:page", {
     paramtype = "light",
     paramtype2 = "facedir",
     use_texture_alpha = "clip",
-    groups = {snappy = 3, attached_node = 1},
+    groups = {snappy = 3, attached_node = 1,not_in_creative_inventory=0},
 
     -- 1. CAPTURE: When dug, move text from the world into the item in your inventory
     preserve_metadata = function(pos, oldnode, oldmeta, drops)
@@ -48,16 +48,16 @@ minetest.register_node("tool:page", {
             "textarea[0.5,0.5;7.5,4.5;text;;" .. minetest.formspec_escape(current_text) .. "]" ..
             "image_button_exit[3.5,4.4;1,1;inq.png;save;]"
         
-        minetest.show_formspec(player_name, "tool:note_"..pos.x.."_"..pos.y.."_"..pos.z, formspec)
+        minetest.show_formspec(player_name, "noter:note_"..pos.x.."_"..pos.y.."_"..pos.z, formspec)
     end,
 })
 
 -- The Save Logic (remains your working version)
 minetest.register_on_player_receive_fields(function(player, formname, fields)
-    if string.sub(formname, 1, 11) == "tool:note_" then
+    if string.sub(formname, 1, 11) == "noter:note_" then
         -- Triggered by the image_button_exit (fields.save) or Enter
         if fields.save or fields.key_enter then
-            local x, y, z = formname:match("tool:note_([%-0-9]+)_([%-0-9]+)_([%-0-9]+)")
+            local x, y, z = formname:match("noter:note_([%-0-9]+)_([%-0-9]+)_([%-0-9]+)")
             local pos = {x=tonumber(x), y=tonumber(y), z=tonumber(z)}
             local meta = minetest.get_meta(pos)
             

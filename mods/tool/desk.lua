@@ -1,7 +1,7 @@
 desk = {}
 
 minetest.register_node("tool:desk", {
-	description = "*2 Desk",
+	description = "*3 Desk",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"wood00.png"},
@@ -21,13 +21,13 @@ minetest.register_node("tool:desk", {
 })	
 
 minetest.register_node("tool:bedf", {
-	description = "*2 Wooden Bed Frame",
+	description = "*3 Wooden Bed Frame",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"wood00.png"},
 	inventory_image = "bedf.png",
 	wield_image = "bedf.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	groups = {cracky=1,attached_node=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:bedf",
 	drawtype = "nodebox",
 	sunlight_propagates = true,
@@ -59,7 +59,7 @@ minetest.register_node("tool:blkt", {
 	tiles = {"blkt_bg.png"},
 	inventory_image = "blkt.png",
 	wield_image = "blkt.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	groups = {cracky=1,attached_node=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
 	drop = "tool:blkt",
 	drawtype = "nodebox",
 	sunlight_propagates = true,

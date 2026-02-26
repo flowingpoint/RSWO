@@ -3814,8 +3814,11 @@ minetest.register_entity("tool:row", {
 		p2bedf = s.param2
 		minetest.env:set_node(p, {name="tool:bedf", param2=p2bedf}) end
 	if s.name == "tool:bedf"	then 
+		p2bs00 = s.param2
+		minetest.env:set_node(p, {name="noter:bs00", param2=p2bs00}) end
+	if s.name == "noter:bs00"	then 
 		p2desk = s.param2
-		minetest.env:set_node(p, {name="tool:desk", param2=p2desk}) end
+		minetest.env:set_node(p, {name="tool:desk", param2=pdesk}) end
 end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

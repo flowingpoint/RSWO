@@ -65,8 +65,9 @@ minetest.register_tool("chalk:chalk", {
     		local pos = pointed_thing.above
     		local oldnode = minetest.get_node(pos)
 	    	local stackname = itemstack:get_name()
+	    	local dir = placer:get_look_dir()
     		while oldnode.name == "air" and not itemstack:is_empty() do
-    			local newnode = {name = "chalk:chardust", param1 = 0}
+    			local newnode = {name = "chalk:chardust", param2 = minetest.dir_to_facedir(dir)}
     			minetest.set_node(pos, newnode)
 	    		itemstack:take_item()
 	    		pos.y = pos.y - 1
@@ -94,8 +95,9 @@ minetest.register_tool("chalk:duster", {
     		local pos = pointed_thing.above
     		local oldnode = minetest.get_node(pos)
 	    	local stackname = itemstack:get_name()
+	    	local dir = placer:get_look_dir()
     		while oldnode.name == "air" and not itemstack:is_empty() do
-    			local newnode = {name = "chalk:chardust", param1 = 0}
+    			local newnode = {name = "chalk:chardust", param2 = minetest.dir_to_facedir(dir)}
     			minetest.set_node(pos, newnode)
 	    		itemstack:take_item()
 	    		pos.y = pos.y - 1
@@ -128,7 +130,13 @@ minetest.register_node("chalk:chardust", {
     {-0.25,-0.5,0.3125, 0.25,-0.375,0.5},
     {-0.125,-0.375,0.375, 0.125,-0.3125,0.4375}}},
 	drawtype = "nodebox",
-    use_texture_alpha = "clip"
+    use_texture_alpha = "clip",
+    after_place_node = function(pos, placer, itemstack, pointed_thing)
+    		local dir = placer:get_look_dir()
+    		local node = minetest.get_node(pos)
+    		node.param2 = minetest.dir_to_facedir(dir)
+    		minetest.set_node(pos, node)
+    end,
 })
 
 minetest.register_craft({

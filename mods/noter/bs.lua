@@ -1,7 +1,7 @@
 bs = {}
 
 minetest.register_node("noter:bs00", {
-	description = "Bookshelf",
+	description = "*3 Bookshelf",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"bs00.png"},
@@ -26,164 +26,8 @@ minetest.register_node("noter:bs00", {
 		{-0.375,-0.375,0.375, 0.375,0.375,0.5}}},
 	mesh = "bs00.obj"
 	})
-	
-	minetest.register_node("noter:bsba", {
-	description = "Bookshelf Book Aligned",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsba",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
-	collision_box = {type="fixed",fixed={
-		{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
-	mesh = "bsba.obj"
-	})
-	
-	minetest.register_node("noter:bsba5", {
-	description = "Bookshelf 5 Book Aligned",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsba5",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.2, -0.5, -0.1875, 0.2, 0.25, 0.375}}},
-	collision_box = {type="fixed",fixed={
-		{-0.2, -0.5, -0.1875, 0.2, 0.25, 0.375}}},
-	mesh = "bsba5.obj"
-	})
 
-	minetest.register_node("noter:bsb5", {
-	description = "Bookshelf 5 Book",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsb5",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.375, -0.5, -0.3125, 0.375, 0, 0.3125}}},
-	collision_box = {type="fixed",fixed={
-		{-0.375, -0.5, -0.3125, 0.375, 0, 0.3125}}},
-	mesh = "bsb5.obj"
-	})
-
-	minetest.register_node("noter:bs5", {
-	description = "Bookshelf 5",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bs5",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.25, -0.5, 0, 0.5, 0.125, 0.5}}},
-	collision_box = {type="fixed",fixed={
-		{-0.25, -0.5, 0, 0.5, 0.125, 0.5}}},
-	mesh = "bs5.obj"
-	})
-
-minetest.register_node("noter:bs2", {
-	description = "2 Books",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bs2",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-	{-0.2, -0.5, -0.24, 0.19, -0.2, 0.26}}},
-	collision_box = {type="fixed",fixed={
-	{-0.2, -0.5, -0.24, 0.19, -0.2, 0.26}}},
-	mesh = "bs2.obj"
-	})
-	
-	
-minetest.register_node("noter:bsbk", {
-	description = "Bookshelf Books",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsbk",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.2, -0.5, -0.29, 0.2, -0.05, 0.28}}},
-	collision_box = {type="fixed",fixed={
-		{-0.2, -0.5, -0.29, 0.2, -0.05, 0.28}}},
-	mesh = "bsbk.obj"
-	})
-
-minetest.register_node("noter:bsbs", {
-	description = "Bookshelf Book Standing",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsbs",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{0, -0.5, -0.125, 0.05, 0.125, 0.36}}},
-	collision_box = {type="fixed",fixed={
-		{0, -0.5, -0.125, 0.05, 0.125, 0.36}}},
-	mesh = "bsbs.obj"
-	})
-
-minetest.register_node("noter:bsbs4", {
-	description = "Bookshelf 4 Books Standing",
-	paramtype = "light",
-	paramtype2 = "facedir",
-	tiles = {"bs00.png"},
---	inventory_image = "bs00inv.png",
---	wield_image = "bs00inv.png",
-	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsbs4",
-	drawtype = "mesh",
-	sunlight_propagates = true,
-	climbable = false,
-	selection_box = {type="fixed",fixed={
-		{-0.14, -0.5, -0.125, 0.3125, 0.12, 0.375},
-		{-0.37,-0.5,-0.22, -0.22,0.125,0.28}}},
-	collision_box = {type="fixed",fixed={
-		{-0.14, -0.5, -0.125, 0.3125, 0.12, 0.375},
-		{-0.37,-0.5,-0.22, -0.22,0.125,0.28}}},
-	mesh = "bsbs4.obj"
-	})
-	
-	
-	minetest.register_node("noter:bsb1", {
+minetest.register_node("noter:bs01", {
 	description = "Bookshelf and a Book",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -191,7 +35,7 @@ minetest.register_node("noter:bsbs4", {
 --	inventory_image = "bs00inv.png",
 --	wield_image = "bs00inv.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsb1",
+	drop = "noter:bs01",
 	drawtype = "mesh",
 	sunlight_propagates = true,
 	climbable = false,
@@ -207,10 +51,10 @@ minetest.register_node("noter:bsbs4", {
 		{0.375,-0.5,-0.5, 0.5,0.5,0.5},
 		{-0.375,0.375,-0.5, 0.375,0.5,0.5},
 		{-0.375,-0.375,0.375, 0.375,0.375,0.5}}},
-	mesh = "bsb1.obj"
+	mesh = "bs01.obj"
 	})
 	
-minetest.register_node("noter:bsb2", {
+minetest.register_node("noter:bs02", {
 	description = "Bookshelf (2 Books)",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -218,7 +62,7 @@ minetest.register_node("noter:bsb2", {
 --	inventory_image = "bs00inv.png",
 --	wield_image = "bs00inv.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsb2",
+	drop = "noter:bs02",
 	drawtype = "mesh",
 	sunlight_propagates = true,
 	climbable = false,
@@ -234,7 +78,7 @@ minetest.register_node("noter:bsb2", {
 		{0.375,-0.5,-0.5, 0.5,0.5,0.5},
 		{-0.375,0.375,-0.5, 0.375,0.5,0.5},
 		{-0.375,-0.375,0.375, 0.375,0.375,0.5}}},
-	mesh = "bsb2.obj"
+	mesh = "bs02.obj"
 	})
 
 minetest.register_node("noter:bs03", {
@@ -291,7 +135,7 @@ minetest.register_node("noter:bs04", {
 	mesh = "bs04.obj"
 	})
 
-minetest.register_node("noter:bsf", {
+minetest.register_node("noter:bs05", {
 	description = "Bookshelf Full (5 Books)",
 	paramtype = "light",
 	paramtype2 = "facedir",
@@ -299,7 +143,7 @@ minetest.register_node("noter:bsf", {
 --	inventory_image = "bs00inv.png",
 --	wield_image = "bs00inv.png",
 	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
-	drop = "noter:bsf",
+	drop = "noter:bs05",
 	drawtype = "mesh",
 	sunlight_propagates = true,
 	climbable = false,
@@ -315,5 +159,181 @@ minetest.register_node("noter:bsf", {
 		{0.375,-0.5,-0.5, 0.5,0.5,0.5},
 		{-0.375,0.375,-0.5, 0.375,0.5,0.5},
 		{-0.375,-0.375,0.375, 0.375,0.375,0.5}}},
-	mesh = "bs0.obj"
+	mesh = "bs05.obj"
 	})
+
+minetest.register_node("noter:b05", {
+	description = "5 Book Aligned",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b05",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.2, -0.5, -0.1875, 0.2, 0.25, 0.375}}},
+	collision_box = {type="fixed",fixed={
+		{-0.2, -0.5, -0.1875, 0.2, 0.25, 0.375}}},
+	mesh = "b05.obj"
+	})
+
+minetest.register_node("noter:b04", {
+	description = "Bookshelf 4 Books Standing",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b04",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.14, -0.5, -0.125, 0.3125, 0.12, 0.375},
+		{-0.37,-0.5,-0.22, -0.22,0.125,0.28}}},
+	collision_box = {type="fixed",fixed={
+		{-0.14, -0.5, -0.125, 0.3125, 0.12, 0.375},
+		{-0.37,-0.5,-0.22, -0.22,0.125,0.28}}},
+	mesh = "b04.obj"
+	})
+	
+minetest.register_node("noter:b03", {
+	description = "Bookshelf Books",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b03",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.2, -0.5, -0.29, 0.2, -0.05, 0.28}}},
+	collision_box = {type="fixed",fixed={
+		{-0.2, -0.5, -0.29, 0.2, -0.05, 0.28}}},
+	mesh = "b03.obj"
+	})
+
+minetest.register_node("noter:b02", {
+	description = "2 Books",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b02",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+	{-0.2, -0.5, -0.24, 0.19, -0.2, 0.26}}},
+	collision_box = {type="fixed",fixed={
+	{-0.2, -0.5, -0.24, 0.19, -0.2, 0.26}}},
+	mesh = "b02.obj"
+	})	
+	
+minetest.register_node("noter:ba1", {
+	description = "Bookshelf Book Aligned",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:ba1",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
+	collision_box = {type="fixed",fixed={
+		{-0.25, -0.5, -0.3125, 0.25, -0.35, 0.3125}}},
+	mesh = "ba1.obj"
+	})
+
+minetest.register_node("noter:b1", {
+	description = "Bookshelf Book Standing",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b1",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{0, -0.5, -0.125, 0.05, 0.125, 0.36}}},
+	collision_box = {type="fixed",fixed={
+		{0, -0.5, -0.125, 0.05, 0.125, 0.36}}},
+	mesh = "b1.obj"
+	})
+
+minetest.register_node("noter:bsb5", {
+	description = "5 Book",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:bsb5",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.375, -0.5, -0.3125, 0.375, 0, 0.3125}}},
+	collision_box = {type="fixed",fixed={
+		{-0.375, -0.5, -0.3125, 0.375, 0, 0.3125}}},
+	mesh = "bsb5.obj"
+	})
+
+minetest.register_node("noter:b5", {
+	description = "Books5",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:b5",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{-0.25, -0.5, 0, 0.5, 0.125, 0.5}}},
+	collision_box = {type="fixed",fixed={
+		{-0.25, -0.5, 0, 0.5, 0.125, 0.5}}},
+	mesh = "b5.obj"
+	})
+
+minetest.register_node("noter:bs1", {
+	description = "Books5",
+	paramtype = "light",
+	paramtype2 = "facedir",
+	tiles = {"bs00.png"},
+--	inventory_image = "bs00inv.png",
+--	wield_image = "bs00inv.png",
+	groups = {cracky=1, oddly_breakable_by_hand=1,not_in_creative_inventory=1},
+	drop = "noter:bs1",
+	drawtype = "mesh",
+	sunlight_propagates = true,
+	climbable = false,
+	selection_box = {type="fixed",fixed={
+		{0, -0.5, 0.3125, 0.5, 0.125, 0.4375}}},
+	collision_box = {type="fixed",fixed={
+		{0, -0.5, 0.3125, 0.5, 0.125, 0.4375}}},
+	mesh = "bs1.obj"
+	})
+
+
+

@@ -4,7 +4,9 @@
 --As plantlike is good for random but if animation can be called, with 'name_'..math.random(x,y)' or something then we have the one item with multiple textures on placing, which is EXACTLE what you need for a dice game. Torch is probably a good model for this. Pity Blacklight didn't place before.
 
 local t = tool
-
+local diceset = {
+    "dice_01.png", "dice_02.png", "dice_03.png", "dice_04.png", "dice_05.png", "dice_06.png", "dice_07.png", "dice_08.png", "dice_09.png", "dice_10.png", "dice_11.png", "dice_12.png", "dice_13.png", "dice_14.png", "dice_15.png", "dice_00.png"
+}
 
 local function try_set_portal(pos)
 	local name = t.get_portal_node(pos)
@@ -20,7 +22,7 @@ minetest.register_node("tool:dice", {
 	drawtype = "plantlike",
 	waving = 1,
 	visual_scale = 1,
-	tiles = {"dice_"..math.random(1,16)..".png"},
+	tiles = {diceset[math.random(1,16)]},
 	-- Use texture out of a group of 16 that doesn't increase the nodes in the menu
 	inventory_image = "dice.png",
 	wield_image = "dice_16.png",

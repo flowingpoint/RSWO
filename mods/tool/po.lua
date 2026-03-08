@@ -1640,11 +1640,11 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="tool:blkt_fl0", param2=p2fl0}) end
 	if s.name == "noter:bs00"	then 
 		p21b = s.param2
-		minetest.env:set_node(p, {name="noter:bsb1", param2=p21b}) end
-	if s.name == "noter:bsb1"	then 
+		minetest.env:set_node(p, {name="noter:bs01", param2=p21b}) end
+	if s.name == "noter:bs01"	then 
 		p22b = s.param2
-		minetest.env:set_node(p, {name="noter:bsb2", param2=p22b}) end
-	if s.name == "noter:bsb2"	then 
+		minetest.env:set_node(p, {name="noter:bs02", param2=p22b}) end
+	if s.name == "noter:bs02"	then 
 		p23b = s.param2
 		minetest.env:set_node(p, {name="noter:bs03", param2=p23b}) end
 	if s.name == "noter:bs03"	then 
@@ -1652,22 +1652,22 @@ minetest.register_entity("tool:pow", {
 		minetest.env:set_node(p, {name="noter:bs04", param2=p24b}) end
 	if s.name == "noter:bs04"	then 
 		p2fb = s.param2
-		minetest.env:set_node(p, {name="noter:bsf", param2=p2fb}) end
-	if s.name == "noter:bsf"	then 
+		minetest.env:set_node(p, {name="noter:bs05", param2=p2fb}) end
+	if s.name == "noter:bs05"	then 
 		p20b = s.param2
 		minetest.env:set_node(p, {name="noter:bs00", param2=p20b}) end
-	if s.name == "noter:bs2"	then 
+	if s.name == "noter:b02"	then 
 		p2bs = s.param2
 		minetest.env:set_node(p, {name="noter:book", param2=p2bs}) end
-	if s.name == "noter:bsbk"	then 
+	if s.name == "noter:b03"	then 
 		p22s = s.param2
-		minetest.env:set_node(p, {name="noter:bs2", param2=p22s}) end
-	if s.name == "noter:bsbs4"	then 
+		minetest.env:set_node(p, {name="noter:b02", param2=p22s}) end
+	if s.name == "noter:b04"	then 
 		p23s = s.param2
-		minetest.env:set_node(p, {name="noter:bsbk", param2=p23s}) end
-	if s.name == "noter:bsba5"	then 
+		minetest.env:set_node(p, {name="noter:b03", param2=p23s}) end
+	if s.name == "noter:b05"	then 
 		p24s = s.param2
-		minetest.env:set_node(p, {name="noter:bsbs4", param2=p24s}) end
+		minetest.env:set_node(p, {name="noter:b04", param2=p24s}) end
 	
 minetest.add_particlespawner({
 		amount = 50,
@@ -3849,9 +3849,9 @@ minetest.register_entity("tool:row", {
 	if s.name == "noter:bs00"	then 
 		p2desk = s.param2
 		minetest.env:set_node(p, {name="tool:desk", param2=p2desk}) end
-	if s.name == "noter:bsf"	then 
+	if s.name == "noter:bs05"	then 
 		p2fxbs = s.param2
-		minetest.env:set_node(p, {name="noter:bsba5", param2=p2fxbs}) end
+		minetest.env:set_node(p, {name="noter:b05", param2=p2fxbs}) end
 end
 minetest.add_particlespawner({
 		amount = 10+math.random(1,10),

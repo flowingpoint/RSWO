@@ -163,7 +163,7 @@ minetest.register_node("noter:bs05", {
 	})
 
 minetest.register_node("noter:b05", {
-	description = "5 Book Aligned",
+	description = "5 Books",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"bs00.png"},
@@ -182,7 +182,7 @@ minetest.register_node("noter:b05", {
 	})
 
 minetest.register_node("noter:b04", {
-	description = "Bookshelf 4 Books Standing",
+	description = "4 Books",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"bs00.png"},
@@ -203,7 +203,7 @@ minetest.register_node("noter:b04", {
 	})
 	
 minetest.register_node("noter:b03", {
-	description = "Bookshelf Books",
+	description = "3 Books",
 	paramtype = "light",
 	paramtype2 = "facedir",
 	tiles = {"bs00.png"},
@@ -334,6 +334,5 @@ minetest.register_node("noter:bs1", {
 		{0, -0.5, 0.3125, 0.5, 0.125, 0.4375}}},
 	mesh = "bs1.obj"
 	})
-
 
 

@@ -232,9 +232,108 @@ end)
 
 -- aliases
 
-minetest.register_alias("homedecor:book", "homedecor:book_grey")
-minetest.register_alias("homedecor:book_open", "homedecor:book_open_grey")
+-- 1. Initialize the tracking table at the top!
+local player_stack_pos = {}
 
+-- 2. Your stack sequence
+local stack_sequence = {
+    [1] = "noter:book",
+    [2] = "noter:b02",
+    [3] = "noter:b03",
+    [4] = "noter:b04",
+    [5] = "noter:b05",
+}
 
+-- 3. Helper function
+local function get_count_from_name(name)
+    for count, node_name in pairs(stack_sequence) do
+        if node_name == name then return count end
+    end
+    return 0
+end
 
+-- 4. Updated UI function
+local function show_book_retrieval_ui(player, pos, count)
+    local player_name = player:get_player_name()
+    
+    -- This line was crashing because player_stack_pos wasn't a table yet
+    player_stack_pos[player_name] = pos 
+    
+    local width = count * 1.1 + 0.2
+    local formspec = "size[" .. width .. ",1.2]" ..
+                     "bgcolor[#00000000;false]"
+    
+    for i = 1, count do
+        local x = (i - 1) * 1.1 + 0.1
+        formspec = formspec .. string.format(
+            "item_image_button[%f,0.1;1,1;noter:book;book_choice_%d;]",
+            x, i
+        )
+    end  
+    minetest.show_formspec(player_name, "noter:book_retrieval", formspec)
+end
 
+-- Handle the selection
+minetest.register_on_player_receive_fields(function(player, formname, fields)
+    if formname ~= "noter:book_retrieval" then return false end
+    
+    local player_name = player:get_player_name()
+    local pos = player_stack_pos[player_name]
+    if not pos then return true end
+
+    for i = 1, 5 do
+        if fields["book_choice_" .. i] then
+            local node = minetest.get_node(pos)
+            local current_count = get_count_from_name(node.name)
+            
+            -- Give the book to the player
+            local inv = player:get_inventory()
+            if inv:room_for_item("main", "noter:book") then
+                inv:add_item("main", "noter:book")
+            else
+                minetest.add_item(player:get_pos(), "noter:book")
+            end
+
+            -- Reduce stack and CLOSE formspec
+            local next_count = current_count - 1
+            if next_count <= 0 then
+                minetest.remove_node(pos)
+            else
+                minetest.swap_node(pos, {name = stack_sequence[next_count], param2 = node.param2})
+            end
+            
+            -- Close the UI immediately after taking one
+            minetest.close_formspec(player_name, "noter:book_retrieval")
+            player_stack_pos[player_name] = nil
+            return true
+        end
+    end
+    return true
+end)
+
+-- Applying the "Stack Up" and "Retrieve" logic
+for _, node_name in pairs(stack_sequence) do
+    minetest.override_item(node_name, {
+        on_rightclick = function(pos, node, clicker, itemstack, pointed_thing)
+            local current_count = get_count_from_name(node.name)
+            
+            -- ADDING A BOOK: If player is holding a book and stack isn't full (5)
+            if itemstack:get_name() == "noter:book" then
+                if current_count < 5 then
+                    local next_node = stack_sequence[current_count + 1]
+                    minetest.swap_node(pos, {name = next_node, param2 = node.param2})
+                    
+                    -- Remove 1 book from the player's hand
+                    itemstack:take_item(1)
+                    return itemstack
+                else
+                    -- Stack is full, maybe send a tiny tip?
+                    return itemstack
+                end
+            end
+            
+            -- RETRIEVING A BOOK: If hand is empty or holding something else
+            show_book_retrieval_ui(clicker, pos, current_count)
+        end,
+    })
+end

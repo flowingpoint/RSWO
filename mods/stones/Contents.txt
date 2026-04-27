@@ -394,7 +394,9 @@ diagsterp_3*		*4 Diagonal Step 3/8 Rubble
 s_52d*			    *4 R5/2 Slope LowHalf Double L&R
 sb_52d*			    *4 R5/2 Slope LowHalf Double L&R Rubble
 diaq				Diagonal 1/4
-diraq*				Diagonal 1/4 Rubble
+diraq*				*2 Diagonal 1/4 Rubble
+duat*				*2 Dual Diagonal 17/24
+durat*				*2 Dual Diagonal 17/24 Rubble
 diagsteps_8l		*2 Diagonal Half-N-Eighth Steps Left
 diagsterps_8l*		*2 Diagonal Half-N-Eighth Steps Left Rubble
 diagsteps_38l*		*2 Diagonal 3/8 Steps Left
